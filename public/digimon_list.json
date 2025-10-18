@@ -1,0 +1,5183 @@
+[
+  {
+    "id": 1,
+    "name": ["Kuramon", "쿠라몬", "クラモン"],
+    "generation": 0,
+    "attribute": 0,
+    "personality": 9,
+    "evolution": {
+      "from": [],
+      "to": [16, 12]
+    }
+  },
+  {
+    "id": 2,
+    "name": ["Choromon", "뽈뽈몬", "チョロモン"],
+    "generation": 0,
+    "attribute": 0,
+    "personality": 13,
+    "evolution": {
+      "from": [],
+      "to": [8]
+    }
+  },
+  {
+    "id": 3,
+    "name": ["Dodomon", "도도몬", "ドドモン"],
+    "generation": 0,
+    "attribute": 0,
+    "personality": 6,
+    "evolution": {
+      "from": [],
+      "to": [20, 14]
+    }
+  },
+  {
+    "id": 4,
+    "name": ["Pabumon", "뽀글몬", "バブモン"],
+    "generation": 0,
+    "attribute": 0,
+    "personality": 2,
+    "evolution": {
+      "from": [],
+      "to": [19, 17, 10]
+    }
+  },
+  {
+    "id": 5,
+    "name": ["Punimon", "푸니몬", "プニモン"],
+    "generation": 0,
+    "attribute": 0,
+    "personality": 13,
+    "evolution": {
+      "from": [],
+      "to": [11, 15]
+    }
+  },
+  {
+    "id": 6,
+    "name": ["Botamon", "깜몬", "ボタモン"],
+    "generation": 0,
+    "attribute": 0,
+    "personality": 7,
+    "evolution": {
+      "from": [],
+      "to": [9]
+    }
+  },
+  {
+    "id": 7,
+    "name": ["Poyomon", "포요몬", "ポヨモン"],
+    "generation": 0,
+    "attribute": 0,
+    "personality": 8,
+    "evolution": {
+      "from": [],
+      "to": [18, 13]
+    }
+  },
+  {
+    "id": 8,
+    "name": ["Kapurimon", "카프리몬", "カプリモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 13,
+    "evolution": {
+      "from": [2],
+      "to": [71, 45, 29, 26]
+    }
+  },
+  {
+    "id": 9,
+    "name": ["Koromon", "코로몬", "コロモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 7,
+    "evolution": {
+      "from": [6],
+      "to": [21, 64, 49, 47, 74, 48]
+    }
+  },
+  {
+    "id": 10,
+    "name": ["Tanemon", "시드몬", "タネモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 14,
+    "evolution": {
+      "from": [4],
+      "to": [73, 56, 53, 75, 54]
+    }
+  },
+  {
+    "id": 11,
+    "name": ["Tsunomon", "뿔몬", "ツノモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 13,
+    "evolution": {
+      "from": [5],
+      "to": [65, 77, 43, 38, 40, 25]
+    }
+  },
+  {
+    "id": 12,
+    "name": ["Tsumemon", "츠메몬", "ツメモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 9,
+    "evolution": {
+      "from": [1],
+      "to": [70, 66, 80]
+    }
+  },
+  {
+    "id": 13,
+    "name": ["Tokomon", "토코몬", "トコモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 8,
+    "evolution": {
+      "from": [7],
+      "to": [51, 24, 27, 76, 39]
+    }
+  },
+  {
+    "id": 14,
+    "name": ["Dorimon", "도리몬", "ドリモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 6,
+    "evolution": {
+      "from": [3],
+      "to": [37, 68, 59]
+    }
+  },
+  {
+    "id": 15,
+    "name": ["Nyaromon", "야옹몬", "ニャロモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 1,
+    "evolution": {
+      "from": [5],
+      "to": [57, 22, 34, 52]
+    }
+  },
+  {
+    "id": 16,
+    "name": ["Pagumon", "퍼그몬", "パグモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 11,
+    "evolution": {
+      "from": [1],
+      "to": [60, 72, 62]
+    }
+  },
+  {
+    "id": 17,
+    "name": ["Yokomon", "어니몬", "ピョコモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 9,
+    "evolution": {
+      "from": [4],
+      "to": [32, 36, 33, 78, 31, 55]
+    }
+  },
+  {
+    "id": 18,
+    "name": ["Bukamon", "둥실몬", "プカモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 6,
+    "evolution": {
+      "from": [7],
+      "to": [44, 42, 23, 63, 67]
+    }
+  },
+  {
+    "id": 19,
+    "name": ["Motimon", "모티몬", "モチモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 2,
+    "evolution": {
+      "from": [4],
+      "to": [69, 28, 79, 46]
+    }
+  },
+  {
+    "id": 20,
+    "name": ["Wanyamon", "와냐몬", "ワニャモン"],
+    "generation": 1,
+    "attribute": 0,
+    "personality": 4,
+    "evolution": {
+      "from": [3],
+      "to": [41, 30, 35, 58]
+    }
+  },
+  {
+    "id": 21,
+    "name": ["Agumon", "아구몬", "アグモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [9],
+      "to": [107, 92, 160]
+    }
+  },
+  {
+    "id": 22,
+    "name": ["Kudamon", "쿠다몬", "クダモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 11,
+    "evolution": {
+      "from": [15],
+      "to": [83, 110, 84, 188, 96]
+    }
+  },
+  {
+    "id": 23,
+    "name": ["Gomamon", "쉬라몬", "ゴマモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [18],
+      "to": [104, 82, 105, 162, 138]
+    }
+  },
+  {
+    "id": 24,
+    "name": ["Coronamon", "코로나몬", "コロナモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [13],
+      "to": [100, 135, 145, 133, 99, 187]
+    }
+  },
+  {
+    "id": 25,
+    "name": ["Zubamon", "즈바몬", "ズバモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [11],
+      "to": [169, 102, 125, 95, 174]
+    }
+  },
+  {
+    "id": 26,
+    "name": ["Solarmon", "황금톱니몬", "ソーラーモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 14,
+    "evolution": {
+      "from": [8],
+      "to": [124, 150, 135]
+    }
+  },
+  {
+    "id": 27,
+    "name": ["Terriermon", "테리어몬", "テリアモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [13],
+      "to": [104, 137, 115]
+    }
+  },
+  {
+    "id": 28,
+    "name": ["Tentomon", "텐타몬", "テントモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 9,
+    "evolution": {
+      "from": [19],
+      "to": [85, 120, 146, 172, 94]
+    }
+  },
+  {
+    "id": 29,
+    "name": ["ToyAgumon", "토이아구몬", "トイアグモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [8],
+      "to": [134, 108, 171, 125]
+    }
+  },
+  {
+    "id": 30,
+    "name": ["Tapirmon", "테이파몬", "バクモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [20],
+      "to": [135, 87, 161, 106, 117]
+    }
+  },
+  {
+    "id": 31,
+    "name": ["Hyokomon", "효코몬", "ヒョコモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [17],
+      "to": [103, 99, 127, 102]
+    }
+  },
+  {
+    "id": 32,
+    "name": ["Biyomon", "피요몬", "ピヨモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [17],
+      "to": [173, 99, 106, 112]
+    }
+  },
+  {
+    "id": 33,
+    "name": ["Falcomon", "팔코몬", "ファルコモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [17],
+      "to": [103, 116]
+    }
+  },
+  {
+    "id": 34,
+    "name": ["Salamon", "플롯트몬", "プロットモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [15],
+      "to": [97, 153, 98, 82, 101, 131]
+    }
+  },
+  {
+    "id": 35,
+    "name": ["Bearmon", "베어몬", "ベアモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [20],
+      "to": [89, 114, 104, 109]
+    }
+  },
+  {
+    "id": 36,
+    "name": ["Penmon", "펭귄몬", "ペンモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [17],
+      "to": [103, 102, 116, 173]
+    }
+  },
+  {
+    "id": 37,
+    "name": ["Monodramon", "모노드라몬", "モノドラモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [14],
+      "to": [93, 107, 157, 178, 152]
+    }
+  },
+  {
+    "id": 38,
+    "name": ["Ryudamon", "류우다몬", "リュウダモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [11],
+      "to": [110, 136]
+    }
+  },
+  {
+    "id": 39,
+    "name": ["Lucemon", "루체몬", "ルーチェモン"],
+    "generation": 2,
+    "attribute": 1,
+    "personality": 8,
+    "evolution": {
+      "from": [13],
+      "to": []
+    }
+  },
+  {
+    "id": 40,
+    "name": ["Elecmon", "에렉몬", "エレキモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [11],
+      "to": [81, 121, 106, 146, 147]
+    }
+  },
+  {
+    "id": 41,
+    "name": ["Gaomon", "가오몬", "ガオモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [20],
+      "to": [93, 114, 109, 159, 129]
+    }
+  },
+  {
+    "id": 42,
+    "name": ["Crabmon", "크랩몬", "ガニモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 12,
+    "evolution": {
+      "from": [18],
+      "to": [115, 142, 123, 171, 94]
+    }
+  },
+  {
+    "id": 43,
+    "name": ["Gabumon", "파피몬", "ガブモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [11],
+      "to": [87, 82, 131, 117]
+    }
+  },
+  {
+    "id": 44,
+    "name": ["Kamemon", "카메몬", "カメモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [18],
+      "to": [115, 142, 123, 127, 96]
+    }
+  },
+  {
+    "id": 45,
+    "name": ["Kokuwamon", "코쿠와몬", "コクワモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [8],
+      "to": [119, 146, 118, 172, 170]
+    }
+  },
+  {
+    "id": 46,
+    "name": ["Gotsumon", "울퉁몬", "ゴツモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [19],
+      "to": [124, 143, 151, 136, 111, 126]
+    }
+  },
+  {
+    "id": 47,
+    "name": ["Kotemon", "코테몬", "コテモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 12,
+    "evolution": {
+      "from": [9],
+      "to": [129, 169, 108, 127]
+    }
+  },
+  {
+    "id": 48,
+    "name": ["Shoutmon", "샤우트몬", "シャウトモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 7,
+    "evolution": {
+      "from": [9],
+      "to": [234, 95]
+    }
+  },
+  {
+    "id": 49,
+    "name": ["Dracomon", "드라코몬", "ドラコモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 6,
+    "evolution": {
+      "from": [9],
+      "to": [157, 101, 121, 128]
+    }
+  },
+  {
+    "id": 50,
+    "name": ["Dorumon", "도루몬", "ドルモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 6,
+    "evolution": {
+      "from": [14],
+      "to": [107, 83, 153, 175, 131, 132]
+    }
+  },
+  {
+    "id": 51,
+    "name": ["Patamon", "파닥몬", "パタモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [13],
+      "to": [84, 184, 106, 119]
+    }
+  },
+  {
+    "id": 52,
+    "name": ["Huckmon", "헉몬", "ハックモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [15],
+      "to": [97, 92, 145, 133]
+    }
+  },
+  {
+    "id": 53,
+    "name": ["Palmon", "팔몬", "パルモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [10],
+      "to": [104, 167, 130, 140, 178, 165]
+    }
+  },
+  {
+    "id": 54,
+    "name": ["Floramon", "플로라몬", "フローラモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [10],
+      "to": [167, 130, 140, 120, 116]
+    }
+  },
+  {
+    "id": 55,
+    "name": ["Muchomon", "레드펭귄몬", "ムーチョモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 1,
+    "evolution": {
+      "from": [17],
+      "to": [83, 103, 99, 163]
+    }
+  },
+  {
+    "id": 56,
+    "name": ["Lalamon", "라라몬", "ララモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [10],
+      "to": [120, 130, 108, 126, 129]
+    }
+  },
+  {
+    "id": 57,
+    "name": ["Lunamon", "루나몬", "ルナモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [15],
+      "to": [137, 87, 105, 162, 96, 111]
+    }
+  },
+  {
+    "id": 58,
+    "name": ["Renamon", "레나몬", "レナモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [20],
+      "to": [137, 120, 110, 117]
+    }
+  },
+  {
+    "id": 59,
+    "name": ["Lopmon", "로프몬", "ロップモン"],
+    "generation": 2,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [14],
+      "to": [89, 168, 109, 129, 139, 126]
+    }
+  },
+  {
+    "id": 60,
+    "name": ["Impmon", "임프몬", "インプモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 9,
+    "evolution": {
+      "from": [16],
+      "to": [161, 112, 118, 153, 156, 113]
+    }
+  },
+  {
+    "id": 61,
+    "name": ["Otamamon", "올챙몬", "オタマモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 9,
+    "evolution": {
+      "from": [],
+      "to": [121, 160, 147, 165]
+    }
+  },
+  {
+    "id": 62,
+    "name": ["Gazimon", "가지몬", "ガジモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [16],
+      "to": [153, 166, 114, 133, 98, 132]
+    }
+  },
+  {
+    "id": 63,
+    "name": ["Gizamon", "기자몬", "ギザモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [18],
+      "to": [152, 164, 95, 174, 189]
+    }
+  },
+  {
+    "id": 64,
+    "name": ["Guilmon", "길몬", "ギルモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [9],
+      "to": [92, 145, 175, 128]
+    }
+  },
+  {
+    "id": 65,
+    "name": ["Goblimon", "고부리몬", "ゴブリモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [11],
+      "to": [151, 139, 157, 155, 141]
+    }
+  },
+  {
+    "id": 66,
+    "name": ["Shamamon", "원시고부리몬", "シャーマモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 14,
+    "evolution": {
+      "from": [12],
+      "to": [168, 169, 163, 113]
+    }
+  },
+  {
+    "id": 67,
+    "name": ["Syakomon", "샤코몬", "シャコモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [18],
+      "to": [123, 142, 171]
+    }
+  },
+  {
+    "id": 68,
+    "name": ["SnowGoblimon", "스노우고부리몬", "スノーゴブリモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [14],
+      "to": [97, 136, 105, 162, 138, 111]
+    }
+  },
+  {
+    "id": 69,
+    "name": ["Chuumon", "츄몬", "チューモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 14,
+    "evolution": {
+      "from": [19],
+      "to": [166, 154, 97, 147, 165]
+    }
+  },
+  {
+    "id": 70,
+    "name": ["Dracmon", "드라큐몬", "ドラクモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [12],
+      "to": [153, 154, 112, 124]
+    }
+  },
+  {
+    "id": 71,
+    "name": ["Hagurumon", "톱니몬", "ハグルモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 14,
+    "evolution": {
+      "from": [8],
+      "to": [118, 170, 125, 143, 134]
+    }
+  },
+  {
+    "id": 72,
+    "name": ["DemiDevimon", "피코데블몬", "ピコデビモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [16],
+      "to": [161, 138, 156, 141]
+    }
+  },
+  {
+    "id": 73,
+    "name": ["FunBeemon", "아기벌몬", "ファンビーモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 12,
+    "evolution": {
+      "from": [10],
+      "to": [172, 164, 158, 177, 150, 85]
+    }
+  },
+  {
+    "id": 74,
+    "name": ["Betamon", "베타몬", "ベタモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 11,
+    "evolution": {
+      "from": [9],
+      "to": [121, 156, 160, 167, 155]
+    }
+  },
+  {
+    "id": 75,
+    "name": ["Mushroomon", "머슈몬", "マッシュモン"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [10],
+      "to": [154, 159, 140, 164]
+    }
+  },
+  {
+    "id": 76,
+    "name": ["Armadillomon", "아르마몬", "アルマジモン"],
+    "generation": 2,
+    "attribute": 4,
+    "personality": 3,
+    "evolution": {
+      "from": [13],
+      "to": [181, 179, 151, 174]
+    }
+  },
+  {
+    "id": 77,
+    "name": ["Veemon", "브이몬", "ブイモン"],
+    "generation": 2,
+    "attribute": 4,
+    "personality": 4,
+    "evolution": {
+      "from": [11],
+      "to": [175, 101, 186, 423, 183]
+    }
+  },
+  {
+    "id": 78,
+    "name": ["Hawkmon", "호크몬", "ホークモン"],
+    "generation": 2,
+    "attribute": 4,
+    "personality": 14,
+    "evolution": {
+      "from": [17],
+      "to": [100, 185, 180, 173]
+    }
+  },
+  {
+    "id": 79,
+    "name": ["Wormmon", "추추몬", "ワームモン"],
+    "generation": 2,
+    "attribute": 4,
+    "personality": 2,
+    "evolution": {
+      "from": [19],
+      "to": [177, 158, 94]
+    }
+  },
+  {
+    "id": 80,
+    "name": ["Keramon", "케라몬", "ケラモン"],
+    "generation": 2,
+    "attribute": 6,
+    "personality": 9,
+    "evolution": {
+      "from": [12],
+      "to": [158, 139, 142, 170, 178]
+    }
+  },
+  {
+    "id": 81,
+    "name": ["Aegiomon", "아이기오몬", "アイギオモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [40],
+      "to": [193]
+    }
+  },
+  {
+    "id": 82,
+    "name": ["Ikkakumon", "원뿔몬", "イッカクモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [23, 34, 43],
+      "to": [220, 260, 212, 280]
+    }
+  },
+  {
+    "id": 83,
+    "name": ["Airdramon", "에어드라몬", "エアドラモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [22, 55],
+      "to": [217, 293, 201, 272]
+    }
+  },
+  {
+    "id": 84,
+    "name": ["Angemon", "엔젤몬", "エンジェモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 8,
+    "evolution": {
+      "from": [22, 51],
+      "to": [254, 221, 241, 300]
+    }
+  },
+  {
+    "id": 85,
+    "name": ["Kabuterimon", "캅테리몬", "カブテリモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 9,
+    "evolution": {
+      "from": [28, 73],
+      "to": [262, 273, 235]
+    }
+  },
+  {
+    "id": 86,
+    "name": ["Gargomon", "고르고몬", "ガーゴモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [27, 29, 48],
+      "to": [236, 258, 422]
+    }
+  },
+  {
+    "id": 87,
+    "name": ["Garurumon", "가루몬", "ガルルモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [30, 43, 57],
+      "to": [229, 288, 242, 235]
+    }
+  },
+  {
+    "id": 88,
+    "name": ["Ginryumon", "긴류우몬", "ギンリュウモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [22, 33, 38],
+      "to": [217, 278, 218]
+    }
+  },
+  {
+    "id": 89,
+    "name": ["Grizzlymon", "그리즈몬", "グリズモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [35, 59],
+      "to": [229, 205, 207]
+    }
+  },
+  {
+    "id": 90,
+    "name": ["Greymon", "그레이몬(2010)", "グレイモン（2010アニメ版）"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [21, 38, 52],
+      "to": [293, 278, 235]
+    }
+  },
+  {
+    "id": 91,
+    "name": ["Coredramon (Blue)", "코어드라몬(청)", "コアドラモン（青）"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [47, 49],
+      "to": [200, 201, 272]
+    }
+  },
+  {
+    "id": 92,
+    "name": ["GeoGreymon", "지오그레이몬", "ジオグレイモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [21, 52, 64],
+      "to": [226, 295, 210]
+    }
+  },
+  {
+    "id": 93,
+    "name": ["Strikedramon", "스트라이크드라몬", "ストライクドラモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [37, 41],
+      "to": [210, 240, 264]
+    }
+  },
+  {
+    "id": 94,
+    "name": ["Snimon", "스나이몬", "スナイモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 14,
+    "evolution": {
+      "from": [28, 42, 79],
+      "to": [269, 286, 266, 211]
+    }
+  },
+  {
+    "id": 95,
+    "name": ["ZubaEagermon", "즈바이거몬", "ズバイガーモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [25, 48, 63],
+      "to": [206, 294, 214, 248]
+    }
+  },
+  {
+    "id": 96,
+    "name": ["Sorcermon", "소서리몬", "ソーサリモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 11,
+    "evolution": {
+      "from": [22, 44, 57],
+      "to": [221, 253, 298]
+    }
+  },
+  {
+    "id": 97,
+    "name": ["Gatomon", "가트몬", "テイルモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [34, 52, 68, 69],
+      "to": [182, 203, 301]
+    }
+  },
+  {
+    "id": 98,
+    "name": ["Dobermon", "도베르몬", "ドーベルモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 14,
+    "evolution": {
+      "from": [34, 62],
+      "to": [290, 281, 208, 291]
+    }
+  },
+  {
+    "id": 99,
+    "name": ["Birdramon", "버드라몬", "バードラモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [24, 31, 32, 55],
+      "to": [219, 204, 244, 215]
+    }
+  },
+  {
+    "id": 100,
+    "name": ["Firamon", "파이라몬", "ファイラモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [24, 78],
+      "to": [219, 240, 292]
+    }
+  },
+  {
+    "id": 101,
+    "name": ["Veedramon", "브이드라몬", "ブイドラモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [34, 49, 77],
+      "to": [200, 201, 210]
+    }
+  },
+  {
+    "id": 102,
+    "name": ["Buraimon", "부라이몬", "ブライモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [25, 31, 36],
+      "to": [218, 214, 204]
+    }
+  },
+  {
+    "id": 103,
+    "name": ["Peckmon", "펙크몬", "ペックモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [31, 33, 36, 55],
+      "to": [213, 267, 225]
+    }
+  },
+  {
+    "id": 104,
+    "name": ["Mojyamon", "모털몬", "モジャモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [23, 27, 35, 53],
+      "to": [212, 253, 292, 222]
+    }
+  },
+  {
+    "id": 105,
+    "name": ["Frigimon", "프리지몬", "ユキダルモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [23, 57, 68],
+      "to": [237, 203, 216, 233, 222]
+    }
+  },
+  {
+    "id": 106,
+    "name": ["Unimon", "유니몬", "ユニモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 11,
+    "evolution": {
+      "from": [30, 32, 40, 51],
+      "to": [254, 221, 213]
+    }
+  },
+  {
+    "id": 107,
+    "name": ["Raptordramon", "라프타드라몬", "ラプタードラモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [21, 37],
+      "to": [206, 272, 283]
+    }
+  },
+  {
+    "id": 108,
+    "name": ["Deputymon", "카우보이몬", "リボルモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [29, 47, 56],
+      "to": [250, 238, 298]
+    }
+  },
+  {
+    "id": 109,
+    "name": ["Leomon", "레오몬", "レオモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [35, 41, 59],
+      "to": [219, 205, 216, 228]
+    }
+  },
+  {
+    "id": 110,
+    "name": ["Reppamon", "레파몬", "レッパモン"],
+    "generation": 3,
+    "attribute": 1,
+    "personality": 11,
+    "evolution": {
+      "from": [22, 38, 58],
+      "to": [213, 260, 203, 247]
+    }
+  },
+  {
+    "id": 111,
+    "name": ["Icemon", "아이스몬", "アイスモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [46, 57, 68],
+      "to": [237, 233, 216]
+    }
+  },
+  {
+    "id": 112,
+    "name": ["Wizardmon", "위자몬", "ウィザーモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [32, 60, 70],
+      "to": [285, 292, 298]
+    }
+  },
+  {
+    "id": 113,
+    "name": ["Witchmon", "위치몬", "ウィッチモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 9,
+    "evolution": {
+      "from": [60, 66],
+      "to": [297, 203, 263]
+    }
+  },
+  {
+    "id": 114,
+    "name": ["Gaogamon", "가오가몬", "ガオガモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [35, 41, 62],
+      "to": [258, 240, 281]
+    }
+  },
+  {
+    "id": 115,
+    "name": ["Gawappamon", "가와파몬", "ガワッパモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [27, 42, 44],
+      "to": [276, 249, 284]
+    }
+  },
+  {
+    "id": 116,
+    "name": ["Kiwimon", "키위몬", "キウイモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [33, 36, 54],
+      "to": [262, 241, 245, 277]
+    }
+  },
+  {
+    "id": 117,
+    "name": ["Kyubimon", "구미호몬", "キュウビモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [30, 43, 58],
+      "to": [288, 208, 242, 231]
+    }
+  },
+  {
+    "id": 118,
+    "name": ["Clockmon", "타임몬", "クロックモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [45, 60, 71],
+      "to": [202, 199, 212, 248]
+    }
+  },
+  {
+    "id": 119,
+    "name": ["Centarumon", "켄터스몬", "ケンタルモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [45, 51],
+      "to": [199, 285, 422]
+    }
+  },
+  {
+    "id": 120,
+    "name": ["Sunflowmon", "해바라기몬", "サンフラウモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [28, 54, 56, 58],
+      "to": [262, 263, 245, 251]
+    }
+  },
+  {
+    "id": 121,
+    "name": ["Seadramon", "시드라몬", "シードラモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [40, 49, 61, 74],
+      "to": [220, 260, 299, 217, 275, 280]
+    }
+  },
+  {
+    "id": 122,
+    "name": ["Coelamon", "실리컨몬", "シーラモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 12,
+    "evolution": {
+      "from": [38, 42, 67, 74],
+      "to": [299, 295, 249, 280]
+    }
+  },
+  {
+    "id": 123,
+    "name": ["Shellmon", "쉘몬", "シェルモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 7,
+    "evolution": {
+      "from": [42, 44, 67],
+      "to": [220, 253]
+    }
+  },
+  {
+    "id": 124,
+    "name": ["Starmon", "스타몬", "スターモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [26, 46, 70],
+      "to": [256, 238, 281, 259]
+    }
+  },
+  {
+    "id": 125,
+    "name": ["Tankmon", "탱크몬", "タンクモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [25, 29, 71],
+      "to": [252, 264, 283]
+    }
+  },
+  {
+    "id": 126,
+    "name": ["MudFrigimon", "머드프리지몬", "ツチダルモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [46, 56, 59],
+      "to": [245, 271, 232]
+    }
+  },
+  {
+    "id": 127,
+    "name": ["Dinohyumon", "다이노휴몬", "ディノヒューモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 6,
+    "evolution": {
+      "from": [31, 44, 47],
+      "to": [276, 206, 248]
+    }
+  },
+  {
+    "id": 128,
+    "name": ["Tyrannomon", "티라노몬", "ティラノモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [49, 64],
+      "to": [202, 274, 295]
+    }
+  },
+  {
+    "id": 129,
+    "name": ["Turuiemon", "토리에몬", "トゥルイエモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [41, 47, 56, 59],
+      "to": [290, 258, 232]
+    }
+  },
+  {
+    "id": 130,
+    "name": ["Togemon", "니드몬", "トゲモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [53, 54, 56],
+      "to": [263, 277, 251]
+    }
+  },
+  {
+    "id": 131,
+    "name": ["Drimogemon", "두리몬", "ドリモゲモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [34, 43],
+      "to": [246, 228, 255]
+    }
+  },
+  {
+    "id": 132,
+    "name": ["Dorugamon", "도루가몬", "ドルガモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 6,
+    "evolution": {
+      "from": [62],
+      "to": [226, 247, 207]
+    }
+  },
+  {
+    "id": 133,
+    "name": ["BaoHuckmon", "바오헉몬", "バオハックモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [24, 52, 62],
+      "to": [226, 240, 228]
+    }
+  },
+  {
+    "id": 134,
+    "name": ["Blimpmon", "브링프몬", "ブリンプモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [29, 71],
+      "to": [264, 261, 257]
+    }
+  },
+  {
+    "id": 135,
+    "name": ["Meramon", "메라몬", "メラモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [24, 26, 30],
+      "to": [252, 288, 244]
+    }
+  },
+  {
+    "id": 136,
+    "name": ["Monochromon", "모노크로몬", "モノクロモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [38, 46, 68],
+      "to": [246, 208, 222]
+    }
+  },
+  {
+    "id": 137,
+    "name": ["Lekismon", "레키스몬", "レキスモン"],
+    "generation": 3,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [27, 57, 58],
+      "to": [237, 229, 205]
+    }
+  },
+  {
+    "id": 138,
+    "name": ["IceDevimon", "아이스데블몬", "アイスデビモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [23, 68, 72],
+      "to": [237, 297, 216, 231]
+    }
+  },
+  {
+    "id": 139,
+    "name": ["Wendigomon", "웬디몬", "ウェンディモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 11,
+    "evolution": {
+      "from": [59, 65, 80],
+      "to": [266, 244, 232]
+    }
+  },
+  {
+    "id": 140,
+    "name": ["Woodmon", "우드몬", "ウッドモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [53, 54, 75],
+      "to": [277, 242, 251]
+    }
+  },
+  {
+    "id": 141,
+    "name": ["Ogremon", "우가몬", "オーガモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [65, 72],
+      "to": [279, 291, 243]
+    }
+  },
+  {
+    "id": 142,
+    "name": ["Octomon", "옥토몬", "オクタモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [42, 44, 67, 80],
+      "to": [282, 243, 249]
+    }
+  },
+  {
+    "id": 143,
+    "name": ["Guardromon", "가드로몬", "ガードロモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 1,
+    "evolution": {
+      "from": [46, 71],
+      "to": [236, 264, 199]
+    }
+  },
+  {
+    "id": 144,
+    "name": ["ShellNumemon", "달팽이워매몬", "カラツキヌメモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 14,
+    "evolution": {
+      "from": [44, 61, 67],
+      "to": [270, 299, 287, 250]
+    }
+  },
+  {
+    "id": 145,
+    "name": ["Growlmon", "그라우몬", "グラウモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [24, 52, 64],
+      "to": [294, 274, 247]
+    }
+  },
+  {
+    "id": 146,
+    "name": ["Kuwagamon", "쿠가몬", "クワガーモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [28, 40, 45],
+      "to": [277, 269, 235]
+    }
+  },
+  {
+    "id": 147,
+    "name": ["Gekomon", "개굴몬", "ゲコモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 9,
+    "evolution": {
+      "from": [40, 61, 69],
+      "to": [241, 284, 249]
+    }
+  },
+  {
+    "id": 148,
+    "name": ["Geremon", "옐로우워매몬", "ゲレモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [43, 63, 69],
+      "to": [236, 238, 224]
+    }
+  },
+  {
+    "id": 149,
+    "name": ["Coredramon (Green)", "코어드라몬(녹)", "コアドラモン（緑）"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [21, 49],
+      "to": [294, 274, 278]
+    }
+  },
+  {
+    "id": 150,
+    "name": ["GoldNumemon", "골드워매몬", "ゴールドヌメモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 14,
+    "evolution": {
+      "from": [26, 73],
+      "to": [299, 289, 287]
+    }
+  },
+  {
+    "id": 151,
+    "name": ["Golemon", "록몬", "ゴーレモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [46, 65, 76],
+      "to": [256, 222, 233]
+    }
+  },
+  {
+    "id": 152,
+    "name": ["Cyclonemon", "사이크로몬", "サイクロモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [37, 63],
+      "to": [206, 210, 255]
+    }
+  },
+  {
+    "id": 153,
+    "name": ["Sangloupmon", "상굴몬", "サングルゥモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [34, 60, 62, 70],
+      "to": [290, 267, 265]
+    }
+  },
+  {
+    "id": 154,
+    "name": ["Sukamon", "스카몬", "スカモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 14,
+    "evolution": {
+      "from": [69, 70, 75],
+      "to": [224, 268, 271, 259]
+    }
+  },
+  {
+    "id": 155,
+    "name": ["Tuskmon", "태스크몬", "タスクモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [65, 74],
+      "to": [246, 274, 243]
+    }
+  },
+  {
+    "id": 156,
+    "name": ["Devimon", "데블몬", "デビモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [60, 72, 74],
+      "to": [267, 297, 304, 279, 265]
+    }
+  },
+  {
+    "id": 157,
+    "name": ["Deltamon", "델타몬", "デルタモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [37, 49, 65],
+      "to": [270, 235, 239, 275]
+    }
+  },
+  {
+    "id": 158,
+    "name": ["Dokugumon", "스파이더몬", "ドクグモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [73, 79, 80],
+      "to": [266, 291, 304]
+    }
+  },
+  {
+    "id": 159,
+    "name": ["Nanimon", "모야몬", "ナニモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [41, 75],
+      "to": [256, 238, 268, 259]
+    }
+  },
+  {
+    "id": 160,
+    "name": ["Numemon", "워매몬", "ヌメモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [21, 61, 74],
+      "to": [224, 281, 268]
+    }
+  },
+  {
+    "id": 161,
+    "name": ["Bakemon", "고스몬", "バケモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 11,
+    "evolution": {
+      "from": [30, 60, 72],
+      "to": [267, 288, 286, 231]
+    }
+  },
+  {
+    "id": 162,
+    "name": ["Hyogamon", "블루우가몬", "ヒョーガモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [23, 57, 68],
+      "to": [212, 286, 216]
+    }
+  },
+  {
+    "id": 163,
+    "name": ["Fugamon", "푸가몬", "フーガモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 14,
+    "evolution": {
+      "from": [55, 66],
+      "to": [256, 279, 204]
+    }
+  },
+  {
+    "id": 164,
+    "name": ["Flymon", "플라이몬", "フライモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 12,
+    "evolution": {
+      "from": [63, 73, 75],
+      "to": [293, 269, 211]
+    }
+  },
+  {
+    "id": 165,
+    "name": ["PlatinumSukamon", "화이트스카몬", "プラチナスカモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 14,
+    "evolution": {
+      "from": [53, 61, 69],
+      "to": [289, 259, 261]
+    }
+  },
+  {
+    "id": 166,
+    "name": ["BlackGatomon", "블랙가트몬", "ブラックテイルモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [62, 69],
+      "to": [250, 297, 239]
+    }
+  },
+  {
+    "id": 167,
+    "name": ["Vegiemon", "베지몬", "ベジーモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 3,
+    "evolution": {
+      "from": [53, 54, 74],
+      "to": [284, 271, 289]
+    }
+  },
+  {
+    "id": 168,
+    "name": ["Minotarumon", "미노타몬", "ミノタルモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 12,
+    "evolution": {
+      "from": [59, 66],
+      "to": [246, 268, 205]
+    }
+  },
+  {
+    "id": 169,
+    "name": ["Musyamon", "무사몬", "ムシャモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [25, 47, 66],
+      "to": [206, 218, 217]
+    }
+  },
+  {
+    "id": 170,
+    "name": ["Mekanorimon", "메카노몬", "メカノリモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 2,
+    "evolution": {
+      "from": [45, 71, 80],
+      "to": [252, 293, 285]
+    }
+  },
+  {
+    "id": 171,
+    "name": ["Raremon", "레어몬", "レアモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [29, 42, 67],
+      "to": [282, 287, 284, 202, 239]
+    }
+  },
+  {
+    "id": 172,
+    "name": ["Waspmon", "말벌몬", "ワスプモン"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 12,
+    "evolution": {
+      "from": [28, 45, 73],
+      "to": [422, 273, 283]
+    }
+  },
+  {
+    "id": 173,
+    "name": ["Aquilamon", "아큐라몬", "アクィラモン"],
+    "generation": 3,
+    "attribute": 4,
+    "personality": 14,
+    "evolution": {
+      "from": [32, 36, 78],
+      "to": [204, 215, 301, 225]
+    }
+  },
+  {
+    "id": 174,
+    "name": ["Ankylomon", "황금아르마몬", "アンキロモン"],
+    "generation": 3,
+    "attribute": 4,
+    "personality": 3,
+    "evolution": {
+      "from": [25, 63, 76],
+      "to": [300, 233, 255]
+    }
+  },
+  {
+    "id": 175,
+    "name": ["ExVeemon", "엑스브이몬", "エクスブイモン"],
+    "generation": 3,
+    "attribute": 4,
+    "personality": 4,
+    "evolution": {
+      "from": [64, 77],
+      "to": [302, 303, 226]
+    }
+  },
+  {
+    "id": 176,
+    "name": ["Guardromon (Gold)", "가드로몬(금)", "ガードロモン（金）"],
+    "generation": 3,
+    "attribute": 4,
+    "personality": 14,
+    "evolution": {
+      "from": [25, 26, 48],
+      "to": [214, 273, 257]
+    }
+  },
+  {
+    "id": 177,
+    "name": ["Stingmon", "스팅몬", "スティングモン"],
+    "generation": 3,
+    "attribute": 4,
+    "personality": 2,
+    "evolution": {
+      "from": [73, 79],
+      "to": [269, 211, 302, 303]
+    }
+  },
+  {
+    "id": 178,
+    "name": ["Kurisarimon", "크리사리몬", "クリサリモン"],
+    "generation": 3,
+    "attribute": 6,
+    "personality": 9,
+    "evolution": {
+      "from": [37, 53, 80],
+      "to": [282, 270, 266, 304]
+    }
+  },
+  {
+    "id": 179,
+    "name": ["Submarimon", "잠수몬", "サブマリモン"],
+    "generation": 7,
+    "attribute": 4,
+    "personality": 3,
+    "evolution": {
+      "from": [76],
+      "to": []
+    }
+  },
+  {
+    "id": 180,
+    "name": ["Shurimon", "수리몬", "シュリモン"],
+    "generation": 7,
+    "attribute": 4,
+    "personality": 14,
+    "evolution": {
+      "from": [78],
+      "to": []
+    }
+  },
+  {
+    "id": 181,
+    "name": ["Digmon", "디그몬", "ディグモン"],
+    "generation": 7,
+    "attribute": 4,
+    "personality": 12,
+    "evolution": {
+      "from": [76],
+      "to": []
+    }
+  },
+  {
+    "id": 182,
+    "name": ["Nefertimon", "네페르티몬", "ネフェルティモン"],
+    "generation": 7,
+    "attribute": 4,
+    "personality": 8,
+    "evolution": {
+      "from": [97],
+      "to": []
+    }
+  },
+  {
+    "id": 183,
+    "name": ["Flamedramon", "화염드라몬", "フレイドラモン"],
+    "generation": 7,
+    "attribute": 4,
+    "personality": 4,
+    "evolution": {
+      "from": [77],
+      "to": []
+    }
+  },
+  {
+    "id": 184,
+    "name": ["Pegasusmon", "페가수스몬", "ペガスモン"],
+    "generation": 7,
+    "attribute": 4,
+    "personality": 8,
+    "evolution": {
+      "from": [51],
+      "to": []
+    }
+  },
+  {
+    "id": 185,
+    "name": ["Halsemon", "호루스몬", "ホルスモン"],
+    "generation": 7,
+    "attribute": 4,
+    "personality": 11,
+    "evolution": {
+      "from": [78],
+      "to": []
+    }
+  },
+  {
+    "id": 186,
+    "name": ["Lighdramon", "번개드라몬", "ライドラモン"],
+    "generation": 7,
+    "attribute": 4,
+    "personality": 14,
+    "evolution": {
+      "from": [77],
+      "to": []
+    }
+  },
+  {
+    "id": 187,
+    "name": ["Agunimon", "아그니몬", "アグニモン"],
+    "generation": 8,
+    "attribute": 5,
+    "personality": 4,
+    "evolution": {
+      "from": [24],
+      "to": [305, 190]
+    }
+  },
+  {
+    "id": 188,
+    "name": ["Lobomon", "볼프몬", "ヴォルフモン"],
+    "generation": 8,
+    "attribute": 5,
+    "personality": 13,
+    "evolution": {
+      "from": [22],
+      "to": [306]
+    }
+  },
+  {
+    "id": 189,
+    "name": ["Lanamon", "라나몬", "ラーナモン"],
+    "generation": 8,
+    "attribute": 5,
+    "personality": 8,
+    "evolution": {
+      "from": [63],
+      "to": [191]
+    }
+  },
+  {
+    "id": 190,
+    "name": ["BurningGreymon", "브리트라몬", "ヴリトラモン"],
+    "generation": 8,
+    "attribute": 5,
+    "personality": 4,
+    "evolution": {
+      "from": [187],
+      "to": [305]
+    }
+  },
+  {
+    "id": 191,
+    "name": ["Calmaramon", "카르마라몬", "カルマーラモン"],
+    "generation": 8,
+    "attribute": 5,
+    "personality": 8,
+    "evolution": {
+      "from": [189],
+      "to": []
+    }
+  },
+  {
+    "id": 192,
+    "name": ["KendoGarurumon", "가름몬", "ガルムモン"],
+    "generation": 8,
+    "attribute": 5,
+    "personality": 13,
+    "evolution": {
+      "from": [188],
+      "to": [306]
+    }
+  },
+  {
+    "id": 193,
+    "name": ["Aegiochusmon", "아이기오투스몬", "アイギオテュースモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [81],
+      "to": [340]
+    }
+  },
+  {
+    "id": 194,
+    "name": [
+      "Aegiochusmon: Green",
+      "아이기오투스몬: 그린",
+      "アイギオテュースモン：グリーン"
+    ],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [81],
+      "to": [340]
+    }
+  },
+  {
+    "id": 195,
+    "name": [
+      "Aegiochusmon: Dark",
+      "아이기오투스몬: 다크",
+      "アイギオテュースモン：ダーク"
+    ],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [81],
+      "to": [380]
+    }
+  },
+  {
+    "id": 196,
+    "name": [
+      "Aegiochusmon: Blue",
+      "아이기오투스몬: 블루",
+      "アイギオテュースモン：ブルー"
+    ],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 14,
+    "evolution": {
+      "from": [81],
+      "to": [340]
+    }
+  },
+  {
+    "id": 197,
+    "name": [
+      "Aegiochusmon: Holy",
+      "아이기오투스몬: 홀리",
+      "アイギオテュースモン：ホーリー"
+    ],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [81],
+      "to": [340]
+    }
+  },
+  {
+    "id": 198,
+    "name": [
+      "MegaKabuterimon",
+      "아트라캅테리몬(레드)",
+      "アトラーカブテリモン（赤）"
+    ],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 9,
+    "evolution": {
+      "from": [85, 158, 164],
+      "to": [386, 334]
+    }
+  },
+  {
+    "id": 199,
+    "name": ["Andromon", "안드로몬", "アンドロモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 1,
+    "evolution": {
+      "from": [118, 119, 143],
+      "to": [332, 362, 316]
+    }
+  },
+  {
+    "id": 200,
+    "name": ["Wingdramon", "윙드라몬", "ウイングドラモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [101],
+      "to": [322, 310, 327]
+    }
+  },
+  {
+    "id": 201,
+    "name": ["AeroVeedramon", "에어로브이드라몬", "エアロブイドラモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [83, 101],
+      "to": [321, 327, 309]
+    }
+  },
+  {
+    "id": 202,
+    "name": ["ExTyrannomon", "엑스티라노몬", "エクスティラノモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [118, 128, 171],
+      "to": [412]
+    }
+  },
+  {
+    "id": 203,
+    "name": ["Angewomon", "엔젤우몬", "エンジェウーモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [97, 105, 113, 110],
+      "to": [410, 314, 336, 337]
+    }
+  },
+  {
+    "id": 204,
+    "name": ["Garudamon", "가루다몬", "ガルダモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [99, 102, 163, 173],
+      "to": [347, 352]
+    }
+  },
+  {
+    "id": 205,
+    "name": ["GrapLeomon", "아이언레오몬", "グラップレオモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [89, 109, 137, 168],
+      "to": [333, 339, 350, 356]
+    }
+  },
+  {
+    "id": 206,
+    "name": ["Grademon", "그레이드몬", "グレイドモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [95, 107, 127, 152, 169],
+      "to": [308, 330, 355]
+    }
+  },
+  {
+    "id": 207,
+    "name": ["GreatGrizzlymon", "그레이트그리즈몬", "グレートグリズモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [89, 132],
+      "to": []
+    }
+  },
+  {
+    "id": 208,
+    "name": ["Cerberusmon", "케르베로스몬", "ケルベロモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 14,
+    "evolution": {
+      "from": [98, 117, 136],
+      "to": [397, 350]
+    }
+  },
+  {
+    "id": 209,
+    "name": [
+      "Cerberusmon WM",
+      "케르베로스몬: 인랑 모드",
+      "ケルベロモン：人狼モード"
+    ],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 14,
+    "evolution": {
+      "from": [208],
+      "to": [397, 350]
+    }
+  },
+  {
+    "id": 210,
+    "name": ["Cyberdramon", "사이버드라몬", "サイバードラモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [92, 93, 101, 152],
+      "to": [309]
+    }
+  },
+  {
+    "id": 211,
+    "name": ["JewelBeemon", "주엘비몬", "ジュエルビーモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [94, 164, 177],
+      "to": [334, 384]
+    }
+  },
+  {
+    "id": 212,
+    "name": ["Zudomon", "쥬드몬", "ズドモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [82, 104, 118, 162],
+      "to": [418, 361]
+    }
+  },
+  {
+    "id": 213,
+    "name": ["Chirinmon", "치린몬", "チィリンモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 11,
+    "evolution": {
+      "from": [103, 106, 110],
+      "to": [326, 317, 419]
+    }
+  },
+  {
+    "id": 214,
+    "name": ["Duramon", "듀라몬", "デュラモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [95, 102],
+      "to": [312, 388, 330]
+    }
+  },
+  {
+    "id": 215,
+    "name": ["Parrotmon", "패롯몬", "パロットモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [99, 173],
+      "to": [317]
+    }
+  },
+  {
+    "id": 216,
+    "name": ["IceLeomon", "화이트레오몬", "パンジャモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 1,
+    "evolution": {
+      "from": [105, 109, 111, 138, 162],
+      "to": [363, 350]
+    }
+  },
+  {
+    "id": 217,
+    "name": ["Hisyaryumon", "히샤류우몬", "ヒシャリュウモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [83, 121, 169],
+      "to": [313, 373]
+    }
+  },
+  {
+    "id": 218,
+    "name": ["Butenmon", "부텐몬", "ブテンモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [102, 169],
+      "to": [380, 347, 373]
+    }
+  },
+  {
+    "id": 219,
+    "name": ["Flaremon", "플레어몬", "フレアモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [99, 100, 109],
+      "to": [307, 328, 474]
+    }
+  },
+  {
+    "id": 220,
+    "name": ["Whamon", "고래몬", "ホエーモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 11,
+    "evolution": {
+      "from": [82, 121, 123],
+      "to": [413, 331, 361, 338]
+    }
+  },
+  {
+    "id": 221,
+    "name": ["MagnaAngemon", "홀리엔젤몬", "ホーリーエンジェモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 8,
+    "evolution": {
+      "from": [84, 96, 106],
+      "to": [321, 328, 315, 325]
+    }
+  },
+  {
+    "id": 222,
+    "name": ["Mammothmon", "맘몬", "マンモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [104, 105, 136, 151],
+      "to": [418, 324]
+    }
+  },
+  {
+    "id": 223,
+    "name": [
+      "MetalGreymon",
+      "메탈그레이몬(2010)",
+      "メタルグレイモン（2010アニメ版）"
+    ],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [128, 157],
+      "to": [312, 373]
+    }
+  },
+  {
+    "id": 224,
+    "name": ["Monzaemon", "퍼펫몬", "もんざえモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [154, 160],
+      "to": [378]
+    }
+  },
+  {
+    "id": 225,
+    "name": ["Crowmon", "야타가라몬", "ヤタガラモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 14,
+    "evolution": {
+      "from": [103, 173],
+      "to": [310, 341, 345]
+    }
+  },
+  {
+    "id": 226,
+    "name": ["RizeGreymon", "라이즈그레이몬", "ライズグレイモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [92, 132, 133, 175],
+      "to": [326, 322, 403]
+    }
+  },
+  {
+    "id": 227,
+    "name": ["Rapidmon", "래피드몬", "ラピッドモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [119, 172],
+      "to": [329, 332]
+    }
+  },
+  {
+    "id": 228,
+    "name": ["LoaderLeomon", "로더레오몬", "ローダーレオモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [109, 131, 133],
+      "to": [333, 364, 375]
+    }
+  },
+  {
+    "id": 229,
+    "name": ["WereGarurumon", "워가루몬", "ワーガルルモン"],
+    "generation": 4,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [87, 89, 137],
+      "to": [409, 364]
+    }
+  },
+  {
+    "id": 230,
+    "name": ["Scorpiomon", "전갈몬", "スコピオモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 12,
+    "evolution": {
+      "from": [123, 146],
+      "to": [343, 395]
+    }
+  },
+  {
+    "id": 231,
+    "name": ["Enbarrmon", "안바르몬", "アンヴァルモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 9,
+    "evolution": {
+      "from": [117, 138, 161],
+      "to": [326, 324]
+    }
+  },
+  {
+    "id": 232,
+    "name": ["Antylamon", "안티라몬", "アンティラモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [126, 129, 139],
+      "to": [354]
+    }
+  },
+  {
+    "id": 233,
+    "name": ["Meteormon", "운석몬", "インセキモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [105, 111, 151, 174],
+      "to": [408, 362]
+    }
+  },
+  {
+    "id": 234,
+    "name": ["OmniShoutmon", "오메가샤우트몬", "オメガシャウトモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 7,
+    "evolution": {
+      "from": [48],
+      "to": [359, 403, 330]
+    }
+  },
+  {
+    "id": 235,
+    "name": ["Kimeramon", "키메라몬", "キメラモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [85, 87, 146, 157],
+      "to": [379, 405, 406]
+    }
+  },
+  {
+    "id": 236,
+    "name": ["CatchMamemon", "캐치콩알몬", "キャッチマメモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 12,
+    "evolution": {
+      "from": [143],
+      "to": [396, 360]
+    }
+  },
+  {
+    "id": 237,
+    "name": ["Crescemon", "크레세몬", "クレシェモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [105, 111, 137, 138],
+      "to": [354, 415]
+    }
+  },
+  {
+    "id": 238,
+    "name": ["SuperStarmon", "슈퍼스타몬", "スーパースターモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [108, 124, 159],
+      "to": [321, 360]
+    }
+  },
+  {
+    "id": 239,
+    "name": ["SkullBaluchimon", "스컬벌키몬", "スカルバルキモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [157, 166, 171],
+      "to": [324]
+    }
+  },
+  {
+    "id": 240,
+    "name": ["SaviorHuckmon", "세이버헉몬", "セイバーハックモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [93, 100, 114, 133],
+      "to": [344, 384, 352]
+    }
+  },
+  {
+    "id": 241,
+    "name": ["Sirenmon", "세이렌몬", "セイレーンモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [84, 116, 147],
+      "to": [338, 349]
+    }
+  },
+  {
+    "id": 242,
+    "name": ["Taomon", "도사몬", "タオモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [87, 117, 140],
+      "to": [311, 351, 345]
+    }
+  },
+  {
+    "id": 243,
+    "name": ["Digitamamon", "디지타몬", "デジタマモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 6,
+    "evolution": {
+      "from": [141, 142, 155],
+      "to": [389, 385]
+    }
+  },
+  {
+    "id": 244,
+    "name": ["SkullMeramon", "데드메라몬", "デスメラモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [99, 135, 139],
+      "to": [401, 362, 369]
+    }
+  },
+  {
+    "id": 245,
+    "name": ["Deramon", "뿌띠몬", "デラモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [116, 120, 126],
+      "to": [310, 349, 396]
+    }
+  },
+  {
+    "id": 246,
+    "name": ["Triceramon", "트리케라몬", "トリケラモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [131, 136, 155, 168],
+      "to": [398, 342]
+    }
+  },
+  {
+    "id": 247,
+    "name": ["DoruGreymon", "도루그레몬", "ドルグレモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 6,
+    "evolution": {
+      "from": [110, 132, 145],
+      "to": [358, 308]
+    }
+  },
+  {
+    "id": 248,
+    "name": ["Knightmon", "나이트몬", "ナイトモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [95, 118, 127],
+      "to": [381, 325, 415, 356]
+    }
+  },
+  {
+    "id": 249,
+    "name": ["Divermon", "다이버몬", "ハンギョモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 7,
+    "evolution": {
+      "from": [115, 142, 147],
+      "to": [331, 361]
+    }
+  },
+  {
+    "id": 250,
+    "name": ["Pandamon", "팬더몬", "パンダモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [108, 166],
+      "to": [409, 363]
+    }
+  },
+  {
+    "id": 251,
+    "name": ["Pumpkinmon", "펌프몬", "パンプモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 9,
+    "evolution": {
+      "from": [120, 130, 140],
+      "to": [367, 368]
+    }
+  },
+  {
+    "id": 252,
+    "name": ["BigMamemon", "빅콩알몬", "ビッグマメモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 9,
+    "evolution": {
+      "from": [125, 135, 170],
+      "to": [396, 360, 346]
+    }
+  },
+  {
+    "id": 253,
+    "name": ["Piximon", "피콜몬", "ピッコロモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 2,
+    "evolution": {
+      "from": [96, 104, 123],
+      "to": [311, 314, 315]
+    }
+  },
+  {
+    "id": 254,
+    "name": ["HippoGryphonmon", "히포그리포몬", "ヒポグリフォモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [84, 106],
+      "to": [347, 317, 355]
+    }
+  },
+  {
+    "id": 255,
+    "name": ["Brachiomon", "브라키몬", "ブラキモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 1,
+    "evolution": {
+      "from": [131, 152, 174],
+      "to": [313, 412, 342]
+    }
+  },
+  {
+    "id": 256,
+    "name": ["Volcanomon", "볼케몬", "ボルケーモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [124, 151, 163, 159],
+      "to": [333, 359, 344, 307]
+    }
+  },
+  {
+    "id": 257,
+    "name": ["MasterBlimpmon", "마스터브링프몬", "マスターブリンプモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [134],
+      "to": [346, 377]
+    }
+  },
+  {
+    "id": 258,
+    "name": ["MachGaogamon", "마하가오가몬", "マッハガオガモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [114, 129],
+      "to": [363, 329]
+    }
+  },
+  {
+    "id": 259,
+    "name": ["Mamemon", "콩알몬", "マメモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 7,
+    "evolution": {
+      "from": [124, 154, 159, 165],
+      "to": [395, 360]
+    }
+  },
+  {
+    "id": 260,
+    "name": ["MegaSeadramon", "메가시드라몬", "メガシードラモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [82, 110, 121],
+      "to": [353, 313, 365]
+    }
+  },
+  {
+    "id": 261,
+    "name": ["MetalMamemon", "메탈콩알몬", "メタルマメモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 7,
+    "evolution": {
+      "from": [134, 165],
+      "to": [364, 403]
+    }
+  },
+  {
+    "id": 262,
+    "name": ["Lilamon", "라일라몬", "ライラモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [85, 116, 120],
+      "to": [414, 367, 393]
+    }
+  },
+  {
+    "id": 263,
+    "name": ["Lillymon", "릴리몬", "リリモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [113, 120, 130],
+      "to": [367, 349]
+    }
+  },
+  {
+    "id": 264,
+    "name": ["Locomon", "로코몬", "ロコモン"],
+    "generation": 4,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [93, 125, 134, 143],
+      "to": [346, 332]
+    }
+  },
+  {
+    "id": 265,
+    "name": ["Astamon", "아스타몬", "アスタモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [153, 156],
+      "to": [401, 397, 371]
+    }
+  },
+  {
+    "id": 266,
+    "name": ["Arukenimon", "아라크네몬", "アルケニモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [94, 139, 158, 178],
+      "to": [414, 386, 368]
+    }
+  },
+  {
+    "id": 267,
+    "name": ["Myotismon", "묘티스몬", "ヴァンデモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [103, 153, 156, 161],
+      "to": [387, 399, 371]
+    }
+  },
+  {
+    "id": 268,
+    "name": ["Etemon", "에테몬", "エテモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 12,
+    "evolution": {
+      "from": [154, 159, 160, 168],
+      "to": [359, 378, 408]
+    }
+  },
+  {
+    "id": 269,
+    "name": ["Okuwamon", "왕쿠가몬", "オオクワモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [94, 146, 164, 177],
+      "to": [386, 334, 420]
+    }
+  },
+  {
+    "id": 270,
+    "name": ["Orochimon", "오로치몬", "オロチモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [157, 178],
+      "to": [389, 377, 404]
+    }
+  },
+  {
+    "id": 271,
+    "name": ["Garbagemon", "가비지몬", "ガーベモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 14,
+    "evolution": {
+      "from": [126, 154, 167],
+      "to": [353, 408]
+    }
+  },
+  {
+    "id": 272,
+    "name": ["Gigadramon", "기가드라몬", "ギガドラモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [83, 107],
+      "to": [377, 375]
+    }
+  },
+  {
+    "id": 273,
+    "name": ["CannonBeemon", "캐논벌몬", "キャノンビーモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 12,
+    "evolution": {
+      "from": [85, 172],
+      "to": [329, 384]
+    }
+  },
+  {
+    "id": 274,
+    "name": ["Groundramon", "그라운드라몬", "グラウンドラモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [128, 145, 155],
+      "to": [407, 398]
+    }
+  },
+  {
+    "id": 275,
+    "name": ["Sharkmon", "샤크몬", "シャークモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [121, 157],
+      "to": [331, 365]
+    }
+  },
+  {
+    "id": 276,
+    "name": ["Shaujinmon", "사우자몬", "シャウジンモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [115, 127],
+      "to": [391, 353, 393]
+    }
+  },
+  {
+    "id": 277,
+    "name": ["Cherrymon", "쥬레이몬", "ジュレイモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [116, 130, 140, 146],
+      "to": [393, 367, 420]
+    }
+  },
+  {
+    "id": 278,
+    "name": ["SkullGreymon", "스컬그레이몬", "スカルグレイモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [],
+      "to": [385, 324]
+    }
+  },
+  {
+    "id": 279,
+    "name": ["SkullSatamon", "스컬사탄몬", "スカルサタモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [141, 156, 163],
+      "to": [391, 392, 370]
+    }
+  },
+  {
+    "id": 280,
+    "name": ["SkullSeadramon", "스컬시드라몬", "スカルシードラモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 11,
+    "evolution": {
+      "from": [82, 121],
+      "to": [413, 365]
+    }
+  },
+  {
+    "id": 281,
+    "name": ["DarkSuperStarmon", "다크슈퍼스타몬", "ダークスーパースターモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [98, 124, 114, 160],
+      "to": [400, 385, 341]
+    }
+  },
+  {
+    "id": 282,
+    "name": ["Dragomon", "드라고몬", "ダゴモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 3,
+    "evolution": {
+      "from": [142, 171, 178],
+      "to": [343, 370]
+    }
+  },
+  {
+    "id": 283,
+    "name": ["Tankdramon", "탱크드라몬", "タンクドラモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [107, 125, 172],
+      "to": [377, 383]
+    }
+  },
+  {
+    "id": 284,
+    "name": ["ShogunGekomon", "왕개굴몬", "トノサマゲコモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 9,
+    "evolution": {
+      "from": [115, 147, 167, 171],
+      "to": [378, 389, 395]
+    }
+  },
+  {
+    "id": 285,
+    "name": ["Datamon", "데이터몬", "ナノモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 11,
+    "evolution": {
+      "from": [112, 119, 170],
+      "to": [394, 421]
+    }
+  },
+  {
+    "id": 286,
+    "name": ["Phantomon", "팬텀몬", "ファントモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 11,
+    "evolution": {
+      "from": [94, 161, 162],
+      "to": [351, 392, 341]
+    }
+  },
+  {
+    "id": 287,
+    "name": ["BlackKingNumemon", "블랙킹워매몬", "ブラックキングヌメモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 14,
+    "evolution": {
+      "from": [150, 171],
+      "to": [396, 408]
+    }
+  },
+  {
+    "id": 288,
+    "name": ["BlueMeramon", "블루메라몬", "ブルーメラモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [87, 117, 135, 161],
+      "to": [339, 394]
+    }
+  },
+  {
+    "id": 289,
+    "name": ["Vademon", "베이더몬", "ベーダモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 3,
+    "evolution": {
+      "from": [150, 165, 167],
+      "to": [370, 369]
+    }
+  },
+  {
+    "id": 290,
+    "name": ["Matadormon", "마타돌몬", "マタドゥルモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [98, 129, 153],
+      "to": [379, 325, 345]
+    }
+  },
+  {
+    "id": 291,
+    "name": ["Mummymon", "미이라몬", "マミーモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [98, 141, 158],
+      "to": [394, 332, 369]
+    }
+  },
+  {
+    "id": 292,
+    "name": ["Mistymon", "미스티몬", "ミスティモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [100, 104, 112],
+      "to": [374, 381, 366, 355]
+    }
+  },
+  {
+    "id": 293,
+    "name": ["Megadramon", "메가드라몬", "メガドラモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [83, 164, 170],
+      "to": [407, 406]
+    }
+  },
+  {
+    "id": 294,
+    "name": ["WarGrowlmon", "메가로그라우몬", "メガログラウモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [95, 145],
+      "to": [407, 388, 374, 375]
+    }
+  },
+  {
+    "id": 295,
+    "name": ["MetalTyrannomon", "메탈티라노몬", "メタルティラノモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [92, 128],
+      "to": [412, 406, 342]
+    }
+  },
+  {
+    "id": 296,
+    "name": [
+      "Lucemon CM",
+      "루체몬: 폴다운 모드",
+      "ルーチェモン：フォールダウンモード"
+    ],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [39],
+      "to": []
+    }
+  },
+  {
+    "id": 297,
+    "name": ["LadyDevimon", "레이디데블몬", "レディーデビモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [113, 138, 156, 166],
+      "to": [414, 400, 337]
+    }
+  },
+  {
+    "id": 298,
+    "name": ["Wisemon", "와이즈몬", "ワイズモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [96, 108, 112],
+      "to": [387, 374, 372]
+    }
+  },
+  {
+    "id": 299,
+    "name": ["WaruSeadramon", "데블시드라몬", "ワルシードラモン"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 9,
+    "evolution": {
+      "from": [121, 150],
+      "to": [413, 407, 365]
+    }
+  },
+  {
+    "id": 300,
+    "name": ["Shakkoumon", "토우몬", "シャッコウモン"],
+    "generation": 4,
+    "attribute": 4,
+    "personality": 3,
+    "evolution": {
+      "from": [84, 174],
+      "to": [321, 410, 418, 336]
+    }
+  },
+  {
+    "id": 301,
+    "name": ["Silphymon", "실피드몬", "シルフィーモン"],
+    "generation": 4,
+    "attribute": 4,
+    "personality": 2,
+    "evolution": {
+      "from": [97, 173],
+      "to": [400, 404, 419]
+    }
+  },
+  {
+    "id": 302,
+    "name": ["Dinobeemon", "다이노몬", "ディノビーモン"],
+    "generation": 4,
+    "attribute": 4,
+    "personality": 2,
+    "evolution": {
+      "from": [175, 177],
+      "to": [420, 384]
+    }
+  },
+  {
+    "id": 303,
+    "name": ["Paildramon", "파일드라몬", "パイルドラモン"],
+    "generation": 4,
+    "attribute": 4,
+    "personality": 4,
+    "evolution": {
+      "from": [175, 177],
+      "to": [358, 383]
+    }
+  },
+  {
+    "id": 304,
+    "name": ["Infermon", "인펠몬", "インフェルモン"],
+    "generation": 4,
+    "attribute": 6,
+    "personality": 9,
+    "evolution": {
+      "from": [156, 158, 178],
+      "to": [399, 421]
+    }
+  },
+  {
+    "id": 305,
+    "name": ["Aldamon", "아루다몬", "アルダモン"],
+    "generation": 8,
+    "attribute": 5,
+    "personality": 4,
+    "evolution": {
+      "from": [187, 190],
+      "to": [424]
+    }
+  },
+  {
+    "id": 306,
+    "name": ["Beowolfmon", "베오울프몬", "ベオウルフモン"],
+    "generation": 8,
+    "attribute": 5,
+    "personality": 13,
+    "evolution": {
+      "from": [188],
+      "to": [425]
+    }
+  },
+  {
+    "id": 307,
+    "name": ["Apollomon", "아폴로몬", "アポロモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [219, 256],
+      "to": [434]
+    }
+  },
+  {
+    "id": 308,
+    "name": ["Alphamon", "알파몬", "アルファモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [206, 247],
+      "to": []
+    }
+  },
+  {
+    "id": 309,
+    "name": [
+      "UlforceVeedramon",
+      "알포스브이드라몬",
+      "アルフォースブイドラモン"
+    ],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [201, 210],
+      "to": []
+    }
+  },
+  {
+    "id": 310,
+    "name": ["Varodurumon", "발두르몬", "ヴァロドゥルモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 14,
+    "evolution": {
+      "from": [200, 225, 245],
+      "to": []
+    }
+  },
+  {
+    "id": 311,
+    "name": ["Venusmon", "베누스몬", "ウェヌスモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [242, 253],
+      "to": []
+    }
+  },
+  {
+    "id": 312,
+    "name": ["WarGreymon", "워그레이몬", "ウォーグレイモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [214],
+      "to": [430]
+    }
+  },
+  {
+    "id": 313,
+    "name": ["Ouryumon", "오류우몬", "オウリュウモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [217, 255, 260],
+      "to": []
+    }
+  },
+  {
+    "id": 314,
+    "name": ["Ophanimon", "오파니몬", "オファニモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [203, 253],
+      "to": []
+    }
+  },
+  {
+    "id": 315,
+    "name": ["ClavisAngemon", "클라비스엔젤몬", "クラヴィスエンジェモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 1,
+    "evolution": {
+      "from": [221, 253],
+      "to": []
+    }
+  },
+  {
+    "id": 316,
+    "name": ["Craniamon", "크레니엄몬", "クレニアムモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 1,
+    "evolution": {
+      "from": [199],
+      "to": []
+    }
+  },
+  {
+    "id": 317,
+    "name": ["Eaglemon", "크로스몬", "クロスモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 8,
+    "evolution": {
+      "from": [213, 215, 254],
+      "to": []
+    }
+  },
+  {
+    "id": 318,
+    "name": ["Chronomon HM", "크로노몬 홀리 모드", "クロノモン ホーリーモード"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [218],
+      "to": []
+    }
+  },
+  {
+    "id": 319,
+    "name": ["Cherubimon (Black)", "케루비몬(악)", "ケルビモン（悪）"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 11,
+    "evolution": {
+      "from": [207, 232, 304],
+      "to": []
+    }
+  },
+  {
+    "id": 320,
+    "name": ["Cherubimon (Good)", "케루비몬(선)", "ケルビモン（善）"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 11,
+    "evolution": {
+      "from": [202, 232, 237],
+      "to": []
+    }
+  },
+  {
+    "id": 321,
+    "name": ["Goldramon", "갓드라몬", "ゴッドドラモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 8,
+    "evolution": {
+      "from": [201, 221, 238, 300],
+      "to": []
+    }
+  },
+  {
+    "id": 322,
+    "name": ["ShineGreymon", "샤인그레이몬", "シャイングレイモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [200, 226],
+      "to": []
+    }
+  },
+  {
+    "id": 323,
+    "name": ["Justimon", "저스티몬: 액셀 암", "ジャスティモン：アクセルアーム"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [210, 238, 250],
+      "to": []
+    }
+  },
+  {
+    "id": 324,
+    "name": ["SkullMammothmon", "스컬맘몬", "スカルマンモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [222, 231, 239, 278],
+      "to": []
+    }
+  },
+  {
+    "id": 325,
+    "name": ["SlashAngemon", "슬래쉬엔젤몬", "スラッシュエンジェモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 6,
+    "evolution": {
+      "from": [221, 248, 290],
+      "to": []
+    }
+  },
+  {
+    "id": 326,
+    "name": ["Kentaurosmon", "슬레이프몬", "スレイプモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 11,
+    "evolution": {
+      "from": [213, 226, 231],
+      "to": []
+    }
+  },
+  {
+    "id": 327,
+    "name": ["Slayerdramon", "슬레이어드라몬", "スレイヤードラモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [200, 201],
+      "to": [439]
+    }
+  },
+  {
+    "id": 328,
+    "name": ["Seraphimon", "세라피몬", "セラフィモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 8,
+    "evolution": {
+      "from": [219, 221],
+      "to": []
+    }
+  },
+  {
+    "id": 329,
+    "name": ["MegaGargomon", "세인트가르고몬", "セントガルゴモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [422, 258, 273],
+      "to": []
+    }
+  },
+  {
+    "id": 330,
+    "name": ["Durandamon", "듀란다몬", "デュランダモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [206, 214, 234],
+      "to": []
+    }
+  },
+  {
+    "id": 331,
+    "name": ["Neptunemon", "넵튠몬", "ネプトゥーンモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [220, 249, 275],
+      "to": []
+    }
+  },
+  {
+    "id": 332,
+    "name": ["HiAndromon", "하이안드로몬", "ハイアンドロモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 1,
+    "evolution": {
+      "from": [199, 422, 264, 291],
+      "to": []
+    }
+  },
+  {
+    "id": 333,
+    "name": ["BanchoLeomon", "반쵸레오몬", "バンチョーレオモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [205, 228, 256],
+      "to": [432]
+    }
+  },
+  {
+    "id": 334,
+    "name": [
+      "HerculesKabuterimon",
+      "헤라클레스캅테리몬",
+      "ヘラクルカブテリモン"
+    ],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 9,
+    "evolution": {
+      "from": [211, 269],
+      "to": []
+    }
+  },
+  {
+    "id": 335,
+    "name": ["Phoenixmon", "페닉스몬", "ホウオウモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [204, 215],
+      "to": []
+    }
+  },
+  {
+    "id": 336,
+    "name": ["Magnadramon", "홀리드라몬", "ホーリードラモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [203, 300],
+      "to": []
+    }
+  },
+  {
+    "id": 337,
+    "name": ["Mastemon", "마스테몬", "マスティモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [203, 297],
+      "to": []
+    }
+  },
+  {
+    "id": 338,
+    "name": ["MarineAngemon", "마린엔젤몬", "マリンエンジェモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 2,
+    "evolution": {
+      "from": [220, 241],
+      "to": []
+    }
+  },
+  {
+    "id": 339,
+    "name": ["Marsmon", "마르스몬", "マルスモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [205, 288],
+      "to": []
+    }
+  },
+  {
+    "id": 340,
+    "name": ["Jupitermon", "유피테르몬", "ユピテルモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [193],
+      "to": []
+    }
+  },
+  {
+    "id": 341,
+    "name": ["Ravemon", "레이브몬", "レイヴモン"],
+    "generation": 5,
+    "attribute": 1,
+    "personality": 14,
+    "evolution": {
+      "from": [225, 281, 286],
+      "to": []
+    }
+  },
+  {
+    "id": 342,
+    "name": [
+      "UltimateBrachiomon",
+      "얼티메이트브라키몬",
+      "アルティメットブラキモン"
+    ],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 1,
+    "evolution": {
+      "from": [246, 255, 295],
+      "to": []
+    }
+  },
+  {
+    "id": 343,
+    "name": ["Vulcanusmon", "불카누스몬", "ウルカヌスモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 2,
+    "evolution": {
+      "from": [282],
+      "to": []
+    }
+  },
+  {
+    "id": 344,
+    "name": ["Gankoomon", "간쿠몬", "ガンクゥモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [240, 256],
+      "to": []
+    }
+  },
+  {
+    "id": 345,
+    "name": ["Kuzuhamon", "쿠즈하몬", "クズハモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [225, 242, 290],
+      "to": []
+    }
+  },
+  {
+    "id": 346,
+    "name": ["GroundLocomon", "그랜드로코몬", "グランドロコモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [252, 257, 264],
+      "to": []
+    }
+  },
+  {
+    "id": 347,
+    "name": ["Gryphonmon", "그리포몬", "グリフォモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [204, 218, 254],
+      "to": []
+    }
+  },
+  {
+    "id": 348,
+    "name": ["Ceresmon", "케레스몬", "ケレスモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [241, 245, 263],
+      "to": []
+    }
+  },
+  {
+    "id": 349,
+    "name": ["Ceresmon Medium", "케레스몬", "ケレスモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [349],
+      "to": []
+    }
+  },
+  {
+    "id": 350,
+    "name": ["SaberLeomon", "샤벨레오몬", "サーベルレオモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [205, 208, 216],
+      "to": []
+    }
+  },
+  {
+    "id": 351,
+    "name": ["Sakuyamon", "샤크라몬", "サクヤモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [242, 286],
+      "to": []
+    }
+  },
+  {
+    "id": 352,
+    "name": ["Jesmon", "제스몬", "ジエスモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [204, 240],
+      "to": []
+    }
+  },
+  {
+    "id": 353,
+    "name": ["JumboGamemon", "점보가메몬", "ジャンボガメモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [260, 271, 276],
+      "to": []
+    }
+  },
+  {
+    "id": 354,
+    "name": ["Dianamon", "디아나몬", "ディアナモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [232, 237],
+      "to": [434]
+    }
+  },
+  {
+    "id": 355,
+    "name": ["Dynasmon", "듀나스몬", "デュナスモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [206, 254, 292],
+      "to": []
+    }
+  },
+  {
+    "id": 356,
+    "name": ["Leopardmon", "두프트몬", "ドゥフトモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [205, 248],
+      "to": []
+    }
+  },
+  {
+    "id": 357,
+    "name": [
+      "Leopardmon LM",
+      "두프트몬: 레오파드 모드",
+      "ドゥフトモン：レオパルドモード"
+    ],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [356],
+      "to": []
+    }
+  },
+  {
+    "id": 358,
+    "name": ["Dorugoramon", "도루고라몬", "ドルゴラモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 6,
+    "evolution": {
+      "from": [247, 303],
+      "to": []
+    }
+  },
+  {
+    "id": 359,
+    "name": ["PileVolcanomon", "파일볼케몬", "パイルボルケーモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [234, 256, 268],
+      "to": []
+    }
+  },
+  {
+    "id": 360,
+    "name": ["PrinceMamemon", "프린스콩알몬", "プリンスマメモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 9,
+    "evolution": {
+      "from": [236, 238, 252, 259],
+      "to": []
+    }
+  },
+  {
+    "id": 361,
+    "name": ["Plesiomon", "플레시오몬", "プレシオモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 6,
+    "evolution": {
+      "from": [212, 220, 249],
+      "to": []
+    }
+  },
+  {
+    "id": 362,
+    "name": ["Boltmon", "볼트몬", "ボルトモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [199, 233, 244],
+      "to": []
+    }
+  },
+  {
+    "id": 363,
+    "name": ["MirageGaogamon", "미라쥬가오가몬", "ミラージュガオガモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [216, 250, 258],
+      "to": []
+    }
+  },
+  {
+    "id": 364,
+    "name": ["MetalGarurumon", "메탈가루몬", "メタルガルルモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 13,
+    "evolution": {
+      "from": [228, 229, 261],
+      "to": [430]
+    }
+  },
+  {
+    "id": 365,
+    "name": ["MetalSeadramon", "메탈시드라몬", "メタルシードラモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 11,
+    "evolution": {
+      "from": [260, 275, 280, 299],
+      "to": []
+    }
+  },
+  {
+    "id": 366,
+    "name": ["MedievalGallantmon", "메디벌듀크몬", "メディーバルデュークモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [292],
+      "to": []
+    }
+  },
+  {
+    "id": 367,
+    "name": ["Rosemon", "로제몬", "ロゼモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [251, 262, 263, 277],
+      "to": []
+    }
+  },
+  {
+    "id": 368,
+    "name": ["Lotosmon", "로터스몬", "ロトスモン"],
+    "generation": 5,
+    "attribute": 3,
+    "personality": 8,
+    "evolution": {
+      "from": [251, 266],
+      "to": []
+    }
+  },
+  {
+    "id": 369,
+    "name": ["AvengeKidmon", "어벤지키드몬", "アヴェンジキッドモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [244, 289, 291],
+      "to": []
+    }
+  },
+  {
+    "id": 370,
+    "name": ["Ebemon", "이바몬", "イーバモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 3,
+    "evolution": {
+      "from": [279, 282, 289],
+      "to": []
+    }
+  },
+  {
+    "id": 371,
+    "name": ["VenomMyotismon", "베놈묘티스몬", "ヴェノムヴァンデモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [265, 267],
+      "to": []
+    }
+  },
+  {
+    "id": 372,
+    "name": ["AncientWisemon", "에이션트와이즈몬", "エンシェントワイズモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [298],
+      "to": []
+    }
+  },
+  {
+    "id": 373,
+    "name": ["Gaiomon", "가이오몬", "ガイオウモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [217, 218],
+      "to": []
+    }
+  },
+  {
+    "id": 374,
+    "name": ["ChaosGallantmon", "카오스듀크몬", "カオスデュークモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [292, 294, 298],
+      "to": []
+    }
+  },
+  {
+    "id": 375,
+    "name": ["Chaosdramon", "카오스드라몬", "カオスドラモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [228, 272, 294],
+      "to": []
+    }
+  },
+  {
+    "id": 376,
+    "name": ["Callismon", "칼리스몬", "カリスモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [207, 224],
+      "to": []
+    }
+  },
+  {
+    "id": 377,
+    "name": ["Gundramon", "건드라몬", "ガンドラモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [257, 270, 272, 283],
+      "to": []
+    }
+  },
+  {
+    "id": 378,
+    "name": ["KingEtemon", "킹에테몬", "キングエテモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [224, 268, 284],
+      "to": []
+    }
+  },
+  {
+    "id": 379,
+    "name": ["GranDracmon", "그란드라큐몬", "グランドラクモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [235, 290],
+      "to": []
+    }
+  },
+  {
+    "id": 380,
+    "name": [
+      "Chronomon DM",
+      "크로노몬 디스트로이 모드",
+      "クロノモン デストロイモード"
+    ],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [218],
+      "to": []
+    }
+  },
+  {
+    "id": 381,
+    "name": ["Zanbamon", "황금무사몬", "ザンバモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [248, 292],
+      "to": []
+    }
+  },
+  {
+    "id": 382,
+    "name": ["ZombiePlutomon", "좀비플루토몬", "ゾンビプルートモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [397],
+      "to": []
+    }
+  },
+  {
+    "id": 383,
+    "name": ["Darkdramon", "다크드라몬", "ダークドラモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [283, 303],
+      "to": [432]
+    }
+  },
+  {
+    "id": 384,
+    "name": ["TigerVespamon", "타이거베스파몬", "タイガーヴェスパモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 12,
+    "evolution": {
+      "from": [211, 240, 273, 302],
+      "to": []
+    }
+  },
+  {
+    "id": 385,
+    "name": ["Titamon", "타이타몬", "タイタモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [243, 278, 281],
+      "to": []
+    }
+  },
+  {
+    "id": 386,
+    "name": ["TyrantKabuterimon", "타이런트캅테리몬", "タイラントカブテリモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [266, 269],
+      "to": []
+    }
+  },
+  {
+    "id": 387,
+    "name": ["Creepymon", "마왕몬", "デーモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [267, 298],
+      "to": []
+    }
+  },
+  {
+    "id": 388,
+    "name": ["Gallantmon", "듀크몬", "デュークモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [214, 294],
+      "to": []
+    }
+  },
+  {
+    "id": 389,
+    "name": ["Bacchusmon", "바커스몬", "バッカスモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [243, 270, 284],
+      "to": []
+    }
+  },
+  {
+    "id": 390,
+    "name": ["Bacchusmon DM", "바커스몬 만취 모드", "バッカスモン泥酔モード"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [389],
+      "to": []
+    }
+  },
+  {
+    "id": 391,
+    "name": ["Barbamon", "발바몬", "バルバモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [276, 279],
+      "to": []
+    }
+  },
+  {
+    "id": 392,
+    "name": ["Piedmon", "피에몬", "ピエモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 11,
+    "evolution": {
+      "from": [279, 286],
+      "to": [450]
+    }
+  },
+  {
+    "id": 393,
+    "name": ["Puppetmon", "피노키몬", "ピノッキモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [262, 276, 277],
+      "to": []
+    }
+  },
+  {
+    "id": 394,
+    "name": ["Pharaohmon", "파라오몬", "ファラオモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [285, 288, 291],
+      "to": []
+    }
+  },
+  {
+    "id": 395,
+    "name": ["Pukumon", "푸쿠몬", "プクモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 12,
+    "evolution": {
+      "from": [259, 284],
+      "to": []
+    }
+  },
+  {
+    "id": 396,
+    "name": ["PlatinumNumemon", "플래티넘워매몬", "プラチナヌメモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 14,
+    "evolution": {
+      "from": [236, 245, 252, 287],
+      "to": []
+    }
+  },
+  {
+    "id": 397,
+    "name": ["Plutomon", "플루토몬", "プルートモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [208, 265],
+      "to": []
+    }
+  },
+  {
+    "id": 398,
+    "name": ["Breakdramon", "브레이크드라몬", "ブレイクドラモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [246, 274],
+      "to": [439]
+    }
+  },
+  {
+    "id": 399,
+    "name": ["MaloMyotismon", "베리얼묘티스몬", "ベリアルヴァンデモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [267, 304],
+      "to": []
+    }
+  },
+  {
+    "id": 400,
+    "name": ["BeelStarmon", "베르스타몬", "ベルスターモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [281, 297, 301],
+      "to": []
+    }
+  },
+  {
+    "id": 401,
+    "name": ["Beelzemon", "베르제브몬", "ベルゼブモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [244, 265],
+      "to": []
+    }
+  },
+  {
+    "id": 402,
+    "name": [
+      "Belphemon SM",
+      "벨페몬: 슬립 모드",
+      "ベルフェモン：スリープモード"
+    ],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [202, 265, 286],
+      "to": []
+    }
+  },
+  {
+    "id": 403,
+    "name": ["MagnaKidmon", "매그너키드몬", "マグナキッドモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [226, 234, 261],
+      "to": []
+    }
+  },
+  {
+    "id": 404,
+    "name": ["Minervamon", "미네르바몬", "ミネルヴァモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [270, 301],
+      "to": [446]
+    }
+  },
+  {
+    "id": 405,
+    "name": ["Millenniummon", "밀레니엄몬", "ミレニアモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [235, 406],
+      "to": []
+    }
+  },
+  {
+    "id": 406,
+    "name": ["Machinedramon", "파워드라몬", "ムゲンドラモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [235, 293, 295],
+      "to": [405]
+    }
+  },
+  {
+    "id": 407,
+    "name": ["Megidramon", "메기드라몬", "メギドラモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [274, 293, 294, 299],
+      "to": []
+    }
+  },
+  {
+    "id": 408,
+    "name": ["MetalEtemon", "메탈에테몬", "メタルエテモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 12,
+    "evolution": {
+      "from": [233, 268, 271, 287],
+      "to": []
+    }
+  },
+  {
+    "id": 409,
+    "name": ["Merukimon", "메르크리몬", "メルクリモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [229, 250],
+      "to": []
+    }
+  },
+  {
+    "id": 410,
+    "name": ["Junomon", "유노몬", "ユノモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 11,
+    "evolution": {
+      "from": [203, 300],
+      "to": []
+    }
+  },
+  {
+    "id": 411,
+    "name": [
+      "Junomon HM",
+      "유노몬: 히스테릭 모드",
+      "ユノモン：ヒステリックモード"
+    ],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 11,
+    "evolution": {
+      "from": [410],
+      "to": []
+    }
+  },
+  {
+    "id": 412,
+    "name": ["RustTyrannomon", "러스트티라노몬", "ラストティラノモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [202, 255, 295],
+      "to": []
+    }
+  },
+  {
+    "id": 413,
+    "name": ["Leviamon", "리바이어몬", "リヴァイアモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 11,
+    "evolution": {
+      "from": [220, 280, 299],
+      "to": []
+    }
+  },
+  {
+    "id": 414,
+    "name": ["Lilithmon", "리리스몬", "リリスモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [262, 266, 297],
+      "to": []
+    }
+  },
+  {
+    "id": 415,
+    "name": ["LordKnightmon", "로드나이트몬", "ロードナイトモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [237, 248],
+      "to": []
+    }
+  },
+  {
+    "id": 416,
+    "name": [
+      "Imperialdramon DM",
+      "황제드라몬: 드래곤 모드",
+      "インペリアルドラモン：ドラゴンモード"
+    ],
+    "generation": 5,
+    "attribute": 4,
+    "personality": 4,
+    "evolution": {
+      "from": [303],
+      "to": []
+    }
+  },
+  {
+    "id": 417,
+    "name": [
+      "Imperialdramon FM",
+      "황제드라몬: 파이터 모드",
+      "インペリアルドラモン：ファイターモード"
+    ],
+    "generation": 5,
+    "attribute": 4,
+    "personality": 4,
+    "evolution": {
+      "from": [],
+      "to": []
+    }
+  },
+  {
+    "id": 418,
+    "name": ["Vikemon", "바이킹몬", "ヴァイクモン"],
+    "generation": 5,
+    "attribute": 4,
+    "personality": 6,
+    "evolution": {
+      "from": [212, 222, 300],
+      "to": []
+    }
+  },
+  {
+    "id": 419,
+    "name": ["Valkyrimon", "발키리몬", "ヴァルキリモン"],
+    "generation": 5,
+    "attribute": 4,
+    "personality": 2,
+    "evolution": {
+      "from": [213, 301],
+      "to": []
+    }
+  },
+  {
+    "id": 420,
+    "name": ["GranKuwagamon", "그랜쿠가몬", "グランクワガーモン"],
+    "generation": 5,
+    "attribute": 4,
+    "personality": 4,
+    "evolution": {
+      "from": [269, 277, 302],
+      "to": []
+    }
+  },
+  {
+    "id": 421,
+    "name": ["Diaboromon", "디아블로몬", "ディアボロモン"],
+    "generation": 5,
+    "attribute": 6,
+    "personality": 9,
+    "evolution": {
+      "from": [285, 304],
+      "to": [448]
+    }
+  },
+  {
+    "id": 422,
+    "name": ["Rapidmon (Armor)", "래피드몬", "ラピッドモン"],
+    "generation": 7,
+    "attribute": 1,
+    "personality": 14,
+    "evolution": {
+      "from": [27],
+      "to": []
+    }
+  },
+  {
+    "id": 423,
+    "name": ["Magnamon", "매그너몬", "マグナモン"],
+    "generation": 7,
+    "attribute": 4,
+    "personality": 4,
+    "evolution": {
+      "from": [77],
+      "to": []
+    }
+  },
+  {
+    "id": 424,
+    "name": ["EmperorGreymon", "카이젤그레이몬", "カイゼルグレイモン"],
+    "generation": 8,
+    "attribute": 5,
+    "personality": 4,
+    "evolution": {
+      "from": [305],
+      "to": [436]
+    }
+  },
+  {
+    "id": 425,
+    "name": ["MagnaGarurumon", "매그너가루몬", "マグナガルルモン"],
+    "generation": 8,
+    "attribute": 5,
+    "personality": 13,
+    "evolution": {
+      "from": [306],
+      "to": [436]
+    }
+  },
+  {
+    "id": 426,
+    "name": [
+      "MagnaGarurumon (Detached)",
+      "매그너가루몬 (분리)",
+      "マグナガルルモン（分離）"
+    ],
+    "generation": 8,
+    "attribute": 5,
+    "personality": 13,
+    "evolution": {
+      "from": [425],
+      "to": []
+    }
+  },
+  {
+    "id": 427,
+    "name": ["Alphamon: Ouryuken", "알파몬: 왕룡검", "アルファモン：王竜剣"],
+    "generation": 6,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [308, 313],
+      "to": []
+    }
+  },
+  {
+    "id": 428,
+    "name": [
+      "Craniamon + Enbarrmon",
+      "크레니엄몬 + 안바르몬",
+      "クレニアムモン+アンヴァルモン"
+    ],
+    "generation": 6,
+    "attribute": 1,
+    "personality": 1,
+    "evolution": {
+      "from": [231, 316],
+      "to": []
+    }
+  },
+  {
+    "id": 429,
+    "name": [
+      "Imperialdramon PM",
+      "황제드라몬: 팔라딘 모드",
+      "インペリアルドラモン：パラディンモード"
+    ],
+    "generation": 6,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [],
+      "to": []
+    }
+  },
+  {
+    "id": 430,
+    "name": ["Omnimon", "오메가몬", "オメガモン"],
+    "generation": 6,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [312, 364],
+      "to": [431]
+    }
+  },
+  {
+    "id": 431,
+    "name": ["Omnimon Zwart", "오메가몬 즈왈트", "オメガモン ズワルト"],
+    "generation": 6,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [430, 474],
+      "to": []
+    }
+  },
+  {
+    "id": 432,
+    "name": ["Chaosmon", "카오스몬", "カオスモン"],
+    "generation": 6,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [333, 383],
+      "to": []
+    }
+  },
+  {
+    "id": 433,
+    "name": [
+      "Chaosmon: Valdur Arm",
+      "카오스몬: 발두르 암",
+      "カオスモン：ヴァロドゥルアーム"
+    ],
+    "generation": 6,
+    "attribute": 1,
+    "personality": 7,
+    "evolution": {
+      "from": [310, 333],
+      "to": []
+    }
+  },
+  {
+    "id": 434,
+    "name": ["GraceNovamon", "그레이스노바몬", "グレイスノヴァモン"],
+    "generation": 6,
+    "attribute": 1,
+    "personality": 8,
+    "evolution": {
+      "from": [307, 354],
+      "to": []
+    }
+  },
+  {
+    "id": 435,
+    "name": [
+      "ShineGreymon BM",
+      "샤인그레이몬: 버스트 모드",
+      "シャイングレイモン：バーストモード"
+    ],
+    "generation": 6,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [322],
+      "to": []
+    }
+  },
+  {
+    "id": 436,
+    "name": ["Susanomon", "스사노오몬", "スサノオモン"],
+    "generation": 6,
+    "attribute": 1,
+    "personality": 4,
+    "evolution": {
+      "from": [424, 425],
+      "to": []
+    }
+  },
+  {
+    "id": 437,
+    "name": [
+      "Jupitermon WM",
+      "유피테르몬: 래스 모드",
+      "ユピテルモン：ラースモード"
+    ],
+    "generation": 6,
+    "attribute": 1,
+    "personality": 13,
+    "evolution": {
+      "from": [340],
+      "to": []
+    }
+  },
+  {
+    "id": 438,
+    "name": [
+      "Ravemon BM",
+      "레이브몬: 버스트 모드",
+      "レイヴモン：バーストモード"
+    ],
+    "generation": 6,
+    "attribute": 1,
+    "personality": 14,
+    "evolution": {
+      "from": [341],
+      "to": []
+    }
+  },
+  {
+    "id": 439,
+    "name": ["Examon", "엑자몬", "エグザモン"],
+    "generation": 6,
+    "attribute": 3,
+    "personality": 6,
+    "evolution": {
+      "from": [327, 398],
+      "to": []
+    }
+  },
+  {
+    "id": 440,
+    "name": [
+      "MirageGaogamon BM",
+      "미라쥬가오가몬: 버스트 모드",
+      "ミラージュガオガモン：バーストモード"
+    ],
+    "generation": 6,
+    "attribute": 3,
+    "personality": 4,
+    "evolution": {
+      "from": [363],
+      "to": []
+    }
+  },
+  {
+    "id": 441,
+    "name": ["Rosemon BM", "로제몬: 버스트 모드", "ロゼモン：バーストモード"],
+    "generation": 6,
+    "attribute": 3,
+    "personality": 14,
+    "evolution": {
+      "from": [367],
+      "to": []
+    }
+  },
+  {
+    "id": 442,
+    "name": [
+      "Titamon + SkullBaluchimon",
+      "타이타몬 + 스컬벌키몬",
+      "タイタモン+スカルバルキモン"
+    ],
+    "generation": 6,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [239, 385],
+      "to": []
+    }
+  },
+  {
+    "id": 443,
+    "name": [
+      "Gallantmon CM",
+      "듀크몬: 크림슨 모드",
+      "デュークモン：クリムゾンモード"
+    ],
+    "generation": 6,
+    "attribute": 2,
+    "personality": 7,
+    "evolution": {
+      "from": [388],
+      "to": []
+    }
+  },
+  {
+    "id": 444,
+    "name": [
+      "Beelzemon BM",
+      "베르제브몬: 블래스트 모드",
+      "ベルゼブモン：ブラストモード"
+    ],
+    "generation": 6,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [401],
+      "to": []
+    }
+  },
+  {
+    "id": 445,
+    "name": [
+      "Belphemon RM",
+      "벨페몬: 레이지 모드",
+      "ベルフェモン：レイジモード"
+    ],
+    "generation": 6,
+    "attribute": 2,
+    "personality": 4,
+    "evolution": {
+      "from": [],
+      "to": []
+    }
+  },
+  {
+    "id": 446,
+    "name": ["Mervamon", "메르바몬", "メルヴァモン"],
+    "generation": 6,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [404],
+      "to": []
+    }
+  },
+  {
+    "id": 447,
+    "name": ["Lucemon SM", "루체몬: 사탄 모드", "ルーチェモン：サタンモード"],
+    "generation": 6,
+    "attribute": 2,
+    "personality": 8,
+    "evolution": {
+      "from": [],
+      "to": []
+    }
+  },
+  {
+    "id": 448,
+    "name": ["Armageddemon", "아마게몬", "アーマゲモン"],
+    "generation": 6,
+    "attribute": 6,
+    "personality": 9,
+    "evolution": {
+      "from": [421],
+      "to": []
+    }
+  },
+  {
+    "id": 449,
+    "name": [
+      "Agumon (Bond of Bravery)",
+      "아구몬 -용기의 유대-",
+      "アグモン -勇気の絆-"
+    ],
+    "generation": 6,
+    "attribute": 6,
+    "personality": 5,
+    "evolution": {
+      "from": [21],
+      "to": []
+    }
+  },
+  {
+    "id": 450,
+    "name": ["Apocalymon", "아포카리몬", "アポカリモン"],
+    "generation": 6,
+    "attribute": 6,
+    "personality": 11,
+    "evolution": {
+      "from": [392],
+      "to": []
+    }
+  },
+  {
+    "id": 451,
+    "name": [
+      "Gabumon (Bond of Friendship)",
+      "파피몬 -우정의 유대-",
+      "ガブモン -友情の絆-"
+    ],
+    "generation": 6,
+    "attribute": 6,
+    "personality": 15,
+    "evolution": {
+      "from": [43],
+      "to": []
+    }
+  },
+  {
+    "id": 468,
+    "name": ["Agumon (Black)", "아구몬(흑)", "アグモン（黒）"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [12],
+      "to": [93, 155, 156]
+    }
+  },
+  {
+    "id": 469,
+    "name": ["Gabumon (Black)", "파피몬(흑)", "ガブモン（黒）"],
+    "generation": 2,
+    "attribute": 2,
+    "personality": 9,
+    "evolution": {
+      "from": [12],
+      "to": [168, 166, 98, 132, 163]
+    }
+  },
+  {
+    "id": 470,
+    "name": ["Garurumon (Black)", "가루몬(흑)", "ガルルモン（黒）"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [35, 58],
+      "to": [279, 250]
+    }
+  },
+  {
+    "id": 471,
+    "name": ["Greymon (Blue)", "그레이몬(청)", "グレイモン（青）"],
+    "generation": 3,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [64, 72],
+      "to": [200, 239]
+    }
+  },
+  {
+    "id": 472,
+    "name": [
+      "MetalGreymon (Blue)",
+      "메탈그레이몬(바이러스종)",
+      "メタルグレイモン（ウィルス種）"
+    ],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [101, 132],
+      "to": [474, 383]
+    }
+  },
+  {
+    "id": 473,
+    "name": ["WereGarurumon (Black)", "워가루몬(흑)", "ワーガルルモン（黒）"],
+    "generation": 4,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [153, 166],
+      "to": [359]
+    }
+  },
+  {
+    "id": 474,
+    "name": ["BlackWarGreymon", "블랙워그레이몬", "ブラックウォーグレイモン"],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 6,
+    "evolution": {
+      "from": [219],
+      "to": [431]
+    }
+  },
+  {
+    "id": 475,
+    "name": [
+      "MetalGarurumon (Black)",
+      "메탈가루몬(흑)",
+      "メタルガルルモン（黒）"
+    ],
+    "generation": 5,
+    "attribute": 2,
+    "personality": 13,
+    "evolution": {
+      "from": [208, 236],
+      "to": [431]
+    }
+  }
+]

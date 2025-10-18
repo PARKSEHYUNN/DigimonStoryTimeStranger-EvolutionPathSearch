@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "evolution_path": "Evolution Path",
+    "digimon_list": "Digimon List"
+  },
+  "evolution_path": {
+    "now_digimon": "Now Digimon",
+    "evolution_from_digimon": "Evolution From Digimon",
+    "choice_digimon": "Choice Digimon"
+  },
+  "temp1": "DigimonStory TimeStranger - Evolution Path Search",
+  "temp2": "Search",
+  "attribute": {
+    "0": "No Data",
+    "1": "Vaccine",
+    "2": "Virus",
+    "3": "Data",
+    "4": "Free",
+    "5": "Variable",
+    "6": "Unknown"
+  },
+  "generation": {
+    "0": "In-Training I",
+    "1": "In-Training II",
+    "2": "Rookie",
+    "3": "Champion",
+    "4": "Ultimate",
+    "5": "Mega",
+    "6": "Mega +",
+    "7": "Armor",
+    "8": "Hybrid"
+  },
+  "personality": {
+    "0": "Adoring",
+    "1": "Devoted",
+    "2": "Tolerant",
+    "3": "Overprotective",
+    "4": "Zealous",
+    "5": "Brave",
+    "6": "Reckless",
+    "7": "Daring",
+    "8": "Enlightened",
+    "9": "Sly",
+    "10": "Astute",
+    "11": "Strategic",
+    "12": "Opportunistic",
+    "13": "Friendly",
+    "14": "Sociable",
+    "15": "Compassionate"
+  }
+}

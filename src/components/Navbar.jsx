@@ -3,18 +3,16 @@
 // 모듈 선언
 import React, { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
+import LanguageDropdown from './LanguageDropdown';
+import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faGear,
-  faBars,
-  faXmark,
-  faLanguage,
-  faAngleDown,
-} from '@fortawesome/free-solid-svg-icons';
+import { faGear, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
   // 모바일 메뉴 상태 관리
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { t } = useTranslation();
 
   return (
     <nav className="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
@@ -60,35 +58,27 @@ export default function Navbar() {
           className={`w-full md:block md:w-auto ${isMenuOpen ? '' : 'hidden'}`}
           id="navbar-solid-bg"
         >
-          <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-4 md:flex-row md:items-center md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 md:p-0 text-white bg-gray-700 rounded-sm md:bg-transparent md:text-gray-500 md:dark:text-gray-400 dark:bg-gray-600 md:dark:bg-transparent"
+                className="block py-2 px-3 md:p-0 text-white bg-gray-700 rounded-sm md:bg-transparent md:text-gray-500 md:dark:text-gray-400 dark:bg-gray-600 md:dark:bg-transparent"
                 aria-current="page"
               >
-                Evolution Path
+                {t('nav.evolution_path')}
               </a>
             </li>
             <li>
               <a
                 href="#"
-                class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 dark:text-white md:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 dark:text-white md:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                Digimon List
+                {t('nav.digimon_list')}
               </a>
             </li>
             {/* 언어 변경 드롭 다운 */}
             <li>
-              <button
-                id="dropdownNavbarLink"
-                data-dropdown-toggle="dropdownNavbar"
-                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent space-x-1"
-              >
-                <FontAwesomeIcon icon={faLanguage} />
-                Language
-                <FontAwesomeIcon icon={faAngleDown} />
-              </button>
+              <LanguageDropdown />
             </li>
             {/* 테마 변경 토글 버튼 */}
             <li>
