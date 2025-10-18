@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar';
 import EvolutionPath from './components/EvolutionPath';
+import { Analytics } from '@vercel/analytics/react';
 
 import { DigimonDataProvider } from './contexts/DigimonDataProvider';
 
@@ -23,6 +24,7 @@ export default function App() {
           </div>
         </div>
       </div>
+      <Analytics />
     </DigimonDataProvider>
   );
 }
