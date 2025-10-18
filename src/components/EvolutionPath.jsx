@@ -4,24 +4,38 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import DigimonSelectBox from './DigimonSelectBox';
 
-const DigimonItem = () => {
+const DigimonItem = ({ digimon }) => {
+  const { i18n, t } = useTranslation();
+
+  if (!digimon) return null;
+
   return (
-    <div
-      className="flex h-24 flex-col items-center md:h-36"
-      onClick={() => {
-        if (onSelect) onSelect(digimon);
-      }}
-    >
+    <div className="flex h-24 flex-col items-center md:h-32" onClick={() => {}}>
       <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-lg bg-white md:h-20 md:w-20 dark:bg-gray-800">
         {/* <FontAwesomeIcon icon={faQuestion} size="xl" /> */}
-        <img src={`/digimon_icons/1.png`} className="h-full w-full" />
+        <img
+          src={`/digimon_icons/${digimon.id}.png`}
+          className="h-full w-full"
+        />
       </div>
-      <span className="mt-1 text-sm text-gray-900 dark:text-white">쿠라몬</span>
+      <span className="mt-1 text-sm text-gray-900 dark:text-white">
+        {
+          digimon.name[
+            i18n.language === 'en'
+              ? 0
+              : i18n.language === 'ko'
+                ? 1
+                : i18n.language === 'ja'
+                  ? 2
+                  : 0
+          ]
+        }
+      </span>
       <span className="text-xs text-gray-900 dark:text-white">
-        유년기 I / 세대 불명
+        {`${t(`generation.${digimon.generation}`)} / ${t(`attribute.${digimon.attribute}`)}`}
       </span>
     </div>
   );
@@ -129,10 +143,56 @@ export default function EvolutionPath() {
       payload: {
         startId: nowDigimon.id,
         endId: evolutionFromDigimon.id,
-        k: 10,
+        k: 1,
       },
     });
   }, [nowDigimon, evolutionFromDigimon, isGraphReady]);
+
+  const renderEvoutionPaths = () => {
+    if (isLoading) {
+      return <FontAwesomeIcon icon={faSpinner} spin />;
+    }
+
+    if (error) {
+      return <span className="text-red-500">Error: {error}</span>;
+    }
+
+    if (paths.length === 0) {
+      if (!nowDigimon || !evolutionFromDigimon) {
+        return (
+          <span className="text-gray-900 dark:text-white">
+            디지몬을 선택 해주세요.
+          </span>
+        );
+      }
+
+      return (
+        <span className="text-gray-900 dark:text-white">
+          해당 진화 트리를 찾을 수 없습니다.
+        </span>
+      );
+    }
+
+    return paths.map((result, pathIndex) => (
+      <div
+        key={pathIndex}
+        className="mb-4 flex w-full flex-row flex-wrap items-center justify-center rounded-lg bg-gray-100 p-3 pt-6 dark:bg-gray-700"
+      >
+        {result.path.map((digimon, index) => (
+          <React.Fragment key={digimon.id}>
+            <DigimonItem digimon={digimon} />
+            {index < result.path.length - 1 && (
+              <EvolutionArrow
+                evolution={
+                  result.path[index + 1].generation >= digimon.generation
+                }
+              />
+            )}
+          </React.Fragment>
+        ))}
+      </div>
+    ));
+  };
 
   return (
     <div className="mt-3 flex w-full flex-col items-center justify-center rounded-lg bg-gray-200 p-5 dark:bg-gray-800">
@@ -222,20 +282,11 @@ export default function EvolutionPath() {
         </div>
       </div>
       <div className="mt-5 flex w-[90%] flex-row flex-wrap items-center justify-center border-t border-gray-300 pt-3 md:w-[95%] dark:border-gray-600">
-        <DigimonItem />
-        <EvolutionArrow evolution={true} />
-        <DigimonItem />
-        <EvolutionArrow evolution={false} />
-        <DigimonItem />
-        <EvolutionArrow evolution={true} />
-        <DigimonItem />
-        <EvolutionArrow evolution={false} />
-        <DigimonItem />
-        <EvolutionArrow evolution={true} />
-        <DigimonItem />
-        <EvolutionArrow evolution={false} />
-        <DigimonItem />
+        {/* 진화 루트 */}
+        {renderEvoutionPaths()}
       </div>
+
+      {/* 검색 금지 목록 */}
     </div>
   );
 }

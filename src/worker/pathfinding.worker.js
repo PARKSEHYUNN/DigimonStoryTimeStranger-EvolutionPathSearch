@@ -170,7 +170,7 @@ self.onmessage = (e) => {
         path: result.path.map((id) => {
           const digi = digimonData.find((d) => d.id === id);
           if (digi) {
-            return { id: digi.id, name: digi.name };
+            return digi;
           }
 
           return { id: id, name: [`ID ${id}`, `ID ${id}`, `ID ${id}`] };
