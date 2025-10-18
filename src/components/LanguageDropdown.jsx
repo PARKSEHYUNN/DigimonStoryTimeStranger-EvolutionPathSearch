@@ -32,7 +32,7 @@ export default function LanguageDropdown() {
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         data-dropdown-toggle="language-dropdown-menu"
-        className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg curosr-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+        className="curosr-pointer inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white"
       >
         <CircleFlag
           countryCode={`${i18n.language === 'en' ? 'us' : i18n.language === 'ko' ? 'kr' : i18n.language === 'ja' ? 'jp' : 'en'}`}
@@ -44,7 +44,7 @@ export default function LanguageDropdown() {
 
       {/* 드롭다운 */}
       <div
-        className={`z-50 ${isOpen ? '' : 'hidden'} w-full min-w-40 absolute top-full left-1/2 -translate-x-1/2 mt-2 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700`}
+        className={`z-50 ${isOpen ? '' : 'hidden'} absolute top-full left-1/2 my-4 mt-2 w-full min-w-40 -translate-x-1/2 list-none divide-y divide-gray-100 rounded-lg bg-white text-base shadow-sm dark:bg-gray-700`}
         id="language-dropdown-menu"
       >
         <ul className="py-2 font-medium" role="none">

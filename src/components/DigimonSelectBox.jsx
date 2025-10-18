@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuestion } from '@fortawesome/free-solid-svg-icons/faQuestion';
 import DigimonSelectModal from './DigimonSelectModal';
 
-export default function DigimonSelectBox() {
+export default function DigimonSelectBox({ onSelectDigimon }) {
   // 모달 상태 관리
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedDigimon, setSelectedDigimon] = useState(null);
@@ -18,7 +18,7 @@ export default function DigimonSelectBox() {
     <>
       <div className="flex flex-col items-center">
         <div
-          className="flex justify-center items-center w-20 h-20 overflow-hidden bg-white dark:bg-gray-800 rounded-lg hover:blur-[1px] hover:cursor-pointer"
+          className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-lg bg-gray-50 hover:cursor-pointer hover:blur-[1px] dark:bg-gray-900"
           onClick={() => setIsModalOpen(true)}
         >
           {!selectedDigimon ? (
@@ -30,11 +30,11 @@ export default function DigimonSelectBox() {
           ) : (
             <img
               src={`/digimon_icons/${selectedDigimon.id}.png`}
-              className="w-full h-full"
+              className="h-full w-full"
             />
           )}
         </div>
-        <span className="text-gray-900 dark:text-white mt-1">
+        <span className="mt-1 text-gray-900 dark:text-white">
           {!selectedDigimon
             ? t('evolution_path.choice_digimon')
             : selectedDigimon.name[
@@ -59,6 +59,7 @@ export default function DigimonSelectBox() {
         onClose={() => setIsModalOpen(false)}
         onSelectDigimon={(digimon) => {
           setSelectedDigimon(digimon);
+          onSelectDigimon(digimon);
           setIsModalOpen(false);
         }}
       />

@@ -15,8 +15,8 @@ export default function Navbar() {
   const { t } = useTranslation();
 
   return (
-    <nav className="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="border-gray-200 bg-gray-200 dark:border-gray-700 dark:bg-gray-800">
+      <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
         {/* 타이틀 */}
         <a href="/" className="flex items-center space-x-2">
           <FontAwesomeIcon
@@ -34,7 +34,7 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           data-collapse-toggle="navbar-solid-bg"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 focus:outline-none md:hidden dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-solid-bg"
           aria-expanded="false"
         >
@@ -58,11 +58,11 @@ export default function Navbar() {
           className={`w-full md:block md:w-auto ${isMenuOpen ? '' : 'hidden'}`}
           id="navbar-solid-bg"
         >
-          <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-4 md:flex-row md:items-center md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <ul className="mt-4 flex flex-col rounded-lg bg-gray-50 font-medium md:mt-0 md:flex-row md:items-center md:space-x-4 md:border-0 md:bg-transparent dark:border-gray-700 dark:bg-gray-800 md:dark:bg-transparent">
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 md:p-0 text-white bg-gray-700 rounded-sm md:bg-transparent md:text-gray-500 md:dark:text-gray-400 dark:bg-gray-600 md:dark:bg-transparent"
+                className="block rounded-sm bg-gray-700 px-3 py-2 text-white md:bg-transparent md:p-0 md:text-gray-500 dark:bg-gray-600 md:dark:bg-transparent md:dark:text-gray-400"
                 aria-current="page"
               >
                 {t('nav.evolution_path')}
@@ -71,7 +71,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 dark:text-white md:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block rounded-sm px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-gray-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-gray-400"
               >
                 {t('nav.digimon_list')}
               </a>

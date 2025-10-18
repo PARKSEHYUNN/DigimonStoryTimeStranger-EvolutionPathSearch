@@ -16,10 +16,10 @@ export default function App() {
       <div className="flex min-h-screen flex-col dark:bg-gray-900">
         <Navbar />
         <div className="flex flex-grow justify-center">
-          <div className="w-[100vw] md:w-[80vw] text-center">
+          <div className="w-[100vw] text-center md:w-[80vw]">
             <EvolutionPath />
-            <h1 className="text-2xl font-bold dark:text-white">{t('temp1')}</h1>
-            <p className="dark:text-white">{t('temp2')}</p>
+            {/* <h1 className="text-2xl font-bold dark:text-white">{t('temp1')}</h1>
+            <p className="dark:text-white">{t('temp2')}</p> */}
           </div>
         </div>
       </div>

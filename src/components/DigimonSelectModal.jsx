@@ -5,7 +5,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { VirtuosoGrid } from 'react-virtuoso';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFilter, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faFilter, faTrash, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useDigimons } from '../hooks/useDigimons';
 
 const DigimonItem = ({ digimon, onSelect }) => {
@@ -22,19 +22,19 @@ const DigimonItem = ({ digimon, onSelect }) => {
 
   return (
     <div
-      className="flex flex-col items-center h-36 hover:cursor-pointer"
+      className="flex h-36 flex-col items-center hover:cursor-pointer"
       onClick={() => {
         if (onSelect) onSelect(digimon);
       }}
     >
-      <div className="flex justify-center items-center w-20 h-20 overflow-hidden bg-white dark:bg-gray-800 rounded-lg hover:blur-[1px] hover:cursor-pointer">
+      <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-lg bg-white hover:cursor-pointer hover:blur-[1px] dark:bg-gray-800">
         {/* <FontAwesomeIcon icon={faQuestion} size="xl" /> */}
         <img
           src={`/digimon_icons/${digimon.id}.png`}
-          className="w-full h-full"
+          className="h-full w-full"
         />
       </div>
-      <span className="text-sm text-gray-900 dark:text-white mt-1">
+      <span className="mt-1 text-sm text-gray-900 dark:text-white">
         {digimon.name[nameLanguage]}
       </span>
       <span className="text-xs text-gray-900 dark:text-white">
@@ -67,17 +67,57 @@ export default function DigimonSelectModal({
     personality: [],
   });
 
-  const filteredItems = useMemo(() => {
-    if (!searchTrim) return digimons;
+  const handleCheckboxChange = (filterType, value, isChecked) => {
+    setFilters((prevFilters) => {
+      const currentValues = prevFilters[filterType];
 
+      let newValues;
+      if (isChecked) {
+        newValues = [...currentValues, value];
+      } else {
+        newValues = currentValues.filter((v) => v !== value);
+      }
+
+      return {
+        ...prevFilters,
+        [filterType]: newValues,
+      };
+    });
+  };
+
+  const resetModal = () => {
+    setSearchTrim('');
+    setFilters({ generation: [], attribute: [], personality: [] });
+  };
+
+  const filteredItems = useMemo(() => {
+    const { generation, attribute, personality } = filters;
     const lowerSearchTrim = searchTrim.toLowerCase();
 
-    return digimons.filter((item) =>
-      item.name.some((langName) =>
-        langName.toLowerCase().includes(lowerSearchTrim),
-      ),
-    );
-  }, [searchTrim, digimons]);
+    return digimons
+      .filter((item) => {
+        if (!searchTrim) return true;
+
+        return item.name.some((langName) =>
+          langName.toLowerCase().includes(lowerSearchTrim),
+        );
+      })
+      .filter((item) => {
+        return generation.length === 0
+          ? true
+          : generation.includes(item.generation);
+      })
+      .filter((item) => {
+        return attribute.length === 0
+          ? true
+          : attribute.includes(item.attribute);
+      })
+      .filter((item) => {
+        return personality.length === 0
+          ? true
+          : personality.includes(item.personality);
+      });
+  }, [searchTrim, digimons, filters]);
 
   if (!isModalOpen) return null;
 
@@ -86,23 +126,23 @@ export default function DigimonSelectModal({
       id="select-modal"
       tabIndex={-1}
       aria-hidden="true"
-      className={`flex ${isModalOpen ? '' : 'hidden'} overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full backdrop-blur-[4px]`}
+      className={`flex ${isModalOpen ? '' : 'hidden'} fixed top-0 right-0 left-0 z-50 h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-x-hidden overflow-y-auto backdrop-blur-[4px] md:inset-0`}
       onClick={onClose}
     >
       <div
-        className="relative p-4 w-full max-w-3xl h-[80vh] flex flex-col"
+        className="relative flex h-[80vh] w-full max-w-3xl flex-col p-4"
         onClick={(e) => e.stopPropagation()}
       >
         {/* 모달 컨텐츠 */}
-        <div className="relative bg-white rounded-lg showdow-sm dark:bg-gray-700 flex flex-col flex-1 min-h-0">
+        <div className="showdow-sm relative flex min-h-0 flex-1 flex-col rounded-lg bg-white dark:bg-gray-700">
           {/* 모달 헤더 */}
-          <div className="flex items-center justfly-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+          <div className="justfly-between flex items-center rounded-t border-b border-gray-200 p-4 md:p-5 dark:border-gray-600">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
               Choice Digimon
             </h3>
             <button
               type="button"
-              className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              className="ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
               data-toggle-modal="select-modal"
               onClick={() => onClose()}
             >
@@ -110,14 +150,14 @@ export default function DigimonSelectModal({
             </button>
           </div>
           {/* 모달 바디 */}
-          <div className="p-4 md:p-5 flex flex-col flex-1 min-h-0">
-            <div className="border-b dark:border-gray-600 border-gray-200 pb-4 mb-4">
+          <div className="flex min-h-0 flex-1 flex-col p-4 md:p-5">
+            <div className="mb-4 border-b border-gray-200 pb-4 dark:border-gray-600">
               {/* 디지몬 검색 입력 */}
               <div className="flex">
                 <input
                   type="text"
                   id="digimon-search-input"
-                  className="rounded-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 w-full text-sm border-gray-300 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                  className="block w-full flex-1 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
                   placeholder="Digimon's Name"
                   value={searchTrim}
                   onChange={(e) => setSearchTrim(e.target.value)}
@@ -125,33 +165,51 @@ export default function DigimonSelectModal({
                 {/* 필터 토글 버튼 */}
                 <button
                   type="button"
-                  className="inline-flex items-center px-3 ml-2 text-sm text-gray-900 bg-gray-50 hover:bg-gray-100 border rounded-lg border-gray-300 dark:bg-gray-800 dark:hover:bg-gray-600 dark:text-gray-400 dark:border-gray-600"
+                  className="ml-2 inline-flex items-center rounded-lg border border-gray-300 bg-gray-50 px-3 text-sm text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-600"
+                  onClick={() => setFilterVisible(!filterVisible)}
                 >
                   <FontAwesomeIcon icon={faFilter} />
+                </button>
+                {/* 초기화 버튼 */}
+                <button
+                  type="button"
+                  className="ml-2 inline-flex items-center rounded-lg border border-gray-300 bg-gray-50 px-3 text-sm text-red-400 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600"
+                  onClick={() => resetModal()}
+                >
+                  <FontAwesomeIcon icon={faTrash} />
                 </button>
               </div>
 
               {/* 필터 */}
-              <div className="w-full mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg border-gray-150 dark:border-gray-900 max-h-48 overflow-y-auto">
-                <h4 className="font-semibold mb-2 dark:text-white">
+              <div
+                className={`border-gray-150 mt-4 max-h-48 w-full overflow-y-auto rounded-lg bg-gray-100 p-4 dark:border-gray-900 dark:bg-gray-800 ${filterVisible ? '' : 'hidden'}`}
+              >
+                <h4 className="mb-2 font-semibold dark:text-white">
                   필터 옵션
                 </h4>
 
                 <div className="flex flex-row justify-around">
                   {/* 세대 필터 */}
                   <div className="mb-3">
-                    <label className="block text-sm font-medium text-gray-900 dark:text-white mb-1.5">
+                    <label className="mb-1.5 block text-sm font-medium text-gray-900 dark:text-white">
                       세대
                     </label>
-                    <div className="flex flex-wrap flex-col gap-x-4 gap-y-1">
+                    <div className="flex flex-col flex-wrap gap-x-4 gap-y-1">
                       {generationFilterOption.map((option) => (
                         <div key={option} className="flex items-center">
                           <input
                             id={`gen-${option}`}
                             type="checkbox"
                             value={option}
-                            checked="false"
-                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                            checked={filters.generation.includes(option)}
+                            onChange={(e) =>
+                              handleCheckboxChange(
+                                'generation',
+                                option,
+                                e.target.checked,
+                              )
+                            }
+                            className="h-4 w-4 rounded border-gray-300 bg-gray-100 ring-0 checked:border-transparent checked:bg-blue-600 checked:ring-0 focus:ring-0"
                           />
                           <label
                             htmlFor={`gen-${option}`}
@@ -166,18 +224,25 @@ export default function DigimonSelectModal({
 
                   {/* 속성 필터 */}
                   <div className="mb-3">
-                    <label className="block text-sm font-medium text-gray-900 dark:text-white mb-1.5">
+                    <label className="mb-1.5 block text-sm font-medium text-gray-900 dark:text-white">
                       속성
                     </label>
-                    <div className="flex flex-wrap flex-col gap-x-4 gap-y-1">
+                    <div className="flex flex-col flex-wrap gap-x-4 gap-y-1">
                       {attributeFilterOption.map((option) => (
                         <div key={option} className="flex items-center">
                           <input
                             id={`attr-${option}`}
                             type="checkbox"
                             value={option}
-                            checked="false"
-                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                            checked={filters.attribute.includes(option)}
+                            onChange={(e) =>
+                              handleCheckboxChange(
+                                'attribute',
+                                option,
+                                e.target.checked,
+                              )
+                            }
+                            className="h-4 w-4 rounded border-gray-300 bg-gray-100 ring-0 checked:border-transparent checked:bg-blue-600 checked:ring-0 focus:ring-0"
                           />
                           <label
                             htmlFor={`attr-${option}`}
@@ -192,18 +257,25 @@ export default function DigimonSelectModal({
 
                   {/* 기본 성격 필터 */}
                   <div className="mb-3">
-                    <label className="block text-sm font-medium text-gray-900 dark:text-white mb-1.5">
+                    <label className="mb-1.5 block text-sm font-medium text-gray-900 dark:text-white">
                       기본 성격
                     </label>
-                    <div className="flex flex-wrap flex-col gap-x-4 gap-y-1">
+                    <div className="flex flex-col flex-wrap gap-x-4 gap-y-1">
                       {personalityFilterOption.map((option) => (
                         <div key={option} className="flex items-center">
                           <input
                             id={`perso-${option}`}
                             type="checkbox"
                             value={option}
-                            checked="false"
-                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                            checked={filters.personality.includes(option)}
+                            onChange={(e) =>
+                              handleCheckboxChange(
+                                'personality',
+                                option,
+                                e.target.checked,
+                              )
+                            }
+                            className="h-4 w-4 rounded border-gray-300 bg-gray-100 ring-0 checked:border-transparent checked:bg-blue-600 checked:ring-0 focus:ring-0"
                           />
                           <label
                             htmlFor={`perso-${option}`}
@@ -220,7 +292,7 @@ export default function DigimonSelectModal({
             </div>
 
             {/* 디지몬 목록 */}
-            <div className="flex-1 min-h-0 overflow-y-auto">
+            <div className="min-h-0 flex-1 overflow-y-auto">
               {loading ? (
                 <p className="text-center">Loading...</p>
               ) : (

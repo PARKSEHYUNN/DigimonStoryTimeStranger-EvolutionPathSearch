@@ -2467,11 +2467,7 @@
   },
   {
     "id": 223,
-    "name": [
-      "MetalGreymon",
-      "메탈그레이몬(2010)",
-      "メタルグレイモン（2010アニメ版）"
-    ],
+    "name": ["MetalGreymon", "메탈그레이몬", "メタルグレイモン"],
     "generation": 4,
     "attribute": 1,
     "personality": 7,

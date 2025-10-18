@@ -1,35 +1,240 @@
 // src/components/EvolutionPath.jsx
 
 // 모듈 선언
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import DigimonSelectBox from './DigimonSelectBox';
+
+const DigimonItem = () => {
+  return (
+    <div
+      className="flex h-24 flex-col items-center md:h-36"
+      onClick={() => {
+        if (onSelect) onSelect(digimon);
+      }}
+    >
+      <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-lg bg-white md:h-20 md:w-20 dark:bg-gray-800">
+        {/* <FontAwesomeIcon icon={faQuestion} size="xl" /> */}
+        <img src={`/digimon_icons/1.png`} className="h-full w-full" />
+      </div>
+      <span className="mt-1 text-sm text-gray-900 dark:text-white">쿠라몬</span>
+      <span className="text-xs text-gray-900 dark:text-white">
+        유년기 I / 세대 불명
+      </span>
+    </div>
+  );
+};
+
+const EvolutionArrow = ({ evolution }) => {
+  return (
+    <div className="flex h-14 flex-col md:h-18">
+      <FontAwesomeIcon
+        icon={faArrowRight}
+        size="lg"
+        className="ms-1 me-1 text-gray-900 md:ms-8 md:me-8 dark:text-white"
+      />
+      <span
+        className={`mt-1 text-xs font-medium ${evolution ? 'text-green-500' : 'text-red-500'}`}
+      >
+        {evolution ? '진화' : '퇴화'}
+      </span>
+    </div>
+  );
+};
 
 export default function EvolutionPath() {
   const { i18n, t } = useTranslation();
 
+  const workerRef = useRef(null);
+
+  const [nowDigimon, setNowDigimon] = useState(null);
+  const [evolutionFromDigimon, setEvolutionFromDigimon] = useState(null);
+
+  const [isGraphReady, setIsGraphReady] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [paths, setPaths] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    workerRef.current = new Worker(
+      new URL('../worker/pathfinding.worker.js', import.meta.url),
+    );
+
+    workerRef.current.onmessage = (e) => {
+      const { type, payload } = e.data;
+      switch (type) {
+        case 'INIT_COMPLETE':
+          setIsGraphReady(true);
+          console.log('Web Worker: Graph initialized.');
+          break;
+
+        case 'PATHS_FOUND':
+          setPaths(payload);
+          setIsLoading(false);
+          console.log(payload);
+          break;
+
+        case 'ERROR':
+          console.error('Web Worker Error Payload: ', payload);
+          setError(payload);
+          setIsLoading(false);
+          setIsGraphReady(false);
+          break;
+
+        default:
+          break;
+      }
+    };
+
+    workerRef.current.onerror = (err) => {
+      console.error('Web Worker Error: ', err);
+      setError('An error occurred in the pathfinding worker.');
+    };
+
+    fetch('/digimon_list.json')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        workerRef.current.postMessage({ type: 'INIT', payload: data });
+      })
+      .catch((err) => {
+        console.error('Failed to load digimon data: ', err);
+        setError(
+          "Failed to load 'digimon_list.json'. Check the /public folder.",
+        );
+      });
+
+    return () => {
+      workerRef.current.terminate();
+      console.log('Web Worker: Terminated.');
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isGraphReady || !nowDigimon || !evolutionFromDigimon) {
+      return;
+    }
+
+    console.log(
+      `[Automatic Request] ${nowDigimon.id} -> ${evolutionFromDigimon.id} 경로 탐색`,
+    );
+    setIsLoading(true);
+    setError(null);
+    setPaths([]);
+
+    workerRef.current.postMessage({
+      type: 'FIND_PATHS',
+      payload: {
+        startId: nowDigimon.id,
+        endId: evolutionFromDigimon.id,
+        k: 10,
+      },
+    });
+  }, [nowDigimon, evolutionFromDigimon, isGraphReady]);
+
   return (
-    <div className="w-full flex flex-col justify-center items-center rounded-lg mt-3 p-5 bg-gray-200 dark:bg-gray-600">
-      <h1 className="text-2xl font-bold dark:text-white mb-3">
+    <div className="mt-3 flex w-full flex-col items-center justify-center rounded-lg bg-gray-200 p-5 dark:bg-gray-800">
+      <h1 className="mb-3 text-2xl font-bold dark:text-white">
         Evolution Path
       </h1>
 
-      <div className="flex flex-row justify-between w-[90%] md:w-[40%]">
-        {/* 현재 디지몬 선택 */}
-        <div className="flex flex-col justify-center items-center">
-          <span className="text-gray-900 dark:text-white mb-1">
-            {t('evolution_path.now_digimon')}
-          </span>
-          <DigimonSelectBox />
+      <div className="mb-3 flex w-[90%] flex-row items-center justify-around md:w-[40%]">
+        {/* 에이전트 레벨 */}
+        <div className="flex w-full flex-row">
+          <form className="mx-auto w-[50%] max-w-sm">
+            <label
+              htmlFor="countries"
+              className="mb-2 block text-start text-sm font-medium text-gray-900 dark:text-white"
+            >
+              에이전트 레벨
+            </label>
+            <select
+              id="countries"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+              value={10}
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </form>
         </div>
 
+        {/* 조그레스 포함 */}
+        <div className="flex w-full flex-row">
+          <form className="mx-auto w-[50%] max-w-sm">
+            <label
+              htmlFor="countries"
+              className="mb-2 block text-start text-sm font-medium text-gray-900 dark:text-white"
+            >
+              조그레스
+            </label>
+            <select
+              id="countries"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+              value={'include'}
+            >
+              <option value="include">포함</option>
+              <option value="not-include">비포함</option>
+            </select>
+          </form>
+        </div>
+      </div>
+
+      <div className="flex w-[90%] flex-row items-center justify-around md:w-[40%]">
+        {/* 현재 디지몬 선택 */}
+        <div className="flex flex-col items-center justify-center">
+          <span className="mb-1 text-gray-900 dark:text-white">
+            {t('evolution_path.now_digimon')}
+          </span>
+          <DigimonSelectBox
+            onSelectDigimon={(digimon) => {
+              setNowDigimon(digimon);
+            }}
+          />
+        </div>
+
+        <FontAwesomeIcon
+          icon={faArrowRight}
+          size="xl"
+          className="text-gray-900 dark:text-white"
+        />
+
         {/* 만들 디지몬 선택 */}
-        <div className="flex flex-col justify-center items-center">
-          <span className="text-gray-900 dark:text-white mb-1">
+        <div className="flex flex-col items-center justify-center">
+          <span className="mb-1 text-gray-900 dark:text-white">
             {t('evolution_path.evolution_from_digimon')}
           </span>
-          <DigimonSelectBox />
+          <DigimonSelectBox
+            onSelectDigimon={(digimon) => {
+              setEvolutionFromDigimon(digimon);
+            }}
+          />
         </div>
+      </div>
+      <div className="mt-5 flex w-[90%] flex-row flex-wrap items-center justify-center border-t border-gray-300 pt-3 md:w-[95%] dark:border-gray-600">
+        <DigimonItem />
+        <EvolutionArrow evolution={true} />
+        <DigimonItem />
+        <EvolutionArrow evolution={false} />
+        <DigimonItem />
+        <EvolutionArrow evolution={true} />
+        <DigimonItem />
+        <EvolutionArrow evolution={false} />
+        <DigimonItem />
+        <EvolutionArrow evolution={true} />
+        <DigimonItem />
+        <EvolutionArrow evolution={false} />
+        <DigimonItem />
       </div>
     </div>
   );
