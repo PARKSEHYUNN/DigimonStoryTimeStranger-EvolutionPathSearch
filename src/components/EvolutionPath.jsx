@@ -4,22 +4,39 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowRight,
+  faBan,
+  faSpinner,
+  faTimes,
+} from '@fortawesome/free-solid-svg-icons';
 import DigimonSelectBox from './DigimonSelectBox';
 
-const DigimonItem = ({ digimon }) => {
+const DigimonItem = ({ digimon, exceptionDigimon }) => {
   const { i18n, t } = useTranslation();
 
   if (!digimon) return null;
 
   return (
-    <div className="flex h-24 flex-col items-center md:h-32" onClick={() => {}}>
-      <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-lg bg-white md:h-20 md:w-20 dark:bg-gray-800">
+    <div
+      className={`flex h-24 flex-col items-center md:h-32 ${exceptionDigimon === false ? 'group' : ''}`}
+      onClick={() =>
+        exceptionDigimon === false ? null : exceptionDigimon(digimon)
+      }
+    >
+      <div
+        className={`flex h-12 w-12 items-center justify-center overflow-hidden rounded-lg bg-white md:h-20 md:w-20 dark:bg-gray-800 ${exceptionDigimon === false ? 'relative' : ''}`}
+      >
         {/* <FontAwesomeIcon icon={faQuestion} size="xl" /> */}
         <img
           src={`/digimon_icons/${digimon.id}.png`}
           className="h-full w-full"
         />
+        {exceptionDigimon === false ?? (
+          <div className="bg-opacity-70 absolute top-0 left-0 hidden h-full w-full items-center justify-center group-hover:flex">
+            <FontAwesomeIcon icon={faBan} />
+          </div>
+        )}
       </div>
       <span className="mt-1 text-sm text-gray-900 dark:text-white">
         {
@@ -65,6 +82,8 @@ export default function EvolutionPath() {
 
   const [nowDigimon, setNowDigimon] = useState(null);
   const [evolutionFromDigimon, setEvolutionFromDigimon] = useState(null);
+
+  const [exceptionDigimons, setExceptionDigimon] = useState([]);
 
   const [isGraphReady, setIsGraphReady] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -148,6 +167,25 @@ export default function EvolutionPath() {
     });
   }, [nowDigimon, evolutionFromDigimon, isGraphReady]);
 
+  useEffect(() => {
+    console.log(exceptionDigimons);
+  });
+
+  const handleAddExcpetion = (digimonToAdd) => {
+    setExceptionDigimon((prevExceptions) => {
+      if (prevExceptions.find((d) => d.id === digimonToAdd.id)) {
+        return prevExceptions;
+      }
+      return [...prevExceptions, digimonToAdd];
+    });
+  };
+
+  const handleRemoveException = (digimonToRemove) => {
+    setExceptionDigimon((prevExceptions) => {
+      return prevExceptions.filter((d) => d.id !== digimonToRemove.id);
+    });
+  };
+
   const renderEvoutionPaths = () => {
     if (isLoading) {
       return <FontAwesomeIcon icon={faSpinner} spin />;
@@ -168,7 +206,8 @@ export default function EvolutionPath() {
 
       return (
         <span className="text-gray-900 dark:text-white">
-          해당 진화 트리를 찾을 수 없습니다.
+          해당 진화 트리를 찾을 수 없습니다. (제외된 디지몬이 경로에 포함
+          되어있을 수 있습니다.)
         </span>
       );
     }
@@ -180,7 +219,10 @@ export default function EvolutionPath() {
       >
         {result.path.map((digimon, index) => (
           <React.Fragment key={digimon.id}>
-            <DigimonItem digimon={digimon} />
+            <DigimonItem
+              digimon={digimon}
+              exceptionDigimon={handleAddExcpetion}
+            />
             {index < result.path.length - 1 && (
               <EvolutionArrow
                 evolution={
@@ -281,12 +323,55 @@ export default function EvolutionPath() {
           />
         </div>
       </div>
-      <div className="mt-5 flex w-[90%] flex-row flex-wrap items-center justify-center border-t border-gray-300 pt-3 md:w-[95%] dark:border-gray-600">
+      <div className="mt-5 flex w-[90%] flex-row flex-wrap items-center justify-center border-t border-b border-gray-300 pt-3 pb-3 md:w-[95%] dark:border-gray-600">
         {/* 진화 루트 */}
         {renderEvoutionPaths()}
       </div>
 
       {/* 검색 금지 목록 */}
+      <div className="mt-5 flex w-[90%] flex-row flex-wrap items-center justify-center rounded-lg bg-gray-50 pt-3 md:w-[95%] dark:bg-gray-900">
+        <h3 className="mb-1 text-gray-900 dark:text-white">
+          제외된 디지몬 목록
+        </h3>
+        <div className="flex w-full flex-row flex-wrap justify-center gap-2 pb-3">
+          {exceptionDigimons.length === 0 ? (
+            <span className="text-gray-900 dark:text-white">
+              현재 제외한 디지몬이 없습니다. (경로 상 디지몬을 클릭해
+              추가하세요.)
+            </span>
+          ) : (
+            exceptionDigimons.map((digimon) => (
+              // <div
+              //   key={digimon.id}
+              //   className="relative flex cursor-pointer flex-col items-center rounded-lg bg-gray-200 p-2 shadow transition-all hover:shadow-lg dark:bg-gray-700"
+              //   onClick={() => handleRemoveException(digimon)}
+              // >
+              //   <div className="absolute top-0 right-0 -mt-1 -mr-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-white opacity-70 group-hover:opacity-100">
+              //     <FontAwesomeIcon icon={faTimes} size="xs" />
+              //   </div>
+              //   <img
+              //     src={`/digimon_icons/${digimon.id}.png`}
+              //     className="h-10 w-10"
+              //   />
+              //   <span className="mt-1 max-w-[60px] truncate text-xs text-gray-900 dark:text-white">
+              //     {
+              //       digimon.name[
+              //         i18n.language === 'en'
+              //           ? 0
+              //           : i18n.language === 'ko'
+              //             ? 1
+              //             : i18n.language === 'ja'
+              //               ? 2
+              //               : 0
+              //       ]
+              //     }
+              //   </span>
+              // </div>
+              <DigimonItem digimon={digimon} exceptionDigimon={false} />
+            ))
+          )}
+        </div>
+      </div>
     </div>
   );
 }

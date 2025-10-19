@@ -4470,7 +4470,7 @@
     "personality": 4,
     "evolution": {
       "from": [202, 265, 286],
-      "to": []
+      "to": [402]
     }
   },
   {
@@ -4631,8 +4631,8 @@
     "attribute": 4,
     "personality": 4,
     "evolution": {
-      "from": [303],
-      "to": []
+      "from": [303, 417],
+      "to": [417, 429]
     }
   },
   {
@@ -4646,8 +4646,8 @@
     "attribute": 4,
     "personality": 4,
     "evolution": {
-      "from": [],
-      "to": []
+      "from": [416],
+      "to": [416, 429]
     }
   },
   {
@@ -4790,7 +4790,7 @@
     "attribute": 1,
     "personality": 4,
     "evolution": {
-      "from": [],
+      "from": [416, 417],
       "to": []
     }
   },
@@ -5002,8 +5002,8 @@
     "attribute": 2,
     "personality": 4,
     "evolution": {
-      "from": [],
-      "to": []
+      "from": [402],
+      "to": [402]
     }
   },
   {
