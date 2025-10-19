@@ -9,34 +9,53 @@ import {
   faBan,
   faSpinner,
   faTimes,
+  faTrash,
+  faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import DigimonSelectBox from './DigimonSelectBox';
+import DigimonInfoModal from './DigimonInfoModal';
 
-const DigimonItem = ({ digimon, exceptionDigimon }) => {
+// exceptionDigimon
+const DigimonItem = ({ digimon, exceptions, isSilhouette, onInfoClick }) => {
   const { i18n, t } = useTranslation();
+  const { exceptionAdd, exceptionRemove, exceptionType } = exceptions;
+  const isExceptionAdd = exceptionType === 'exceptionAdd';
+  const silhouetteIconOption = isSilhouette ? 'brightness-0' : '';
+  const exceptionIconOption = isExceptionAdd
+    ? 'z-10 h-5 w-5'
+    : 'hidden h-full w-full bg-black opacity-70 group-hover:flex';
+  const exceptionIcon = isExceptionAdd ? faBan : faXmark;
+  const exceptionIconSize = isExceptionAdd ? 'xs' : '2xl';
+
+  const exceptionIconClick = (e) => {
+    e.stopPropagation();
+    if (isExceptionAdd) exceptionAdd(digimon);
+    else exceptionRemove(digimon);
+  };
+
+  const infoClick = (e) => {
+    e.stopPropagation();
+    if (isExceptionAdd) onInfoClick(digimon);
+  };
 
   if (!digimon) return null;
 
   return (
     <div
-      className={`flex h-24 flex-col items-center md:h-32 ${exceptionDigimon === false ? 'group' : ''}`}
-      onClick={() =>
-        exceptionDigimon === false ? null : exceptionDigimon(digimon)
-      }
+      className="group flex h-24 flex-col items-center hover:cursor-pointer md:h-32"
+      onClick={infoClick}
     >
-      <div
-        className={`flex h-12 w-12 items-center justify-center overflow-hidden rounded-lg bg-white md:h-20 md:w-20 dark:bg-gray-800 ${exceptionDigimon === false ? 'relative' : ''}`}
-      >
-        {/* <FontAwesomeIcon icon={faQuestion} size="xl" /> */}
+      <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-lg bg-white md:h-20 md:w-20 dark:bg-gray-800">
         <img
           src={`/digimon_icons/${digimon.id}.png`}
-          className="h-full w-full"
+          className={`h-full w-full transition-all ${silhouetteIconOption}`}
         />
-        {exceptionDigimon === false ?? (
-          <div className="bg-opacity-70 absolute top-0 left-0 hidden h-full w-full items-center justify-center group-hover:flex">
-            <FontAwesomeIcon icon={faBan} />
-          </div>
-        )}
+        <div
+          className={`absolute top-0 right-0 items-center justify-center text-white ${exceptionIconOption}`}
+          onClick={exceptionIconClick}
+        >
+          <FontAwesomeIcon icon={exceptionIcon} size={exceptionIconSize} />
+        </div>
       </div>
       <span className="mt-1 text-sm text-gray-900 dark:text-white">
         {
@@ -83,7 +102,14 @@ export default function EvolutionPath() {
   const [nowDigimon, setNowDigimon] = useState(null);
   const [evolutionFromDigimon, setEvolutionFromDigimon] = useState(null);
 
+  const [agentLevel, setAgentLevel] = useState(10);
+  const [jogressOption, setJogressOption] = useState('include');
   const [exceptionDigimons, setExceptionDigimon] = useState([]);
+
+  const [isSilhouette, setIsSilhouette] = useState(false);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedDigimon, setSelectedDigimon] = useState(null);
 
   const [isGraphReady, setIsGraphReady] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -126,16 +152,25 @@ export default function EvolutionPath() {
       setError('An error occurred in the pathfinding worker.');
     };
 
-    fetch('/digimon_list.json')
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        workerRef.current.postMessage({ type: 'INIT', payload: data });
+    Promise.all([
+      fetch('/digimon_list.json').then((res) => res.json()),
+      fetch('/jogress_list.json').then((res) => res.json()),
+      fetch('/agent_level_list.json').then((res) => res.json()),
+    ])
+      .then(([digimonList, jogressList, agentLevelData]) => {
+        workerRef.current.postMessage({
+          type: 'INIT',
+          payload: {
+            digimonList,
+            jogressList,
+            agentLevelData,
+          },
+        });
       })
       .catch((err) => {
-        console.error('Failed to load digimon data: ', err);
+        console.error('Failed to load initial data: ', err);
         setError(
-          "Failed to load 'digimon_list.json'. Check the /public folder.",
+          "Failed to load 'digimon_list.json', 'jogress_list.json', or 'agent_level_list.json'. Check the /public folder.",
         );
       });
 
@@ -163,13 +198,19 @@ export default function EvolutionPath() {
         startId: nowDigimon.id,
         endId: evolutionFromDigimon.id,
         k: 1,
+        exceptions: exceptionDigimons.map((d) => d.id),
+        agentLevel: agentLevel,
+        jogressOption: jogressOption,
       },
     });
-  }, [nowDigimon, evolutionFromDigimon, isGraphReady]);
-
-  useEffect(() => {
-    console.log(exceptionDigimons);
-  });
+  }, [
+    nowDigimon,
+    evolutionFromDigimon,
+    isGraphReady,
+    exceptionDigimons,
+    agentLevel,
+    jogressOption,
+  ]);
 
   const handleAddExcpetion = (digimonToAdd) => {
     setExceptionDigimon((prevExceptions) => {
@@ -188,7 +229,14 @@ export default function EvolutionPath() {
 
   const renderEvoutionPaths = () => {
     if (isLoading) {
-      return <FontAwesomeIcon icon={faSpinner} spin />;
+      return (
+        <FontAwesomeIcon
+          icon={faSpinner}
+          size="2xl"
+          spin
+          className="text-gray-900 dark:text-white"
+        />
+      );
     }
 
     if (error) {
@@ -215,25 +263,65 @@ export default function EvolutionPath() {
     return paths.map((result, pathIndex) => (
       <div
         key={pathIndex}
-        className="mb-4 flex w-full flex-row flex-wrap items-center justify-center rounded-lg bg-gray-100 p-3 pt-6 dark:bg-gray-700"
+        className="mb-4 flex w-full flex-col items-center justify-center rounded-lg bg-gray-100 p-3 pt-3 dark:bg-gray-700"
       >
-        {result.path.map((digimon, index) => (
-          <React.Fragment key={digimon.id}>
-            <DigimonItem
-              digimon={digimon}
-              exceptionDigimon={handleAddExcpetion}
+        {/* 실루엣 토글 */}
+        <div className="mb-4 flex w-full justify-end pe-3">
+          <label className="mb-2 inline-flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              value=""
+              className="peer sr-only"
+              checked={isSilhouette}
+              onChange={() => setIsSilhouette(!isSilhouette)}
             />
-            {index < result.path.length - 1 && (
-              <EvolutionArrow
-                evolution={
-                  result.path[index + 1].generation >= digimon.generation
-                }
+            <div className="peer dark:peer-checked:bg-white-400 relative h-5 w-9 rounded-full bg-gray-300 peer-checked:bg-gray-600 peer-focus:outline-none after:absolute after:start-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-800"></div>
+            <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+              실루엣 보기
+            </span>
+          </label>
+        </div>
+
+        {/* 진화 트리 */}
+        <div className="flex w-full flex-row flex-wrap items-center justify-center">
+          {result.path.map((digimon, index) => (
+            <React.Fragment key={digimon.id}>
+              <DigimonItem
+                digimon={digimon}
+                exceptions={{
+                  exceptionAdd: handleAddExcpetion,
+                  exceptionRemove: handleRemoveException,
+                  exceptionType: 'exceptionAdd',
+                }}
+                isSilhouette={isSilhouette}
+                onInfoClick={handleShowInfo}
               />
-            )}
-          </React.Fragment>
-        ))}
+              {index < result.path.length - 1 && (
+                <EvolutionArrow
+                  evolution={
+                    result.path[index + 1].generation >= digimon.generation
+                  }
+                />
+              )}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     ));
+  };
+
+  const resetExceptions = () => {
+    setExceptionDigimon([]);
+  };
+
+  const handleShowInfo = (digimon) => {
+    setSelectedDigimon(digimon);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedDigimon(null);
   };
 
   return (
@@ -247,15 +335,16 @@ export default function EvolutionPath() {
         <div className="flex w-full flex-row">
           <form className="mx-auto w-[50%] max-w-sm">
             <label
-              htmlFor="countries"
+              htmlFor="agentLevelSelect"
               className="mb-2 block text-start text-sm font-medium text-gray-900 dark:text-white"
             >
               에이전트 레벨
             </label>
             <select
-              id="countries"
+              id="agentLevelSelect"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-              value={10}
+              value={agentLevel}
+              onChange={(e) => setAgentLevel(parseInt(e.target.value, 10))}
             >
               <option value="1">1</option>
               <option value="2">2</option>
@@ -275,15 +364,16 @@ export default function EvolutionPath() {
         <div className="flex w-full flex-row">
           <form className="mx-auto w-[50%] max-w-sm">
             <label
-              htmlFor="countries"
+              htmlFor="jogressOption"
               className="mb-2 block text-start text-sm font-medium text-gray-900 dark:text-white"
             >
               조그레스
             </label>
             <select
-              id="countries"
+              id="jogressOption"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-              value={'include'}
+              value={jogressOption}
+              onChange={(e) => setJogressOption(e.target.value)}
             >
               <option value="include">포함</option>
               <option value="not-include">비포함</option>
@@ -330,10 +420,20 @@ export default function EvolutionPath() {
 
       {/* 검색 금지 목록 */}
       <div className="mt-5 flex w-[90%] flex-row flex-wrap items-center justify-center rounded-lg bg-gray-50 pt-3 md:w-[95%] dark:bg-gray-900">
-        <h3 className="mb-1 text-gray-900 dark:text-white">
-          제외된 디지몬 목록
-        </h3>
-        <div className="flex w-full flex-row flex-wrap justify-center gap-2 pb-3">
+        <div className="flex w-full items-center justify-center">
+          <h3 className="mb-1 text-gray-900 dark:text-white">
+            제외된 디지몬 목록
+          </h3>
+          <button
+            type="button"
+            className="mb-1 ml-2 inline-flex cursor-pointer items-center rounded-lg border border-gray-300 bg-gray-50 px-3 text-sm text-red-400 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-600"
+            onClick={() => resetExceptions()}
+          >
+            {/* <FontAwesomeIcon icon={faTrash} /> */}
+            초기화
+          </button>
+        </div>
+        <div className="flex w-full flex-row flex-wrap justify-center gap-4 pb-3">
           {exceptionDigimons.length === 0 ? (
             <span className="text-gray-900 dark:text-white">
               현재 제외한 디지몬이 없습니다. (경로 상 디지몬을 클릭해
@@ -367,11 +467,24 @@ export default function EvolutionPath() {
               //     }
               //   </span>
               // </div>
-              <DigimonItem digimon={digimon} exceptionDigimon={false} />
+              <DigimonItem
+                digimon={digimon}
+                exceptions={{
+                  exceptionAdd: handleAddExcpetion,
+                  exceptionRemove: handleRemoveException,
+                  exceptionType: 'exceptionRemove',
+                }}
+                isSilhouette={isSilhouette}
+              />
             ))
           )}
         </div>
       </div>
+      <DigimonInfoModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        digimon={selectedDigimon}
+      />
     </div>
   );
 }

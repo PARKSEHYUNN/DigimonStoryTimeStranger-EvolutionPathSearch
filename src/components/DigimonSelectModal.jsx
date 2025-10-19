@@ -125,7 +125,6 @@ export default function DigimonSelectModal({
     <div
       id="select-modal"
       tabIndex={-1}
-      aria-hidden="true"
       className={`flex ${isModalOpen ? '' : 'hidden'} fixed top-0 right-0 left-0 z-50 h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-x-hidden overflow-y-auto backdrop-blur-[4px] md:inset-0`}
       onClick={onClose}
     >
@@ -143,7 +142,6 @@ export default function DigimonSelectModal({
             <button
               type="button"
               className="ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
-              data-toggle-modal="select-modal"
               onClick={() => onClose()}
             >
               <FontAwesomeIcon icon={faXmark} />
