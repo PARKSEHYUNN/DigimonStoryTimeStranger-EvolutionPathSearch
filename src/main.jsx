@@ -5,7 +5,7 @@ import './index.css';
 import App from './App.jsx';
 
 import './i18n.js';
-import HomePage from './pages/Homepage.jsx';
+import HomePage from './pages/HomePage.jsx';
 import List from './pages/List.jsx';
 
 const router = createBrowserRouter([
