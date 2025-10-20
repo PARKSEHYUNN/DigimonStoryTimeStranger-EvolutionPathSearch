@@ -18,7 +18,7 @@ export default function DigimonSelectBox({ onSelectDigimon }) {
     <>
       <div className="flex flex-col items-center">
         <div
-          className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-lg bg-gray-50 hover:cursor-pointer hover:blur-[1px] dark:bg-gray-900"
+          className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-lg bg-gray-50 hover:cursor-pointer dark:bg-gray-900"
           onClick={() => setIsModalOpen(true)}
         >
           {!selectedDigimon ? (

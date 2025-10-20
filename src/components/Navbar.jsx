@@ -2,6 +2,7 @@
 
 // 모듈 선언
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import LanguageDropdown from './LanguageDropdown';
 import { useTranslation } from 'react-i18next';
@@ -13,6 +14,11 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const { t } = useTranslation();
+
+  const baseLinkClasses = 'block rounded-sm px-3 py-3 md:p-0';
+  const activeLinkClassse =
+    'text-white bg-gray-700 dark:bg-gray-600 md:bg-transparent md:dark:bg-transparent md:text-gray-500 dark:text-white md:dark:text-gray-400';
+  const inactiveLinkClasses = `text-gray-900 hover:bg-gray-100 md:border-0 md:hover:bg-transparent md:hover:text-gray-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-gray-400`;
 
   return (
     <nav className="border-gray-200 bg-gray-200 dark:border-gray-700 dark:bg-gray-800">
@@ -60,21 +66,26 @@ export default function Navbar() {
         >
           <ul className="mt-4 flex flex-col rounded-lg bg-gray-50 font-medium md:mt-0 md:flex-row md:items-center md:space-x-4 md:border-0 md:bg-transparent dark:border-gray-700 dark:bg-gray-800 md:dark:bg-transparent">
             <li>
-              <a
-                href="#"
-                className="block rounded-sm bg-gray-700 px-3 py-2 text-white md:bg-transparent md:p-0 md:text-gray-500 dark:bg-gray-600 md:dark:bg-transparent md:dark:text-gray-400"
-                aria-current="page"
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `${baseLinkClasses} ${isActive ? activeLinkClassse : inactiveLinkClasses}`
+                }
+                end
               >
                 {t('nav.evolution_path')}
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="#"
-                className="block rounded-sm px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-gray-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-gray-400"
+              <NavLink
+                to="/list"
+                className={({ isActive }) =>
+                  `${baseLinkClasses} ${isActive ? activeLinkClassse : inactiveLinkClasses}`
+                }
+                end
               >
                 {t('nav.digimon_list')}
-              </a>
+              </NavLink>
             </li>
             {/* 언어 변경 드롭 다운 */}
             <li>

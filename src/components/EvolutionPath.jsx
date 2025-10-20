@@ -3,6 +3,7 @@
 // 모듈 선언
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import Swal from 'sweetalert2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowRight,
@@ -14,68 +15,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import DigimonSelectBox from './DigimonSelectBox';
 import DigimonInfoModal from './DigimonInfoModal';
-
-// exceptionDigimon
-const DigimonItem = ({ digimon, exceptions, isSilhouette, onInfoClick }) => {
-  const { i18n, t } = useTranslation();
-  const { exceptionAdd, exceptionRemove, exceptionType } = exceptions;
-  const isExceptionAdd = exceptionType === 'exceptionAdd';
-  const silhouetteIconOption = isSilhouette ? 'brightness-0' : '';
-  const exceptionIconOption = isExceptionAdd
-    ? 'z-10 h-5 w-5'
-    : 'hidden h-full w-full bg-black opacity-70 group-hover:flex';
-  const exceptionIcon = isExceptionAdd ? faBan : faXmark;
-  const exceptionIconSize = isExceptionAdd ? 'xs' : '2xl';
-
-  const exceptionIconClick = (e) => {
-    e.stopPropagation();
-    if (isExceptionAdd) exceptionAdd(digimon);
-    else exceptionRemove(digimon);
-  };
-
-  const infoClick = (e) => {
-    e.stopPropagation();
-    if (isExceptionAdd) onInfoClick(digimon);
-  };
-
-  if (!digimon) return null;
-
-  return (
-    <div
-      className="group flex h-24 flex-col items-center hover:cursor-pointer md:h-32"
-      onClick={infoClick}
-    >
-      <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-lg bg-white md:h-20 md:w-20 dark:bg-gray-800">
-        <img
-          src={`/digimon_icons/${digimon.id}.png`}
-          className={`h-full w-full transition-all ${silhouetteIconOption}`}
-        />
-        <div
-          className={`absolute top-0 right-0 items-center justify-center text-white ${exceptionIconOption}`}
-          onClick={exceptionIconClick}
-        >
-          <FontAwesomeIcon icon={exceptionIcon} size={exceptionIconSize} />
-        </div>
-      </div>
-      <span className="mt-1 text-sm text-gray-900 dark:text-white">
-        {
-          digimon.name[
-            i18n.language === 'en'
-              ? 0
-              : i18n.language === 'ko'
-                ? 1
-                : i18n.language === 'ja'
-                  ? 2
-                  : 0
-          ]
-        }
-      </span>
-      <span className="text-xs text-gray-900 dark:text-white">
-        {`${t(`generation.${digimon.generation}`)} / ${t(`attribute.${digimon.attribute}`)}`}
-      </span>
-    </div>
-  );
-};
+import DigimonItem from './DigimonItem';
 
 const EvolutionArrow = ({ evolution }) => {
   return (
@@ -213,6 +153,24 @@ export default function EvolutionPath() {
   ]);
 
   const handleAddExcpetion = (digimonToAdd) => {
+    if (nowDigimon.id === digimonToAdd.id) {
+      Swal.fire({
+        title: '경고',
+        icon: 'warning',
+        text: '현재 디지몬은 제외 목록에 추가 할 수 없습니다.',
+      });
+      return null;
+    }
+
+    if (evolutionFromDigimon.id === digimonToAdd.id) {
+      Swal.fire({
+        title: '경고',
+        icon: 'warning',
+        text: '진화 할 디지몬은 제외 목록에 추가 할 수 없습니다.',
+      });
+      return null;
+    }
+
     setExceptionDigimon((prevExceptions) => {
       if (prevExceptions.find((d) => d.id === digimonToAdd.id)) {
         return prevExceptions;
@@ -288,13 +246,12 @@ export default function EvolutionPath() {
             <React.Fragment key={digimon.id}>
               <DigimonItem
                 digimon={digimon}
-                exceptions={{
+                type="exceptionAdd"
+                options={{
                   exceptionAdd: handleAddExcpetion,
-                  exceptionRemove: handleRemoveException,
-                  exceptionType: 'exceptionAdd',
+                  onInfoClick: handleShowInfo,
                 }}
                 isSilhouette={isSilhouette}
-                onInfoClick={handleShowInfo}
               />
               {index < result.path.length - 1 && (
                 <EvolutionArrow
@@ -436,8 +393,8 @@ export default function EvolutionPath() {
         <div className="flex w-full flex-row flex-wrap justify-center gap-4 pb-3">
           {exceptionDigimons.length === 0 ? (
             <span className="text-gray-900 dark:text-white">
-              현재 제외한 디지몬이 없습니다. (경로 상 디지몬을 클릭해
-              추가하세요.)
+              현재 제외한 디지몬이 없습니다. (경로 상 디지몬의 금지 아이콘을
+              클릭해 추가하세요.)
             </span>
           ) : (
             exceptionDigimons.map((digimon) => (
@@ -469,10 +426,9 @@ export default function EvolutionPath() {
               // </div>
               <DigimonItem
                 digimon={digimon}
-                exceptions={{
-                  exceptionAdd: handleAddExcpetion,
+                type="exceptionRemove"
+                options={{
                   exceptionRemove: handleRemoveException,
-                  exceptionType: 'exceptionRemove',
                 }}
                 isSilhouette={isSilhouette}
               />
