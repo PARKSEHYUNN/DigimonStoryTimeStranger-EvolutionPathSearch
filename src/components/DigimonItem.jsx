@@ -69,7 +69,7 @@ export default function DigimonItem({ digimon, type, options, isSilhouette }) {
           className={`h-full w-full transition-all ${silhouetteIconOption}`}
         />
         <div
-          className={`absolute top-0 right-0 items-center justify-center text-white ${exceptionIconOption}`}
+          className={`absolute top-0 right-0 items-center justify-center text-red-500 dark:text-white ${exceptionIconOption}`}
           onClick={exceptionIconClick}
         >
           <FontAwesomeIcon icon={exceptionIcon} size={exceptionIconSize} />
