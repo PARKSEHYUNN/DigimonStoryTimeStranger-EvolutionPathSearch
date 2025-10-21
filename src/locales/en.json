@@ -64,5 +64,11 @@
     "13": "Beast Spirit of Flame",
     "14": "Beast Spirit of Light",
     "15": "Omega Blade"
+  },
+  "agent": {
+    "valor": "Bonds of Valor",
+    "philanthropy": "Bonds of Philanthropy",
+    "amicability": "Bonds of Amicability",
+    "wisdom": "Bonds of Wisdom"
   }
 }

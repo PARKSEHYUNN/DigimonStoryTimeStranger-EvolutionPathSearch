@@ -880,7 +880,7 @@
         "conditions": {
           "rank": 8,
           "ATK": 3630,
-          "Valor": 46
+          "valor": 46
         }
       }
     ]
@@ -1766,7 +1766,7 @@
         "conditions": {
           "rank": 9,
           "MP": 470,
-          "Valor": 46
+          "valor": 46
         }
       },
       {
@@ -1964,7 +1964,7 @@
         "conditions": {
           "rank": 8,
           "DEF": 2260,
-          "Amicability": 46
+          "amicability": 46
         }
       }
     ]
@@ -3884,8 +3884,8 @@
           "rank": 9,
           "ATK": 1100,
           "SPD": 1090,
-          "Valor": 46,
-          "Philanthropy": 46
+          "valor": 46,
+          "philanthropy": 46
         }
       },
       {
@@ -3894,9 +3894,9 @@
           "rank": 9,
           "ATK": 3070,
           "INT": 2980,
-          "Valor": 46,
-          "Amicability": 46,
-          "Wisdom": 46
+          "valor": 46,
+          "amicability": 46,
+          "wisdom": 46
         }
       },
       {
@@ -3905,9 +3905,9 @@
           "rank": 9,
           "INT": 2980,
           "RES": 2890,
-          "Valor": 46,
-          "Philanthropy": 46,
-          "Amicability": 46
+          "valor": 46,
+          "philanthropy": 46,
+          "amicability": 46
         }
       },
       {
@@ -3916,8 +3916,8 @@
           "rank": 9,
           "MP": 1820,
           "ATK": 3070,
-          "Valor": 46,
-          "Amicability": 46
+          "valor": 46,
+          "amicability": 46
         }
       },
       {
@@ -3926,8 +3926,8 @@
           "rank": 9,
           "HP": 4620,
           "SPD": 2910,
-          "Valor": 46,
-          "Wisdom": 46
+          "valor": 46,
+          "wisdom": 46
         }
       }
     ]
@@ -8336,10 +8336,10 @@
         "id": 340,
         "conditions": {
           "rank": 9,
-          "Valor": 46,
-          "Philanthropy": 46,
-          "Amicability": 46,
-          "Wisdom": 46
+          "valor": 46,
+          "philanthropy": 46,
+          "amicability": 46,
+          "wisdom": 46
         }
       }
     ]
@@ -8363,10 +8363,10 @@
         "id": 340,
         "conditions": {
           "rank": 9,
-          "Valor": 46,
-          "Philanthropy": 46,
-          "Amicability": 46,
-          "Wisdom": 46
+          "valor": 46,
+          "philanthropy": 46,
+          "amicability": 46,
+          "wisdom": 46
         }
       }
     ]
@@ -8390,10 +8390,10 @@
         "id": 380,
         "conditions": {
           "rank": 10,
-          "Valor": 46,
-          "Philanthropy": 46,
-          "Amicability": 46,
-          "Wisdom": 46
+          "valor": 46,
+          "philanthropy": 46,
+          "amicability": 46,
+          "wisdom": 46
         }
       }
     ]
@@ -8417,10 +8417,10 @@
         "id": 340,
         "conditions": {
           "rank": 9,
-          "Valor": 46,
-          "Philanthropy": 46,
-          "Amicability": 46,
-          "Wisdom": 46
+          "valor": 46,
+          "philanthropy": 46,
+          "amicability": 46,
+          "wisdom": 46
         }
       }
     ]
@@ -8444,10 +8444,10 @@
         "id": 340,
         "conditions": {
           "rank": 9,
-          "Valor": 46,
-          "Philanthropy": 46,
-          "Amicability": 46,
-          "Wisdom": 46
+          "valor": 46,
+          "philanthropy": 46,
+          "amicability": 46,
+          "wisdom": 46
         }
       }
     ]
@@ -9221,20 +9221,20 @@
         "id": 318,
         "conditions": {
           "rank": 10,
-          "Valor": 46,
-          "Philanthropy": 46,
-          "Amicability": 46,
-          "Wisdom": 46
+          "valor": 46,
+          "philanthropy": 46,
+          "amicability": 46,
+          "wisdom": 46
         }
       },
       {
         "id": 380,
         "conditions": {
           "rank": 10,
-          "Valor": 46,
-          "Philanthropy": 46,
-          "Amicability": 46,
-          "Wisdom": 46
+          "valor": 46,
+          "philanthropy": 46,
+          "amicability": 46,
+          "wisdom": 46
         }
       },
       {

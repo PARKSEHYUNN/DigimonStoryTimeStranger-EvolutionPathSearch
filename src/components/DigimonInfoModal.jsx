@@ -294,6 +294,15 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                                           </span>
                                         </>
                                       );
+                                    case 'valor':
+                                    case 'philanthropy':
+                                    case 'amicability':
+                                    case 'wisdom':
+                                      return (
+                                        <span className="text-sm text-gray-900 dark:text-white">
+                                          • {t(`agent.${key}`)} {value} 이상
+                                        </span>
+                                      );
                                   }
                                 })}
                             </div>
