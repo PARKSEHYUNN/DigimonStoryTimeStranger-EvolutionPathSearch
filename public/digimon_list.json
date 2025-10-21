@@ -14445,18 +14445,7 @@
       {
         "id": 431,
         "conditions": {
-          "rank": 8,
-          "isJogress": true,
-          "jogress": [
-            {
-              "id": 474,
-              "personality": 6
-            },
-            {
-              "id": 475,
-              "personality": 13
-            }
-          ]
+          "rank": 8
         }
       }
     ]
@@ -14475,17 +14464,7 @@
       {
         "id": 430,
         "conditions": {
-          "rank": 8,
-          "jogress": [
-            {
-              "id": 312,
-              "personality": 7
-            },
-            {
-              "id": 364,
-              "personality": 13
-            }
-          ]
+          "rank": 8
         }
       }
     ]
