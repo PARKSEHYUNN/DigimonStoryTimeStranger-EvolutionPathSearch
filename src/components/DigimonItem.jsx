@@ -75,7 +75,7 @@ export default function DigimonItem({ digimon, type, options, isSilhouette }) {
           <FontAwesomeIcon icon={exceptionIcon} size={exceptionIconSize} />
         </div>
       </div>
-      <span className="mt-1 w-25 text-sm text-gray-900 dark:text-white">
+      <span className="mt-1 w-25 text-xs text-gray-900 dark:text-white">
         {digimonName}
       </span>
       <span className="w-25 text-xs text-gray-900 dark:text-white">

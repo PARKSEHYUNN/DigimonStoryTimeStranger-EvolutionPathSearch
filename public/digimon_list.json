@@ -930,7 +930,7 @@
         "id": 188,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 11
         }
       },
       {
@@ -1048,7 +1048,7 @@
         "id": 187,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 12
         }
       }
     ]
@@ -1201,7 +1201,7 @@
         "id": 422,
         "conditions": {
           "rank": 7,
-          "item": 0
+          "item": 1
         }
       }
     ]
@@ -2368,7 +2368,7 @@
         "id": 184,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 2
         }
       },
       {
@@ -3661,14 +3661,14 @@
         "id": 181,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 3
         }
       },
       {
         "id": 179,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 4
         }
       },
       {
@@ -3719,21 +3719,21 @@
         "id": 186,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 5
         }
       },
       {
         "id": 423,
         "conditions": {
           "rank": 7,
-          "item": 0
+          "item": 6
         }
       },
       {
         "id": 183,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 7
         }
       }
     ]
@@ -3760,14 +3760,14 @@
         "id": 185,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 8
         }
       },
       {
         "id": 180,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 9
         }
       },
       {
@@ -4590,7 +4590,7 @@
         "id": 182,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 10
         }
       },
       {
@@ -7899,7 +7899,7 @@
               "personality": 4
             },
             {
-              "id": 178,
+              "id": 177,
               "personality": 2
             }
           ]
@@ -7915,7 +7915,7 @@
               "personality": 4
             },
             {
-              "id": 178,
+              "id": 177,
               "personality": 2
             }
           ]
@@ -8006,7 +8006,7 @@
               "personality": 4
             },
             {
-              "id": 178,
+              "id": 177,
               "personality": 2
             }
           ]
@@ -8022,7 +8022,7 @@
               "personality": 4
             },
             {
-              "id": 178,
+              "id": 177,
               "personality": 2
             }
           ]
@@ -8188,14 +8188,14 @@
         "id": 305,
         "conditions": {
           "rank": 5,
-          "item": 0
+          "item": 13
         }
       },
       {
         "id": 190,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 13
         }
       }
     ]
@@ -8215,14 +8215,14 @@
         "id": 306,
         "conditions": {
           "rank": 5,
-          "item": 0
+          "item": 14
         }
       },
       {
         "id": 192,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 14
         }
       }
     ]
@@ -8261,14 +8261,14 @@
         "id": 305,
         "conditions": {
           "rank": 5,
-          "item": 0
+          "item": 13
         }
       },
       {
         "id": 187,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 12
         }
       }
     ]
@@ -8309,14 +8309,14 @@
         "id": 306,
         "conditions": {
           "rank": 5,
-          "item": 0
+          "item": 14
         }
       },
       {
         "id": 188,
         "conditions": {
           "rank": 3,
-          "item": 0
+          "item": 11
         }
       }
     ]
@@ -14179,7 +14179,7 @@
           "rank": 8,
           "HP": 4680,
           "SPD": 2740,
-          "item": 0
+          "item": 15
         }
       }
     ]
@@ -14205,7 +14205,7 @@
           "rank": 8,
           "HP": 4680,
           "SPD": 2740,
-          "item": 0
+          "item": 15
         }
       },
       {

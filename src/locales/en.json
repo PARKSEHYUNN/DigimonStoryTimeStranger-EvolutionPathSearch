@@ -47,5 +47,22 @@
     "13": "Friendly",
     "14": "Sociable",
     "15": "Compassionate"
+  },
+  "item": {
+    "1": "Digi-Egg of Destiny",
+    "2": "Digi-Egg of Hope",
+    "3": "Digi-Egg of Knowledge",
+    "4": "Digi-Egg of Reliability",
+    "5": "Digi-Egg of Friendship",
+    "6": "Digi-Egg of Miracles",
+    "7": "Digi-Egg of Courage",
+    "8": "Digi-Egg of Love",
+    "9": "Digi-Egg of Sincerity",
+    "10": "Digi-Egg of Light",
+    "11": "Human Spirit of Light",
+    "12": "Human Spirit of Flame",
+    "13": "Beast Spirit of Flame",
+    "14": "Beast Spirit of Light",
+    "15": "Omega Blade"
   }
 }

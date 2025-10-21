@@ -7,7 +7,13 @@ import ThemeToggle from './ThemeToggle';
 import LanguageDropdown from './LanguageDropdown';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGear, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGear,
+  faBars,
+  faXmark,
+  faBug,
+} from '@fortawesome/free-solid-svg-icons';
+import BugReportButton from './BugReportButton';
 
 export default function Navbar() {
   // 모바일 메뉴 상태 관리
@@ -94,6 +100,10 @@ export default function Navbar() {
             {/* 테마 변경 토글 버튼 */}
             <li>
               <ThemeToggle />
+            </li>
+            {/* 버그 제보 버튼 */}
+            <li>
+              <BugReportButton />
             </li>
           </ul>
         </div>

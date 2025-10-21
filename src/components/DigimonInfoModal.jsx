@@ -35,6 +35,15 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
     e.stopPropagation();
   };
 
+  const lang =
+    i18n.language === 'en'
+      ? 0
+      : i18n.language === 'ko'
+        ? 1
+        : i18n.language === 'ja'
+          ? 2
+          : 0;
+
   return (
     <div
       className="fixed top-0 right-0 left-0 z-50 flex h-[calc(100%-1rem)] max-h-full items-center justify-center overflow-x-hidden overflow-y-auto backdrop-blur-[4px] md:inset-0"
@@ -201,7 +210,7 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                               className="w-2/5"
                             />
                             <div className="ms-2 flex w-3/5 flex-col text-start">
-                              <span className="text-gray-900 dark:text-white">
+                              <span className="text-sm text-gray-900 dark:text-white">
                                 • 에이전트 레벨 {toDigimon.conditions.rank} 이상
                               </span>
                               {Object.keys(toDigimon.conditions)
@@ -224,9 +233,66 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                                     case 'RES':
                                     case 'SPD':
                                       return (
-                                        <span className="text-gray-900 dark:text-white">
+                                        <span className="text-sm text-gray-900 dark:text-white">
                                           • {key} {value} 이상
                                         </span>
+                                      );
+                                  }
+                                })}
+
+                              {Object.keys(toDigimon.conditions)
+                                .filter(
+                                  (key) =>
+                                    key !== 'rank' &&
+                                    key !== 'HP' &&
+                                    key !== 'MP' &&
+                                    key !== 'ATK' &&
+                                    key !== 'DEF' &&
+                                    key !== 'INT' &&
+                                    key !== 'RES' &&
+                                    key !== 'SPD',
+                                )
+                                .map((key) => {
+                                  const value = toDigimon.conditions[key];
+                                  console.log(key, toDigimon.conditions[key]);
+                                  console.log('a');
+
+                                  switch (key) {
+                                    case 'item':
+                                      return (
+                                        <span className="text-sm text-gray-900 dark:text-white">
+                                          • {t(`item.${value}`)} 필요
+                                        </span>
+                                      );
+
+                                    case 'jogress':
+                                      return (
+                                        <>
+                                          <span className="text-sm text-gray-900 dark:text-white">
+                                            •{' '}
+                                            {t(
+                                              `personality.${value[0].personality}`,
+                                            )}{' '}
+                                            성격{' '}
+                                            {
+                                              digimons.get(value[0].id).name[
+                                                lang
+                                              ]
+                                            }
+                                          </span>
+                                          <span className="text-sm text-gray-900 dark:text-white">
+                                            •{' '}
+                                            {t(
+                                              `personality.${value[1].personality}`,
+                                            )}{' '}
+                                            성격{' '}
+                                            {
+                                              digimons.get(value[1].id).name[
+                                                lang
+                                              ]
+                                            }
+                                          </span>
+                                        </>
                                       );
                                   }
                                 })}
