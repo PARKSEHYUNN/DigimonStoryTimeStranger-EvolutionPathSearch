@@ -73,7 +73,7 @@
     "error_network": "네트워크 오류가 발생했습니다.",
     "error_submit": "제출 실패: {{error_message}}",
     "completion_title": "제출 완료!",
-    "completion_text": "소중한 의견 감사합니다. 빠른 시일 내ㅐ에 확인하겠습니다."
+    "completion_text": "소중한 의견 감사합니다. 빠른 시일 내에 확인하겠습니다."
   },
   "attribute": {
     "0": "종족 불명",

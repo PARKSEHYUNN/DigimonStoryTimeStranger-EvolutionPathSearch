@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBug } from '@fortawesome/free-solid-svg-icons';
 
 export default function BugReportButton() {
+  const { t } = useTranslation();
   const FORMSPREE_ID = 'meorwprq';
 
   const openBugReportModal = () => {
@@ -24,19 +25,19 @@ export default function BugReportButton() {
       },
       html: `
       <form id="bug-report-form" class="flex flex-col items-start gap-4">
-          <label for="swal-email" class="font-bold text-sm w-full text-left text-gray-700 dark:text-gray-300">{t('bug_report.email')}</label>
+          <label for="swal-email" class="font-bold text-sm w-full text-left text-gray-700 dark:text-gray-300">${t('bug_report.email')}</label>
           <input 
             id="swal-email" 
             name="_replyto" 
             type="email" 
-            placeholder={t('bug_report.replyto')}
+            placeholder=${t('bug_report.replyto')}
             required 
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md 
                   !bg-white dark:!bg-gray-700 !text-gray-900 dark:!text-gray-100 
                   focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           
-          <label for="swal-bug-type" class="font-bold text-sm w-full text-left text-gray-700 dark:text-gray-300">{t('bug_report.type')}</label>
+          <label for="swal-bug-type" class="font-bold text-sm w-full text-left text-gray-700 dark:text-gray-300">${t('bug_report.type')}</label>
           <select 
             id="swal-bug-type" 
             name="bugType" 
@@ -45,18 +46,18 @@ export default function BugReportButton() {
                   !bg-white dark:!bg-gray-700 !text-gray-900 dark:!text-gray-100 
                   focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <option value="">{t('bug_report.choice')}</option>
-            <option value="ui">{t('bug_report.ui')}</option>
-            <option value="functional">{t('bug_report.functional')}</option>
-            <option value="crash">{t('bug_report.crash')}</option>
-            <option value="etc">{t('bug_report.etc')}</option>
+            <option value="">${t('bug_report.choice')}</option>
+            <option value="ui">${t('bug_report.ui')}</option>
+            <option value="functional">${t('bug_report.functional')}</option>
+            <option value="crash">${t('bug_report.crash')}</option>
+            <option value="etc">${t('bug_report.etc')}</option>
           </select>
 
-          <label for="swal-description" class="font-bold text-sm w-full text-left text-gray-700 dark:text-gray-300">{t('bug_report.details')}</label>
+          <label for="swal-description" class="font-bold text-sm w-full text-left text-gray-700 dark:text-gray-300">${t('bug_report.details')}</label>
           <textarea 
             id="swal-description" 
             name="description" 
-            placeholder={t('bug_report.details_placeholder')}
+            placeholder=${t('bug_report.details_placeholder')}
             rows="5"
             required
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md 
