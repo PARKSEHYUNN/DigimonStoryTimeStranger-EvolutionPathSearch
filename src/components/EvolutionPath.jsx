@@ -16,20 +16,54 @@ import {
 import DigimonSelectBox from './DigimonSelectBox';
 import DigimonInfoModal from './DigimonInfoModal';
 import DigimonItem from './DigimonItem';
+import { useDigimons } from '../hooks/useDigimons';
 
-const EvolutionArrow = ({ evolution }) => {
+const EvolutionArrow = ({ evolution, isJogress, jogress }) => {
+  const { digimons, loading } = useDigimons();
+  const { i18n, t } = useTranslation();
+  const lang =
+    i18n.language === 'en'
+      ? 0
+      : i18n.language === 'ko'
+        ? 1
+        : i18n.language === 'ja'
+          ? 2
+          : 0;
+
   return (
-    <div className="flex h-14 flex-col md:h-18">
+    <div className="flex h-14 flex-col items-center justify-center md:h-18">
       <FontAwesomeIcon
         icon={faArrowRight}
         size="lg"
         className="ms-1 me-1 text-gray-900 md:ms-8 md:me-8 dark:text-white"
       />
       <span
-        className={`mt-1 text-xs font-medium ${evolution ? 'text-green-500' : 'text-red-500'}`}
+        className={`mt-1 text-xs font-medium ${jogress ? 'text-cyan-500' : evolution ? 'text-green-500' : 'text-red-500'}`}
       >
-        {evolution ? '진화' : '퇴화'}
+        {jogress
+          ? t('evolution_path.jogress')
+          : evolution
+            ? t(`evolution_path.evolution`)
+            : t(`evolution_path.devolution`)}
       </span>
+      {isJogress ? (
+        <>
+          <span className="mt-1 text-xs font-medium text-rose-500">
+            {t('digimon_info.personality_message', {
+              personality: t(`personality.${jogress[0].personality}`),
+              digimon_name: digimons.get(jogress[0].id).name[lang],
+            })}
+          </span>
+          <span className="mt-1 text-xs font-medium text-emerald-500">
+            {t('digimon_info.personality_message', {
+              personality: t(`personality.${jogress[1].personality}`),
+              digimon_name: digimons.get(jogress[1].id).name[lang],
+            })}
+          </span>
+        </>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
@@ -125,9 +159,9 @@ export default function EvolutionPath() {
       return;
     }
 
-    console.log(
-      `[Automatic Request] ${nowDigimon.id} -> ${evolutionFromDigimon.id} 경로 탐색`,
-    );
+    // console.log(
+    //   `[Automatic Request] ${nowDigimon.id} -> ${evolutionFromDigimon.id} 경로 탐색`,
+    // );
     setIsLoading(true);
     setError(null);
     setPaths([]);
@@ -155,9 +189,9 @@ export default function EvolutionPath() {
   const handleAddExcpetion = (digimonToAdd) => {
     if (nowDigimon.id === digimonToAdd.id) {
       Swal.fire({
-        title: '경고',
+        title: t('evolution_path.exception_error_title'),
         icon: 'warning',
-        text: '현재 디지몬은 제외 목록에 추가 할 수 없습니다.',
+        text: t('evolution_path.exception_error_start'),
       });
       return null;
     }
@@ -166,7 +200,7 @@ export default function EvolutionPath() {
       Swal.fire({
         title: '경고',
         icon: 'warning',
-        text: '진화 할 디지몬은 제외 목록에 추가 할 수 없습니다.',
+        text: t('evolution_path.exception_error_end'),
       });
       return null;
     }
@@ -205,15 +239,14 @@ export default function EvolutionPath() {
       if (!nowDigimon || !evolutionFromDigimon) {
         return (
           <span className="text-gray-900 dark:text-white">
-            디지몬을 선택 해주세요.
+            {t('evolution_path.choice_digimon_message')}
           </span>
         );
       }
 
       return (
         <span className="text-gray-900 dark:text-white">
-          해당 진화 트리를 찾을 수 없습니다. (제외된 디지몬이 경로에 포함
-          되어있을 수 있습니다.)
+          {t('evolution_path.evolution_path_error')}
         </span>
       );
     }
@@ -235,14 +268,58 @@ export default function EvolutionPath() {
             />
             <div className="peer dark:peer-checked:bg-white-400 relative h-5 w-9 rounded-full bg-gray-300 peer-checked:bg-gray-600 peer-focus:outline-none after:absolute after:start-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-800"></div>
             <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-              실루엣 보기
+              {t('evolution_path.silhouette_toggle')}
             </span>
           </label>
         </div>
 
         {/* 진화 트리 */}
         <div className="flex w-full flex-row flex-wrap items-center justify-center">
-          {result.path.map((digimon, index) => (
+          {result.path.map((digimon, index) => {
+            const hasNext = index < result.path.length - 1;
+            let isEvolution = true;
+            let isJogress = false;
+            let jogressData = null;
+
+            if (hasNext) {
+              const nextDigimon = result.path[index + 1];
+              isEvolution = nextDigimon.generation >= digimon.generation;
+
+              const requirement = digimon.evolution_requirements?.find(
+                (req) => req.id === nextDigimon.id,
+              );
+
+              isJogress = !!(requirement && requirement.conditions.jogress);
+
+              if (isJogress) jogressData = requirement.conditions.jogress;
+            }
+
+            return (
+              <React.Fragment key={digimon.id}>
+                <DigimonItem
+                  digimon={digimon}
+                  type="exceptionAdd"
+                  options={{
+                    exceptionAdd: handleAddExcpetion,
+                    onInfoClick: handleShowInfo,
+                  }}
+                  isSilhouette={isSilhouette}
+                />
+                {console.log(digimon)}
+                {index < result.path.length - 1 && (
+                  <EvolutionArrow
+                    evolution={
+                      result.path[index + 1].generation >= digimon.generation
+                    }
+                    isJogress={isJogress}
+                    jogress={jogressData}
+                  />
+                )}
+              </React.Fragment>
+            );
+          })}
+
+          {/* {result.path.map((digimon, index) => (
             <React.Fragment key={digimon.id}>
               <DigimonItem
                 digimon={digimon}
@@ -253,15 +330,18 @@ export default function EvolutionPath() {
                 }}
                 isSilhouette={isSilhouette}
               />
+              {console.log(digimon)}
               {index < result.path.length - 1 && (
                 <EvolutionArrow
                   evolution={
                     result.path[index + 1].generation >= digimon.generation
                   }
+                  isJogress={isJogress}
+                  jogress={jogressData}
                 />
               )}
             </React.Fragment>
-          ))}
+          ))} */}
         </div>
       </div>
     ));
@@ -295,7 +375,7 @@ export default function EvolutionPath() {
               htmlFor="agentLevelSelect"
               className="mb-2 block text-start text-sm font-medium text-gray-900 dark:text-white"
             >
-              에이전트 레벨
+              {t('evolution_path.agent_level')}
             </label>
             <select
               id="agentLevelSelect"
@@ -324,7 +404,7 @@ export default function EvolutionPath() {
               htmlFor="jogressOption"
               className="mb-2 block text-start text-sm font-medium text-gray-900 dark:text-white"
             >
-              조그레스
+              {t('evolution_path.in_jogress')}
             </label>
             <select
               id="jogressOption"
@@ -332,8 +412,12 @@ export default function EvolutionPath() {
               value={jogressOption}
               onChange={(e) => setJogressOption(e.target.value)}
             >
-              <option value="include">포함</option>
-              <option value="not-include">비포함</option>
+              <option value="include">
+                {t('evolution_path.in_jogress_true')}
+              </option>
+              <option value="not-include">
+                {t('evolution_path.in_jogress_false')}
+              </option>
             </select>
           </form>
         </div>
@@ -379,7 +463,7 @@ export default function EvolutionPath() {
       <div className="mt-5 flex w-[90%] flex-row flex-wrap items-center justify-center rounded-lg bg-gray-50 pt-3 md:w-[95%] dark:bg-gray-900">
         <div className="flex w-full items-center justify-center">
           <h3 className="mb-1 text-gray-900 dark:text-white">
-            제외된 디지몬 목록
+            {t('evolution_path.exception_digimon_list')}
           </h3>
           <button
             type="button"
@@ -387,14 +471,13 @@ export default function EvolutionPath() {
             onClick={() => resetExceptions()}
           >
             {/* <FontAwesomeIcon icon={faTrash} /> */}
-            초기화
+            {t('evolution_path.exception_digimon_list_reset')}
           </button>
         </div>
         <div className="flex w-full flex-row flex-wrap justify-center gap-4 pb-3">
           {exceptionDigimons.length === 0 ? (
             <span className="text-gray-900 dark:text-white">
-              현재 제외한 디지몬이 없습니다. (경로 상 디지몬의 금지 아이콘을
-              클릭해 추가하세요.)
+              {t('evolution_path.exception_digimon_list_message')}
             </span>
           ) : (
             exceptionDigimons.map((digimon) => (

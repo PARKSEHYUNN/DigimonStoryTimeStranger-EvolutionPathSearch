@@ -7,6 +7,8 @@ import DigimonSearch from './DigimonSearch';
 import DigimonInfoModal from './DigimonInfoModal';
 
 export default function DigimonList() {
+  const { t } = useTranslation();
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedDigimon, setSelectedDigimon] = useState(null);
 
@@ -22,7 +24,9 @@ export default function DigimonList() {
 
   return (
     <div className="mt-3 flex h-[calc(100vh-120px)] w-full flex-col items-center justify-center rounded-lg bg-gray-200 p-5 dark:bg-gray-800">
-      <h1 className="mb-3 shrink-0 text-2xl font-bold dark:text-white">List</h1>
+      <h1 className="mb-3 shrink-0 text-2xl font-bold dark:text-white">
+        {t('digimon_list.title')}
+      </h1>
 
       <DigimonSearch onSelectDigimon={handleShowInfo} isList={true} />
 

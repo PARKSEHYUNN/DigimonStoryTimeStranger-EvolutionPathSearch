@@ -87,7 +87,7 @@ export default function DigimonSearch({ onSelectDigimon, isList }) {
             type="text"
             id="digimon-search-input"
             className="dark:gray-600 block w-full flex-1 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
-            placeholder="디지몬 이름 검색"
+            placeholder={t('digimon_search.input_placeholder')}
             value={searchTrim}
             onChange={(e) => setSearchTrim(e.target.value)}
           />
@@ -114,12 +114,14 @@ export default function DigimonSearch({ onSelectDigimon, isList }) {
         <div
           className={`border-gray-150 mt-4 max-h-48 w-full overflow-y-auto rounded-lg bg-gray-100 p-4 dark:border-gray-900 dark:bg-gray-800 ${filterVisible ? '' : 'hidden'}`}
         >
-          <h4 className="mb-2 font-semibold dark:text-white">필터 옵션</h4>
+          <h4 className="mb-2 font-semibold dark:text-white">
+            {t('digimon_search.filter_option')}
+          </h4>
           <div className="flex flex-row justify-around">
             {/* 세대 필터 */}
             <div className="mb-3">
               <label className="mb-1.5 block text-sm font-medium text-gray-900 dark:text-white">
-                세대
+                {t('digimon_search.generation')}
               </label>
               <div className="flex flex-col flex-wrap gap-x-4 gap-y-1">
                 {generationFilterOption.map((option) => (
@@ -152,7 +154,7 @@ export default function DigimonSearch({ onSelectDigimon, isList }) {
             {/* 속성 필터 */}
             <div className="mb-3">
               <label className="mb-1.5 block text-sm font-medium text-gray-900 dark:text-white">
-                속성
+                {t('digimon_search.attribute')}
               </label>
               <div className="flex flex-col flex-wrap gap-x-4 gap-y-1">
                 {attributeFilterOption.map((option) => (
@@ -185,7 +187,7 @@ export default function DigimonSearch({ onSelectDigimon, isList }) {
             {/* 기본 성격 필터 */}
             <div className="mb-3">
               <label className="mb-1.5 block text-sm font-medium text-gray-900 dark:text-white">
-                기본 성격
+                {t('digimon_search.personality')}
               </label>
               <div className="flex flex-col flex-wrap gap-x-4 gap-y-1">
                 {personalityFilterOption.map((option) => (
@@ -221,7 +223,7 @@ export default function DigimonSearch({ onSelectDigimon, isList }) {
       {/* 디지몬 목록 */}
       <div className="min-h-0 flex-1 overflow-y-auto">
         {loading ? (
-          <p className="text-center">로딩 중...</p>
+          <p className="text-center">{t('digimon_search.loading')}</p>
         ) : (
           <VirtuosoGrid
             data={filteredItems}

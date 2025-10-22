@@ -1,15 +1,80 @@
 {
   "nav": {
     "evolution_path": "進化ツリー",
-    "digimon_list": "デジモン一覧"
+    "digimon_list": "デジモンリスト"
   },
   "evolution_path": {
-    "now_digimon": "Now Digimon",
-    "evolution_from_digimon": "Evolution From Digimon",
-    "choice_digimon": "Choice Digimon"
+    "agent_level": "エージェントレベル",
+    "in_jogress": "ジョグレス含む",
+    "in_jogress_true": "含む",
+    "in_jogress_false": "含まない",
+    "now_digimon": "現在のデジモン",
+    "evolution_from_digimon": "進化先デジモン",
+    "choice_digimon": "デジモン選択",
+    "choice_digimon_message": "デジモンを選択してください。",
+    "evolution_path_error": "該当の進化ツリーが見つかりません。（除外されたデジモンが経路に含まれている可能性があります。）",
+    "silhouette_toggle": "シルエット表示",
+    "jogress": "ジョグレス",
+    "evolution": "進化",
+    "devolution": "退化",
+    "exception_error_title": "警告",
+    "exception_error_start": "現在のデジモンは除外リストに追加できません。",
+    "exception_error_end": "進化先のデジモンは除外リストに追加できません。",
+    "exception_digimon_list": "除外デジモンリスト",
+    "exception_digimon_list_reset": "リセット",
+    "exception_digimon_list_message": "現在除外したデジモンがいません。（経路上のデジモンの禁止アイコンをクリックして追加してください。）"
   },
-  "temp1": "デジモンストーリー タイムストレンジャー - 進化ツリー検索",
-  "temp2": "検索",
+  "digimon_select_modal": {
+    "title": "デジモン選択"
+  },
+  "digimon_search": {
+    "input_placeholder": "デジモン名検索",
+    "filter_option": "フィルターオプション",
+    "generation": "世代",
+    "attribute": "属性",
+    "personality": "基本性格",
+    "loading": "ロード中..."
+  },
+  "digimon_info": {
+    "title": "デジモン情報",
+    "name": "名前",
+    "generation": "世代",
+    "attribute": "属性",
+    "personality": "基本性格",
+    "silhouette_toggle": "シルエット表示",
+    "before_digimon": "進化前デジモン",
+    "before_digimon_none": "進化前のデジモンがいません。",
+    "after_digimon": "進化後デジモン",
+    "after_digimon_none": "進化後のデジモンがいません。",
+    "agent_level": "エージェントレベル {{agent_level}} 以上",
+    "stat": "{{key}} {{value}} 以上",
+    "item": "{{item}} 必要",
+    "personality_message": "{{personality}} 性格の {{digimon_name}}",
+    "agent_skill": "{{key}} {{value}} 以上"
+  },
+  "digimon_list": {
+    "title": "デジモンリスト"
+  },
+  "bug_report": {
+    "title": "バグ報告",
+    "email": "Eメール (返信用)",
+    "replyto": "返信先Eメールアドレス",
+    "type": "問題の種類",
+    "choice": "選択してください...",
+    "ui": "UI/デザインの問題",
+    "functional": "機能エラー",
+    "crash": "クラッシュ/フリーズ",
+    "etc": "その他",
+    "details": "詳細内容",
+    "details_placeholder": "問題をできるだけ詳しく説明してください。",
+    "submit": "送信",
+    "cancel": "キャンセル",
+    "error_input": "すべての項目を入力してください。",
+    "error_network": "ネットワークエラーが発生しました。",
+    "error_submit": "送信失敗: {{error_message}}",
+    "completion_title": "送信完了！",
+    "completion_text": "貴重なご意見ありがとうございます。早急に確認いたします。"
+  },
   "attribute": {
     "0": "No Data",
     "1": "ワクチン",

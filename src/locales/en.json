@@ -4,12 +4,77 @@
     "digimon_list": "Digimon List"
   },
   "evolution_path": {
-    "now_digimon": "Now Digimon",
-    "evolution_from_digimon": "Evolution From Digimon",
-    "choice_digimon": "Choice Digimon"
+    "agent_level": "Agent Level",
+    "in_jogress": "Include Jogress",
+    "in_jogress_true": "Include",
+    "in_jogress_false": "Exclude",
+    "now_digimon": "Current Digimon",
+    "evolution_from_digimon": "Evolve to",
+    "choice_digimon": "Select Digimon",
+    "choice_digimon_message": "Please select a Digimon.",
+    "evolution_path_error": "Cannot find the evolution path. (An excluded Digimon might be on the path.)",
+    "silhouette_toggle": "View Silhouette",
+    "jogress": "Jogress",
+    "evolution": "Evolution",
+    "devolution": "De-evolution",
+    "exception_error_title": "Warning",
+    "exception_error_start": "The current Digimon cannot be added to the exclusion list.",
+    "exception_error_end": "The Digimon to evolve to cannot be added to the exclusion list.",
+    "exception_digimon_list": "Excluded Digimon List",
+    "exception_digimon_list_reset": "Reset",
+    "exception_digimon_list_message": "There are no currently excluded Digimon. (Click the ban icon on a Digimon in the path to add.)"
   },
-  "temp1": "DigimonStory TimeStranger - Evolution Path Search",
-  "temp2": "Search",
+  "digimon_select_modal": {
+    "title": "Select Digimon"
+  },
+  "digimon_search": {
+    "input_placeholder": "Search Digimon name",
+    "filter_option": "Filter Options",
+    "generation": "Generation",
+    "attribute": "Attribute",
+    "personality": "Base Personality",
+    "loading": "Loading..."
+  },
+  "digimon_info": {
+    "title": "Digimon Info",
+    "name": "Name",
+    "generation": "Generation",
+    "attribute": "Attribute",
+    "personality": "Base Personality",
+    "silhouette_toggle": "View Silhouette",
+    "before_digimon": "Pre-evolution",
+    "before_digimon_none": "No pre-evolutions.",
+    "after_digimon": "Post-evolution",
+    "after_digimon_none": "No post-evolutions.",
+    "agent_level": "Agent Level {{agent_level}} or higher",
+    "stat": "{{key}} {{value}} or higher",
+    "item": "{{item}} required",
+    "personality_message": "{{digimon_name}} with {{personality}} personality",
+    "agent_skill": "{{key}} {{value}} or higher"
+  },
+  "digimon_list": {
+    "title": "Digimon List"
+  },
+  "bug_report": {
+    "title": "Report a Bug",
+    "email": "Email (for reply)",
+    "replyto": "Email address to receive a reply",
+    "type": "Issue Type",
+    "choice": "Select...",
+    "ui": "UI/Design Issue",
+    "functional": "Functional Error",
+    "crash": "Crash/Freeze",
+    "etc": "Other",
+    "details": "Details",
+    "details_placeholder": "Please describe the problem in as much detail as possible.",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "error_input": "Please fill in all fields.",
+    "error_network": "A network error occurred.",
+    "error_submit": "Submission failed: {{error_message}}",
+    "completion_title": "Submission Complete!",
+    "completion_text": "Thank you for your valuable feedback. We will check it as soon as possible."
+  },
   "attribute": {
     "0": "No Data",
     "1": "Vaccine",

@@ -58,7 +58,7 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
           {/* 모달 헤더 */}
           <div className="flex items-center justify-between rounded-t border-b border-gray-200 p-4 md:p-5 dark:border-gray-600">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              디지몬 정보
+              {t('digimon_info.title')}
             </h3>
             <button
               type="button"
@@ -82,7 +82,7 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                 {/* 디지몬 이름 */}
                 <div className="mb-2 flex flex-col">
                   <span className="ms-7 text-start text-xs text-gray-900 dark:text-white">
-                    이름
+                    {t('digimon_info.name')}
                   </span>
                   <span className="text-md ms-9 text-start text-gray-900 dark:text-white">
                     {
@@ -102,7 +102,7 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                 {/* 디지몬 등급 */}
                 <div className="mb-2 flex flex-col">
                   <span className="ms-7 text-start text-xs text-gray-900 dark:text-white">
-                    등급
+                    {t('digimon_info.generation')}
                   </span>
                   <span className="text-md ms-9 text-start text-gray-900 dark:text-white">
                     {t(`generation.${digimonToDisplay.generation}`)}
@@ -112,7 +112,7 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                 {/* 디지몬 속성 */}
                 <div className="mb-2 flex flex-col">
                   <span className="ms-7 text-start text-xs text-gray-900 dark:text-white">
-                    속성
+                    {t('digimon_info.attribute')}
                   </span>
                   <span className="text-md ms-9 text-start text-gray-900 dark:text-white">
                     {t(`attribute.${digimonToDisplay.attribute}`)}
@@ -122,7 +122,7 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                 {/* 디지몬 기본 성격 */}
                 <div className="mb-2 flex flex-col">
                   <span className="ms-7 text-start text-xs text-gray-900 dark:text-white">
-                    기본 성격
+                    {t('digimon_info.personality')}
                   </span>
                   <span className="text-md ms-9 text-start text-gray-900 dark:text-white">
                     {t(`personality.${digimonToDisplay.personality}`)}
@@ -131,31 +131,32 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
               </div>
             </div>
 
+            {/* 실루엣 토글 */}
+            <div className="mb-4 flex w-full justify-end pe-3">
+              <label className="mb-2 inline-flex cursor-pointer items-center">
+                <input
+                  type="checkbox"
+                  value=""
+                  className="peer sr-only"
+                  checked={isSilhouette}
+                  onChange={() => setIsSilhouette(!isSilhouette)}
+                />
+                <div className="peer dark:peer-checked:bg-white-200 relative h-5 w-9 rounded-full bg-gray-300 peer-checked:bg-gray-600 peer-focus:outline-none after:absolute after:start-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-900"></div>
+                <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+                  {t('digimon_info.silhouette_toggle')}
+                </span>
+              </label>
+            </div>
+
             {/* 진화 전 디지몬 */}
             <div className="mb-4 flex w-full flex-col rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
-              {/* 실루엣 토글 */}
-              <div className="mb-4 flex w-full justify-end pe-3">
-                <label className="mb-2 inline-flex cursor-pointer items-center">
-                  <input
-                    type="checkbox"
-                    value=""
-                    className="peer sr-only"
-                    checked={isSilhouette}
-                    onChange={() => setIsSilhouette(!isSilhouette)}
-                  />
-                  <div className="peer dark:peer-checked:bg-white-200 relative h-5 w-9 rounded-full bg-gray-300 peer-checked:bg-gray-600 peer-focus:outline-none after:absolute after:start-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-900"></div>
-                  <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-                    실루엣 보기
-                  </span>
-                </label>
-              </div>
               <span className="text-md mb-2 text-start text-gray-900 dark:text-white">
-                진화 전 디지몬
+                {t('digimon_info.before_digimon')}
               </span>
               <div className="flex w-full gap-3 overflow-x-scroll rounded-lg bg-gray-100 ps-3 pe-3 pt-3 dark:bg-gray-900">
                 {digimonToDisplay.evolution.from.length === 0 ? (
                   <span className="pb-3 text-gray-900 dark:text-white">
-                    진화 전 디지몬이 없습니다.
+                    {t('digimon_info.before_digimon_none')}
                   </span>
                 ) : (
                   digimonToDisplay.evolution.from.map((fromDigimonId) => {
@@ -182,12 +183,12 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
             {/* 진화 후 디지몬 */}
             <div className="mb-2 flex w-full flex-col rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
               <span className="text-md mb-2 text-start text-gray-900 dark:text-white">
-                진화 후 디지몬
+                {t('digimon_info.after_digimon')}
               </span>
               <div className="flex w-full gap-3 overflow-x-scroll rounded-lg bg-gray-100 p-3 dark:bg-gray-900">
                 {digimonToDisplay.evolution_requirements.length === 0 ? (
                   <span className="pb-3 text-gray-900 dark:text-white">
-                    진화 후 디지몬이 없습니다.
+                    {t('digimon_info.after_digimon_none')}
                   </span>
                 ) : (
                   <div className="grid w-full grid-cols-2 overflow-x-hidden">
@@ -211,7 +212,10 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                             />
                             <div className="ms-2 flex w-3/5 flex-col text-start">
                               <span className="text-sm text-gray-900 dark:text-white">
-                                • 에이전트 레벨 {toDigimon.conditions.rank} 이상
+                                •{' '}
+                                {t('digimon_info.agent_level', {
+                                  agent_level: toDigimon.conditions.rank,
+                                })}
                               </span>
                               {Object.keys(toDigimon.conditions)
                                 .filter(
@@ -234,7 +238,11 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                                     case 'SPD':
                                       return (
                                         <span className="text-sm text-gray-900 dark:text-white">
-                                          • {key} {value} 이상
+                                          •{' '}
+                                          {t('digimon_info.stat', {
+                                            key: key,
+                                            value: value,
+                                          })}
                                         </span>
                                       );
                                   }
@@ -255,13 +263,15 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                                 .map((key) => {
                                   const value = toDigimon.conditions[key];
                                   console.log(key, toDigimon.conditions[key]);
-                                  console.log('a');
 
                                   switch (key) {
                                     case 'item':
                                       return (
                                         <span className="text-sm text-gray-900 dark:text-white">
-                                          • {t(`item.${value}`)} 필요
+                                          •{' '}
+                                          {t('digimon_info.item', {
+                                            item: t(`item.${value}`),
+                                          })}
                                         </span>
                                       );
 
@@ -271,26 +281,30 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                                           <span className="text-sm text-gray-900 dark:text-white">
                                             •{' '}
                                             {t(
-                                              `personality.${value[0].personality}`,
-                                            )}{' '}
-                                            성격{' '}
-                                            {
-                                              digimons.get(value[0].id).name[
-                                                lang
-                                              ]
-                                            }
+                                              'digimon_info.personality_message',
+                                              {
+                                                personality: t(
+                                                  `personality.${value[0].personality}`,
+                                                ),
+                                                digimon_name: digimons.get(
+                                                  value[0].id,
+                                                ).name[lang],
+                                              },
+                                            )}
                                           </span>
                                           <span className="text-sm text-gray-900 dark:text-white">
                                             •{' '}
                                             {t(
-                                              `personality.${value[1].personality}`,
-                                            )}{' '}
-                                            성격{' '}
-                                            {
-                                              digimons.get(value[1].id).name[
-                                                lang
-                                              ]
-                                            }
+                                              'digimon_info.personality_message',
+                                              {
+                                                personality: t(
+                                                  `personality.${value[1].personality}`,
+                                                ),
+                                                digimon_name: digimons.get(
+                                                  value[1].id,
+                                                ).name[lang],
+                                              },
+                                            )}
                                           </span>
                                         </>
                                       );
@@ -300,7 +314,11 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                                     case 'wisdom':
                                       return (
                                         <span className="text-sm text-gray-900 dark:text-white">
-                                          • {t(`agent.${key}`)} {value} 이상
+                                          •{' '}
+                                          {t('digimon_info.agent_skill', {
+                                            key: t(`agent.${key}`),
+                                            value: value,
+                                          })}
                                         </span>
                                       );
                                   }

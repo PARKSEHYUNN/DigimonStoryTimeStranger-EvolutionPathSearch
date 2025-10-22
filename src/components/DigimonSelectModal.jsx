@@ -41,7 +41,7 @@ export default function DigimonSelectModal({
           {/* 모달 헤더 */}
           <div className="justfly-between flex items-center rounded-t border-b border-gray-200 p-4 md:p-5 dark:border-gray-600">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              Choice Digimon
+              {t('digimon_select_modal.title')}
             </h3>
             <button
               type="button"

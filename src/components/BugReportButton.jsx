@@ -2,6 +2,7 @@
 
 // 모듈 선언
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBug } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +12,7 @@ export default function BugReportButton() {
 
   const openBugReportModal = () => {
     Swal.fire({
-      title: '버그 제보하기',
+      title: t('bug_report.title'),
       customClass: {
         popup:
           '!bg-white dark:!bg-gray-800 !text-gray-900 dark:!text-gray-100 !rounded-2xl',
@@ -23,19 +24,19 @@ export default function BugReportButton() {
       },
       html: `
       <form id="bug-report-form" class="flex flex-col items-start gap-4">
-          <label for="swal-email" class="font-bold text-sm w-full text-left text-gray-700 dark:text-gray-300">이메일 (답변을 위해)</label>
+          <label for="swal-email" class="font-bold text-sm w-full text-left text-gray-700 dark:text-gray-300">{t('bug_report.email')}</label>
           <input 
             id="swal-email" 
             name="_replyto" 
             type="email" 
-            placeholder="답변 받을 이메일 주소" 
+            placeholder={t('bug_report.replyto')}
             required 
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md 
                   !bg-white dark:!bg-gray-700 !text-gray-900 dark:!text-gray-100 
                   focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           
-          <label for="swal-bug-type" class="font-bold text-sm w-full text-left text-gray-700 dark:text-gray-300">문제 유형</label>
+          <label for="swal-bug-type" class="font-bold text-sm w-full text-left text-gray-700 dark:text-gray-300">{t('bug_report.type')}</label>
           <select 
             id="swal-bug-type" 
             name="bugType" 
@@ -44,18 +45,18 @@ export default function BugReportButton() {
                   !bg-white dark:!bg-gray-700 !text-gray-900 dark:!text-gray-100 
                   focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <option value="">선택하세요...</option>
-            <option value="ui">UI/디자인 문제</option>
-            <option value="functional">기능 오류</option>
-            <option value="crash">크래시/멈춤</option>
-            <option value="etc">기타</option>
+            <option value="">{t('bug_report.choice')}</option>
+            <option value="ui">{t('bug_report.ui')}</option>
+            <option value="functional">{t('bug_report.functional')}</option>
+            <option value="crash">{t('bug_report.crash')}</option>
+            <option value="etc">{t('bug_report.etc')}</option>
           </select>
 
-          <label for="swal-description" class="font-bold text-sm w-full text-left text-gray-700 dark:text-gray-300">상세 내용</label>
+          <label for="swal-description" class="font-bold text-sm w-full text-left text-gray-700 dark:text-gray-300">{t('bug_report.details')}</label>
           <textarea 
             id="swal-description" 
             name="description" 
-            placeholder="문제를 최대한 자세히 설명해주세요." 
+            placeholder={t('bug_report.details_placeholder')}
             rows="5"
             required
             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md 
@@ -65,8 +66,8 @@ export default function BugReportButton() {
         </form>
       `,
       showCancelButton: true,
-      confirmButtonText: '제출하기',
-      cancelButtonText: '취소',
+      confirmButtonText: t('bug_report.submit'),
+      cancelButtonText: t('bug_report.cancel'),
       focusConfirm: false,
       preConfirm: () => {
         const email = document.getElementById('swal-email').value;
@@ -75,7 +76,7 @@ export default function BugReportButton() {
 
         // 간단한 유효성 검사
         if (!email || !bugType || !description) {
-          Swal.showValidationMessage('모든 항목을 입력해주세요.');
+          Swal.showValidationMessage(t('bug_report.error_input'));
         }
 
         const formData = {
@@ -94,20 +95,22 @@ export default function BugReportButton() {
         })
           .then((response) => {
             if (!response.ok) {
-              throw new Error('네트워크 오류가 발생했습니다.');
+              throw new Error(t('bug_report.error_network'));
             }
             return response.json();
           })
           .catch((error) => {
-            Swal.showValidationMessage(`제출 실패: ${error.message}`);
+            Swal.showValidationMessage(
+              t('bug_report.error_submit', { error_message: error.message }),
+            );
           });
       },
       allowOutsideClick: () => !Swal.isLoading(),
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire({
-          title: '제출 완료!',
-          text: '소중한 의견 감사합니다. 빠른 시일 내에 확인하겠습니다.',
+          title: t('bug_report.completion_title'),
+          text: t('bug_report.completion_text'),
           icon: 'success',
           background: '#ffffff',
           color: '#1f2937',

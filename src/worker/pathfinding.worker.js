@@ -117,7 +117,7 @@ function findKShortestPaths(graph, startId, endId, k, option) {
     option;
   const endGeneration = endNodeData.generation;
 
-  const HEURUSTIC_WEIGHT = 0;
+  const HEURUSTIC_WEIGHT = 1;
 
   const pq = new PriorityQueue();
   const distances = new Map();
