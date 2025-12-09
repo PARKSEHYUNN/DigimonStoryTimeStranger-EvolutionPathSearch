@@ -8,6 +8,7 @@
     "in_jogress": "Include Jogress",
     "in_jogress_true": "Include",
     "in_jogress_false": "Exclude",
+    "in_dlc": "Include DLC",
     "now_digimon": "Current Digimon",
     "evolution_from_digimon": "Evolve to",
     "choice_digimon": "Select Digimon",
@@ -135,5 +136,15 @@
     "philanthropy": "Bonds of Philanthropy",
     "amicability": "Bonds of Amicability",
     "wisdom": "Bonds of Wisdom"
+  },
+  "stats": {
+    "HP": "Max HP",
+    "SP": "Max SP",
+    "ATK": "Attack",
+    "DEF": "Defense",
+    "INT": "Intelligence",
+    "RES": "Spirit", 
+    "SPD": "Agility",
+    "TALENT": "Talent"
   }
 }

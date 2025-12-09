@@ -80,6 +80,9 @@ export default function EvolutionPath() {
   const [jogressOption, setJogressOption] = useState('include');
   const [exceptionDigimons, setExceptionDigimon] = useState([]);
 
+  const [isJogress, setIsJogress] = useState(true);
+  const [isDlc, setIsDlc] = useState(true);
+
   const [isSilhouette, setIsSilhouette] = useState(false);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -129,14 +132,16 @@ export default function EvolutionPath() {
     Promise.all([
       fetch('/digimon_list.json').then((res) => res.json()),
       fetch('/jogress_list.json').then((res) => res.json()),
+      fetch('/dlc_list.json').then((res) => res.json()),
       fetch('/agent_level_list.json').then((res) => res.json()),
     ])
-      .then(([digimonList, jogressList, agentLevelData]) => {
+      .then(([digimonList, jogressList, dlcList, agentLevelData]) => {
         workerRef.current.postMessage({
           type: 'INIT',
           payload: {
             digimonList,
             jogressList,
+            dlcList,
             agentLevelData,
           },
         });
@@ -174,7 +179,8 @@ export default function EvolutionPath() {
         k: 1,
         exceptions: exceptionDigimons.map((d) => d.id),
         agentLevel: agentLevel,
-        jogressOption: jogressOption,
+        jogressOption: isJogress ? "include" : "not-include",
+        includeDlc: isDlc,
       },
     });
   }, [
@@ -183,7 +189,8 @@ export default function EvolutionPath() {
     isGraphReady,
     exceptionDigimons,
     agentLevel,
-    jogressOption,
+    isJogress,
+    isDlc,
   ]);
 
   const handleAddExcpetion = (digimonToAdd) => {
@@ -398,7 +405,39 @@ export default function EvolutionPath() {
         </div>
 
         {/* 조그레스 포함 */}
-        <div className="flex w-full flex-row">
+        <div className="flex w-full flex-col items-end justify-center gap-2 pl-4">
+          {/* 조그레스 포함 토글 */}
+          <label className="inline-flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              value=""
+              className="peer sr-only"
+              checked={isJogress}
+              onChange={() => setIsJogress(!isJogress)}
+            />
+            <div className="peer dark:peer-checked:bg-white-400 relative h-5 w-9 rounded-full bg-gray-300 peer-checked:bg-gray-600 peer-focus:outline-none after:absolute after:start-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-800"></div>
+            <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+              {t('evolution_path.in_jogress')}
+            </span>
+          </label>
+
+          {/* DLC 포함 토글 */}
+          <label className="inline-flex cursor-pointer items-center">
+            <input
+              type="checkbox"
+              value=""
+              className="peer sr-only"
+              checked={isDlc}
+              onChange={() => setIsDlc(!isDlc)}
+            />
+            <div className="peer dark:peer-checked:bg-white-400 relative h-5 w-9 rounded-full bg-gray-300 peer-checked:bg-gray-600 peer-focus:outline-none after:absolute after:start-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-800"></div>
+            <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+              {t('evolution_path.in_dlc')}
+            </span>
+          </label>
+        </div>
+
+        {/* <div className="flex w-full flex-row">
           <form className="mx-auto w-[50%] max-w-sm">
             <label
               htmlFor="jogressOption"
@@ -420,7 +459,7 @@ export default function EvolutionPath() {
               </option>
             </select>
           </form>
-        </div>
+        </div> */}
       </div>
 
       <div className="flex w-[90%] flex-row items-center justify-around md:w-[40%]">

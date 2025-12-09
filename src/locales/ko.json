@@ -8,6 +8,7 @@
     "in_jogress": "조그레스 포함",
     "in_jogress_true": "포함",
     "in_jogress_false": "비포함",
+    "in_dlc": "DLC 포함",
     "now_digimon": "현재 디지몬",
     "evolution_from_digimon": "진화 할 디지몬",
     "choice_digimon": "디지몬 선택",
@@ -135,5 +136,15 @@
     "philanthropy": "박애의 유대",
     "amicability": "우호의 유대",
     "wisdom": "지계의 유대"
+  },
+  "stats": {
+    "HP": "최대 체력",
+    "SP": "최대 SP",
+    "ATK": "공격력",
+    "DEF": "방어력",
+    "INT": "지력",
+    "RES": "정신",
+    "SPD": "민첩",
+    "TALENT": "재능"
   }
 }

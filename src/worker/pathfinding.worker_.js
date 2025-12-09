@@ -113,14 +113,8 @@ function buildGraph(digimonList) {
 }
 
 function findKShortestPaths(graph, startId, endId, k, option) {
-  const {
-    exceptions,
-    agentLevel,
-    jogressOption,
-    includeDlc, // 옵션에서 includeDlc 받기
-    startNodeData,
-    endNodeData,
-  } = option;
+  const { exceptions, agentLevel, jogressOption, includeDlc, startNodeData, endNodeData } =
+    option;
   const endGeneration = endNodeData.generation;
 
   const HEURUSTIC_WEIGHT = 1;
@@ -162,11 +156,8 @@ function findKShortestPaths(graph, startId, endId, k, option) {
       const neighborData = digimonDataMap.get(neighbor);
       if (!neighborData) continue;
 
-      // [DLC 필터링 로직 추가]
-      // DLC 포함 옵션이 꺼져있고(!includeDlc), 해당 이웃이 DLC 목록(dlcIdSet)에 있다면 건너뜀
-      if (!includeDlc && dlcIdSet.has(neighborData.id)) {
+      if(!includeDlc && dlcIdSet.has(neighborData.id))
         continue;
-      }
 
       const isEvolution = neighborData.generation >= currentNodeData.generation;
       if (isEvolution) {
@@ -211,12 +202,88 @@ function findKShortestPaths(graph, startId, endId, k, option) {
   }
 
   return [{ cost: distances.get(endId), path: path.reverse() }];
+
+  // const { exceptions, agentLevel, jogressOption } = option;
+
+  // const pq = new PriorityQueue();
+  // const distances = new Map();
+  // const cameFrom = new Map();
+
+  // distances.set(startId, 0);
+  // pq.push([0, startId]);
+
+  // let found = false;
+
+  // while (pq.isNotEmpty()) {
+  //   const [cost, currentNode] = pq.pop();
+
+  //   if (cost > distances.get(currentNode)) {
+  //     continue;
+  //   }
+
+  //   if (currentNode === endId) {
+  //     found = true;
+  //     break;
+  //   }
+
+  //   const currentNodeData = digimonDataMap.get(currentNode);
+  //   if (!currentNodeData) continue;
+
+  //   const neighbors = graph.get(currentNode) || [];
+  //   for (const neighbor of neighbors) {
+  //     // 제외 목록에 포함된 노드인지 확인
+  //     if (exceptions.has(neighbor)) continue;
+
+  //     const neighborData = digimonDataMap.get(neighbor);
+  //     if (!neighborData) continue;
+
+  //     // 조그레스 필터
+  //     const isJogress = jogressIdSet.has(neighborData.id);
+  //     if (isJogress && jogressOption === 'not-include') continue;
+
+  //     // 에이전트 레벨 필터
+  //     const isEvolution = neighborData.generation >= currentNodeData.generation;
+  //     if (isEvolution) {
+  //       let requiredLevel = 1;
+
+  //       if (exceptionLevelRules.hasOwnProperty(neighborData.id)) {
+  //         requiredLevel = exceptionLevelRules[neighborData.id];
+  //       } else if (agentLevelRules.hasOwnProperty(neighborData.generation)) {
+  //         requiredLevel = agentLevelRules[neighborData.generation];
+  //       }
+
+  //       if (agentLevel < requiredLevel) continue;
+  //     }
+
+  //     const newCost = cost + 1;
+
+  //     if (newCost < (distances.get(neighbor) || Infinity)) {
+  //       distances.set(neighbor, newCost);
+  //       cameFrom.set(neighbor, currentNode);
+  //       pq.push([newCost, neighbor]);
+  //     }
+  //   }
+  // }
+
+  // if (!found) {
+  //   return [];
+  // }
+
+  // const path = [];
+  // let current = endId;
+
+  // while (current !== undefined) {
+  //   path.push(current);
+  //   current = cameFrom.get(current);
+  // }
+
+  // return [{ cost: distances.get(endId), path: path.reverse() }];
 }
 
 let graph = null;
 let digimonDataMap = null;
 let jogressIdSet = null;
-let dlcIdSet = null; // DLC ID를 저장할 Set
+let dlcIdSet = null;
 let agentLevelRules = null;
 let exceptionLevelRules = null;
 
@@ -232,10 +299,7 @@ self.onmessage = (e) => {
         graph = buildGraph(digimonList);
 
         jogressIdSet = new Set(jogressList.map((j) => j.id));
-
-        // [수정됨] dlc_list 구조 ({ DLC: [...] })에 맞춰 Set 초기화
-        // dlcList.DLC 배열을 바로 Set으로 만듭니다.
-        dlcIdSet = new Set(dlcList.DLC);
+        dlcIdSet = new Set(dlcList.map((d) => d.id));
 
         agentLevelRules = agentLevelData.agentLevel;
         exceptionLevelRules = agentLevelData.exceptionLevel;
@@ -251,7 +315,7 @@ self.onmessage = (e) => {
         !graph ||
         !digimonDataMap ||
         !jogressIdSet ||
-        !dlcIdSet || // DLC Set 초기화 확인
+        !dlcIdSet ||
         !agentLevelRules ||
         !exceptionLevelRules
       ) {
@@ -259,15 +323,8 @@ self.onmessage = (e) => {
         return;
       }
 
-      const {
-        startId,
-        endId,
-        k,
-        exceptions,
-        agentLevel,
-        jogressOption,
-        includeDlc, // 메인 스레드에서 보낸 옵션
-      } = payload;
+      const { startId, endId, k, exceptions, agentLevel, jogressOption, includeDlc } =
+        payload;
       const exceptionSet = new Set(exceptions);
 
       if (exceptionSet.has(startId) || exceptionSet.has(endId)) {
@@ -284,6 +341,11 @@ self.onmessage = (e) => {
         });
         return;
       }
+
+      // if (jogressIdSet.has(endId) && jogressOption === 'not-include') {
+      //   self.postMessage({ type: 'PATHS_FOUND', payload: [] });
+      //   return;
+      // }
 
       let requiredLevel = 1;
       const generation = endNodeData.generation;
@@ -309,6 +371,15 @@ self.onmessage = (e) => {
         return;
       }
 
+      // 조그레스 옵션 검사
+      // if (jogressIdSet.has(startId) && jogressOption === 'not-include') {
+      //   console.log(
+      //     'Pre-check failed: Start node is excluded by Jogress option.',
+      //   );
+      //   self.postMessage({ type: 'PATHS_FOUND', payload: [] });
+      //   return;
+      // }
+
       // 에이전트 레벨 검사
       let startRequiredLevel = 1;
       const startGeneration = startNodeData.generation;
@@ -327,16 +398,14 @@ self.onmessage = (e) => {
         return;
       }
 
-      // 옵션 객체 구성
       const option = {
         exceptions: exceptionSet,
         agentLevel,
         jogressOption,
-        includeDlc, // DLC 옵션 추가
+        includeDlc,
         startNodeData,
         endNodeData,
       };
-      
       const paths = findKShortestPaths(graph, startId, endId, k, option);
 
       const pathsWithData = paths.map((result) => ({

@@ -81,6 +81,9 @@ export default function DigimonItem({ digimon, type, options, isSilhouette }) {
       <span className="w-25 text-xs text-gray-900 dark:text-white">
         {`${t(`generation.${digimon.generation}`)} / ${t(`attribute.${digimon.attribute}`)}`}
       </span>
+      <span className="w-25 text-xs text-gray-900 dark:text-white">
+        {`${t(`personality.${digimon.personality}`)}`}
+      </span>
     </div>
   );
 }

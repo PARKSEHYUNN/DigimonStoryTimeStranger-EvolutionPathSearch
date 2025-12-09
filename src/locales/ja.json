@@ -8,6 +8,7 @@
     "in_jogress": "ジョグレス含む",
     "in_jogress_true": "含む",
     "in_jogress_false": "含まない",
+    "in_dlc": "DLC含む",
     "now_digimon": "現在のデジモン",
     "evolution_from_digimon": "進化先デジモン",
     "choice_digimon": "デジモン選択",
@@ -135,5 +136,15 @@
     "philanthropy": "博愛の絆",
     "amicability": "友好の絆",
     "wisdom": "知啓の絆"
+  },
+  "stats": {
+    "HP": "最大HP",
+    "SP": "最大SP",
+    "ATK": "攻撃力",
+    "DEF": "防御力",
+    "INT": "知力",
+    "RES": "精神力",
+    "SPD": "敏捷性",
+    "TALENT": "才能"
   }
 }

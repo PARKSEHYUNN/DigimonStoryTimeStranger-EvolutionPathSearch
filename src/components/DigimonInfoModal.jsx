@@ -230,7 +230,7 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
 
                                   switch (key) {
                                     case 'HP':
-                                    case 'MP':
+                                    case 'SP':
                                     case 'ATK':
                                     case 'DEF':
                                     case 'INT':
@@ -240,7 +240,7 @@ export default function DigimonInfoModal({ isOpen, onClose, digimon }) {
                                         <span className="text-sm text-gray-900 dark:text-white">
                                           •{' '}
                                           {t('digimon_info.stat', {
-                                            key: key,
+                                            key: t('stats.' + key),
                                             value: value,
                                           })}
                                         </span>
