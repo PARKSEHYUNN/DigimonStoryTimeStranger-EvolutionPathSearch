@@ -5,20 +5,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowRight,
-  faBan,
-  faSpinner,
-  faTimes,
-  faTrash,
-  faXmark,
-} from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import DigimonSelectBox from './DigimonSelectBox';
 import DigimonInfoModal from './DigimonInfoModal';
 import DigimonItem from './DigimonItem';
 import { useDigimons } from '../hooks/useDigimons';
 
-const EvolutionArrow = ({ evolution, isJogress, jogress }) => {
+const EvolutionArrow = ({ evolution, jogress }) => {
   const { digimons, loading } = useDigimons();
   const { i18n, t } = useTranslation();
   const lang =
@@ -46,7 +39,7 @@ const EvolutionArrow = ({ evolution, isJogress, jogress }) => {
             ? t(`evolution_path.evolution`)
             : t(`evolution_path.devolution`)}
       </span>
-      {isJogress ? (
+      {jogress ? (
         <>
           <span className="mt-1 text-xs font-medium text-rose-500">
             {t('digimon_info.personality_message', {
@@ -70,6 +63,7 @@ const EvolutionArrow = ({ evolution, isJogress, jogress }) => {
 
 export default function EvolutionPath() {
   const { i18n, t } = useTranslation();
+  const { digimons, loading: digimonsLoading } = useDigimons();
 
   const workerRef = useRef(null);
 
@@ -77,7 +71,6 @@ export default function EvolutionPath() {
   const [evolutionFromDigimon, setEvolutionFromDigimon] = useState(null);
 
   const [agentLevel, setAgentLevel] = useState(10);
-  const [jogressOption, setJogressOption] = useState('include');
   const [exceptionDigimons, setExceptionDigimon] = useState([]);
 
   const [isJogress, setIsJogress] = useState(true);
@@ -103,13 +96,11 @@ export default function EvolutionPath() {
       switch (type) {
         case 'INIT_COMPLETE':
           setIsGraphReady(true);
-          console.log('Web Worker: Graph initialized.');
           break;
 
         case 'PATHS_FOUND':
           setPaths(payload);
           setIsLoading(false);
-          console.log(payload);
           break;
 
         case 'ERROR':
@@ -129,17 +120,24 @@ export default function EvolutionPath() {
       setError('An error occurred in the pathfinding worker.');
     };
 
+    return () => {
+      workerRef.current.terminate();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (digimonsLoading || !workerRef.current) return;
+
     Promise.all([
-      fetch('/digimon_list.json').then((res) => res.json()),
       fetch('/jogress_list.json').then((res) => res.json()),
       fetch('/dlc_list.json').then((res) => res.json()),
       fetch('/agent_level_list.json').then((res) => res.json()),
     ])
-      .then(([digimonList, jogressList, dlcList, agentLevelData]) => {
+      .then(([jogressList, dlcList, agentLevelData]) => {
         workerRef.current.postMessage({
           type: 'INIT',
           payload: {
-            digimonList,
+            digimonList: Array.from(digimons.values()),
             jogressList,
             dlcList,
             agentLevelData,
@@ -149,15 +147,10 @@ export default function EvolutionPath() {
       .catch((err) => {
         console.error('Failed to load initial data: ', err);
         setError(
-          "Failed to load 'digimon_list.json', 'jogress_list.json', or 'agent_level_list.json'. Check the /public folder.",
+          "Failed to load 'jogress_list.json', 'dlc_list.json', or 'agent_level_list.json'. Check the /public folder.",
         );
       });
-
-    return () => {
-      workerRef.current.terminate();
-      console.log('Web Worker: Terminated.');
-    };
-  }, []);
+  }, [digimonsLoading, digimons]);
 
   useEffect(() => {
     if (!isGraphReady || !nowDigimon || !evolutionFromDigimon) {
@@ -285,7 +278,6 @@ export default function EvolutionPath() {
           {result.path.map((digimon, index) => {
             const hasNext = index < result.path.length - 1;
             let isEvolution = true;
-            let isJogress = false;
             let jogressData = null;
 
             if (hasNext) {
@@ -296,9 +288,7 @@ export default function EvolutionPath() {
                 (req) => req.id === nextDigimon.id,
               );
 
-              isJogress = !!(requirement && requirement.conditions.jogress);
-
-              if (isJogress) jogressData = requirement.conditions.jogress;
+              jogressData = requirement?.conditions?.jogress ?? null;
             }
 
             return (
@@ -312,13 +302,9 @@ export default function EvolutionPath() {
                   }}
                   isSilhouette={isSilhouette}
                 />
-                {console.log(digimon)}
                 {index < result.path.length - 1 && (
                   <EvolutionArrow
-                    evolution={
-                      result.path[index + 1].generation >= digimon.generation
-                    }
-                    isJogress={isJogress}
+                    evolution={isEvolution}
                     jogress={jogressData}
                   />
                 )}

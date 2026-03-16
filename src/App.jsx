@@ -6,6 +6,8 @@ import { Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar';
 import EvolutionPath from './components/EvolutionPath';
+import Footer from './components/Footer';
+import FloatingDonateButton from './components/FloatingDonateButton';
 import { Analytics } from '@vercel/analytics/react';
 
 import { DigimonDataProvider } from './contexts/DigimonDataProvider';
@@ -22,7 +24,9 @@ export default function App() {
             <Outlet />
           </div>
         </div>
+        <Footer />
       </div>
+      <FloatingDonateButton />
       <Analytics />
     </DigimonDataProvider>
   );

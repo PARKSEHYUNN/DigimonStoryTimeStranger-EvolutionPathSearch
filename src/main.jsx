@@ -7,6 +7,15 @@ import App from './App.jsx';
 import './i18n.js';
 import HomePage from './pages/HomePage.jsx';
 import List from './pages/List.jsx';
+import AdminPage from './pages/AdminPage.jsx';
+import AdminEditPage from './pages/AdminEditPage.jsx';
+
+const adminRoutes = import.meta.env.DEV
+  ? [
+      { path: '/admin', element: <AdminPage /> },
+      { path: '/admin/edit', element: <AdminEditPage /> },
+    ]
+  : [];
 
 const router = createBrowserRouter([
   {
@@ -22,6 +31,7 @@ const router = createBrowserRouter([
         path: '/list',
         element: <List />,
       },
+      ...adminRoutes,
     ],
   },
 ]);
