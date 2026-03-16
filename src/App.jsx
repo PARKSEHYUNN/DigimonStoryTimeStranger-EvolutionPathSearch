@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import EvolutionPath from './components/EvolutionPath';
 import Footer from './components/Footer';
 import FloatingDonateButton from './components/FloatingDonateButton';
+import AnnouncementBanner from './components/AnnouncementBanner';
 import { Analytics } from '@vercel/analytics/react';
 
 import { DigimonDataProvider } from './contexts/DigimonDataProvider';
@@ -19,6 +20,7 @@ export default function App() {
     <DigimonDataProvider>
       <div className="flex min-h-screen flex-col dark:bg-gray-900">
         <Navbar />
+        <AnnouncementBanner />
         <div className="flex flex-grow justify-center">
           <div className="w-[100vw] text-center md:w-[80vw]">
             <Outlet />

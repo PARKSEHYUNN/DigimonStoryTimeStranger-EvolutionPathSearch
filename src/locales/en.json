@@ -137,6 +137,9 @@
     "amicability": "Bonds of Amicability",
     "wisdom": "Bonds of Wisdom"
   },
+  "announcement": {
+    "message": "DLC 2 & 3 Updates Completed"
+  },
   "footer": {
     "disclaimer": "This is a non-profit fan-made site. All images are the property of Bandai Namco. Donations are used solely for domain maintenance and site updates."
   },
