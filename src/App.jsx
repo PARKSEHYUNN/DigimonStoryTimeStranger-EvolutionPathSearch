@@ -1,7 +1,7 @@
 // src/App.jsx
 
 // 모듈 선언
-import React, { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar';
@@ -14,7 +14,11 @@ import { Analytics } from '@vercel/analytics/react';
 import { DigimonDataProvider } from './contexts/DigimonDataProvider';
 
 export default function App() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    document.title = t('site_title');
+  }, [i18n.language, t]);
 
   return (
     <DigimonDataProvider>
