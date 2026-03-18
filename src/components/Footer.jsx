@@ -22,7 +22,7 @@ export default function Footer() {
                 href="mailto:kmesbul@gmail.com"
                 className="hover:text-gray-600 hover:underline dark:hover:text-gray-300"
               >
-                navylimes@gmail.com
+                kmesbul@gmail.com
               </a>
             </p>
           </div>
