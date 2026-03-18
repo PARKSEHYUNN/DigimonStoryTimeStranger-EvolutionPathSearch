@@ -19,7 +19,7 @@ export default function Footer() {
               Developed by <span className="font-medium text-gray-600 dark:text-gray-400">Mesbul</span>
               {' · '}
               <a
-                href="mailto:navylimes@gmail.com"
+                href="mailto:kmesbul@gmail.com"
                 className="hover:text-gray-600 hover:underline dark:hover:text-gray-300"
               >
                 navylimes@gmail.com
