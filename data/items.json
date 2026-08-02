@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "names": {
+      "en": "Digi-Egg of Destiny",
+      "ko": "운명의 캡슐",
+      "ja": "運命のデジメンタル"
+    }
+  },
+  {
+    "id": 2,
+    "names": {
+      "en": "Digi-Egg of Hope",
+      "ko": "희망의 캡슐",
+      "ja": "希望のデジメンタル"
+    }
+  },
+  {
+    "id": 3,
+    "names": {
+      "en": "Digi-Egg of Knowledge",
+      "ko": "지식의 캡슐",
+      "ja": "知識のデジメンタル"
+    }
+  },
+  {
+    "id": 4,
+    "names": {
+      "en": "Digi-Egg of Reliability",
+      "ko": "성실의 캡슐",
+      "ja": "誠実のデジメンタル"
+    }
+  },
+  {
+    "id": 5,
+    "names": {
+      "en": "Digi-Egg of Friendship",
+      "ko": "우정의 캡슐",
+      "ja": "友情のデジメンタル"
+    }
+  },
+  {
+    "id": 6,
+    "names": {
+      "en": "Digi-Egg of Miracles",
+      "ko": "기적의 캡슐",
+      "ja": "奇跡のデジメンタル"
+    }
+  },
+  {
+    "id": 7,
+    "names": {
+      "en": "Digi-Egg of Courage",
+      "ko": "용기의 캡슐",
+      "ja": "勇気のデジメンタル"
+    }
+  },
+  {
+    "id": 8,
+    "names": {
+      "en": "Digi-Egg of Love",
+      "ko": "사랑의 캡슐",
+      "ja": "愛情のデジメンタル"
+    }
+  },
+  {
+    "id": 9,
+    "names": {
+      "en": "Digi-Egg of Sincerity",
+      "ko": "순수의 캡슐",
+      "ja": "純真のデジメンタル"
+    }
+  },
+  {
+    "id": 10,
+    "names": {
+      "en": "Digi-Egg of Light",
+      "ko": "빛의 캡슐",
+      "ja": "光のデジメンタル"
+    }
+  },
+  {
+    "id": 11,
+    "names": {
+      "en": "Human Spirit of Light",
+      "ko": "빛의 휴먼 스피릿",
+      "ja": "光のヒューマンスピリット"
+    }
+  },
+  {
+    "id": 12,
+    "names": {
+      "en": "Human Spirit of Flame",
+      "ko": "불의 휴먼 스피릿",
+      "ja": "炎のヒューマンスピリット"
+    }
+  },
+  {
+    "id": 13,
+    "names": {
+      "en": "Beast Spirit of Flame",
+      "ko": "불의 비스트 스피릿",
+      "ja": "炎のビーストスピリット"
+    }
+  },
+  {
+    "id": 14,
+    "names": {
+      "en": "Beast Spirit of Light",
+      "ko": "빛의 비스트 스피릿",
+      "ja": "光のビーストスピリット"
+    }
+  },
+  {
+    "id": 15,
+    "names": {
+      "en": "Omega Blade",
+      "ko": "오메가 블레이드",
+      "ja": "オメガ ブレード"
+    }
+  }
+]

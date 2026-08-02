@@ -5,14 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "npm run data:graph && next build",
+    "build": "npm run data:validate && next build",
     "start": "npx serve out",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "data:validate": "node scripts/validate-data.mjs",
-    "data:graph": "node scripts/build-graph-payload.mjs",
+    "data:validate": "node scripts/validate-data.ts",
     "data:migrate": "node tools/migrate-legacy.mjs",
     "icons:optimize": "node scripts/optimize-icons.mjs"
   },

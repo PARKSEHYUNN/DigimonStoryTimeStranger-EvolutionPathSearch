@@ -1,0 +1,10412 @@
+[
+  {
+    "from": 1,
+    "to": 12,
+    "conditions": {
+      "rank": 1,
+      "SP": 260,
+      "ATK": 170
+    }
+  },
+  {
+    "from": 1,
+    "to": 16,
+    "conditions": {
+      "rank": 1,
+      "SP": 280
+    }
+  },
+  {
+    "from": 2,
+    "to": 8,
+    "conditions": {
+      "rank": 1,
+      "RES": 140
+    }
+  },
+  {
+    "from": 3,
+    "to": 14,
+    "conditions": {
+      "rank": 1,
+      "HP": 350,
+      "ATK": 180
+    }
+  },
+  {
+    "from": 3,
+    "to": 20,
+    "conditions": {
+      "rank": 1,
+      "SP": 250
+    }
+  },
+  {
+    "from": 4,
+    "to": 10,
+    "conditions": {
+      "rank": 1,
+      "HP": 370,
+      "INT": 140
+    }
+  },
+  {
+    "from": 4,
+    "to": 17,
+    "conditions": {
+      "rank": 1,
+      "INT": 160
+    }
+  },
+  {
+    "from": 4,
+    "to": 19,
+    "conditions": {
+      "rank": 1,
+      "HP": 400
+    }
+  },
+  {
+    "from": 5,
+    "to": 11,
+    "conditions": {
+      "rank": 1,
+      "ATK": 200
+    }
+  },
+  {
+    "from": 5,
+    "to": 15,
+    "conditions": {
+      "rank": 1,
+      "SP": 160,
+      "SPD": 150
+    }
+  },
+  {
+    "from": 6,
+    "to": 9,
+    "conditions": {
+      "rank": 1,
+      "HP": 350,
+      "ATK": 150
+    }
+  },
+  {
+    "from": 7,
+    "to": 13,
+    "conditions": {
+      "rank": 1,
+      "SP": 400,
+      "SPD": 150
+    }
+  },
+  {
+    "from": 7,
+    "to": 18,
+    "conditions": {
+      "rank": 1,
+      "SP": 360,
+      "INT": 180
+    }
+  },
+  {
+    "from": 8,
+    "to": 26,
+    "conditions": {
+      "rank": 1,
+      "SP": 290,
+      "RES": 200
+    }
+  },
+  {
+    "from": 8,
+    "to": 29,
+    "conditions": {
+      "rank": 1,
+      "HP": 460
+    }
+  },
+  {
+    "from": 8,
+    "to": 45,
+    "conditions": {
+      "rank": 1,
+      "HP": 420,
+      "ATK": 160
+    }
+  },
+  {
+    "from": 8,
+    "to": 71,
+    "conditions": {
+      "rank": 1,
+      "DEF": 200
+    }
+  },
+  {
+    "from": 9,
+    "to": 21,
+    "conditions": {
+      "rank": 1,
+      "HP": 530
+    }
+  },
+  {
+    "from": 9,
+    "to": 47,
+    "conditions": {
+      "rank": 1,
+      "DEF": 220,
+      "RES": 140
+    }
+  },
+  {
+    "from": 9,
+    "to": 48,
+    "conditions": {
+      "rank": 1,
+      "HP": 500,
+      "ATK": 270
+    }
+  },
+  {
+    "from": 9,
+    "to": 49,
+    "conditions": {
+      "rank": 1,
+      "ATK": 270,
+      "SPD": 170
+    }
+  },
+  {
+    "from": 9,
+    "to": 64,
+    "conditions": {
+      "rank": 1,
+      "ATK": 280
+    }
+  },
+  {
+    "from": 9,
+    "to": 74,
+    "conditions": {
+      "rank": 1,
+      "SP": 200
+    }
+  },
+  {
+    "from": 10,
+    "to": 53,
+    "conditions": {
+      "rank": 1,
+      "ATK": 220,
+      "INT": 220
+    }
+  },
+  {
+    "from": 10,
+    "to": 54,
+    "conditions": {
+      "rank": 1,
+      "SP": 280,
+      "INT": 200
+    }
+  },
+  {
+    "from": 10,
+    "to": 56,
+    "conditions": {
+      "rank": 1,
+      "HP": 500,
+      "RES": 160
+    }
+  },
+  {
+    "from": 10,
+    "to": 73,
+    "conditions": {
+      "rank": 1,
+      "INT": 200,
+      "SPD": 170
+    }
+  },
+  {
+    "from": 10,
+    "to": 75,
+    "conditions": {
+      "rank": 1,
+      "DEF": 200
+    }
+  },
+  {
+    "from": 11,
+    "to": 25,
+    "conditions": {
+      "rank": 1,
+      "ATK": 280,
+      "DEF": 200
+    }
+  },
+  {
+    "from": 11,
+    "to": 38,
+    "conditions": {
+      "rank": 1,
+      "HP": 520,
+      "ATK": 250
+    }
+  },
+  {
+    "from": 11,
+    "to": 40,
+    "conditions": {
+      "rank": 1,
+      "SP": 200,
+      "INT": 160
+    }
+  },
+  {
+    "from": 11,
+    "to": 43,
+    "conditions": {
+      "rank": 1,
+      "SP": 230,
+      "ATK": 250
+    }
+  },
+  {
+    "from": 11,
+    "to": 65,
+    "conditions": {
+      "rank": 1,
+      "HP": 500,
+      "DEF": 200
+    }
+  },
+  {
+    "from": 11,
+    "to": 77,
+    "conditions": {
+      "rank": 1,
+      "ATK": 280,
+      "SPD": 170
+    }
+  },
+  {
+    "from": 12,
+    "to": 66,
+    "conditions": {
+      "rank": 1,
+      "SP": 230,
+      "SPD": 230
+    }
+  },
+  {
+    "from": 12,
+    "to": 70,
+    "conditions": {
+      "rank": 1,
+      "SP": 230,
+      "ATK": 270
+    }
+  },
+  {
+    "from": 12,
+    "to": 80,
+    "conditions": {
+      "rank": 1,
+      "HP": 530,
+      "SP": 260
+    }
+  },
+  {
+    "from": 12,
+    "to": 468,
+    "conditions": {
+      "rank": 1,
+      "ATK": 490
+    }
+  },
+  {
+    "from": 12,
+    "to": 469,
+    "conditions": {
+      "rank": 1,
+      "ATK": 360
+    }
+  },
+  {
+    "from": 13,
+    "to": 24,
+    "conditions": {
+      "rank": 1,
+      "ATK": 220,
+      "DEF": 190
+    }
+  },
+  {
+    "from": 13,
+    "to": 27,
+    "conditions": {
+      "rank": 1,
+      "HP": 380,
+      "ATK": 180
+    }
+  },
+  {
+    "from": 13,
+    "to": 39,
+    "conditions": {
+      "rank": 5,
+      "INT": 430,
+      "TALENT": 30
+    }
+  },
+  {
+    "from": 13,
+    "to": 51,
+    "conditions": {
+      "rank": 1,
+      "SP": 600,
+      "INT": 360
+    }
+  },
+  {
+    "from": 13,
+    "to": 76,
+    "conditions": {
+      "rank": 1,
+      "SP": 400,
+      "SPD": 250
+    }
+  },
+  {
+    "from": 14,
+    "to": 37,
+    "conditions": {
+      "rank": 1,
+      "HP": 530,
+      "ATK": 240
+    }
+  },
+  {
+    "from": 14,
+    "to": 50,
+    "conditions": {
+      "rank": 1,
+      "ATK": 260
+    }
+  },
+  {
+    "from": 14,
+    "to": 59,
+    "conditions": {
+      "rank": 1,
+      "SP": 280,
+      "DEF": 170
+    }
+  },
+  {
+    "from": 14,
+    "to": 68,
+    "conditions": {
+      "rank": 1,
+      "SP": 300
+    }
+  },
+  {
+    "from": 15,
+    "to": 22,
+    "conditions": {
+      "rank": 1,
+      "SP": 480,
+      "INT": 250
+    }
+  },
+  {
+    "from": 15,
+    "to": 34,
+    "conditions": {
+      "rank": 1,
+      "INT": 280
+    }
+  },
+  {
+    "from": 15,
+    "to": 52,
+    "conditions": {
+      "rank": 1,
+      "HP": 420
+    }
+  },
+  {
+    "from": 15,
+    "to": 57,
+    "conditions": {
+      "rank": 1,
+      "RES": 240
+    }
+  },
+  {
+    "from": 16,
+    "to": 60,
+    "conditions": {
+      "rank": 1,
+      "SP": 400,
+      "INT": 270
+    }
+  },
+  {
+    "from": 16,
+    "to": 62,
+    "conditions": {
+      "rank": 1,
+      "HP": 400,
+      "SPD": 230
+    }
+  },
+  {
+    "from": 16,
+    "to": 72,
+    "conditions": {
+      "rank": 1,
+      "ATK": 230,
+      "INT": 350
+    }
+  },
+  {
+    "from": 17,
+    "to": 31,
+    "conditions": {
+      "rank": 1,
+      "ATK": 200,
+      "SPD": 170
+    }
+  },
+  {
+    "from": 17,
+    "to": 32,
+    "conditions": {
+      "rank": 1,
+      "SP": 270,
+      "INT": 240
+    }
+  },
+  {
+    "from": 17,
+    "to": 33,
+    "conditions": {
+      "rank": 1,
+      "INT": 230,
+      "SPD": 180
+    }
+  },
+  {
+    "from": 17,
+    "to": 36,
+    "conditions": {
+      "rank": 1,
+      "INT": 260
+    }
+  },
+  {
+    "from": 17,
+    "to": 55,
+    "conditions": {
+      "rank": 1,
+      "HP": 500,
+      "SP": 270
+    }
+  },
+  {
+    "from": 17,
+    "to": 78,
+    "conditions": {
+      "rank": 1,
+      "ATK": 180,
+      "SPD": 180
+    }
+  },
+  {
+    "from": 18,
+    "to": 23,
+    "conditions": {
+      "rank": 1,
+      "HP": 750
+    }
+  },
+  {
+    "from": 18,
+    "to": 42,
+    "conditions": {
+      "rank": 1,
+      "ATK": 150,
+      "DEF": 160
+    }
+  },
+  {
+    "from": 18,
+    "to": 44,
+    "conditions": {
+      "rank": 1,
+      "HP": 400,
+      "DEF": 180
+    }
+  },
+  {
+    "from": 18,
+    "to": 63,
+    "conditions": {
+      "rank": 1,
+      "SP": 400,
+      "RES": 210
+    }
+  },
+  {
+    "from": 18,
+    "to": 67,
+    "conditions": {
+      "rank": 1,
+      "HP": 440,
+      "DEF": 180
+    }
+  },
+  {
+    "from": 19,
+    "to": 28,
+    "conditions": {
+      "rank": 1,
+      "DEF": 170,
+      "INT": 250
+    }
+  },
+  {
+    "from": 19,
+    "to": 46,
+    "conditions": {
+      "rank": 1,
+      "DEF": 170,
+      "RES": 190
+    }
+  },
+  {
+    "from": 19,
+    "to": 69,
+    "conditions": {
+      "rank": 1,
+      "SP": 280,
+      "SPD": 180
+    }
+  },
+  {
+    "from": 19,
+    "to": 79,
+    "conditions": {
+      "rank": 1,
+      "ATK": 190,
+      "RES": 190
+    }
+  },
+  {
+    "from": 20,
+    "to": 30,
+    "conditions": {
+      "rank": 1,
+      "SP": 360,
+      "INT": 220
+    }
+  },
+  {
+    "from": 20,
+    "to": 35,
+    "conditions": {
+      "rank": 1,
+      "ATK": 220
+    }
+  },
+  {
+    "from": 20,
+    "to": 41,
+    "conditions": {
+      "rank": 1,
+      "ATK": 210,
+      "SPD": 210
+    }
+  },
+  {
+    "from": 20,
+    "to": 58,
+    "conditions": {
+      "rank": 1,
+      "SP": 380,
+      "INT": 230
+    }
+  },
+  {
+    "from": 21,
+    "to": 90,
+    "conditions": {
+      "rank": 3,
+      "HP": 1120
+    }
+  },
+  {
+    "from": 21,
+    "to": 92,
+    "conditions": {
+      "rank": 3,
+      "HP": 1100
+    }
+  },
+  {
+    "from": 21,
+    "to": 107,
+    "conditions": {
+      "rank": 3,
+      "HP": 1090
+    }
+  },
+  {
+    "from": 21,
+    "to": 149,
+    "conditions": {
+      "rank": 3,
+      "ATK": 830
+    }
+  },
+  {
+    "from": 21,
+    "to": 160,
+    "conditions": {
+      "rank": 3,
+      "SP": 330
+    }
+  },
+  {
+    "from": 21,
+    "to": 449,
+    "conditions": {
+      "rank": 8,
+      "ATK": 3630,
+      "valor": 46
+    }
+  },
+  {
+    "from": 22,
+    "to": 83,
+    "conditions": {
+      "rank": 3,
+      "SPD": 380
+    }
+  },
+  {
+    "from": 22,
+    "to": 84,
+    "conditions": {
+      "rank": 3,
+      "SP": 730,
+      "INT": 540
+    }
+  },
+  {
+    "from": 22,
+    "to": 88,
+    "conditions": {
+      "rank": 3,
+      "DEF": 460
+    }
+  },
+  {
+    "from": 22,
+    "to": 96,
+    "conditions": {
+      "rank": 3,
+      "INT": 640,
+      "RES": 480
+    }
+  },
+  {
+    "from": 22,
+    "to": 110,
+    "conditions": {
+      "rank": 3,
+      "HP": 820,
+      "RES": 540
+    }
+  },
+  {
+    "from": 22,
+    "to": 188,
+    "conditions": {
+      "rank": 3,
+      "item": 11
+    }
+  },
+  {
+    "from": 23,
+    "to": 82,
+    "conditions": {
+      "rank": 3,
+      "HP": 1120,
+      "ATK": 440
+    }
+  },
+  {
+    "from": 23,
+    "to": 104,
+    "conditions": {
+      "rank": 3,
+      "HP": 1200
+    }
+  },
+  {
+    "from": 23,
+    "to": 105,
+    "conditions": {
+      "rank": 3,
+      "HP": 960,
+      "RES": 300
+    }
+  },
+  {
+    "from": 23,
+    "to": 138,
+    "conditions": {
+      "rank": 3,
+      "ATK": 400,
+      "RES": 300
+    }
+  },
+  {
+    "from": 23,
+    "to": 162,
+    "conditions": {
+      "rank": 3,
+      "HP": 1010,
+      "ATK": 380
+    }
+  },
+  {
+    "from": 24,
+    "to": 99,
+    "conditions": {
+      "rank": 3,
+      "SP": 540,
+      "INT": 540
+    }
+  },
+  {
+    "from": 24,
+    "to": 100,
+    "conditions": {
+      "rank": 3,
+      "ATK": 700
+    }
+  },
+  {
+    "from": 24,
+    "to": 133,
+    "conditions": {
+      "rank": 3,
+      "ATK": 700,
+      "RES": 540
+    }
+  },
+  {
+    "from": 24,
+    "to": 135,
+    "conditions": {
+      "rank": 3,
+      "ATK": 530,
+      "RES": 450
+    }
+  },
+  {
+    "from": 24,
+    "to": 145,
+    "conditions": {
+      "rank": 3,
+      "HP": 1100
+    }
+  },
+  {
+    "from": 24,
+    "to": 187,
+    "conditions": {
+      "rank": 3,
+      "item": 12
+    }
+  },
+  {
+    "from": 25,
+    "to": 95,
+    "conditions": {
+      "rank": 3,
+      "ATK": 540
+    }
+  },
+  {
+    "from": 25,
+    "to": 102,
+    "conditions": {
+      "rank": 3,
+      "SP": 400,
+      "ATK": 530
+    }
+  },
+  {
+    "from": 25,
+    "to": 125,
+    "conditions": {
+      "rank": 3,
+      "DEF": 430,
+      "RES": 300
+    }
+  },
+  {
+    "from": 25,
+    "to": 169,
+    "conditions": {
+      "rank": 3,
+      "RES": 560
+    }
+  },
+  {
+    "from": 25,
+    "to": 174,
+    "conditions": {
+      "rank": 3,
+      "DEF": 450,
+      "RES": 420
+    }
+  },
+  {
+    "from": 25,
+    "to": 176,
+    "conditions": {
+      "rank": 3,
+      "DEF": 500,
+      "RES": 380
+    }
+  },
+  {
+    "from": 26,
+    "to": 124,
+    "conditions": {
+      "rank": 3,
+      "SP": 420
+    }
+  },
+  {
+    "from": 26,
+    "to": 135,
+    "conditions": {
+      "rank": 3,
+      "ATK": 530,
+      "RES": 450
+    }
+  },
+  {
+    "from": 26,
+    "to": 150,
+    "conditions": {
+      "rank": 3,
+      "INT": 300,
+      "RES": 300
+    }
+  },
+  {
+    "from": 26,
+    "to": 176,
+    "conditions": {
+      "rank": 3,
+      "DEF": 500,
+      "RES": 380
+    }
+  },
+  {
+    "from": 27,
+    "to": 86,
+    "conditions": {
+      "rank": 3,
+      "SP": 530
+    }
+  },
+  {
+    "from": 27,
+    "to": 104,
+    "conditions": {
+      "rank": 3,
+      "HP": 1200
+    }
+  },
+  {
+    "from": 27,
+    "to": 115,
+    "conditions": {
+      "rank": 3,
+      "HP": 940,
+      "RES": 450
+    }
+  },
+  {
+    "from": 27,
+    "to": 137,
+    "conditions": {
+      "rank": 3,
+      "SP": 470,
+      "SPD": 640
+    }
+  },
+  {
+    "from": 27,
+    "to": 422,
+    "conditions": {
+      "rank": 7,
+      "item": 1
+    }
+  },
+  {
+    "from": 28,
+    "to": 85,
+    "conditions": {
+      "rank": 3,
+      "SP": 380
+    }
+  },
+  {
+    "from": 28,
+    "to": 94,
+    "conditions": {
+      "rank": 3,
+      "SPD": 530
+    }
+  },
+  {
+    "from": 28,
+    "to": 120,
+    "conditions": {
+      "rank": 3,
+      "SP": 360,
+      "INT": 630,
+      "RES": 480
+    }
+  },
+  {
+    "from": 28,
+    "to": 146,
+    "conditions": {
+      "rank": 3,
+      "ATK": 550
+    }
+  },
+  {
+    "from": 28,
+    "to": 172,
+    "conditions": {
+      "rank": 3,
+      "HP": 800,
+      "ATK": 520
+    }
+  },
+  {
+    "from": 29,
+    "to": 86,
+    "conditions": {
+      "rank": 3,
+      "SP": 530
+    }
+  },
+  {
+    "from": 29,
+    "to": 108,
+    "conditions": {
+      "rank": 3,
+      "RES": 560
+    }
+  },
+  {
+    "from": 29,
+    "to": 125,
+    "conditions": {
+      "rank": 3,
+      "DEF": 430,
+      "RES": 300
+    }
+  },
+  {
+    "from": 29,
+    "to": 134,
+    "conditions": {
+      "rank": 3,
+      "HP": 1000
+    }
+  },
+  {
+    "from": 29,
+    "to": 171,
+    "conditions": {
+      "rank": 3,
+      "HP": 900
+    }
+  },
+  {
+    "from": 30,
+    "to": 87,
+    "conditions": {
+      "rank": 3,
+      "DEF": 300,
+      "SPD": 400
+    }
+  },
+  {
+    "from": 30,
+    "to": 106,
+    "conditions": {
+      "rank": 3,
+      "RES": 250,
+      "SPD": 300
+    }
+  },
+  {
+    "from": 30,
+    "to": 117,
+    "conditions": {
+      "rank": 3,
+      "INT": 730
+    }
+  },
+  {
+    "from": 30,
+    "to": 135,
+    "conditions": {
+      "rank": 3,
+      "ATK": 530,
+      "RES": 450
+    }
+  },
+  {
+    "from": 30,
+    "to": 161,
+    "conditions": {
+      "rank": 3,
+      "RES": 400
+    }
+  },
+  {
+    "from": 31,
+    "to": 99,
+    "conditions": {
+      "rank": 3,
+      "SP": 540,
+      "INT": 540
+    }
+  },
+  {
+    "from": 31,
+    "to": 102,
+    "conditions": {
+      "rank": 3,
+      "SP": 400,
+      "ATK": 530
+    }
+  },
+  {
+    "from": 31,
+    "to": 103,
+    "conditions": {
+      "rank": 3,
+      "SPD": 540
+    }
+  },
+  {
+    "from": 31,
+    "to": 127,
+    "conditions": {
+      "rank": 3,
+      "HP": 1740,
+      "ATK": 530
+    }
+  },
+  {
+    "from": 32,
+    "to": 99,
+    "conditions": {
+      "rank": 3,
+      "SP": 540,
+      "INT": 540
+    }
+  },
+  {
+    "from": 32,
+    "to": 106,
+    "conditions": {
+      "rank": 3,
+      "RES": 250,
+      "SPD": 300
+    }
+  },
+  {
+    "from": 32,
+    "to": 112,
+    "conditions": {
+      "rank": 3,
+      "SP": 500,
+      "INT": 630
+    }
+  },
+  {
+    "from": 32,
+    "to": 173,
+    "conditions": {
+      "rank": 3,
+      "DEF": 300,
+      "SPD": 470
+    }
+  },
+  {
+    "from": 33,
+    "to": 88,
+    "conditions": {
+      "rank": 3,
+      "DEF": 460
+    }
+  },
+  {
+    "from": 33,
+    "to": 103,
+    "conditions": {
+      "rank": 3,
+      "SPD": 540
+    }
+  },
+  {
+    "from": 33,
+    "to": 116,
+    "conditions": {
+      "rank": 3,
+      "SP": 510
+    }
+  },
+  {
+    "from": 34,
+    "to": 82,
+    "conditions": {
+      "rank": 3,
+      "HP": 1120,
+      "ATK": 440
+    }
+  },
+  {
+    "from": 34,
+    "to": 97,
+    "conditions": {
+      "rank": 3,
+      "HP": 820,
+      "RES": 540
+    }
+  },
+  {
+    "from": 34,
+    "to": 98,
+    "conditions": {
+      "rank": 3,
+      "SPD": 620
+    }
+  },
+  {
+    "from": 34,
+    "to": 101,
+    "conditions": {
+      "rank": 3,
+      "SP": 380,
+      "ATK": 480,
+      "RES": 390
+    }
+  },
+  {
+    "from": 34,
+    "to": 131,
+    "conditions": {
+      "rank": 3,
+      "SP": 450,
+      "DEF": 300
+    }
+  },
+  {
+    "from": 34,
+    "to": 153,
+    "conditions": {
+      "rank": 3,
+      "SPD": 620
+    }
+  },
+  {
+    "from": 35,
+    "to": 89,
+    "conditions": {
+      "rank": 3,
+      "DEF": 460
+    }
+  },
+  {
+    "from": 35,
+    "to": 104,
+    "conditions": {
+      "rank": 3,
+      "HP": 1200
+    }
+  },
+  {
+    "from": 35,
+    "to": 109,
+    "conditions": {
+      "rank": 3,
+      "ATK": 510
+    }
+  },
+  {
+    "from": 35,
+    "to": 114,
+    "conditions": {
+      "rank": 3,
+      "RES": 470
+    }
+  },
+  {
+    "from": 35,
+    "to": 470,
+    "conditions": {
+      "rank": 3,
+      "SPD": 580
+    }
+  },
+  {
+    "from": 36,
+    "to": 102,
+    "conditions": {
+      "rank": 3,
+      "SP": 400,
+      "ATK": 530
+    }
+  },
+  {
+    "from": 36,
+    "to": 103,
+    "conditions": {
+      "rank": 3,
+      "SPD": 540
+    }
+  },
+  {
+    "from": 36,
+    "to": 116,
+    "conditions": {
+      "rank": 3,
+      "SP": 510
+    }
+  },
+  {
+    "from": 36,
+    "to": 173,
+    "conditions": {
+      "rank": 3,
+      "DEF": 300,
+      "SPD": 470
+    }
+  },
+  {
+    "from": 37,
+    "to": 93,
+    "conditions": {
+      "rank": 3,
+      "HP": 1090
+    }
+  },
+  {
+    "from": 37,
+    "to": 107,
+    "conditions": {
+      "rank": 3,
+      "HP": 1090
+    }
+  },
+  {
+    "from": 37,
+    "to": 152,
+    "conditions": {
+      "rank": 3,
+      "HP": 1020,
+      "RES": 460
+    }
+  },
+  {
+    "from": 37,
+    "to": 157,
+    "conditions": {
+      "rank": 3,
+      "HP": 1100
+    }
+  },
+  {
+    "from": 37,
+    "to": 178,
+    "conditions": {
+      "rank": 3,
+      "HP": 1170
+    }
+  },
+  {
+    "from": 38,
+    "to": 88,
+    "conditions": {
+      "rank": 3,
+      "DEF": 460
+    }
+  },
+  {
+    "from": 38,
+    "to": 90,
+    "conditions": {
+      "rank": 3,
+      "HP": 1120
+    }
+  },
+  {
+    "from": 38,
+    "to": 110,
+    "conditions": {
+      "rank": 3,
+      "HP": 820,
+      "RES": 540
+    }
+  },
+  {
+    "from": 38,
+    "to": 122,
+    "conditions": {
+      "rank": 3,
+      "HP": 1060
+    }
+  },
+  {
+    "from": 38,
+    "to": 136,
+    "conditions": {
+      "rank": 3,
+      "ATK": 510
+    }
+  },
+  {
+    "from": 39,
+    "to": 296,
+    "conditions": {
+      "rank": 7,
+      "SP": 920,
+      "INT": 1820
+    }
+  },
+  {
+    "from": 40,
+    "to": 81,
+    "conditions": {
+      "rank": 9,
+      "SP": 470,
+      "valor": 46
+    }
+  },
+  {
+    "from": 40,
+    "to": 106,
+    "conditions": {
+      "rank": 3,
+      "RES": 250,
+      "SPD": 300
+    }
+  },
+  {
+    "from": 40,
+    "to": 121,
+    "conditions": {
+      "rank": 3,
+      "HP": 890,
+      "INT": 420
+    }
+  },
+  {
+    "from": 40,
+    "to": 146,
+    "conditions": {
+      "rank": 3,
+      "ATK": 550
+    }
+  },
+  {
+    "from": 40,
+    "to": 147,
+    "conditions": {
+      "rank": 3,
+      "INT": 490
+    }
+  },
+  {
+    "from": 41,
+    "to": 93,
+    "conditions": {
+      "rank": 3,
+      "HP": 1090
+    }
+  },
+  {
+    "from": 41,
+    "to": 109,
+    "conditions": {
+      "rank": 3,
+      "ATK": 510
+    }
+  },
+  {
+    "from": 41,
+    "to": 114,
+    "conditions": {
+      "rank": 3,
+      "RES": 470
+    }
+  },
+  {
+    "from": 41,
+    "to": 129,
+    "conditions": {
+      "rank": 3,
+      "HP": 820,
+      "SP": 380,
+      "ATK": 530
+    }
+  },
+  {
+    "from": 41,
+    "to": 159,
+    "conditions": {
+      "rank": 3,
+      "HP": 840,
+      "DEF": 280
+    }
+  },
+  {
+    "from": 42,
+    "to": 94,
+    "conditions": {
+      "rank": 3,
+      "SPD": 530
+    }
+  },
+  {
+    "from": 42,
+    "to": 115,
+    "conditions": {
+      "rank": 3,
+      "HP": 940,
+      "RES": 450
+    }
+  },
+  {
+    "from": 42,
+    "to": 122,
+    "conditions": {
+      "rank": 3,
+      "HP": 1060
+    }
+  },
+  {
+    "from": 42,
+    "to": 123,
+    "conditions": {
+      "rank": 3,
+      "SP": 460,
+      "DEF": 430
+    }
+  },
+  {
+    "from": 42,
+    "to": 142,
+    "conditions": {
+      "rank": 3,
+      "HP": 1010,
+      "DEF": 430
+    }
+  },
+  {
+    "from": 42,
+    "to": 171,
+    "conditions": {
+      "rank": 3,
+      "HP": 900
+    }
+  },
+  {
+    "from": 43,
+    "to": 82,
+    "conditions": {
+      "rank": 3,
+      "HP": 1120,
+      "ATK": 440
+    }
+  },
+  {
+    "from": 43,
+    "to": 87,
+    "conditions": {
+      "rank": 3,
+      "DEF": 300,
+      "SPD": 400
+    }
+  },
+  {
+    "from": 43,
+    "to": 117,
+    "conditions": {
+      "rank": 3,
+      "INT": 730
+    }
+  },
+  {
+    "from": 43,
+    "to": 131,
+    "conditions": {
+      "rank": 3,
+      "SP": 450,
+      "DEF": 300
+    }
+  },
+  {
+    "from": 43,
+    "to": 148,
+    "conditions": {
+      "rank": 3,
+      "HP": 750
+    }
+  },
+  {
+    "from": 43,
+    "to": 451,
+    "conditions": {
+      "rank": 8,
+      "DEF": 2260,
+      "amicability": 46
+    }
+  },
+  {
+    "from": 44,
+    "to": 96,
+    "conditions": {
+      "rank": 3,
+      "INT": 640,
+      "RES": 480
+    }
+  },
+  {
+    "from": 44,
+    "to": 115,
+    "conditions": {
+      "rank": 3,
+      "HP": 940,
+      "RES": 450
+    }
+  },
+  {
+    "from": 44,
+    "to": 123,
+    "conditions": {
+      "rank": 3,
+      "SP": 460,
+      "DEF": 430
+    }
+  },
+  {
+    "from": 44,
+    "to": 127,
+    "conditions": {
+      "rank": 3,
+      "HP": 1740,
+      "ATK": 530
+    }
+  },
+  {
+    "from": 44,
+    "to": 142,
+    "conditions": {
+      "rank": 3,
+      "HP": 1010,
+      "DEF": 430
+    }
+  },
+  {
+    "from": 44,
+    "to": 144,
+    "conditions": {
+      "rank": 3,
+      "SP": 390,
+      "DEF": 300
+    }
+  },
+  {
+    "from": 45,
+    "to": 118,
+    "conditions": {
+      "rank": 3,
+      "SP": 450
+    }
+  },
+  {
+    "from": 45,
+    "to": 119,
+    "conditions": {
+      "rank": 3,
+      "ATK": 550,
+      "SPD": 330
+    }
+  },
+  {
+    "from": 45,
+    "to": 146,
+    "conditions": {
+      "rank": 3,
+      "ATK": 550
+    }
+  },
+  {
+    "from": 45,
+    "to": 170,
+    "conditions": {
+      "rank": 3,
+      "HP": 870,
+      "DEF": 430
+    }
+  },
+  {
+    "from": 45,
+    "to": 172,
+    "conditions": {
+      "rank": 3,
+      "HP": 800,
+      "ATK": 520
+    }
+  },
+  {
+    "from": 46,
+    "to": 111,
+    "conditions": {
+      "rank": 3,
+      "ATK": 460,
+      "RES": 620
+    }
+  },
+  {
+    "from": 46,
+    "to": 124,
+    "conditions": {
+      "rank": 3,
+      "SP": 420
+    }
+  },
+  {
+    "from": 46,
+    "to": 126,
+    "conditions": {
+      "rank": 3,
+      "SP": 380
+    }
+  },
+  {
+    "from": 46,
+    "to": 136,
+    "conditions": {
+      "rank": 3,
+      "ATK": 510
+    }
+  },
+  {
+    "from": 46,
+    "to": 143,
+    "conditions": {
+      "rank": 3,
+      "DEF": 440
+    }
+  },
+  {
+    "from": 46,
+    "to": 151,
+    "conditions": {
+      "rank": 3,
+      "DEF": 480
+    }
+  },
+  {
+    "from": 47,
+    "to": 91,
+    "conditions": {
+      "rank": 3,
+      "HP": 1060
+    }
+  },
+  {
+    "from": 47,
+    "to": 108,
+    "conditions": {
+      "rank": 3,
+      "RES": 560
+    }
+  },
+  {
+    "from": 47,
+    "to": 127,
+    "conditions": {
+      "rank": 3,
+      "HP": 1740,
+      "ATK": 530
+    }
+  },
+  {
+    "from": 47,
+    "to": 129,
+    "conditions": {
+      "rank": 3,
+      "HP": 820,
+      "SP": 380,
+      "ATK": 530
+    }
+  },
+  {
+    "from": 47,
+    "to": 169,
+    "conditions": {
+      "rank": 3,
+      "RES": 560
+    }
+  },
+  {
+    "from": 48,
+    "to": 86,
+    "conditions": {
+      "rank": 3,
+      "SP": 530
+    }
+  },
+  {
+    "from": 48,
+    "to": 95,
+    "conditions": {
+      "rank": 3,
+      "ATK": 540
+    }
+  },
+  {
+    "from": 48,
+    "to": 176,
+    "conditions": {
+      "rank": 3,
+      "DEF": 500,
+      "RES": 380
+    }
+  },
+  {
+    "from": 48,
+    "to": 234,
+    "conditions": {
+      "rank": 5,
+      "HP": 1070,
+      "SP": 320
+    }
+  },
+  {
+    "from": 49,
+    "to": 91,
+    "conditions": {
+      "rank": 3,
+      "HP": 1060
+    }
+  },
+  {
+    "from": 49,
+    "to": 101,
+    "conditions": {
+      "rank": 3,
+      "SP": 380,
+      "ATK": 480,
+      "RES": 390
+    }
+  },
+  {
+    "from": 49,
+    "to": 121,
+    "conditions": {
+      "rank": 3,
+      "HP": 890,
+      "INT": 420
+    }
+  },
+  {
+    "from": 49,
+    "to": 128,
+    "conditions": {
+      "rank": 3,
+      "ATK": 840
+    }
+  },
+  {
+    "from": 49,
+    "to": 149,
+    "conditions": {
+      "rank": 3,
+      "ATK": 830
+    }
+  },
+  {
+    "from": 49,
+    "to": 157,
+    "conditions": {
+      "rank": 3,
+      "HP": 1100
+    }
+  },
+  {
+    "from": 50,
+    "to": 83,
+    "conditions": {
+      "rank": 3,
+      "SPD": 380
+    }
+  },
+  {
+    "from": 50,
+    "to": 107,
+    "conditions": {
+      "rank": 3,
+      "HP": 1090
+    }
+  },
+  {
+    "from": 50,
+    "to": 131,
+    "conditions": {
+      "rank": 3,
+      "SP": 450,
+      "DEF": 300
+    }
+  },
+  {
+    "from": 50,
+    "to": 132,
+    "conditions": {
+      "rank": 3,
+      "HP": 1060
+    }
+  },
+  {
+    "from": 50,
+    "to": 153,
+    "conditions": {
+      "rank": 3,
+      "SPD": 620
+    }
+  },
+  {
+    "from": 50,
+    "to": 175,
+    "conditions": {
+      "rank": 3,
+      "SPD": 610
+    }
+  },
+  {
+    "from": 51,
+    "to": 84,
+    "conditions": {
+      "rank": 3,
+      "SP": 730,
+      "INT": 540
+    }
+  },
+  {
+    "from": 51,
+    "to": 106,
+    "conditions": {
+      "rank": 3,
+      "RES": 250,
+      "SPD": 300
+    }
+  },
+  {
+    "from": 51,
+    "to": 119,
+    "conditions": {
+      "rank": 3,
+      "ATK": 550,
+      "SPD": 330
+    }
+  },
+  {
+    "from": 51,
+    "to": 184,
+    "conditions": {
+      "rank": 3,
+      "item": 2
+    }
+  },
+  {
+    "from": 52,
+    "to": 90,
+    "conditions": {
+      "rank": 3,
+      "HP": 1120
+    }
+  },
+  {
+    "from": 52,
+    "to": 92,
+    "conditions": {
+      "rank": 3,
+      "HP": 1100
+    }
+  },
+  {
+    "from": 52,
+    "to": 97,
+    "conditions": {
+      "rank": 3,
+      "HP": 820,
+      "RES": 540
+    }
+  },
+  {
+    "from": 52,
+    "to": 133,
+    "conditions": {
+      "rank": 3,
+      "ATK": 700,
+      "RES": 540
+    }
+  },
+  {
+    "from": 52,
+    "to": 145,
+    "conditions": {
+      "rank": 3,
+      "HP": 1100
+    }
+  },
+  {
+    "from": 53,
+    "to": 104,
+    "conditions": {
+      "rank": 3,
+      "HP": 1200
+    }
+  },
+  {
+    "from": 53,
+    "to": 130,
+    "conditions": {
+      "rank": 3,
+      "HP": 840,
+      "DEF": 410
+    }
+  },
+  {
+    "from": 53,
+    "to": 140,
+    "conditions": {
+      "rank": 3,
+      "HP": 1100
+    }
+  },
+  {
+    "from": 53,
+    "to": 165,
+    "conditions": {
+      "rank": 3,
+      "DEF": 550
+    }
+  },
+  {
+    "from": 53,
+    "to": 167,
+    "conditions": {
+      "rank": 3,
+      "HP": 800
+    }
+  },
+  {
+    "from": 53,
+    "to": 178,
+    "conditions": {
+      "rank": 3,
+      "HP": 1170
+    }
+  },
+  {
+    "from": 54,
+    "to": 116,
+    "conditions": {
+      "rank": 3,
+      "SP": 510
+    }
+  },
+  {
+    "from": 54,
+    "to": 120,
+    "conditions": {
+      "rank": 3,
+      "SP": 360,
+      "INT": 630,
+      "RES": 480
+    }
+  },
+  {
+    "from": 54,
+    "to": 130,
+    "conditions": {
+      "rank": 3,
+      "HP": 840,
+      "DEF": 410
+    }
+  },
+  {
+    "from": 54,
+    "to": 140,
+    "conditions": {
+      "rank": 3,
+      "HP": 1100
+    }
+  },
+  {
+    "from": 54,
+    "to": 167,
+    "conditions": {
+      "rank": 3,
+      "HP": 800
+    }
+  },
+  {
+    "from": 55,
+    "to": 83,
+    "conditions": {
+      "rank": 3,
+      "SPD": 380
+    }
+  },
+  {
+    "from": 55,
+    "to": 99,
+    "conditions": {
+      "rank": 3,
+      "SP": 540,
+      "INT": 540
+    }
+  },
+  {
+    "from": 55,
+    "to": 103,
+    "conditions": {
+      "rank": 3,
+      "SPD": 540
+    }
+  },
+  {
+    "from": 55,
+    "to": 163,
+    "conditions": {
+      "rank": 3,
+      "SP": 380,
+      "ATK": 640
+    }
+  },
+  {
+    "from": 56,
+    "to": 108,
+    "conditions": {
+      "rank": 3,
+      "RES": 560
+    }
+  },
+  {
+    "from": 56,
+    "to": 120,
+    "conditions": {
+      "rank": 3,
+      "SP": 360,
+      "INT": 630,
+      "RES": 480
+    }
+  },
+  {
+    "from": 56,
+    "to": 126,
+    "conditions": {
+      "rank": 3,
+      "SP": 380
+    }
+  },
+  {
+    "from": 56,
+    "to": 129,
+    "conditions": {
+      "rank": 3,
+      "HP": 820,
+      "SP": 380,
+      "ATK": 530
+    }
+  },
+  {
+    "from": 56,
+    "to": 130,
+    "conditions": {
+      "rank": 3,
+      "HP": 840,
+      "DEF": 410
+    }
+  },
+  {
+    "from": 57,
+    "to": 87,
+    "conditions": {
+      "rank": 3,
+      "DEF": 300,
+      "SPD": 400
+    }
+  },
+  {
+    "from": 57,
+    "to": 96,
+    "conditions": {
+      "rank": 3,
+      "INT": 640,
+      "RES": 480
+    }
+  },
+  {
+    "from": 57,
+    "to": 105,
+    "conditions": {
+      "rank": 3,
+      "HP": 960,
+      "RES": 300
+    }
+  },
+  {
+    "from": 57,
+    "to": 111,
+    "conditions": {
+      "rank": 3,
+      "ATK": 460,
+      "RES": 620
+    }
+  },
+  {
+    "from": 57,
+    "to": 137,
+    "conditions": {
+      "rank": 3,
+      "SP": 470,
+      "SPD": 640
+    }
+  },
+  {
+    "from": 57,
+    "to": 162,
+    "conditions": {
+      "rank": 3,
+      "HP": 1010,
+      "ATK": 380
+    }
+  },
+  {
+    "from": 58,
+    "to": 110,
+    "conditions": {
+      "rank": 3,
+      "HP": 820,
+      "RES": 540
+    }
+  },
+  {
+    "from": 58,
+    "to": 117,
+    "conditions": {
+      "rank": 3,
+      "INT": 730
+    }
+  },
+  {
+    "from": 58,
+    "to": 120,
+    "conditions": {
+      "rank": 3,
+      "SP": 360,
+      "INT": 630,
+      "RES": 480
+    }
+  },
+  {
+    "from": 58,
+    "to": 137,
+    "conditions": {
+      "rank": 3,
+      "SP": 470,
+      "SPD": 640
+    }
+  },
+  {
+    "from": 58,
+    "to": 470,
+    "conditions": {
+      "rank": 3,
+      "SPD": 580
+    }
+  },
+  {
+    "from": 59,
+    "to": 89,
+    "conditions": {
+      "rank": 3,
+      "DEF": 460
+    }
+  },
+  {
+    "from": 59,
+    "to": 109,
+    "conditions": {
+      "rank": 3,
+      "ATK": 510
+    }
+  },
+  {
+    "from": 59,
+    "to": 126,
+    "conditions": {
+      "rank": 3,
+      "SP": 380
+    }
+  },
+  {
+    "from": 59,
+    "to": 129,
+    "conditions": {
+      "rank": 3,
+      "HP": 820,
+      "SP": 380,
+      "ATK": 530
+    }
+  },
+  {
+    "from": 59,
+    "to": 139,
+    "conditions": {
+      "rank": 3,
+      "SPD": 610
+    }
+  },
+  {
+    "from": 59,
+    "to": 168,
+    "conditions": {
+      "rank": 3,
+      "ATK": 660
+    }
+  },
+  {
+    "from": 60,
+    "to": 112,
+    "conditions": {
+      "rank": 3,
+      "SP": 500,
+      "INT": 630
+    }
+  },
+  {
+    "from": 60,
+    "to": 113,
+    "conditions": {
+      "rank": 3,
+      "INT": 500,
+      "RES": 490
+    }
+  },
+  {
+    "from": 60,
+    "to": 118,
+    "conditions": {
+      "rank": 3,
+      "SP": 450
+    }
+  },
+  {
+    "from": 60,
+    "to": 153,
+    "conditions": {
+      "rank": 3,
+      "SPD": 620
+    }
+  },
+  {
+    "from": 60,
+    "to": 156,
+    "conditions": {
+      "rank": 3,
+      "SP": 640,
+      "SPD": 430
+    }
+  },
+  {
+    "from": 60,
+    "to": 161,
+    "conditions": {
+      "rank": 3,
+      "RES": 400
+    }
+  },
+  {
+    "from": 61,
+    "to": 121,
+    "conditions": {
+      "rank": 3,
+      "HP": 890,
+      "INT": 420
+    }
+  },
+  {
+    "from": 61,
+    "to": 144,
+    "conditions": {
+      "rank": 3,
+      "SP": 390,
+      "DEF": 300
+    }
+  },
+  {
+    "from": 61,
+    "to": 147,
+    "conditions": {
+      "rank": 3,
+      "INT": 490
+    }
+  },
+  {
+    "from": 61,
+    "to": 160,
+    "conditions": {
+      "rank": 3,
+      "SP": 330
+    }
+  },
+  {
+    "from": 61,
+    "to": 165,
+    "conditions": {
+      "rank": 3,
+      "DEF": 550
+    }
+  },
+  {
+    "from": 62,
+    "to": 98,
+    "conditions": {
+      "rank": 3,
+      "SPD": 620
+    }
+  },
+  {
+    "from": 62,
+    "to": 114,
+    "conditions": {
+      "rank": 3,
+      "RES": 470
+    }
+  },
+  {
+    "from": 62,
+    "to": 132,
+    "conditions": {
+      "rank": 3,
+      "HP": 1060
+    }
+  },
+  {
+    "from": 62,
+    "to": 133,
+    "conditions": {
+      "rank": 3,
+      "ATK": 700,
+      "RES": 540
+    }
+  },
+  {
+    "from": 62,
+    "to": 153,
+    "conditions": {
+      "rank": 3,
+      "SPD": 620
+    }
+  },
+  {
+    "from": 62,
+    "to": 166,
+    "conditions": {
+      "rank": 3,
+      "RES": 530
+    }
+  },
+  {
+    "from": 63,
+    "to": 95,
+    "conditions": {
+      "rank": 3,
+      "ATK": 540
+    }
+  },
+  {
+    "from": 63,
+    "to": 148,
+    "conditions": {
+      "rank": 3,
+      "HP": 750
+    }
+  },
+  {
+    "from": 63,
+    "to": 152,
+    "conditions": {
+      "rank": 3,
+      "HP": 1020,
+      "RES": 460
+    }
+  },
+  {
+    "from": 63,
+    "to": 164,
+    "conditions": {
+      "rank": 3,
+      "ATK": 620
+    }
+  },
+  {
+    "from": 63,
+    "to": 174,
+    "conditions": {
+      "rank": 3,
+      "DEF": 450,
+      "RES": 420
+    }
+  },
+  {
+    "from": 63,
+    "to": 189,
+    "conditions": {
+      "rank": 3,
+      "SP": 1580,
+      "INT": 1130
+    }
+  },
+  {
+    "from": 64,
+    "to": 92,
+    "conditions": {
+      "rank": 3,
+      "HP": 1100
+    }
+  },
+  {
+    "from": 64,
+    "to": 128,
+    "conditions": {
+      "rank": 3,
+      "ATK": 840
+    }
+  },
+  {
+    "from": 64,
+    "to": 145,
+    "conditions": {
+      "rank": 3,
+      "HP": 1100
+    }
+  },
+  {
+    "from": 64,
+    "to": 175,
+    "conditions": {
+      "rank": 3,
+      "SPD": 610
+    }
+  },
+  {
+    "from": 64,
+    "to": 471,
+    "conditions": {
+      "rank": 3,
+      "ATK": 660,
+      "RES": 420,
+      "SPD": 540
+    }
+  },
+  {
+    "from": 65,
+    "to": 139,
+    "conditions": {
+      "rank": 3,
+      "SPD": 610
+    }
+  },
+  {
+    "from": 65,
+    "to": 141,
+    "conditions": {
+      "rank": 3,
+      "ATK": 440,
+      "DEF": 290
+    }
+  },
+  {
+    "from": 65,
+    "to": 151,
+    "conditions": {
+      "rank": 3,
+      "DEF": 480
+    }
+  },
+  {
+    "from": 65,
+    "to": 155,
+    "conditions": {
+      "rank": 3,
+      "ATK": 540
+    }
+  },
+  {
+    "from": 65,
+    "to": 157,
+    "conditions": {
+      "rank": 3,
+      "HP": 1100
+    }
+  },
+  {
+    "from": 66,
+    "to": 113,
+    "conditions": {
+      "rank": 3,
+      "INT": 500,
+      "RES": 490
+    }
+  },
+  {
+    "from": 66,
+    "to": 163,
+    "conditions": {
+      "rank": 3,
+      "SP": 380,
+      "ATK": 640
+    }
+  },
+  {
+    "from": 66,
+    "to": 168,
+    "conditions": {
+      "rank": 3,
+      "ATK": 660
+    }
+  },
+  {
+    "from": 66,
+    "to": 169,
+    "conditions": {
+      "rank": 3,
+      "RES": 560
+    }
+  },
+  {
+    "from": 67,
+    "to": 122,
+    "conditions": {
+      "rank": 3,
+      "HP": 1060
+    }
+  },
+  {
+    "from": 67,
+    "to": 123,
+    "conditions": {
+      "rank": 3,
+      "SP": 460,
+      "DEF": 430
+    }
+  },
+  {
+    "from": 67,
+    "to": 142,
+    "conditions": {
+      "rank": 3,
+      "HP": 1010,
+      "DEF": 430
+    }
+  },
+  {
+    "from": 67,
+    "to": 144,
+    "conditions": {
+      "rank": 3,
+      "SP": 390,
+      "DEF": 300
+    }
+  },
+  {
+    "from": 67,
+    "to": 171,
+    "conditions": {
+      "rank": 3,
+      "HP": 900
+    }
+  },
+  {
+    "from": 68,
+    "to": 97,
+    "conditions": {
+      "rank": 3,
+      "HP": 820,
+      "RES": 540
+    }
+  },
+  {
+    "from": 68,
+    "to": 105,
+    "conditions": {
+      "rank": 3,
+      "HP": 960,
+      "RES": 300
+    }
+  },
+  {
+    "from": 68,
+    "to": 111,
+    "conditions": {
+      "rank": 3,
+      "ATK": 460,
+      "RES": 620
+    }
+  },
+  {
+    "from": 68,
+    "to": 136,
+    "conditions": {
+      "rank": 3,
+      "ATK": 510
+    }
+  },
+  {
+    "from": 68,
+    "to": 138,
+    "conditions": {
+      "rank": 3,
+      "ATK": 400,
+      "RES": 300
+    }
+  },
+  {
+    "from": 68,
+    "to": 162,
+    "conditions": {
+      "rank": 3,
+      "HP": 1010,
+      "ATK": 380
+    }
+  },
+  {
+    "from": 69,
+    "to": 97,
+    "conditions": {
+      "rank": 3,
+      "HP": 820,
+      "RES": 540
+    }
+  },
+  {
+    "from": 69,
+    "to": 147,
+    "conditions": {
+      "rank": 3,
+      "INT": 490
+    }
+  },
+  {
+    "from": 69,
+    "to": 148,
+    "conditions": {
+      "rank": 3,
+      "HP": 750
+    }
+  },
+  {
+    "from": 69,
+    "to": 154,
+    "conditions": {
+      "rank": 3,
+      "DEF": 300
+    }
+  },
+  {
+    "from": 69,
+    "to": 165,
+    "conditions": {
+      "rank": 3,
+      "DEF": 550
+    }
+  },
+  {
+    "from": 69,
+    "to": 166,
+    "conditions": {
+      "rank": 3,
+      "RES": 530
+    }
+  },
+  {
+    "from": 70,
+    "to": 112,
+    "conditions": {
+      "rank": 3,
+      "SP": 500,
+      "INT": 630
+    }
+  },
+  {
+    "from": 70,
+    "to": 124,
+    "conditions": {
+      "rank": 3,
+      "SP": 420
+    }
+  },
+  {
+    "from": 70,
+    "to": 153,
+    "conditions": {
+      "rank": 3,
+      "SPD": 620
+    }
+  },
+  {
+    "from": 70,
+    "to": 154,
+    "conditions": {
+      "rank": 3,
+      "DEF": 300
+    }
+  },
+  {
+    "from": 71,
+    "to": 118,
+    "conditions": {
+      "rank": 3,
+      "SP": 450
+    }
+  },
+  {
+    "from": 71,
+    "to": 125,
+    "conditions": {
+      "rank": 3,
+      "DEF": 430,
+      "RES": 300
+    }
+  },
+  {
+    "from": 71,
+    "to": 134,
+    "conditions": {
+      "rank": 3,
+      "HP": 1000
+    }
+  },
+  {
+    "from": 71,
+    "to": 143,
+    "conditions": {
+      "rank": 3,
+      "DEF": 440
+    }
+  },
+  {
+    "from": 71,
+    "to": 170,
+    "conditions": {
+      "rank": 3,
+      "HP": 870,
+      "DEF": 430
+    }
+  },
+  {
+    "from": 72,
+    "to": 138,
+    "conditions": {
+      "rank": 3,
+      "ATK": 400,
+      "RES": 300
+    }
+  },
+  {
+    "from": 72,
+    "to": 141,
+    "conditions": {
+      "rank": 3,
+      "ATK": 440,
+      "DEF": 290
+    }
+  },
+  {
+    "from": 72,
+    "to": 156,
+    "conditions": {
+      "rank": 3,
+      "SP": 640,
+      "SPD": 430
+    }
+  },
+  {
+    "from": 72,
+    "to": 161,
+    "conditions": {
+      "rank": 3,
+      "RES": 400
+    }
+  },
+  {
+    "from": 72,
+    "to": 471,
+    "conditions": {
+      "rank": 3,
+      "ATK": 660,
+      "RES": 420,
+      "SPD": 540
+    }
+  },
+  {
+    "from": 73,
+    "to": 85,
+    "conditions": {
+      "rank": 3,
+      "SP": 380
+    }
+  },
+  {
+    "from": 73,
+    "to": 150,
+    "conditions": {
+      "rank": 3,
+      "INT": 300,
+      "RES": 300
+    }
+  },
+  {
+    "from": 73,
+    "to": 158,
+    "conditions": {
+      "rank": 3,
+      "SP": 460,
+      "ATK": 380
+    }
+  },
+  {
+    "from": 73,
+    "to": 164,
+    "conditions": {
+      "rank": 3,
+      "ATK": 620
+    }
+  },
+  {
+    "from": 73,
+    "to": 172,
+    "conditions": {
+      "rank": 3,
+      "HP": 800,
+      "ATK": 520
+    }
+  },
+  {
+    "from": 73,
+    "to": 177,
+    "conditions": {
+      "rank": 3,
+      "ATK": 500,
+      "RES": 590
+    }
+  },
+  {
+    "from": 74,
+    "to": 121,
+    "conditions": {
+      "rank": 3,
+      "HP": 890,
+      "INT": 420
+    }
+  },
+  {
+    "from": 74,
+    "to": 122,
+    "conditions": {
+      "rank": 3,
+      "HP": 1060
+    }
+  },
+  {
+    "from": 74,
+    "to": 155,
+    "conditions": {
+      "rank": 3,
+      "ATK": 540
+    }
+  },
+  {
+    "from": 74,
+    "to": 156,
+    "conditions": {
+      "rank": 3,
+      "SP": 640,
+      "SPD": 430
+    }
+  },
+  {
+    "from": 74,
+    "to": 160,
+    "conditions": {
+      "rank": 3,
+      "SP": 330
+    }
+  },
+  {
+    "from": 74,
+    "to": 167,
+    "conditions": {
+      "rank": 3,
+      "HP": 800
+    }
+  },
+  {
+    "from": 75,
+    "to": 140,
+    "conditions": {
+      "rank": 3,
+      "HP": 1100
+    }
+  },
+  {
+    "from": 75,
+    "to": 154,
+    "conditions": {
+      "rank": 3,
+      "DEF": 300
+    }
+  },
+  {
+    "from": 75,
+    "to": 159,
+    "conditions": {
+      "rank": 3,
+      "HP": 840,
+      "DEF": 280
+    }
+  },
+  {
+    "from": 75,
+    "to": 164,
+    "conditions": {
+      "rank": 3,
+      "ATK": 620
+    }
+  },
+  {
+    "from": 76,
+    "to": 151,
+    "conditions": {
+      "rank": 3,
+      "DEF": 480
+    }
+  },
+  {
+    "from": 76,
+    "to": 174,
+    "conditions": {
+      "rank": 3,
+      "DEF": 450,
+      "RES": 420
+    }
+  },
+  {
+    "from": 76,
+    "to": 179,
+    "conditions": {
+      "rank": 3,
+      "item": 4
+    }
+  },
+  {
+    "from": 76,
+    "to": 181,
+    "conditions": {
+      "rank": 3,
+      "item": 3
+    }
+  },
+  {
+    "from": 77,
+    "to": 101,
+    "conditions": {
+      "rank": 3,
+      "SP": 380,
+      "ATK": 480,
+      "RES": 390
+    }
+  },
+  {
+    "from": 77,
+    "to": 175,
+    "conditions": {
+      "rank": 3,
+      "SPD": 610
+    }
+  },
+  {
+    "from": 77,
+    "to": 183,
+    "conditions": {
+      "rank": 3,
+      "item": 7
+    }
+  },
+  {
+    "from": 77,
+    "to": 186,
+    "conditions": {
+      "rank": 3,
+      "item": 5
+    }
+  },
+  {
+    "from": 77,
+    "to": 423,
+    "conditions": {
+      "rank": 7,
+      "item": 6
+    }
+  },
+  {
+    "from": 78,
+    "to": 100,
+    "conditions": {
+      "rank": 3,
+      "ATK": 700
+    }
+  },
+  {
+    "from": 78,
+    "to": 173,
+    "conditions": {
+      "rank": 3,
+      "DEF": 300,
+      "SPD": 470
+    }
+  },
+  {
+    "from": 78,
+    "to": 180,
+    "conditions": {
+      "rank": 3,
+      "item": 9
+    }
+  },
+  {
+    "from": 78,
+    "to": 185,
+    "conditions": {
+      "rank": 3,
+      "item": 8
+    }
+  },
+  {
+    "from": 79,
+    "to": 94,
+    "conditions": {
+      "rank": 3,
+      "SPD": 530
+    }
+  },
+  {
+    "from": 79,
+    "to": 158,
+    "conditions": {
+      "rank": 3,
+      "SP": 460,
+      "ATK": 380
+    }
+  },
+  {
+    "from": 79,
+    "to": 177,
+    "conditions": {
+      "rank": 3,
+      "ATK": 500,
+      "RES": 590
+    }
+  },
+  {
+    "from": 80,
+    "to": 139,
+    "conditions": {
+      "rank": 3,
+      "SPD": 610
+    }
+  },
+  {
+    "from": 80,
+    "to": 142,
+    "conditions": {
+      "rank": 3,
+      "HP": 1010,
+      "DEF": 430
+    }
+  },
+  {
+    "from": 80,
+    "to": 158,
+    "conditions": {
+      "rank": 3,
+      "SP": 460,
+      "ATK": 380
+    }
+  },
+  {
+    "from": 80,
+    "to": 170,
+    "conditions": {
+      "rank": 3,
+      "HP": 870,
+      "DEF": 430
+    }
+  },
+  {
+    "from": 80,
+    "to": 178,
+    "conditions": {
+      "rank": 3,
+      "HP": 1170
+    }
+  },
+  {
+    "from": 81,
+    "to": 193,
+    "conditions": {
+      "rank": 9,
+      "ATK": 1100,
+      "SPD": 1090,
+      "valor": 46,
+      "philanthropy": 46
+    }
+  },
+  {
+    "from": 81,
+    "to": 194,
+    "conditions": {
+      "rank": 9,
+      "HP": 4620,
+      "SPD": 2910,
+      "valor": 46,
+      "wisdom": 46
+    }
+  },
+  {
+    "from": 81,
+    "to": 195,
+    "conditions": {
+      "rank": 9,
+      "ATK": 3070,
+      "INT": 2980,
+      "valor": 46,
+      "amicability": 46,
+      "wisdom": 46
+    }
+  },
+  {
+    "from": 81,
+    "to": 196,
+    "conditions": {
+      "rank": 9,
+      "SP": 1820,
+      "ATK": 3070,
+      "valor": 46,
+      "amicability": 46
+    }
+  },
+  {
+    "from": 81,
+    "to": 197,
+    "conditions": {
+      "rank": 9,
+      "INT": 2980,
+      "RES": 2890,
+      "valor": 46,
+      "philanthropy": 46,
+      "amicability": 46
+    }
+  },
+  {
+    "from": 82,
+    "to": 212,
+    "conditions": {
+      "rank": 5,
+      "HP": 1730,
+      "ATK": 930,
+      "DEF": 940
+    }
+  },
+  {
+    "from": 82,
+    "to": 220,
+    "conditions": {
+      "rank": 5,
+      "HP": 1800,
+      "INT": 990,
+      "RES": 960
+    }
+  },
+  {
+    "from": 82,
+    "to": 260,
+    "conditions": {
+      "rank": 5,
+      "SP": 900,
+      "INT": 1040
+    }
+  },
+  {
+    "from": 82,
+    "to": 280,
+    "conditions": {
+      "rank": 5,
+      "SP": 900,
+      "INT": 1100
+    }
+  },
+  {
+    "from": 83,
+    "to": 201,
+    "conditions": {
+      "rank": 5,
+      "HP": 1580,
+      "ATK": 1130,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 83,
+    "to": 217,
+    "conditions": {
+      "rank": 5,
+      "ATK": 900,
+      "DEF": 960
+    }
+  },
+  {
+    "from": 83,
+    "to": 272,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1130,
+      "DEF": 990,
+      "RES": 860
+    }
+  },
+  {
+    "from": 83,
+    "to": 293,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1050,
+      "RES": 940
+    }
+  },
+  {
+    "from": 84,
+    "to": 221,
+    "conditions": {
+      "rank": 5,
+      "SP": 910,
+      "INT": 1270
+    }
+  },
+  {
+    "from": 84,
+    "to": 241,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "RES": 1020,
+      "SPD": 910
+    }
+  },
+  {
+    "from": 84,
+    "to": 254,
+    "conditions": {
+      "rank": 5,
+      "INT": 1050,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 84,
+    "to": 300,
+    "conditions": {
+      "rank": 5,
+      "jogress": [
+        {
+          "id": 174,
+          "personality": 3
+        },
+        {
+          "id": 84,
+          "personality": 8
+        }
+      ]
+    }
+  },
+  {
+    "from": 85,
+    "to": 198,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "DEF": 1020
+    }
+  },
+  {
+    "from": 85,
+    "to": 235,
+    "conditions": {
+      "rank": 5,
+      "HP": 2030,
+      "ATK": 1350
+    }
+  },
+  {
+    "from": 85,
+    "to": 262,
+    "conditions": {
+      "rank": 5,
+      "ATK": 880,
+      "INT": 1260
+    }
+  },
+  {
+    "from": 85,
+    "to": 273,
+    "conditions": {
+      "rank": 5,
+      "SP": 540,
+      "ATK": 1060
+    }
+  },
+  {
+    "from": 86,
+    "to": 227,
+    "conditions": {
+      "rank": 5,
+      "SP": 1150,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 86,
+    "to": 236,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "DEF": 940
+    }
+  },
+  {
+    "from": 86,
+    "to": 258,
+    "conditions": {
+      "rank": 5,
+      "HP": 1800,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 87,
+    "to": 229,
+    "conditions": {
+      "rank": 5,
+      "HP": 1840,
+      "ATK": 990,
+      "SPD": 1090
+    }
+  },
+  {
+    "from": 87,
+    "to": 235,
+    "conditions": {
+      "rank": 5,
+      "HP": 2030,
+      "ATK": 1350
+    }
+  },
+  {
+    "from": 87,
+    "to": 242,
+    "conditions": {
+      "rank": 5,
+      "SP": 860,
+      "INT": 1020
+    }
+  },
+  {
+    "from": 87,
+    "to": 288,
+    "conditions": {
+      "rank": 5,
+      "HP": 1370,
+      "SP": 1020
+    }
+  },
+  {
+    "from": 88,
+    "to": 217,
+    "conditions": {
+      "rank": 5,
+      "ATK": 900,
+      "DEF": 960
+    }
+  },
+  {
+    "from": 88,
+    "to": 218,
+    "conditions": {
+      "rank": 5,
+      "RES": 960,
+      "SPD": 1040
+    }
+  },
+  {
+    "from": 88,
+    "to": 278,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1250,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 89,
+    "to": 205,
+    "conditions": {
+      "rank": 5,
+      "HP": 1080,
+      "ATK": 940
+    }
+  },
+  {
+    "from": 89,
+    "to": 207,
+    "conditions": {
+      "rank": 5,
+      "DEF": 1050,
+      "RES": 970
+    }
+  },
+  {
+    "from": 89,
+    "to": 229,
+    "conditions": {
+      "rank": 5,
+      "HP": 1840,
+      "ATK": 990,
+      "SPD": 1090
+    }
+  },
+  {
+    "from": 90,
+    "to": 223,
+    "conditions": {
+      "rank": 5,
+      "HP": 1480,
+      "ATK": 1300
+    }
+  },
+  {
+    "from": 90,
+    "to": 235,
+    "conditions": {
+      "rank": 5,
+      "HP": 2030,
+      "ATK": 1350
+    }
+  },
+  {
+    "from": 90,
+    "to": 278,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1250,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 90,
+    "to": 293,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1050,
+      "RES": 940
+    }
+  },
+  {
+    "from": 91,
+    "to": 200,
+    "conditions": {
+      "rank": 5,
+      "HP": 1760,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 91,
+    "to": 201,
+    "conditions": {
+      "rank": 5,
+      "HP": 1580,
+      "ATK": 1130,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 91,
+    "to": 272,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1130,
+      "DEF": 990,
+      "RES": 860
+    }
+  },
+  {
+    "from": 92,
+    "to": 210,
+    "conditions": {
+      "rank": 5,
+      "SP": 510,
+      "ATK": 960,
+      "DEF": 790
+    }
+  },
+  {
+    "from": 92,
+    "to": 226,
+    "conditions": {
+      "rank": 5,
+      "ATK": 940,
+      "SPD": 980
+    }
+  },
+  {
+    "from": 92,
+    "to": 295,
+    "conditions": {
+      "rank": 5,
+      "ATK": 740,
+      "DEF": 1060,
+      "RES": 820
+    }
+  },
+  {
+    "from": 93,
+    "to": 210,
+    "conditions": {
+      "rank": 5,
+      "SP": 510,
+      "ATK": 960,
+      "DEF": 790
+    }
+  },
+  {
+    "from": 93,
+    "to": 240,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1020,
+      "RES": 890,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 93,
+    "to": 264,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "DEF": 980
+    }
+  },
+  {
+    "from": 94,
+    "to": 211,
+    "conditions": {
+      "rank": 5,
+      "HP": 1200,
+      "ATK": 1020
+    }
+  },
+  {
+    "from": 94,
+    "to": 266,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1110,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 94,
+    "to": 269,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1170,
+      "DEF": 1020
+    }
+  },
+  {
+    "from": 94,
+    "to": 286,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "RES": 940,
+      "SPD": 1010
+    }
+  },
+  {
+    "from": 95,
+    "to": 206,
+    "conditions": {
+      "rank": 5,
+      "ATK": 960,
+      "SPD": 960
+    }
+  },
+  {
+    "from": 95,
+    "to": 214,
+    "conditions": {
+      "rank": 5,
+      "HP": 1900,
+      "ATK": 1060,
+      "DEF": 960
+    }
+  },
+  {
+    "from": 95,
+    "to": 248,
+    "conditions": {
+      "rank": 5,
+      "DEF": 1040,
+      "RES": 950
+    }
+  },
+  {
+    "from": 95,
+    "to": 294,
+    "conditions": {
+      "rank": 5,
+      "HP": 1730,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 96,
+    "to": 221,
+    "conditions": {
+      "rank": 5,
+      "SP": 910,
+      "INT": 1270
+    }
+  },
+  {
+    "from": 96,
+    "to": 253,
+    "conditions": {
+      "rank": 5,
+      "HP": 1600,
+      "INT": 980,
+      "RES": 930
+    }
+  },
+  {
+    "from": 96,
+    "to": 298,
+    "conditions": {
+      "rank": 5,
+      "SP": 1100,
+      "INT": 1650
+    }
+  },
+  {
+    "from": 97,
+    "to": 182,
+    "conditions": {
+      "rank": 3,
+      "item": 10
+    }
+  },
+  {
+    "from": 97,
+    "to": 203,
+    "conditions": {
+      "rank": 5,
+      "INT": 970,
+      "RES": 910
+    }
+  },
+  {
+    "from": 97,
+    "to": 301,
+    "conditions": {
+      "rank": 5,
+      "jogress": [
+        {
+          "id": 173,
+          "personality": 14
+        },
+        {
+          "id": 97,
+          "personality": 2
+        }
+      ]
+    }
+  },
+  {
+    "from": 98,
+    "to": 208,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "ATK": 940,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 98,
+    "to": 281,
+    "conditions": {
+      "rank": 5,
+      "SP": 970,
+      "ATK": 900
+    }
+  },
+  {
+    "from": 98,
+    "to": 290,
+    "conditions": {
+      "rank": 5,
+      "RES": 890,
+      "SPD": 1100
+    }
+  },
+  {
+    "from": 98,
+    "to": 291,
+    "conditions": {
+      "rank": 5,
+      "SP": 530,
+      "DEF": 920,
+      "RES": 870
+    }
+  },
+  {
+    "from": 99,
+    "to": 204,
+    "conditions": {
+      "rank": 5,
+      "INT": 1060,
+      "SPD": 980
+    }
+  },
+  {
+    "from": 99,
+    "to": 215,
+    "conditions": {
+      "rank": 5,
+      "INT": 980,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 99,
+    "to": 219,
+    "conditions": {
+      "rank": 5,
+      "HP": 1860,
+      "ATK": 980,
+      "DEF": 890
+    }
+  },
+  {
+    "from": 99,
+    "to": 244,
+    "conditions": {
+      "rank": 5,
+      "HP": 1720,
+      "ATK": 1020,
+      "DEF": 820
+    }
+  },
+  {
+    "from": 100,
+    "to": 219,
+    "conditions": {
+      "rank": 5,
+      "HP": 1860,
+      "ATK": 980,
+      "DEF": 890
+    }
+  },
+  {
+    "from": 100,
+    "to": 240,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1020,
+      "RES": 890,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 100,
+    "to": 292,
+    "conditions": {
+      "rank": 5,
+      "SP": 550,
+      "INT": 900,
+      "RES": 890
+    }
+  },
+  {
+    "from": 101,
+    "to": 200,
+    "conditions": {
+      "rank": 5,
+      "HP": 1760,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 101,
+    "to": 201,
+    "conditions": {
+      "rank": 5,
+      "HP": 1580,
+      "ATK": 1130,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 101,
+    "to": 210,
+    "conditions": {
+      "rank": 5,
+      "SP": 510,
+      "ATK": 960,
+      "DEF": 790
+    }
+  },
+  {
+    "from": 101,
+    "to": 472,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1220,
+      "INT": 740
+    }
+  },
+  {
+    "from": 102,
+    "to": 204,
+    "conditions": {
+      "rank": 5,
+      "INT": 1060,
+      "SPD": 980
+    }
+  },
+  {
+    "from": 102,
+    "to": 214,
+    "conditions": {
+      "rank": 5,
+      "HP": 1900,
+      "ATK": 1060,
+      "DEF": 960
+    }
+  },
+  {
+    "from": 102,
+    "to": 218,
+    "conditions": {
+      "rank": 5,
+      "RES": 960,
+      "SPD": 1040
+    }
+  },
+  {
+    "from": 103,
+    "to": 213,
+    "conditions": {
+      "rank": 5,
+      "ATK": 900,
+      "INT": 900,
+      "SPD": 1100
+    }
+  },
+  {
+    "from": 103,
+    "to": 225,
+    "conditions": {
+      "rank": 5,
+      "INT": 1020,
+      "SPD": 1050
+    }
+  },
+  {
+    "from": 103,
+    "to": 267,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "INT": 950
+    }
+  },
+  {
+    "from": 104,
+    "to": 212,
+    "conditions": {
+      "rank": 5,
+      "HP": 1730,
+      "ATK": 930,
+      "DEF": 940
+    }
+  },
+  {
+    "from": 104,
+    "to": 222,
+    "conditions": {
+      "rank": 5,
+      "HP": 1940,
+      "ATK": 820
+    }
+  },
+  {
+    "from": 104,
+    "to": 253,
+    "conditions": {
+      "rank": 5,
+      "HP": 1600,
+      "INT": 980,
+      "RES": 930
+    }
+  },
+  {
+    "from": 104,
+    "to": 292,
+    "conditions": {
+      "rank": 5,
+      "SP": 550,
+      "INT": 900,
+      "RES": 890
+    }
+  },
+  {
+    "from": 105,
+    "to": 203,
+    "conditions": {
+      "rank": 5,
+      "INT": 970,
+      "RES": 910
+    }
+  },
+  {
+    "from": 105,
+    "to": 216,
+    "conditions": {
+      "rank": 5,
+      "SP": 540,
+      "RES": 940,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 105,
+    "to": 222,
+    "conditions": {
+      "rank": 5,
+      "HP": 1940,
+      "ATK": 820
+    }
+  },
+  {
+    "from": 105,
+    "to": 233,
+    "conditions": {
+      "rank": 5,
+      "DEF": 980,
+      "RES": 970
+    }
+  },
+  {
+    "from": 105,
+    "to": 237,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "RES": 1000,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 106,
+    "to": 213,
+    "conditions": {
+      "rank": 5,
+      "ATK": 900,
+      "INT": 900,
+      "SPD": 1100
+    }
+  },
+  {
+    "from": 106,
+    "to": 221,
+    "conditions": {
+      "rank": 5,
+      "SP": 910,
+      "INT": 1270
+    }
+  },
+  {
+    "from": 106,
+    "to": 254,
+    "conditions": {
+      "rank": 5,
+      "INT": 1050,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 107,
+    "to": 206,
+    "conditions": {
+      "rank": 5,
+      "ATK": 960,
+      "SPD": 960
+    }
+  },
+  {
+    "from": 107,
+    "to": 272,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1130,
+      "DEF": 990,
+      "RES": 860
+    }
+  },
+  {
+    "from": 107,
+    "to": 283,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1150,
+      "DEF": 900
+    }
+  },
+  {
+    "from": 108,
+    "to": 238,
+    "conditions": {
+      "rank": 5,
+      "ATK": 980,
+      "DEF": 1020,
+      "RES": 980
+    }
+  },
+  {
+    "from": 108,
+    "to": 250,
+    "conditions": {
+      "rank": 5,
+      "DEF": 860,
+      "INT": 850,
+      "RES": 900
+    }
+  },
+  {
+    "from": 108,
+    "to": 298,
+    "conditions": {
+      "rank": 5,
+      "SP": 1100,
+      "INT": 1650
+    }
+  },
+  {
+    "from": 109,
+    "to": 205,
+    "conditions": {
+      "rank": 5,
+      "HP": 1080,
+      "ATK": 940
+    }
+  },
+  {
+    "from": 109,
+    "to": 216,
+    "conditions": {
+      "rank": 5,
+      "SP": 540,
+      "RES": 940,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 109,
+    "to": 219,
+    "conditions": {
+      "rank": 5,
+      "HP": 1860,
+      "ATK": 980,
+      "DEF": 890
+    }
+  },
+  {
+    "from": 109,
+    "to": 228,
+    "conditions": {
+      "rank": 5,
+      "ATK": 840,
+      "SPD": 1010
+    }
+  },
+  {
+    "from": 110,
+    "to": 203,
+    "conditions": {
+      "rank": 5,
+      "INT": 970,
+      "RES": 910
+    }
+  },
+  {
+    "from": 110,
+    "to": 213,
+    "conditions": {
+      "rank": 5,
+      "ATK": 900,
+      "INT": 900,
+      "SPD": 1100
+    }
+  },
+  {
+    "from": 110,
+    "to": 247,
+    "conditions": {
+      "rank": 5,
+      "HP": 1370,
+      "ATK": 850
+    }
+  },
+  {
+    "from": 110,
+    "to": 260,
+    "conditions": {
+      "rank": 5,
+      "SP": 900,
+      "INT": 1040
+    }
+  },
+  {
+    "from": 111,
+    "to": 216,
+    "conditions": {
+      "rank": 5,
+      "SP": 540,
+      "RES": 940,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 111,
+    "to": 233,
+    "conditions": {
+      "rank": 5,
+      "DEF": 980,
+      "RES": 970
+    }
+  },
+  {
+    "from": 111,
+    "to": 237,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "RES": 1000,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 112,
+    "to": 285,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "INT": 1020
+    }
+  },
+  {
+    "from": 112,
+    "to": 292,
+    "conditions": {
+      "rank": 5,
+      "SP": 550,
+      "INT": 900,
+      "RES": 890
+    }
+  },
+  {
+    "from": 112,
+    "to": 298,
+    "conditions": {
+      "rank": 5,
+      "SP": 1100,
+      "INT": 1650
+    }
+  },
+  {
+    "from": 113,
+    "to": 203,
+    "conditions": {
+      "rank": 5,
+      "INT": 970,
+      "RES": 910
+    }
+  },
+  {
+    "from": 113,
+    "to": 263,
+    "conditions": {
+      "rank": 5,
+      "SP": 960,
+      "RES": 830
+    }
+  },
+  {
+    "from": 113,
+    "to": 297,
+    "conditions": {
+      "rank": 5,
+      "HP": 1290,
+      "INT": 770,
+      "SPD": 830
+    }
+  },
+  {
+    "from": 114,
+    "to": 240,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1020,
+      "RES": 890,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 114,
+    "to": 258,
+    "conditions": {
+      "rank": 5,
+      "HP": 1800,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 114,
+    "to": 281,
+    "conditions": {
+      "rank": 5,
+      "SP": 970,
+      "ATK": 900
+    }
+  },
+  {
+    "from": 115,
+    "to": 249,
+    "conditions": {
+      "rank": 5,
+      "HP": 1610,
+      "ATK": 860,
+      "SPD": 830
+    }
+  },
+  {
+    "from": 115,
+    "to": 276,
+    "conditions": {
+      "rank": 5,
+      "HP": 1630,
+      "SPD": 980
+    }
+  },
+  {
+    "from": 115,
+    "to": 284,
+    "conditions": {
+      "rank": 5,
+      "HP": 1630,
+      "DEF": 940,
+      "RES": 940
+    }
+  },
+  {
+    "from": 116,
+    "to": 241,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "RES": 1020,
+      "SPD": 910
+    }
+  },
+  {
+    "from": 116,
+    "to": 245,
+    "conditions": {
+      "rank": 5,
+      "HP": 1700,
+      "SP": 650
+    }
+  },
+  {
+    "from": 116,
+    "to": 262,
+    "conditions": {
+      "rank": 5,
+      "ATK": 880,
+      "INT": 1260
+    }
+  },
+  {
+    "from": 116,
+    "to": 277,
+    "conditions": {
+      "rank": 5,
+      "SP": 980,
+      "DEF": 950
+    }
+  },
+  {
+    "from": 117,
+    "to": 208,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "ATK": 940,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 117,
+    "to": 231,
+    "conditions": {
+      "rank": 5,
+      "HP": 1140,
+      "DEF": 820,
+      "SPD": 840
+    }
+  },
+  {
+    "from": 117,
+    "to": 242,
+    "conditions": {
+      "rank": 5,
+      "SP": 860,
+      "INT": 1020
+    }
+  },
+  {
+    "from": 117,
+    "to": 288,
+    "conditions": {
+      "rank": 5,
+      "HP": 1370,
+      "SP": 1020
+    }
+  },
+  {
+    "from": 118,
+    "to": 199,
+    "conditions": {
+      "rank": 5,
+      "DEF": 810,
+      "RES": 1040
+    }
+  },
+  {
+    "from": 118,
+    "to": 202,
+    "conditions": {
+      "rank": 5,
+      "HP": 1610,
+      "RES": 1010
+    }
+  },
+  {
+    "from": 118,
+    "to": 212,
+    "conditions": {
+      "rank": 5,
+      "HP": 1730,
+      "ATK": 930,
+      "DEF": 940
+    }
+  },
+  {
+    "from": 118,
+    "to": 248,
+    "conditions": {
+      "rank": 5,
+      "DEF": 1040,
+      "RES": 950
+    }
+  },
+  {
+    "from": 119,
+    "to": 199,
+    "conditions": {
+      "rank": 5,
+      "DEF": 810,
+      "RES": 1040
+    }
+  },
+  {
+    "from": 119,
+    "to": 227,
+    "conditions": {
+      "rank": 5,
+      "SP": 1150,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 119,
+    "to": 285,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "INT": 1020
+    }
+  },
+  {
+    "from": 120,
+    "to": 245,
+    "conditions": {
+      "rank": 5,
+      "HP": 1700,
+      "SP": 650
+    }
+  },
+  {
+    "from": 120,
+    "to": 251,
+    "conditions": {
+      "rank": 5,
+      "HP": 1610,
+      "INT": 1060
+    }
+  },
+  {
+    "from": 120,
+    "to": 262,
+    "conditions": {
+      "rank": 5,
+      "ATK": 880,
+      "INT": 1260
+    }
+  },
+  {
+    "from": 120,
+    "to": 263,
+    "conditions": {
+      "rank": 5,
+      "SP": 960,
+      "RES": 830
+    }
+  },
+  {
+    "from": 121,
+    "to": 217,
+    "conditions": {
+      "rank": 5,
+      "ATK": 900,
+      "DEF": 960
+    }
+  },
+  {
+    "from": 121,
+    "to": 220,
+    "conditions": {
+      "rank": 5,
+      "HP": 1800,
+      "INT": 990,
+      "RES": 960
+    }
+  },
+  {
+    "from": 121,
+    "to": 260,
+    "conditions": {
+      "rank": 5,
+      "SP": 900,
+      "INT": 1040
+    }
+  },
+  {
+    "from": 121,
+    "to": 275,
+    "conditions": {
+      "rank": 5,
+      "HP": 1690,
+      "SP": 960,
+      "ATK": 1100
+    }
+  },
+  {
+    "from": 121,
+    "to": 280,
+    "conditions": {
+      "rank": 5,
+      "SP": 900,
+      "INT": 1100
+    }
+  },
+  {
+    "from": 121,
+    "to": 299,
+    "conditions": {
+      "rank": 5,
+      "HP": 1680,
+      "INT": 1200
+    }
+  },
+  {
+    "from": 122,
+    "to": 230,
+    "conditions": {
+      "rank": 5,
+      "SP": 920,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 122,
+    "to": 249,
+    "conditions": {
+      "rank": 5,
+      "HP": 1610,
+      "ATK": 860,
+      "SPD": 830
+    }
+  },
+  {
+    "from": 122,
+    "to": 280,
+    "conditions": {
+      "rank": 5,
+      "SP": 900,
+      "INT": 1100
+    }
+  },
+  {
+    "from": 122,
+    "to": 295,
+    "conditions": {
+      "rank": 5,
+      "ATK": 740,
+      "DEF": 1060,
+      "RES": 820
+    }
+  },
+  {
+    "from": 122,
+    "to": 299,
+    "conditions": {
+      "rank": 5,
+      "HP": 1680,
+      "INT": 1200
+    }
+  },
+  {
+    "from": 123,
+    "to": 220,
+    "conditions": {
+      "rank": 5,
+      "HP": 1800,
+      "INT": 990,
+      "RES": 960
+    }
+  },
+  {
+    "from": 123,
+    "to": 230,
+    "conditions": {
+      "rank": 5,
+      "SP": 920,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 123,
+    "to": 253,
+    "conditions": {
+      "rank": 5,
+      "HP": 1600,
+      "INT": 980,
+      "RES": 930
+    }
+  },
+  {
+    "from": 124,
+    "to": 238,
+    "conditions": {
+      "rank": 5,
+      "ATK": 980,
+      "DEF": 1020,
+      "RES": 980
+    }
+  },
+  {
+    "from": 124,
+    "to": 256,
+    "conditions": {
+      "rank": 5,
+      "HP": 2080,
+      "ATK": 980
+    }
+  },
+  {
+    "from": 124,
+    "to": 259,
+    "conditions": {
+      "rank": 5,
+      "HP": 1720,
+      "SP": 580,
+      "DEF": 1020
+    }
+  },
+  {
+    "from": 124,
+    "to": 281,
+    "conditions": {
+      "rank": 5,
+      "SP": 970,
+      "ATK": 900
+    }
+  },
+  {
+    "from": 125,
+    "to": 252,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "DEF": 940
+    }
+  },
+  {
+    "from": 125,
+    "to": 264,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "DEF": 980
+    }
+  },
+  {
+    "from": 125,
+    "to": 283,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1150,
+      "DEF": 900
+    }
+  },
+  {
+    "from": 126,
+    "to": 232,
+    "conditions": {
+      "rank": 5,
+      "SP": 920,
+      "SPD": 990
+    }
+  },
+  {
+    "from": 126,
+    "to": 245,
+    "conditions": {
+      "rank": 5,
+      "HP": 1700,
+      "SP": 650
+    }
+  },
+  {
+    "from": 126,
+    "to": 271,
+    "conditions": {
+      "rank": 5,
+      "HP": 1880,
+      "SP": 1020
+    }
+  },
+  {
+    "from": 127,
+    "to": 206,
+    "conditions": {
+      "rank": 5,
+      "ATK": 960,
+      "SPD": 960
+    }
+  },
+  {
+    "from": 127,
+    "to": 248,
+    "conditions": {
+      "rank": 5,
+      "DEF": 1040,
+      "RES": 950
+    }
+  },
+  {
+    "from": 127,
+    "to": 276,
+    "conditions": {
+      "rank": 5,
+      "HP": 1630,
+      "SPD": 980
+    }
+  },
+  {
+    "from": 128,
+    "to": 202,
+    "conditions": {
+      "rank": 5,
+      "HP": 1610,
+      "RES": 1010
+    }
+  },
+  {
+    "from": 128,
+    "to": 223,
+    "conditions": {
+      "rank": 5,
+      "HP": 1480,
+      "ATK": 1300
+    }
+  },
+  {
+    "from": 128,
+    "to": 274,
+    "conditions": {
+      "rank": 5,
+      "HP": 2120,
+      "ATK": 740,
+      "DEF": 870
+    }
+  },
+  {
+    "from": 128,
+    "to": 295,
+    "conditions": {
+      "rank": 5,
+      "ATK": 740,
+      "DEF": 1060,
+      "RES": 820
+    }
+  },
+  {
+    "from": 129,
+    "to": 232,
+    "conditions": {
+      "rank": 5,
+      "SP": 920,
+      "SPD": 990
+    }
+  },
+  {
+    "from": 129,
+    "to": 258,
+    "conditions": {
+      "rank": 5,
+      "HP": 1800,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 129,
+    "to": 290,
+    "conditions": {
+      "rank": 5,
+      "RES": 890,
+      "SPD": 1100
+    }
+  },
+  {
+    "from": 130,
+    "to": 251,
+    "conditions": {
+      "rank": 5,
+      "HP": 1610,
+      "INT": 1060
+    }
+  },
+  {
+    "from": 130,
+    "to": 263,
+    "conditions": {
+      "rank": 5,
+      "SP": 960,
+      "RES": 830
+    }
+  },
+  {
+    "from": 130,
+    "to": 277,
+    "conditions": {
+      "rank": 5,
+      "SP": 980,
+      "DEF": 950
+    }
+  },
+  {
+    "from": 131,
+    "to": 228,
+    "conditions": {
+      "rank": 5,
+      "ATK": 840,
+      "SPD": 1010
+    }
+  },
+  {
+    "from": 131,
+    "to": 246,
+    "conditions": {
+      "rank": 5,
+      "ATK": 970,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 131,
+    "to": 255,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "RES": 1010
+    }
+  },
+  {
+    "from": 132,
+    "to": 207,
+    "conditions": {
+      "rank": 5,
+      "DEF": 1050,
+      "RES": 970
+    }
+  },
+  {
+    "from": 132,
+    "to": 226,
+    "conditions": {
+      "rank": 5,
+      "ATK": 940,
+      "SPD": 980
+    }
+  },
+  {
+    "from": 132,
+    "to": 247,
+    "conditions": {
+      "rank": 5,
+      "HP": 1370,
+      "ATK": 850
+    }
+  },
+  {
+    "from": 132,
+    "to": 472,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1220,
+      "INT": 740
+    }
+  },
+  {
+    "from": 133,
+    "to": 226,
+    "conditions": {
+      "rank": 5,
+      "ATK": 940,
+      "SPD": 980
+    }
+  },
+  {
+    "from": 133,
+    "to": 228,
+    "conditions": {
+      "rank": 5,
+      "ATK": 840,
+      "SPD": 1010
+    }
+  },
+  {
+    "from": 133,
+    "to": 240,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1020,
+      "RES": 890,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 134,
+    "to": 257,
+    "conditions": {
+      "rank": 5,
+      "HP": 2000,
+      "RES": 920
+    }
+  },
+  {
+    "from": 134,
+    "to": 261,
+    "conditions": {
+      "rank": 5,
+      "ATK": 820,
+      "INT": 630
+    }
+  },
+  {
+    "from": 134,
+    "to": 264,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "DEF": 980
+    }
+  },
+  {
+    "from": 135,
+    "to": 244,
+    "conditions": {
+      "rank": 5,
+      "HP": 1720,
+      "ATK": 1020,
+      "DEF": 820
+    }
+  },
+  {
+    "from": 135,
+    "to": 252,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "DEF": 940
+    }
+  },
+  {
+    "from": 135,
+    "to": 288,
+    "conditions": {
+      "rank": 5,
+      "HP": 1370,
+      "SP": 1020
+    }
+  },
+  {
+    "from": 136,
+    "to": 208,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "ATK": 940,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 136,
+    "to": 222,
+    "conditions": {
+      "rank": 5,
+      "HP": 1940,
+      "ATK": 820
+    }
+  },
+  {
+    "from": 136,
+    "to": 246,
+    "conditions": {
+      "rank": 5,
+      "ATK": 970,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 137,
+    "to": 205,
+    "conditions": {
+      "rank": 5,
+      "HP": 1080,
+      "ATK": 940
+    }
+  },
+  {
+    "from": 137,
+    "to": 229,
+    "conditions": {
+      "rank": 5,
+      "HP": 1840,
+      "ATK": 990,
+      "SPD": 1090
+    }
+  },
+  {
+    "from": 137,
+    "to": 237,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "RES": 1000,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 138,
+    "to": 216,
+    "conditions": {
+      "rank": 5,
+      "SP": 540,
+      "RES": 940,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 138,
+    "to": 231,
+    "conditions": {
+      "rank": 5,
+      "HP": 1140,
+      "DEF": 820,
+      "SPD": 840
+    }
+  },
+  {
+    "from": 138,
+    "to": 237,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "RES": 1000,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 138,
+    "to": 297,
+    "conditions": {
+      "rank": 5,
+      "HP": 1290,
+      "INT": 770,
+      "SPD": 830
+    }
+  },
+  {
+    "from": 139,
+    "to": 232,
+    "conditions": {
+      "rank": 5,
+      "SP": 920,
+      "SPD": 990
+    }
+  },
+  {
+    "from": 139,
+    "to": 244,
+    "conditions": {
+      "rank": 5,
+      "HP": 1720,
+      "ATK": 1020,
+      "DEF": 820
+    }
+  },
+  {
+    "from": 139,
+    "to": 266,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1110,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 140,
+    "to": 242,
+    "conditions": {
+      "rank": 5,
+      "SP": 860,
+      "INT": 1020
+    }
+  },
+  {
+    "from": 140,
+    "to": 251,
+    "conditions": {
+      "rank": 5,
+      "HP": 1610,
+      "INT": 1060
+    }
+  },
+  {
+    "from": 140,
+    "to": 277,
+    "conditions": {
+      "rank": 5,
+      "SP": 980,
+      "DEF": 950
+    }
+  },
+  {
+    "from": 141,
+    "to": 243,
+    "conditions": {
+      "rank": 5,
+      "DEF": 1100,
+      "RES": 870
+    }
+  },
+  {
+    "from": 141,
+    "to": 279,
+    "conditions": {
+      "rank": 5,
+      "INT": 870,
+      "RES": 960
+    }
+  },
+  {
+    "from": 141,
+    "to": 291,
+    "conditions": {
+      "rank": 5,
+      "SP": 530,
+      "DEF": 920,
+      "RES": 870
+    }
+  },
+  {
+    "from": 142,
+    "to": 243,
+    "conditions": {
+      "rank": 5,
+      "DEF": 1100,
+      "RES": 870
+    }
+  },
+  {
+    "from": 142,
+    "to": 249,
+    "conditions": {
+      "rank": 5,
+      "HP": 1610,
+      "ATK": 860,
+      "SPD": 830
+    }
+  },
+  {
+    "from": 142,
+    "to": 282,
+    "conditions": {
+      "rank": 5,
+      "SP": 820,
+      "INT": 930,
+      "RES": 940
+    }
+  },
+  {
+    "from": 143,
+    "to": 199,
+    "conditions": {
+      "rank": 5,
+      "DEF": 810,
+      "RES": 1040
+    }
+  },
+  {
+    "from": 143,
+    "to": 236,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "DEF": 940
+    }
+  },
+  {
+    "from": 143,
+    "to": 264,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "DEF": 980
+    }
+  },
+  {
+    "from": 144,
+    "to": 250,
+    "conditions": {
+      "rank": 5,
+      "DEF": 860,
+      "INT": 850,
+      "RES": 900
+    }
+  },
+  {
+    "from": 144,
+    "to": 270,
+    "conditions": {
+      "rank": 5,
+      "HP": 1960,
+      "ATK": 780
+    }
+  },
+  {
+    "from": 144,
+    "to": 287,
+    "conditions": {
+      "rank": 5,
+      "HP": 1720,
+      "DEF": 900
+    }
+  },
+  {
+    "from": 144,
+    "to": 299,
+    "conditions": {
+      "rank": 5,
+      "HP": 1680,
+      "INT": 1200
+    }
+  },
+  {
+    "from": 145,
+    "to": 247,
+    "conditions": {
+      "rank": 5,
+      "HP": 1370,
+      "ATK": 850
+    }
+  },
+  {
+    "from": 145,
+    "to": 274,
+    "conditions": {
+      "rank": 5,
+      "HP": 2120,
+      "ATK": 740,
+      "DEF": 870
+    }
+  },
+  {
+    "from": 145,
+    "to": 294,
+    "conditions": {
+      "rank": 5,
+      "HP": 1730,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 146,
+    "to": 230,
+    "conditions": {
+      "rank": 5,
+      "SP": 920,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 146,
+    "to": 235,
+    "conditions": {
+      "rank": 5,
+      "HP": 2030,
+      "ATK": 1350
+    }
+  },
+  {
+    "from": 146,
+    "to": 269,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1170,
+      "DEF": 1020
+    }
+  },
+  {
+    "from": 146,
+    "to": 277,
+    "conditions": {
+      "rank": 5,
+      "SP": 980,
+      "DEF": 950
+    }
+  },
+  {
+    "from": 147,
+    "to": 241,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "RES": 1020,
+      "SPD": 910
+    }
+  },
+  {
+    "from": 147,
+    "to": 249,
+    "conditions": {
+      "rank": 5,
+      "HP": 1610,
+      "ATK": 860,
+      "SPD": 830
+    }
+  },
+  {
+    "from": 147,
+    "to": 284,
+    "conditions": {
+      "rank": 5,
+      "HP": 1630,
+      "DEF": 940,
+      "RES": 940
+    }
+  },
+  {
+    "from": 148,
+    "to": 224,
+    "conditions": {
+      "rank": 5,
+      "HP": 2080,
+      "RES": 1140
+    }
+  },
+  {
+    "from": 148,
+    "to": 236,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "DEF": 940
+    }
+  },
+  {
+    "from": 148,
+    "to": 238,
+    "conditions": {
+      "rank": 5,
+      "ATK": 980,
+      "DEF": 1020,
+      "RES": 980
+    }
+  },
+  {
+    "from": 149,
+    "to": 274,
+    "conditions": {
+      "rank": 5,
+      "HP": 2120,
+      "ATK": 740,
+      "DEF": 870
+    }
+  },
+  {
+    "from": 149,
+    "to": 278,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1250,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 149,
+    "to": 294,
+    "conditions": {
+      "rank": 5,
+      "HP": 1730,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 150,
+    "to": 287,
+    "conditions": {
+      "rank": 5,
+      "HP": 1720,
+      "DEF": 900
+    }
+  },
+  {
+    "from": 150,
+    "to": 289,
+    "conditions": {
+      "rank": 5,
+      "SP": 580,
+      "INT": 860,
+      "RES": 700
+    }
+  },
+  {
+    "from": 150,
+    "to": 299,
+    "conditions": {
+      "rank": 5,
+      "HP": 1680,
+      "INT": 1200
+    }
+  },
+  {
+    "from": 151,
+    "to": 222,
+    "conditions": {
+      "rank": 5,
+      "HP": 1940,
+      "ATK": 820
+    }
+  },
+  {
+    "from": 151,
+    "to": 233,
+    "conditions": {
+      "rank": 5,
+      "DEF": 980,
+      "RES": 970
+    }
+  },
+  {
+    "from": 151,
+    "to": 256,
+    "conditions": {
+      "rank": 5,
+      "HP": 2080,
+      "ATK": 980
+    }
+  },
+  {
+    "from": 151,
+    "to": 460,
+    "conditions": {
+      "rank": 7,
+      "HP": 2640,
+      "ATK": 2010,
+      "DEF": 1800
+    }
+  },
+  {
+    "from": 152,
+    "to": 206,
+    "conditions": {
+      "rank": 5,
+      "ATK": 960,
+      "SPD": 960
+    }
+  },
+  {
+    "from": 152,
+    "to": 210,
+    "conditions": {
+      "rank": 5,
+      "SP": 510,
+      "ATK": 960,
+      "DEF": 790
+    }
+  },
+  {
+    "from": 152,
+    "to": 255,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "RES": 1010
+    }
+  },
+  {
+    "from": 153,
+    "to": 265,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1070,
+      "INT": 1030,
+      "RES": 940
+    }
+  },
+  {
+    "from": 153,
+    "to": 267,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "INT": 950
+    }
+  },
+  {
+    "from": 153,
+    "to": 290,
+    "conditions": {
+      "rank": 5,
+      "RES": 890,
+      "SPD": 1100
+    }
+  },
+  {
+    "from": 153,
+    "to": 473,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "ATK": 980,
+      "RES": 920,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 154,
+    "to": 224,
+    "conditions": {
+      "rank": 5,
+      "HP": 2080,
+      "RES": 1140
+    }
+  },
+  {
+    "from": 154,
+    "to": 259,
+    "conditions": {
+      "rank": 5,
+      "HP": 1720,
+      "SP": 580,
+      "DEF": 1020
+    }
+  },
+  {
+    "from": 154,
+    "to": 268,
+    "conditions": {
+      "rank": 5,
+      "HP": 1730,
+      "RES": 940,
+      "SPD": 860
+    }
+  },
+  {
+    "from": 154,
+    "to": 271,
+    "conditions": {
+      "rank": 5,
+      "HP": 1880,
+      "SP": 1020
+    }
+  },
+  {
+    "from": 155,
+    "to": 243,
+    "conditions": {
+      "rank": 5,
+      "DEF": 1100,
+      "RES": 870
+    }
+  },
+  {
+    "from": 155,
+    "to": 246,
+    "conditions": {
+      "rank": 5,
+      "ATK": 970,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 155,
+    "to": 274,
+    "conditions": {
+      "rank": 5,
+      "HP": 2120,
+      "ATK": 740,
+      "DEF": 870
+    }
+  },
+  {
+    "from": 156,
+    "to": 265,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1070,
+      "INT": 1030,
+      "RES": 940
+    }
+  },
+  {
+    "from": 156,
+    "to": 267,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "INT": 950
+    }
+  },
+  {
+    "from": 156,
+    "to": 279,
+    "conditions": {
+      "rank": 5,
+      "INT": 870,
+      "RES": 960
+    }
+  },
+  {
+    "from": 156,
+    "to": 297,
+    "conditions": {
+      "rank": 5,
+      "HP": 1290,
+      "INT": 770,
+      "SPD": 830
+    }
+  },
+  {
+    "from": 156,
+    "to": 304,
+    "conditions": {
+      "rank": 5,
+      "SP": 660,
+      "ATK": 1110,
+      "SPD": 930
+    }
+  },
+  {
+    "from": 157,
+    "to": 223,
+    "conditions": {
+      "rank": 5,
+      "HP": 1480,
+      "ATK": 1300
+    }
+  },
+  {
+    "from": 157,
+    "to": 235,
+    "conditions": {
+      "rank": 5,
+      "HP": 2030,
+      "ATK": 1350
+    }
+  },
+  {
+    "from": 157,
+    "to": 239,
+    "conditions": {
+      "rank": 5,
+      "DEF": 1100,
+      "SPD": 740
+    }
+  },
+  {
+    "from": 157,
+    "to": 270,
+    "conditions": {
+      "rank": 5,
+      "HP": 1960,
+      "ATK": 780
+    }
+  },
+  {
+    "from": 157,
+    "to": 275,
+    "conditions": {
+      "rank": 5,
+      "HP": 1690,
+      "SP": 960,
+      "ATK": 1100
+    }
+  },
+  {
+    "from": 158,
+    "to": 198,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "DEF": 1020
+    }
+  },
+  {
+    "from": 158,
+    "to": 266,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1110,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 158,
+    "to": 291,
+    "conditions": {
+      "rank": 5,
+      "SP": 530,
+      "DEF": 920,
+      "RES": 870
+    }
+  },
+  {
+    "from": 158,
+    "to": 304,
+    "conditions": {
+      "rank": 5,
+      "SP": 660,
+      "ATK": 1110,
+      "SPD": 930
+    }
+  },
+  {
+    "from": 159,
+    "to": 238,
+    "conditions": {
+      "rank": 5,
+      "ATK": 980,
+      "DEF": 1020,
+      "RES": 980
+    }
+  },
+  {
+    "from": 159,
+    "to": 256,
+    "conditions": {
+      "rank": 5,
+      "HP": 2080,
+      "ATK": 980
+    }
+  },
+  {
+    "from": 159,
+    "to": 259,
+    "conditions": {
+      "rank": 5,
+      "HP": 1720,
+      "SP": 580,
+      "DEF": 1020
+    }
+  },
+  {
+    "from": 159,
+    "to": 268,
+    "conditions": {
+      "rank": 5,
+      "HP": 1730,
+      "RES": 940,
+      "SPD": 860
+    }
+  },
+  {
+    "from": 160,
+    "to": 224,
+    "conditions": {
+      "rank": 5,
+      "HP": 2080,
+      "RES": 1140
+    }
+  },
+  {
+    "from": 160,
+    "to": 268,
+    "conditions": {
+      "rank": 5,
+      "HP": 1730,
+      "RES": 940,
+      "SPD": 860
+    }
+  },
+  {
+    "from": 160,
+    "to": 281,
+    "conditions": {
+      "rank": 5,
+      "SP": 970,
+      "ATK": 900
+    }
+  },
+  {
+    "from": 161,
+    "to": 231,
+    "conditions": {
+      "rank": 5,
+      "HP": 1140,
+      "DEF": 820,
+      "SPD": 840
+    }
+  },
+  {
+    "from": 161,
+    "to": 267,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "INT": 950
+    }
+  },
+  {
+    "from": 161,
+    "to": 286,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "RES": 940,
+      "SPD": 1010
+    }
+  },
+  {
+    "from": 161,
+    "to": 288,
+    "conditions": {
+      "rank": 5,
+      "HP": 1370,
+      "SP": 1020
+    }
+  },
+  {
+    "from": 162,
+    "to": 212,
+    "conditions": {
+      "rank": 5,
+      "HP": 1730,
+      "ATK": 930,
+      "DEF": 940
+    }
+  },
+  {
+    "from": 162,
+    "to": 216,
+    "conditions": {
+      "rank": 5,
+      "SP": 540,
+      "RES": 940,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 162,
+    "to": 286,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "RES": 940,
+      "SPD": 1010
+    }
+  },
+  {
+    "from": 163,
+    "to": 204,
+    "conditions": {
+      "rank": 5,
+      "INT": 1060,
+      "SPD": 980
+    }
+  },
+  {
+    "from": 163,
+    "to": 256,
+    "conditions": {
+      "rank": 5,
+      "HP": 2080,
+      "ATK": 980
+    }
+  },
+  {
+    "from": 163,
+    "to": 279,
+    "conditions": {
+      "rank": 5,
+      "INT": 870,
+      "RES": 960
+    }
+  },
+  {
+    "from": 164,
+    "to": 198,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "DEF": 1020
+    }
+  },
+  {
+    "from": 164,
+    "to": 211,
+    "conditions": {
+      "rank": 5,
+      "HP": 1200,
+      "ATK": 1020
+    }
+  },
+  {
+    "from": 164,
+    "to": 269,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1170,
+      "DEF": 1020
+    }
+  },
+  {
+    "from": 164,
+    "to": 293,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1050,
+      "RES": 940
+    }
+  },
+  {
+    "from": 165,
+    "to": 259,
+    "conditions": {
+      "rank": 5,
+      "HP": 1720,
+      "SP": 580,
+      "DEF": 1020
+    }
+  },
+  {
+    "from": 165,
+    "to": 261,
+    "conditions": {
+      "rank": 5,
+      "ATK": 820,
+      "INT": 630
+    }
+  },
+  {
+    "from": 165,
+    "to": 289,
+    "conditions": {
+      "rank": 5,
+      "SP": 580,
+      "INT": 860,
+      "RES": 700
+    }
+  },
+  {
+    "from": 166,
+    "to": 239,
+    "conditions": {
+      "rank": 5,
+      "DEF": 1100,
+      "SPD": 740
+    }
+  },
+  {
+    "from": 166,
+    "to": 250,
+    "conditions": {
+      "rank": 5,
+      "DEF": 860,
+      "INT": 850,
+      "RES": 900
+    }
+  },
+  {
+    "from": 166,
+    "to": 297,
+    "conditions": {
+      "rank": 5,
+      "HP": 1290,
+      "INT": 770,
+      "SPD": 830
+    }
+  },
+  {
+    "from": 166,
+    "to": 473,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "ATK": 980,
+      "RES": 920,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 167,
+    "to": 271,
+    "conditions": {
+      "rank": 5,
+      "HP": 1880,
+      "SP": 1020
+    }
+  },
+  {
+    "from": 167,
+    "to": 284,
+    "conditions": {
+      "rank": 5,
+      "HP": 1630,
+      "DEF": 940,
+      "RES": 940
+    }
+  },
+  {
+    "from": 167,
+    "to": 289,
+    "conditions": {
+      "rank": 5,
+      "SP": 580,
+      "INT": 860,
+      "RES": 700
+    }
+  },
+  {
+    "from": 168,
+    "to": 205,
+    "conditions": {
+      "rank": 5,
+      "HP": 1080,
+      "ATK": 940
+    }
+  },
+  {
+    "from": 168,
+    "to": 246,
+    "conditions": {
+      "rank": 5,
+      "ATK": 970,
+      "DEF": 1060
+    }
+  },
+  {
+    "from": 168,
+    "to": 268,
+    "conditions": {
+      "rank": 5,
+      "HP": 1730,
+      "RES": 940,
+      "SPD": 860
+    }
+  },
+  {
+    "from": 169,
+    "to": 206,
+    "conditions": {
+      "rank": 5,
+      "ATK": 960,
+      "SPD": 960
+    }
+  },
+  {
+    "from": 169,
+    "to": 217,
+    "conditions": {
+      "rank": 5,
+      "ATK": 900,
+      "DEF": 960
+    }
+  },
+  {
+    "from": 169,
+    "to": 218,
+    "conditions": {
+      "rank": 5,
+      "RES": 960,
+      "SPD": 1040
+    }
+  },
+  {
+    "from": 170,
+    "to": 252,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "DEF": 940
+    }
+  },
+  {
+    "from": 170,
+    "to": 285,
+    "conditions": {
+      "rank": 5,
+      "HP": 1530,
+      "INT": 1020
+    }
+  },
+  {
+    "from": 170,
+    "to": 293,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1050,
+      "RES": 940
+    }
+  },
+  {
+    "from": 171,
+    "to": 202,
+    "conditions": {
+      "rank": 5,
+      "HP": 1610,
+      "RES": 1010
+    }
+  },
+  {
+    "from": 171,
+    "to": 239,
+    "conditions": {
+      "rank": 5,
+      "DEF": 1100,
+      "SPD": 740
+    }
+  },
+  {
+    "from": 171,
+    "to": 282,
+    "conditions": {
+      "rank": 5,
+      "SP": 820,
+      "INT": 930,
+      "RES": 940
+    }
+  },
+  {
+    "from": 171,
+    "to": 284,
+    "conditions": {
+      "rank": 5,
+      "HP": 1630,
+      "DEF": 940,
+      "RES": 940
+    }
+  },
+  {
+    "from": 171,
+    "to": 287,
+    "conditions": {
+      "rank": 5,
+      "HP": 1720,
+      "DEF": 900
+    }
+  },
+  {
+    "from": 172,
+    "to": 227,
+    "conditions": {
+      "rank": 5,
+      "SP": 1150,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 172,
+    "to": 273,
+    "conditions": {
+      "rank": 5,
+      "SP": 540,
+      "ATK": 1060
+    }
+  },
+  {
+    "from": 172,
+    "to": 283,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1150,
+      "DEF": 900
+    }
+  },
+  {
+    "from": 173,
+    "to": 204,
+    "conditions": {
+      "rank": 5,
+      "INT": 1060,
+      "SPD": 980
+    }
+  },
+  {
+    "from": 173,
+    "to": 215,
+    "conditions": {
+      "rank": 5,
+      "INT": 980,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 173,
+    "to": 225,
+    "conditions": {
+      "rank": 5,
+      "INT": 1020,
+      "SPD": 1050
+    }
+  },
+  {
+    "from": 173,
+    "to": 301,
+    "conditions": {
+      "rank": 5,
+      "jogress": [
+        {
+          "id": 173,
+          "personality": 14
+        },
+        {
+          "id": 97,
+          "personality": 2
+        }
+      ]
+    }
+  },
+  {
+    "from": 174,
+    "to": 233,
+    "conditions": {
+      "rank": 5,
+      "DEF": 980,
+      "RES": 970
+    }
+  },
+  {
+    "from": 174,
+    "to": 255,
+    "conditions": {
+      "rank": 5,
+      "HP": 1650,
+      "RES": 1010
+    }
+  },
+  {
+    "from": 174,
+    "to": 300,
+    "conditions": {
+      "rank": 5,
+      "jogress": [
+        {
+          "id": 174,
+          "personality": 3
+        },
+        {
+          "id": 84,
+          "personality": 8
+        }
+      ]
+    }
+  },
+  {
+    "from": 175,
+    "to": 226,
+    "conditions": {
+      "rank": 5,
+      "ATK": 940,
+      "SPD": 980
+    }
+  },
+  {
+    "from": 175,
+    "to": 302,
+    "conditions": {
+      "rank": 5,
+      "jogress": [
+        {
+          "id": 175,
+          "personality": 4
+        },
+        {
+          "id": 177,
+          "personality": 2
+        }
+      ]
+    }
+  },
+  {
+    "from": 175,
+    "to": 303,
+    "conditions": {
+      "rank": 5,
+      "jogress": [
+        {
+          "id": 175,
+          "personality": 4
+        },
+        {
+          "id": 177,
+          "personality": 2
+        }
+      ]
+    }
+  },
+  {
+    "from": 176,
+    "to": 214,
+    "conditions": {
+      "rank": 5,
+      "HP": 1900,
+      "ATK": 1060,
+      "DEF": 960
+    }
+  },
+  {
+    "from": 176,
+    "to": 257,
+    "conditions": {
+      "rank": 5,
+      "HP": 2000,
+      "RES": 920
+    }
+  },
+  {
+    "from": 176,
+    "to": 273,
+    "conditions": {
+      "rank": 5,
+      "SP": 540,
+      "ATK": 1060
+    }
+  },
+  {
+    "from": 177,
+    "to": 211,
+    "conditions": {
+      "rank": 5,
+      "HP": 1200,
+      "ATK": 1020
+    }
+  },
+  {
+    "from": 177,
+    "to": 269,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1170,
+      "DEF": 1020
+    }
+  },
+  {
+    "from": 177,
+    "to": 302,
+    "conditions": {
+      "rank": 5,
+      "jogress": [
+        {
+          "id": 175,
+          "personality": 4
+        },
+        {
+          "id": 177,
+          "personality": 2
+        }
+      ]
+    }
+  },
+  {
+    "from": 177,
+    "to": 303,
+    "conditions": {
+      "rank": 5,
+      "jogress": [
+        {
+          "id": 175,
+          "personality": 4
+        },
+        {
+          "id": 177,
+          "personality": 2
+        }
+      ]
+    }
+  },
+  {
+    "from": 178,
+    "to": 266,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1110,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 178,
+    "to": 270,
+    "conditions": {
+      "rank": 5,
+      "HP": 1960,
+      "ATK": 780
+    }
+  },
+  {
+    "from": 178,
+    "to": 282,
+    "conditions": {
+      "rank": 5,
+      "SP": 820,
+      "INT": 930,
+      "RES": 940
+    }
+  },
+  {
+    "from": 178,
+    "to": 304,
+    "conditions": {
+      "rank": 5,
+      "SP": 660,
+      "ATK": 1110,
+      "SPD": 930
+    }
+  },
+  {
+    "from": 187,
+    "to": 190,
+    "conditions": {
+      "rank": 3,
+      "item": 13
+    }
+  },
+  {
+    "from": 187,
+    "to": 305,
+    "conditions": {
+      "rank": 5,
+      "item": 13
+    }
+  },
+  {
+    "from": 188,
+    "to": 192,
+    "conditions": {
+      "rank": 3,
+      "item": 14
+    }
+  },
+  {
+    "from": 188,
+    "to": 306,
+    "conditions": {
+      "rank": 5,
+      "item": 14
+    }
+  },
+  {
+    "from": 189,
+    "to": 191,
+    "conditions": {
+      "rank": 3
+    }
+  },
+  {
+    "from": 190,
+    "to": 187,
+    "conditions": {
+      "rank": 3,
+      "item": 12
+    }
+  },
+  {
+    "from": 190,
+    "to": 305,
+    "conditions": {
+      "rank": 5,
+      "item": 13
+    }
+  },
+  {
+    "from": 191,
+    "to": 189,
+    "conditions": {
+      "rank": 3,
+      "SP": 1580,
+      "INT": 1130
+    }
+  },
+  {
+    "from": 192,
+    "to": 188,
+    "conditions": {
+      "rank": 3,
+      "item": 11
+    }
+  },
+  {
+    "from": 192,
+    "to": 306,
+    "conditions": {
+      "rank": 5,
+      "item": 14
+    }
+  },
+  {
+    "from": 193,
+    "to": 340,
+    "conditions": {
+      "rank": 9,
+      "valor": 46,
+      "philanthropy": 46,
+      "amicability": 46,
+      "wisdom": 46
+    }
+  },
+  {
+    "from": 194,
+    "to": 340,
+    "conditions": {
+      "rank": 9,
+      "valor": 46,
+      "philanthropy": 46,
+      "amicability": 46,
+      "wisdom": 46
+    }
+  },
+  {
+    "from": 195,
+    "to": 380,
+    "conditions": {
+      "rank": 10,
+      "valor": 46,
+      "philanthropy": 46,
+      "amicability": 46,
+      "wisdom": 46
+    }
+  },
+  {
+    "from": 196,
+    "to": 340,
+    "conditions": {
+      "rank": 9,
+      "valor": 46,
+      "philanthropy": 46,
+      "amicability": 46,
+      "wisdom": 46
+    }
+  },
+  {
+    "from": 197,
+    "to": 340,
+    "conditions": {
+      "rank": 9,
+      "valor": 46,
+      "philanthropy": 46,
+      "amicability": 46,
+      "wisdom": 46
+    }
+  },
+  {
+    "from": 198,
+    "to": 334,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2280,
+      "INT": 1570
+    }
+  },
+  {
+    "from": 198,
+    "to": 386,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "ATK": 1490,
+      "SPD": 1620
+    }
+  },
+  {
+    "from": 199,
+    "to": 316,
+    "conditions": {
+      "rank": 7,
+      "HP": 2380,
+      "DEF": 1850,
+      "RES": 1540
+    }
+  },
+  {
+    "from": 199,
+    "to": 332,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "RES": 1780
+    }
+  },
+  {
+    "from": 199,
+    "to": 362,
+    "conditions": {
+      "rank": 7,
+      "HP": 2380,
+      "ATK": 1570,
+      "DEF": 2010
+    }
+  },
+  {
+    "from": 200,
+    "to": 310,
+    "conditions": {
+      "rank": 7,
+      "INT": 1800,
+      "RES": 1750,
+      "SPD": 1640
+    }
+  },
+  {
+    "from": 200,
+    "to": 322,
+    "conditions": {
+      "rank": 7,
+      "HP": 2300,
+      "ATK": 2360
+    }
+  },
+  {
+    "from": 200,
+    "to": 327,
+    "conditions": {
+      "rank": 7,
+      "ATK": 2280,
+      "SPD": 2280
+    }
+  },
+  {
+    "from": 201,
+    "to": 309,
+    "conditions": {
+      "rank": 7,
+      "HP": 2960,
+      "SPD": 1980
+    }
+  },
+  {
+    "from": 201,
+    "to": 321,
+    "conditions": {
+      "rank": 7,
+      "HP": 2690,
+      "INT": 1660,
+      "RES": 1380
+    }
+  },
+  {
+    "from": 201,
+    "to": 327,
+    "conditions": {
+      "rank": 7,
+      "ATK": 2280,
+      "SPD": 2280
+    }
+  },
+  {
+    "from": 202,
+    "to": 320,
+    "conditions": {
+      "rank": 7,
+      "SP": 1260,
+      "INT": 2140,
+      "RES": 1600
+    }
+  },
+  {
+    "from": 202,
+    "to": 402,
+    "conditions": {
+      "rank": 7,
+      "SP": 1180,
+      "INT": 1740,
+      "RES": 1540
+    }
+  },
+  {
+    "from": 202,
+    "to": 412,
+    "conditions": {
+      "rank": 7,
+      "HP": 2830,
+      "ATK": 1860,
+      "DEF": 2050
+    }
+  },
+  {
+    "from": 203,
+    "to": 314,
+    "conditions": {
+      "rank": 7,
+      "INT": 2450,
+      "RES": 2010
+    }
+  },
+  {
+    "from": 203,
+    "to": 336,
+    "conditions": {
+      "rank": 7,
+      "HP": 2740,
+      "SP": 1100,
+      "INT": 1370
+    }
+  },
+  {
+    "from": 203,
+    "to": 337,
+    "conditions": {
+      "rank": 7,
+      "jogress": [
+        {
+          "id": 203,
+          "personality": 2
+        },
+        {
+          "id": 297,
+          "personality": 8
+        }
+      ]
+    }
+  },
+  {
+    "from": 203,
+    "to": 410,
+    "conditions": {
+      "rank": 7,
+      "SP": 1100,
+      "INT": 1370
+    }
+  },
+  {
+    "from": 204,
+    "to": 335,
+    "conditions": {
+      "rank": 7,
+      "SP": 1260,
+      "INT": 2350
+    }
+  },
+  {
+    "from": 204,
+    "to": 347,
+    "conditions": {
+      "rank": 7,
+      "SP": 1160,
+      "SPD": 1750
+    }
+  },
+  {
+    "from": 204,
+    "to": 352,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1730,
+      "DEF": 1730,
+      "SPD": 1650
+    }
+  },
+  {
+    "from": 205,
+    "to": 333,
+    "conditions": {
+      "rank": 7,
+      "HP": 2620,
+      "ATK": 2290
+    }
+  },
+  {
+    "from": 205,
+    "to": 339,
+    "conditions": {
+      "rank": 7,
+      "SP": 960,
+      "ATK": 2220
+    }
+  },
+  {
+    "from": 205,
+    "to": 350,
+    "conditions": {
+      "rank": 7,
+      "HP": 2400,
+      "ATK": 1930,
+      "SPD": 1860
+    }
+  },
+  {
+    "from": 205,
+    "to": 356,
+    "conditions": {
+      "rank": 7,
+      "HP": 2570,
+      "INT": 2130,
+      "SPD": 1890
+    }
+  },
+  {
+    "from": 206,
+    "to": 308,
+    "conditions": {
+      "rank": 7,
+      "HP": 2200,
+      "DEF": 1580,
+      "RES": 1580
+    }
+  },
+  {
+    "from": 206,
+    "to": 330,
+    "conditions": {
+      "rank": 7,
+      "HP": 2360,
+      "ATK": 1580,
+      "DEF": 1740
+    }
+  },
+  {
+    "from": 206,
+    "to": 355,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "ATK": 1940,
+      "SPD": 1660
+    }
+  },
+  {
+    "from": 207,
+    "to": 319,
+    "conditions": {
+      "rank": 7,
+      "SP": 960,
+      "INT": 2280,
+      "RES": 1600
+    }
+  },
+  {
+    "from": 207,
+    "to": 376,
+    "conditions": {
+      "rank": 7,
+      "HP": 2820,
+      "ATK": 1930,
+      "SPD": 1540
+    }
+  },
+  {
+    "from": 208,
+    "to": 209,
+    "conditions": {
+      "rank": 5
+    }
+  },
+  {
+    "from": 208,
+    "to": 350,
+    "conditions": {
+      "rank": 7,
+      "HP": 2400,
+      "ATK": 1930,
+      "SPD": 1860
+    }
+  },
+  {
+    "from": 208,
+    "to": 397,
+    "conditions": {
+      "rank": 7,
+      "HP": 2010,
+      "ATK": 2220,
+      "INT": 1700
+    }
+  },
+  {
+    "from": 208,
+    "to": 475,
+    "conditions": {
+      "rank": 7,
+      "HP": 2760,
+      "RES": 1680,
+      "SPD": 1720
+    }
+  },
+  {
+    "from": 209,
+    "to": 208,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "ATK": 940,
+      "SPD": 890
+    }
+  },
+  {
+    "from": 209,
+    "to": 350,
+    "conditions": {
+      "rank": 7,
+      "HP": 2400,
+      "ATK": 1930,
+      "SPD": 1860
+    }
+  },
+  {
+    "from": 209,
+    "to": 397,
+    "conditions": {
+      "rank": 7,
+      "HP": 2010,
+      "ATK": 2220,
+      "INT": 1700
+    }
+  },
+  {
+    "from": 209,
+    "to": 475,
+    "conditions": {
+      "rank": 7,
+      "HP": 2760,
+      "RES": 1680,
+      "SPD": 1720
+    }
+  },
+  {
+    "from": 210,
+    "to": 309,
+    "conditions": {
+      "rank": 7,
+      "HP": 2960,
+      "SPD": 1980
+    }
+  },
+  {
+    "from": 210,
+    "to": 323,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2060,
+      "RES": 1960
+    }
+  },
+  {
+    "from": 211,
+    "to": 334,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2280,
+      "INT": 1570
+    }
+  },
+  {
+    "from": 211,
+    "to": 384,
+    "conditions": {
+      "rank": 7,
+      "HP": 2820,
+      "ATK": 1900,
+      "SPD": 1600
+    }
+  },
+  {
+    "from": 211,
+    "to": 461,
+    "conditions": {
+      "rank": 7,
+      "HP": 2470,
+      "DEF": 1670,
+      "SPD": 1170
+    }
+  },
+  {
+    "from": 212,
+    "to": 361,
+    "conditions": {
+      "rank": 7,
+      "HP": 2680,
+      "INT": 1830,
+      "RES": 1660
+    }
+  },
+  {
+    "from": 212,
+    "to": 418,
+    "conditions": {
+      "rank": 7,
+      "HP": 3180,
+      "ATK": 1930
+    }
+  },
+  {
+    "from": 213,
+    "to": 317,
+    "conditions": {
+      "rank": 7,
+      "HP": 2260,
+      "DEF": 1720,
+      "RES": 2060
+    }
+  },
+  {
+    "from": 213,
+    "to": 326,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1730,
+      "INT": 1800,
+      "SPD": 2060
+    }
+  },
+  {
+    "from": 213,
+    "to": 419,
+    "conditions": {
+      "rank": 7,
+      "SP": 1930,
+      "SPD": 1650
+    }
+  },
+  {
+    "from": 214,
+    "to": 312,
+    "conditions": {
+      "rank": 7,
+      "HP": 2350,
+      "ATK": 2430
+    }
+  },
+  {
+    "from": 214,
+    "to": 330,
+    "conditions": {
+      "rank": 7,
+      "HP": 2360,
+      "ATK": 1580,
+      "DEF": 1740
+    }
+  },
+  {
+    "from": 214,
+    "to": 388,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1800,
+      "RES": 2240
+    }
+  },
+  {
+    "from": 215,
+    "to": 317,
+    "conditions": {
+      "rank": 7,
+      "HP": 2260,
+      "DEF": 1720,
+      "RES": 2060
+    }
+  },
+  {
+    "from": 215,
+    "to": 335,
+    "conditions": {
+      "rank": 7,
+      "SP": 1260,
+      "INT": 2350
+    }
+  },
+  {
+    "from": 216,
+    "to": 350,
+    "conditions": {
+      "rank": 7,
+      "HP": 2400,
+      "ATK": 1930,
+      "SPD": 1860
+    }
+  },
+  {
+    "from": 216,
+    "to": 363,
+    "conditions": {
+      "rank": 7,
+      "HP": 2470,
+      "SPD": 1790
+    }
+  },
+  {
+    "from": 217,
+    "to": 313,
+    "conditions": {
+      "rank": 7,
+      "HP": 1850,
+      "ATK": 2150,
+      "DEF": 1860
+    }
+  },
+  {
+    "from": 217,
+    "to": 373,
+    "conditions": {
+      "rank": 7,
+      "HP": 2820,
+      "ATK": 2430
+    }
+  },
+  {
+    "from": 218,
+    "to": 318,
+    "conditions": {
+      "rank": 10,
+      "valor": 46,
+      "philanthropy": 46,
+      "amicability": 46,
+      "wisdom": 46
+    }
+  },
+  {
+    "from": 218,
+    "to": 347,
+    "conditions": {
+      "rank": 7,
+      "SP": 1160,
+      "SPD": 1750
+    }
+  },
+  {
+    "from": 218,
+    "to": 373,
+    "conditions": {
+      "rank": 7,
+      "HP": 2820,
+      "ATK": 2430
+    }
+  },
+  {
+    "from": 218,
+    "to": 380,
+    "conditions": {
+      "rank": 10,
+      "valor": 46,
+      "philanthropy": 46,
+      "amicability": 46,
+      "wisdom": 46
+    }
+  },
+  {
+    "from": 219,
+    "to": 307,
+    "conditions": {
+      "rank": 7,
+      "ATK": 2220,
+      "RES": 1810
+    }
+  },
+  {
+    "from": 219,
+    "to": 328,
+    "conditions": {
+      "rank": 7,
+      "SP": 1380,
+      "INT": 1990,
+      "RES": 1730
+    }
+  },
+  {
+    "from": 219,
+    "to": 474,
+    "conditions": {
+      "rank": 7,
+      "ATK": 2420,
+      "DEF": 2060
+    }
+  },
+  {
+    "from": 220,
+    "to": 331,
+    "conditions": {
+      "rank": 7,
+      "SP": 1190,
+      "ATK": 1940,
+      "RES": 1710
+    }
+  },
+  {
+    "from": 220,
+    "to": 338,
+    "conditions": {
+      "rank": 7,
+      "INT": 1800,
+      "RES": 2040
+    }
+  },
+  {
+    "from": 220,
+    "to": 361,
+    "conditions": {
+      "rank": 7,
+      "HP": 2680,
+      "INT": 1830,
+      "RES": 1660
+    }
+  },
+  {
+    "from": 220,
+    "to": 413,
+    "conditions": {
+      "rank": 7,
+      "HP": 2860,
+      "ATK": 2000,
+      "DEF": 1430
+    }
+  },
+  {
+    "from": 221,
+    "to": 315,
+    "conditions": {
+      "rank": 7,
+      "SP": 1540,
+      "INT": 2450
+    }
+  },
+  {
+    "from": 221,
+    "to": 321,
+    "conditions": {
+      "rank": 7,
+      "HP": 2690,
+      "INT": 1660,
+      "RES": 1380
+    }
+  },
+  {
+    "from": 221,
+    "to": 325,
+    "conditions": {
+      "rank": 7,
+      "ATK": 2050,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 221,
+    "to": 328,
+    "conditions": {
+      "rank": 7,
+      "SP": 1380,
+      "INT": 1990,
+      "RES": 1730
+    }
+  },
+  {
+    "from": 222,
+    "to": 324,
+    "conditions": {
+      "rank": 7,
+      "HP": 2570,
+      "ATK": 1580,
+      "DEF": 1650
+    }
+  },
+  {
+    "from": 222,
+    "to": 418,
+    "conditions": {
+      "rank": 7,
+      "HP": 3180,
+      "ATK": 1930
+    }
+  },
+  {
+    "from": 223,
+    "to": 312,
+    "conditions": {
+      "rank": 7,
+      "HP": 2350,
+      "ATK": 2430
+    }
+  },
+  {
+    "from": 223,
+    "to": 373,
+    "conditions": {
+      "rank": 7,
+      "HP": 2820,
+      "ATK": 2430
+    }
+  },
+  {
+    "from": 223,
+    "to": 454,
+    "conditions": {
+      "rank": 7,
+      "ATK": 2280,
+      "INT": 1670
+    }
+  },
+  {
+    "from": 224,
+    "to": 376,
+    "conditions": {
+      "rank": 7,
+      "HP": 2820,
+      "ATK": 1930,
+      "SPD": 1540
+    }
+  },
+  {
+    "from": 224,
+    "to": 378,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1640,
+      "DEF": 1790
+    }
+  },
+  {
+    "from": 225,
+    "to": 310,
+    "conditions": {
+      "rank": 7,
+      "INT": 1800,
+      "RES": 1750,
+      "SPD": 1640
+    }
+  },
+  {
+    "from": 225,
+    "to": 341,
+    "conditions": {
+      "rank": 7,
+      "SP": 1640,
+      "SPD": 1820
+    }
+  },
+  {
+    "from": 225,
+    "to": 345,
+    "conditions": {
+      "rank": 7,
+      "SP": 1290,
+      "INT": 1860,
+      "RES": 1290
+    }
+  },
+  {
+    "from": 226,
+    "to": 322,
+    "conditions": {
+      "rank": 7,
+      "HP": 2300,
+      "ATK": 2360
+    }
+  },
+  {
+    "from": 226,
+    "to": 326,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1730,
+      "INT": 1800,
+      "SPD": 2060
+    }
+  },
+  {
+    "from": 226,
+    "to": 403,
+    "conditions": {
+      "rank": 7,
+      "SP": 1200,
+      "ATK": 1940
+    }
+  },
+  {
+    "from": 227,
+    "to": 329,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "SP": 1070,
+      "ATK": 1780
+    }
+  },
+  {
+    "from": 227,
+    "to": 332,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "RES": 1780
+    }
+  },
+  {
+    "from": 228,
+    "to": 333,
+    "conditions": {
+      "rank": 7,
+      "HP": 2620,
+      "ATK": 2290
+    }
+  },
+  {
+    "from": 228,
+    "to": 364,
+    "conditions": {
+      "rank": 7,
+      "SP": 1700,
+      "ATK": 960,
+      "SPD": 1850
+    }
+  },
+  {
+    "from": 228,
+    "to": 375,
+    "conditions": {
+      "rank": 7,
+      "HP": 2100,
+      "ATK": 2130,
+      "DEF": 1700
+    }
+  },
+  {
+    "from": 229,
+    "to": 364,
+    "conditions": {
+      "rank": 7,
+      "SP": 1700,
+      "ATK": 960,
+      "SPD": 1850
+    }
+  },
+  {
+    "from": 229,
+    "to": 409,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1150,
+      "SPD": 2100
+    }
+  },
+  {
+    "from": 229,
+    "to": 452,
+    "conditions": {
+      "rank": 7,
+      "SP": 204,
+      "ATK": 362,
+      "SPD": 392
+    }
+  },
+  {
+    "from": 230,
+    "to": 343,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1700,
+      "RES": 1820
+    }
+  },
+  {
+    "from": 230,
+    "to": 395,
+    "conditions": {
+      "rank": 7,
+      "HP": 2690,
+      "ATK": 1790
+    }
+  },
+  {
+    "from": 231,
+    "to": 324,
+    "conditions": {
+      "rank": 7,
+      "HP": 2570,
+      "ATK": 1580,
+      "DEF": 1650
+    }
+  },
+  {
+    "from": 231,
+    "to": 326,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1730,
+      "INT": 1800,
+      "SPD": 2060
+    }
+  },
+  {
+    "from": 231,
+    "to": 428,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 231,
+          "personality": 1
+        },
+        {
+          "id": 316,
+          "personality": 9
+        }
+      ]
+    }
+  },
+  {
+    "from": 232,
+    "to": 319,
+    "conditions": {
+      "rank": 7,
+      "SP": 960,
+      "INT": 2280,
+      "RES": 1600
+    }
+  },
+  {
+    "from": 232,
+    "to": 320,
+    "conditions": {
+      "rank": 7,
+      "SP": 1260,
+      "INT": 2140,
+      "RES": 1600
+    }
+  },
+  {
+    "from": 232,
+    "to": 354,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1670,
+      "INT": 2100
+    }
+  },
+  {
+    "from": 233,
+    "to": 362,
+    "conditions": {
+      "rank": 7,
+      "HP": 2380,
+      "ATK": 1570,
+      "DEF": 2010
+    }
+  },
+  {
+    "from": 233,
+    "to": 408,
+    "conditions": {
+      "rank": 7,
+      "HP": 2470,
+      "DEF": 2010
+    }
+  },
+  {
+    "from": 234,
+    "to": 330,
+    "conditions": {
+      "rank": 7,
+      "HP": 2360,
+      "ATK": 1580,
+      "DEF": 1740
+    }
+  },
+  {
+    "from": 234,
+    "to": 359,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1430,
+      "DEF": 1790,
+      "RES": 1730
+    }
+  },
+  {
+    "from": 234,
+    "to": 403,
+    "conditions": {
+      "rank": 7,
+      "SP": 1200,
+      "ATK": 1940
+    }
+  },
+  {
+    "from": 235,
+    "to": 379,
+    "conditions": {
+      "rank": 7,
+      "SP": 1140,
+      "ATK": 1300,
+      "INT": 1590
+    }
+  },
+  {
+    "from": 235,
+    "to": 405,
+    "conditions": {
+      "rank": 7,
+      "jogress": [
+        {
+          "id": 406,
+          "personality": 6
+        },
+        {
+          "id": 235,
+          "personality": 13
+        }
+      ]
+    }
+  },
+  {
+    "from": 235,
+    "to": 406,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1700,
+      "DEF": 2140
+    }
+  },
+  {
+    "from": 236,
+    "to": 360,
+    "conditions": {
+      "rank": 7,
+      "HP": 2140,
+      "DEF": 1530
+    }
+  },
+  {
+    "from": 236,
+    "to": 396,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2220
+    }
+  },
+  {
+    "from": 236,
+    "to": 475,
+    "conditions": {
+      "rank": 7,
+      "HP": 2760,
+      "RES": 1680,
+      "SPD": 1720
+    }
+  },
+  {
+    "from": 237,
+    "to": 320,
+    "conditions": {
+      "rank": 7,
+      "SP": 1260,
+      "INT": 2140,
+      "RES": 1600
+    }
+  },
+  {
+    "from": 237,
+    "to": 354,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1670,
+      "INT": 2100
+    }
+  },
+  {
+    "from": 237,
+    "to": 415,
+    "conditions": {
+      "rank": 7,
+      "SP": 1120,
+      "RES": 2020,
+      "SPD": 2060
+    }
+  },
+  {
+    "from": 238,
+    "to": 321,
+    "conditions": {
+      "rank": 7,
+      "HP": 2690,
+      "INT": 1660,
+      "RES": 1380
+    }
+  },
+  {
+    "from": 238,
+    "to": 323,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2060,
+      "RES": 1960
+    }
+  },
+  {
+    "from": 238,
+    "to": 360,
+    "conditions": {
+      "rank": 7,
+      "HP": 2140,
+      "DEF": 1530
+    }
+  },
+  {
+    "from": 239,
+    "to": 324,
+    "conditions": {
+      "rank": 7,
+      "HP": 2570,
+      "ATK": 1580,
+      "DEF": 1650
+    }
+  },
+  {
+    "from": 239,
+    "to": 442,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 385,
+          "personality": 6
+        },
+        {
+          "id": 239,
+          "personality": 14
+        }
+      ]
+    }
+  },
+  {
+    "from": 240,
+    "to": 344,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1860,
+      "RES": 1720
+    }
+  },
+  {
+    "from": 240,
+    "to": 352,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1730,
+      "DEF": 1730,
+      "SPD": 1650
+    }
+  },
+  {
+    "from": 240,
+    "to": 384,
+    "conditions": {
+      "rank": 7,
+      "HP": 2820,
+      "ATK": 1900,
+      "SPD": 1600
+    }
+  },
+  {
+    "from": 241,
+    "to": 338,
+    "conditions": {
+      "rank": 7,
+      "INT": 1800,
+      "RES": 2040
+    }
+  },
+  {
+    "from": 241,
+    "to": 348,
+    "conditions": {
+      "rank": 7,
+      "HP": 2470,
+      "RES": 2190
+    }
+  },
+  {
+    "from": 242,
+    "to": 311,
+    "conditions": {
+      "rank": 7,
+      "SP": 1170,
+      "RES": 2040
+    }
+  },
+  {
+    "from": 242,
+    "to": 345,
+    "conditions": {
+      "rank": 7,
+      "SP": 1290,
+      "INT": 1860,
+      "RES": 1290
+    }
+  },
+  {
+    "from": 242,
+    "to": 351,
+    "conditions": {
+      "rank": 7,
+      "INT": 2710,
+      "SPD": 1990
+    }
+  },
+  {
+    "from": 243,
+    "to": 385,
+    "conditions": {
+      "rank": 7,
+      "HP": 3220,
+      "ATK": 1680
+    }
+  },
+  {
+    "from": 243,
+    "to": 389,
+    "conditions": {
+      "rank": 7,
+      "HP": 2880,
+      "ATK": 1790,
+      "INT": 1510
+    }
+  },
+  {
+    "from": 244,
+    "to": 362,
+    "conditions": {
+      "rank": 7,
+      "HP": 2380,
+      "ATK": 1570,
+      "DEF": 2010
+    }
+  },
+  {
+    "from": 244,
+    "to": 369,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "ATK": 1940
+    }
+  },
+  {
+    "from": 244,
+    "to": 401,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "ATK": 2340,
+      "SPD": 1330
+    }
+  },
+  {
+    "from": 245,
+    "to": 310,
+    "conditions": {
+      "rank": 7,
+      "INT": 1800,
+      "RES": 1750,
+      "SPD": 1640
+    }
+  },
+  {
+    "from": 245,
+    "to": 348,
+    "conditions": {
+      "rank": 7,
+      "HP": 2470,
+      "RES": 2190
+    }
+  },
+  {
+    "from": 245,
+    "to": 396,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2220
+    }
+  },
+  {
+    "from": 246,
+    "to": 342,
+    "conditions": {
+      "rank": 7,
+      "HP": 2900,
+      "DEF": 2130,
+      "RES": 1570
+    }
+  },
+  {
+    "from": 246,
+    "to": 398,
+    "conditions": {
+      "rank": 7,
+      "HP": 1920,
+      "ATK": 1920,
+      "DEF": 1570
+    }
+  },
+  {
+    "from": 247,
+    "to": 308,
+    "conditions": {
+      "rank": 7,
+      "HP": 2200,
+      "DEF": 1580,
+      "RES": 1580
+    }
+  },
+  {
+    "from": 247,
+    "to": 358,
+    "conditions": {
+      "rank": 7,
+      "HP": 2700,
+      "ATK": 2220
+    }
+  },
+  {
+    "from": 248,
+    "to": 325,
+    "conditions": {
+      "rank": 7,
+      "ATK": 2050,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 248,
+    "to": 356,
+    "conditions": {
+      "rank": 7,
+      "HP": 2570,
+      "INT": 2130,
+      "SPD": 1890
+    }
+  },
+  {
+    "from": 248,
+    "to": 381,
+    "conditions": {
+      "rank": 7,
+      "HP": 2380,
+      "ATK": 1960,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 248,
+    "to": 415,
+    "conditions": {
+      "rank": 7,
+      "SP": 1120,
+      "RES": 2020,
+      "SPD": 2060
+    }
+  },
+  {
+    "from": 249,
+    "to": 331,
+    "conditions": {
+      "rank": 7,
+      "SP": 1190,
+      "ATK": 1940,
+      "RES": 1710
+    }
+  },
+  {
+    "from": 249,
+    "to": 361,
+    "conditions": {
+      "rank": 7,
+      "HP": 2680,
+      "INT": 1830,
+      "RES": 1660
+    }
+  },
+  {
+    "from": 250,
+    "to": 323,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2060,
+      "RES": 1960
+    }
+  },
+  {
+    "from": 250,
+    "to": 363,
+    "conditions": {
+      "rank": 7,
+      "HP": 2470,
+      "SPD": 1790
+    }
+  },
+  {
+    "from": 250,
+    "to": 409,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1150,
+      "SPD": 2100
+    }
+  },
+  {
+    "from": 251,
+    "to": 367,
+    "conditions": {
+      "rank": 7,
+      "SP": 2350,
+      "ATK": 1290,
+      "INT": 1500
+    }
+  },
+  {
+    "from": 251,
+    "to": 368,
+    "conditions": {
+      "rank": 7,
+      "HP": 2380,
+      "SP": 1100,
+      "INT": 1980
+    }
+  },
+  {
+    "from": 252,
+    "to": 346,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2250,
+      "RES": 1850
+    }
+  },
+  {
+    "from": 252,
+    "to": 360,
+    "conditions": {
+      "rank": 7,
+      "HP": 2140,
+      "DEF": 1530
+    }
+  },
+  {
+    "from": 252,
+    "to": 396,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2220
+    }
+  },
+  {
+    "from": 253,
+    "to": 311,
+    "conditions": {
+      "rank": 7,
+      "SP": 1170,
+      "RES": 2040
+    }
+  },
+  {
+    "from": 253,
+    "to": 314,
+    "conditions": {
+      "rank": 7,
+      "INT": 2450,
+      "RES": 2010
+    }
+  },
+  {
+    "from": 253,
+    "to": 315,
+    "conditions": {
+      "rank": 7,
+      "SP": 1540,
+      "INT": 2450
+    }
+  },
+  {
+    "from": 254,
+    "to": 317,
+    "conditions": {
+      "rank": 7,
+      "HP": 2260,
+      "DEF": 1720,
+      "RES": 2060
+    }
+  },
+  {
+    "from": 254,
+    "to": 347,
+    "conditions": {
+      "rank": 7,
+      "SP": 1160,
+      "SPD": 1750
+    }
+  },
+  {
+    "from": 254,
+    "to": 355,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "ATK": 1940,
+      "SPD": 1660
+    }
+  },
+  {
+    "from": 255,
+    "to": 313,
+    "conditions": {
+      "rank": 7,
+      "HP": 1850,
+      "ATK": 2150,
+      "DEF": 1860
+    }
+  },
+  {
+    "from": 255,
+    "to": 342,
+    "conditions": {
+      "rank": 7,
+      "HP": 2900,
+      "DEF": 2130,
+      "RES": 1570
+    }
+  },
+  {
+    "from": 255,
+    "to": 412,
+    "conditions": {
+      "rank": 7,
+      "HP": 2830,
+      "ATK": 1860,
+      "DEF": 2050
+    }
+  },
+  {
+    "from": 256,
+    "to": 307,
+    "conditions": {
+      "rank": 7,
+      "ATK": 2220,
+      "RES": 1810
+    }
+  },
+  {
+    "from": 256,
+    "to": 333,
+    "conditions": {
+      "rank": 7,
+      "HP": 2620,
+      "ATK": 2290
+    }
+  },
+  {
+    "from": 256,
+    "to": 344,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1860,
+      "RES": 1720
+    }
+  },
+  {
+    "from": 256,
+    "to": 359,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1430,
+      "DEF": 1790,
+      "RES": 1730
+    }
+  },
+  {
+    "from": 257,
+    "to": 346,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2250,
+      "RES": 1850
+    }
+  },
+  {
+    "from": 257,
+    "to": 377,
+    "conditions": {
+      "rank": 7,
+      "SP": 1300,
+      "ATK": 2130
+    }
+  },
+  {
+    "from": 258,
+    "to": 329,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "SP": 1070,
+      "ATK": 1780
+    }
+  },
+  {
+    "from": 258,
+    "to": 363,
+    "conditions": {
+      "rank": 7,
+      "HP": 2470,
+      "SPD": 1790
+    }
+  },
+  {
+    "from": 259,
+    "to": 360,
+    "conditions": {
+      "rank": 7,
+      "HP": 2140,
+      "DEF": 1530
+    }
+  },
+  {
+    "from": 259,
+    "to": 395,
+    "conditions": {
+      "rank": 7,
+      "HP": 2690,
+      "ATK": 1790
+    }
+  },
+  {
+    "from": 259,
+    "to": 458,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1870,
+      "DEF": 1340,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 260,
+    "to": 313,
+    "conditions": {
+      "rank": 7,
+      "HP": 1850,
+      "ATK": 2150,
+      "DEF": 1860
+    }
+  },
+  {
+    "from": 260,
+    "to": 353,
+    "conditions": {
+      "rank": 7,
+      "HP": 2010,
+      "DEF": 1740,
+      "RES": 1870
+    }
+  },
+  {
+    "from": 260,
+    "to": 365,
+    "conditions": {
+      "rank": 7,
+      "SP": 1430,
+      "INT": 1530
+    }
+  },
+  {
+    "from": 261,
+    "to": 364,
+    "conditions": {
+      "rank": 7,
+      "SP": 1700,
+      "ATK": 960,
+      "SPD": 1850
+    }
+  },
+  {
+    "from": 261,
+    "to": 403,
+    "conditions": {
+      "rank": 7,
+      "SP": 1200,
+      "ATK": 1940
+    }
+  },
+  {
+    "from": 262,
+    "to": 367,
+    "conditions": {
+      "rank": 7,
+      "SP": 2350,
+      "ATK": 1290,
+      "INT": 1500
+    }
+  },
+  {
+    "from": 262,
+    "to": 393,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1430,
+      "RES": 1430
+    }
+  },
+  {
+    "from": 262,
+    "to": 414,
+    "conditions": {
+      "rank": 7,
+      "SP": 1300,
+      "INT": 2180,
+      "SPD": 1860
+    }
+  },
+  {
+    "from": 263,
+    "to": 348,
+    "conditions": {
+      "rank": 7,
+      "HP": 2470,
+      "RES": 2190
+    }
+  },
+  {
+    "from": 263,
+    "to": 367,
+    "conditions": {
+      "rank": 7,
+      "SP": 2350,
+      "ATK": 1290,
+      "INT": 1500
+    }
+  },
+  {
+    "from": 263,
+    "to": 459,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1660,
+      "RES": 2060,
+      "SPD": 1280
+    }
+  },
+  {
+    "from": 264,
+    "to": 332,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "RES": 1780
+    }
+  },
+  {
+    "from": 264,
+    "to": 346,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2250,
+      "RES": 1850
+    }
+  },
+  {
+    "from": 265,
+    "to": 371,
+    "conditions": {
+      "rank": 7,
+      "HP": 2080,
+      "ATK": 2140
+    }
+  },
+  {
+    "from": 265,
+    "to": 397,
+    "conditions": {
+      "rank": 7,
+      "HP": 2010,
+      "ATK": 2220,
+      "INT": 1700
+    }
+  },
+  {
+    "from": 265,
+    "to": 401,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "ATK": 2340,
+      "SPD": 1330
+    }
+  },
+  {
+    "from": 265,
+    "to": 402,
+    "conditions": {
+      "rank": 7,
+      "SP": 1180,
+      "INT": 1740,
+      "RES": 1540
+    }
+  },
+  {
+    "from": 266,
+    "to": 368,
+    "conditions": {
+      "rank": 7,
+      "HP": 2380,
+      "SP": 1100,
+      "INT": 1980
+    }
+  },
+  {
+    "from": 266,
+    "to": 386,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "ATK": 1490,
+      "SPD": 1620
+    }
+  },
+  {
+    "from": 266,
+    "to": 414,
+    "conditions": {
+      "rank": 7,
+      "SP": 1300,
+      "INT": 2180,
+      "SPD": 1860
+    }
+  },
+  {
+    "from": 267,
+    "to": 371,
+    "conditions": {
+      "rank": 7,
+      "HP": 2080,
+      "ATK": 2140
+    }
+  },
+  {
+    "from": 267,
+    "to": 387,
+    "conditions": {
+      "rank": 7,
+      "HP": 2000,
+      "ATK": 1970,
+      "INT": 1900
+    }
+  },
+  {
+    "from": 267,
+    "to": 399,
+    "conditions": {
+      "rank": 7,
+      "HP": 2200,
+      "ATK": 2140,
+      "INT": 2770
+    }
+  },
+  {
+    "from": 268,
+    "to": 359,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1430,
+      "DEF": 1790,
+      "RES": 1730
+    }
+  },
+  {
+    "from": 268,
+    "to": 378,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1640,
+      "DEF": 1790
+    }
+  },
+  {
+    "from": 268,
+    "to": 408,
+    "conditions": {
+      "rank": 7,
+      "HP": 2470,
+      "DEF": 2010
+    }
+  },
+  {
+    "from": 269,
+    "to": 334,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2280,
+      "INT": 1570
+    }
+  },
+  {
+    "from": 269,
+    "to": 386,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "ATK": 1490,
+      "SPD": 1620
+    }
+  },
+  {
+    "from": 269,
+    "to": 420,
+    "conditions": {
+      "rank": 7,
+      "HP": 2770,
+      "DEF": 2290
+    }
+  },
+  {
+    "from": 270,
+    "to": 377,
+    "conditions": {
+      "rank": 7,
+      "SP": 1300,
+      "ATK": 2130
+    }
+  },
+  {
+    "from": 270,
+    "to": 389,
+    "conditions": {
+      "rank": 7,
+      "HP": 2880,
+      "ATK": 1790,
+      "INT": 1510
+    }
+  },
+  {
+    "from": 270,
+    "to": 404,
+    "conditions": {
+      "rank": 7,
+      "HP": 2360,
+      "ATK": 1940
+    }
+  },
+  {
+    "from": 271,
+    "to": 353,
+    "conditions": {
+      "rank": 7,
+      "HP": 2010,
+      "DEF": 1740,
+      "RES": 1870
+    }
+  },
+  {
+    "from": 271,
+    "to": 408,
+    "conditions": {
+      "rank": 7,
+      "HP": 2470,
+      "DEF": 2010
+    }
+  },
+  {
+    "from": 272,
+    "to": 375,
+    "conditions": {
+      "rank": 7,
+      "HP": 2100,
+      "ATK": 2130,
+      "DEF": 1700
+    }
+  },
+  {
+    "from": 272,
+    "to": 377,
+    "conditions": {
+      "rank": 7,
+      "SP": 1300,
+      "ATK": 2130
+    }
+  },
+  {
+    "from": 273,
+    "to": 329,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "SP": 1070,
+      "ATK": 1780
+    }
+  },
+  {
+    "from": 273,
+    "to": 384,
+    "conditions": {
+      "rank": 7,
+      "HP": 2820,
+      "ATK": 1900,
+      "SPD": 1600
+    }
+  },
+  {
+    "from": 274,
+    "to": 398,
+    "conditions": {
+      "rank": 7,
+      "HP": 1920,
+      "ATK": 1920,
+      "DEF": 1570
+    }
+  },
+  {
+    "from": 274,
+    "to": 407,
+    "conditions": {
+      "rank": 7,
+      "HP": 2960,
+      "ATK": 2290
+    }
+  },
+  {
+    "from": 275,
+    "to": 331,
+    "conditions": {
+      "rank": 7,
+      "SP": 1190,
+      "ATK": 1940,
+      "RES": 1710
+    }
+  },
+  {
+    "from": 275,
+    "to": 365,
+    "conditions": {
+      "rank": 7,
+      "SP": 1430,
+      "INT": 1530
+    }
+  },
+  {
+    "from": 276,
+    "to": 353,
+    "conditions": {
+      "rank": 7,
+      "HP": 2010,
+      "DEF": 1740,
+      "RES": 1870
+    }
+  },
+  {
+    "from": 276,
+    "to": 391,
+    "conditions": {
+      "rank": 7,
+      "SP": 1060,
+      "INT": 2290
+    }
+  },
+  {
+    "from": 276,
+    "to": 393,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1430,
+      "RES": 1430
+    }
+  },
+  {
+    "from": 277,
+    "to": 367,
+    "conditions": {
+      "rank": 7,
+      "SP": 2350,
+      "ATK": 1290,
+      "INT": 1500
+    }
+  },
+  {
+    "from": 277,
+    "to": 393,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1430,
+      "RES": 1430
+    }
+  },
+  {
+    "from": 277,
+    "to": 420,
+    "conditions": {
+      "rank": 7,
+      "HP": 2770,
+      "DEF": 2290
+    }
+  },
+  {
+    "from": 278,
+    "to": 324,
+    "conditions": {
+      "rank": 7,
+      "HP": 2570,
+      "ATK": 1580,
+      "DEF": 1650
+    }
+  },
+  {
+    "from": 278,
+    "to": 385,
+    "conditions": {
+      "rank": 7,
+      "HP": 3220,
+      "ATK": 1680
+    }
+  },
+  {
+    "from": 279,
+    "to": 370,
+    "conditions": {
+      "rank": 7,
+      "SP": 1500,
+      "INT": 2420,
+      "RES": 1570
+    }
+  },
+  {
+    "from": 279,
+    "to": 391,
+    "conditions": {
+      "rank": 7,
+      "SP": 1060,
+      "INT": 2290
+    }
+  },
+  {
+    "from": 279,
+    "to": 392,
+    "conditions": {
+      "rank": 7,
+      "SP": 1190,
+      "INT": 1860
+    }
+  },
+  {
+    "from": 280,
+    "to": 365,
+    "conditions": {
+      "rank": 7,
+      "SP": 1430,
+      "INT": 1530
+    }
+  },
+  {
+    "from": 280,
+    "to": 413,
+    "conditions": {
+      "rank": 7,
+      "HP": 2860,
+      "ATK": 2000,
+      "DEF": 1430
+    }
+  },
+  {
+    "from": 281,
+    "to": 341,
+    "conditions": {
+      "rank": 7,
+      "SP": 1640,
+      "SPD": 1820
+    }
+  },
+  {
+    "from": 281,
+    "to": 385,
+    "conditions": {
+      "rank": 7,
+      "HP": 3220,
+      "ATK": 1680
+    }
+  },
+  {
+    "from": 281,
+    "to": 400,
+    "conditions": {
+      "rank": 7,
+      "HP": 2200,
+      "SP": 1380,
+      "ATK": 1600
+    }
+  },
+  {
+    "from": 282,
+    "to": 343,
+    "conditions": {
+      "rank": 7,
+      "DEF": 1700,
+      "RES": 1820
+    }
+  },
+  {
+    "from": 282,
+    "to": 370,
+    "conditions": {
+      "rank": 7,
+      "SP": 1500,
+      "INT": 2420,
+      "RES": 1570
+    }
+  },
+  {
+    "from": 282,
+    "to": 453,
+    "conditions": {
+      "rank": 8,
+      "HP": 4840,
+      "ATK": 2420,
+      "RES": 1800,
+      "TALENT": 40
+    }
+  },
+  {
+    "from": 283,
+    "to": 377,
+    "conditions": {
+      "rank": 7,
+      "SP": 1300,
+      "ATK": 2130
+    }
+  },
+  {
+    "from": 283,
+    "to": 383,
+    "conditions": {
+      "rank": 7,
+      "HP": 2400,
+      "ATK": 2220
+    }
+  },
+  {
+    "from": 284,
+    "to": 378,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1640,
+      "DEF": 1790
+    }
+  },
+  {
+    "from": 284,
+    "to": 389,
+    "conditions": {
+      "rank": 7,
+      "HP": 2880,
+      "ATK": 1790,
+      "INT": 1510
+    }
+  },
+  {
+    "from": 284,
+    "to": 395,
+    "conditions": {
+      "rank": 7,
+      "HP": 2690,
+      "ATK": 1790
+    }
+  },
+  {
+    "from": 285,
+    "to": 394,
+    "conditions": {
+      "rank": 7,
+      "HP": 2460,
+      "INT": 1360,
+      "RES": 1820
+    }
+  },
+  {
+    "from": 285,
+    "to": 421,
+    "conditions": {
+      "rank": 7,
+      "HP": 2690,
+      "ATK": 2250
+    }
+  },
+  {
+    "from": 286,
+    "to": 341,
+    "conditions": {
+      "rank": 7,
+      "SP": 1640,
+      "SPD": 1820
+    }
+  },
+  {
+    "from": 286,
+    "to": 351,
+    "conditions": {
+      "rank": 7,
+      "INT": 2710,
+      "SPD": 1990
+    }
+  },
+  {
+    "from": 286,
+    "to": 392,
+    "conditions": {
+      "rank": 7,
+      "SP": 1190,
+      "INT": 1860
+    }
+  },
+  {
+    "from": 286,
+    "to": 402,
+    "conditions": {
+      "rank": 7,
+      "SP": 1180,
+      "INT": 1740,
+      "RES": 1540
+    }
+  },
+  {
+    "from": 287,
+    "to": 396,
+    "conditions": {
+      "rank": 7,
+      "DEF": 2220
+    }
+  },
+  {
+    "from": 287,
+    "to": 408,
+    "conditions": {
+      "rank": 7,
+      "HP": 2470,
+      "DEF": 2010
+    }
+  },
+  {
+    "from": 288,
+    "to": 339,
+    "conditions": {
+      "rank": 7,
+      "SP": 960,
+      "ATK": 2220
+    }
+  },
+  {
+    "from": 288,
+    "to": 394,
+    "conditions": {
+      "rank": 7,
+      "HP": 2460,
+      "INT": 1360,
+      "RES": 1820
+    }
+  },
+  {
+    "from": 289,
+    "to": 369,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "ATK": 1940
+    }
+  },
+  {
+    "from": 289,
+    "to": 370,
+    "conditions": {
+      "rank": 7,
+      "SP": 1500,
+      "INT": 2420,
+      "RES": 1570
+    }
+  },
+  {
+    "from": 290,
+    "to": 325,
+    "conditions": {
+      "rank": 7,
+      "ATK": 2050,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 290,
+    "to": 345,
+    "conditions": {
+      "rank": 7,
+      "SP": 1290,
+      "INT": 1860,
+      "RES": 1290
+    }
+  },
+  {
+    "from": 290,
+    "to": 379,
+    "conditions": {
+      "rank": 7,
+      "SP": 1140,
+      "ATK": 1300,
+      "INT": 1590
+    }
+  },
+  {
+    "from": 291,
+    "to": 332,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "RES": 1780
+    }
+  },
+  {
+    "from": 291,
+    "to": 369,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "ATK": 1940
+    }
+  },
+  {
+    "from": 291,
+    "to": 394,
+    "conditions": {
+      "rank": 7,
+      "HP": 2460,
+      "INT": 1360,
+      "RES": 1820
+    }
+  },
+  {
+    "from": 292,
+    "to": 355,
+    "conditions": {
+      "rank": 7,
+      "HP": 2500,
+      "ATK": 1940,
+      "SPD": 1660
+    }
+  },
+  {
+    "from": 292,
+    "to": 366,
+    "conditions": {
+      "rank": 7,
+      "INT": 2050,
+      "RES": 1790
+    }
+  },
+  {
+    "from": 292,
+    "to": 374,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1870,
+      "INT": 1430
+    }
+  },
+  {
+    "from": 292,
+    "to": 381,
+    "conditions": {
+      "rank": 7,
+      "HP": 2380,
+      "ATK": 1960,
+      "SPD": 1060
+    }
+  },
+  {
+    "from": 293,
+    "to": 406,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1700,
+      "DEF": 2140
+    }
+  },
+  {
+    "from": 293,
+    "to": 407,
+    "conditions": {
+      "rank": 7,
+      "HP": 2960,
+      "ATK": 2290
+    }
+  },
+  {
+    "from": 294,
+    "to": 374,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1870,
+      "INT": 1430
+    }
+  },
+  {
+    "from": 294,
+    "to": 375,
+    "conditions": {
+      "rank": 7,
+      "HP": 2100,
+      "ATK": 2130,
+      "DEF": 1700
+    }
+  },
+  {
+    "from": 294,
+    "to": 388,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1800,
+      "RES": 2240
+    }
+  },
+  {
+    "from": 294,
+    "to": 407,
+    "conditions": {
+      "rank": 7,
+      "HP": 2960,
+      "ATK": 2290
+    }
+  },
+  {
+    "from": 295,
+    "to": 342,
+    "conditions": {
+      "rank": 7,
+      "HP": 2900,
+      "DEF": 2130,
+      "RES": 1570
+    }
+  },
+  {
+    "from": 295,
+    "to": 406,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1700,
+      "DEF": 2140
+    }
+  },
+  {
+    "from": 295,
+    "to": 412,
+    "conditions": {
+      "rank": 7,
+      "HP": 2830,
+      "ATK": 1860,
+      "DEF": 2050
+    }
+  },
+  {
+    "from": 296,
+    "to": 447,
+    "conditions": {
+      "rank": 8,
+      "HP": 2350,
+      "INT": 3090,
+      "SPD": 1880
+    }
+  },
+  {
+    "from": 297,
+    "to": 337,
+    "conditions": {
+      "rank": 7,
+      "jogress": [
+        {
+          "id": 203,
+          "personality": 2
+        },
+        {
+          "id": 297,
+          "personality": 8
+        }
+      ]
+    }
+  },
+  {
+    "from": 297,
+    "to": 400,
+    "conditions": {
+      "rank": 7,
+      "HP": 2200,
+      "SP": 1380,
+      "ATK": 1600
+    }
+  },
+  {
+    "from": 297,
+    "to": 414,
+    "conditions": {
+      "rank": 7,
+      "SP": 1300,
+      "INT": 2180,
+      "SPD": 1860
+    }
+  },
+  {
+    "from": 298,
+    "to": 372,
+    "conditions": {
+      "rank": 7,
+      "INT": 3100,
+      "RES": 2090
+    }
+  },
+  {
+    "from": 298,
+    "to": 374,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1870,
+      "INT": 1430
+    }
+  },
+  {
+    "from": 298,
+    "to": 387,
+    "conditions": {
+      "rank": 7,
+      "HP": 2000,
+      "ATK": 1970,
+      "INT": 1900
+    }
+  },
+  {
+    "from": 299,
+    "to": 365,
+    "conditions": {
+      "rank": 7,
+      "SP": 1430,
+      "INT": 1530
+    }
+  },
+  {
+    "from": 299,
+    "to": 407,
+    "conditions": {
+      "rank": 7,
+      "HP": 2960,
+      "ATK": 2290
+    }
+  },
+  {
+    "from": 299,
+    "to": 413,
+    "conditions": {
+      "rank": 7,
+      "HP": 2860,
+      "ATK": 2000,
+      "DEF": 1430
+    }
+  },
+  {
+    "from": 300,
+    "to": 321,
+    "conditions": {
+      "rank": 7,
+      "HP": 2690,
+      "INT": 1660,
+      "RES": 1380
+    }
+  },
+  {
+    "from": 300,
+    "to": 336,
+    "conditions": {
+      "rank": 7,
+      "HP": 2740,
+      "SP": 1100,
+      "INT": 1370
+    }
+  },
+  {
+    "from": 300,
+    "to": 410,
+    "conditions": {
+      "rank": 7,
+      "SP": 1100,
+      "INT": 1370
+    }
+  },
+  {
+    "from": 300,
+    "to": 418,
+    "conditions": {
+      "rank": 7,
+      "HP": 3180,
+      "ATK": 1930
+    }
+  },
+  {
+    "from": 301,
+    "to": 400,
+    "conditions": {
+      "rank": 7,
+      "HP": 2200,
+      "SP": 1380,
+      "ATK": 1600
+    }
+  },
+  {
+    "from": 301,
+    "to": 404,
+    "conditions": {
+      "rank": 7,
+      "HP": 2360,
+      "ATK": 1940
+    }
+  },
+  {
+    "from": 301,
+    "to": 419,
+    "conditions": {
+      "rank": 7,
+      "SP": 1930,
+      "SPD": 1650
+    }
+  },
+  {
+    "from": 302,
+    "to": 384,
+    "conditions": {
+      "rank": 7,
+      "HP": 2820,
+      "ATK": 1900,
+      "SPD": 1600
+    }
+  },
+  {
+    "from": 302,
+    "to": 420,
+    "conditions": {
+      "rank": 7,
+      "HP": 2770,
+      "DEF": 2290
+    }
+  },
+  {
+    "from": 303,
+    "to": 358,
+    "conditions": {
+      "rank": 7,
+      "HP": 2700,
+      "ATK": 2220
+    }
+  },
+  {
+    "from": 303,
+    "to": 383,
+    "conditions": {
+      "rank": 7,
+      "HP": 2400,
+      "ATK": 2220
+    }
+  },
+  {
+    "from": 303,
+    "to": 416,
+    "conditions": {
+      "rank": 7,
+      "HP": 2890,
+      "SP": 1180,
+      "RES": 1180
+    }
+  },
+  {
+    "from": 304,
+    "to": 319,
+    "conditions": {
+      "rank": 7,
+      "SP": 960,
+      "INT": 2280,
+      "RES": 1600
+    }
+  },
+  {
+    "from": 304,
+    "to": 399,
+    "conditions": {
+      "rank": 7,
+      "HP": 2200,
+      "ATK": 2140,
+      "INT": 2770
+    }
+  },
+  {
+    "from": 304,
+    "to": 421,
+    "conditions": {
+      "rank": 7,
+      "HP": 2690,
+      "ATK": 2250
+    }
+  },
+  {
+    "from": 304,
+    "to": 453,
+    "conditions": {
+      "rank": 8,
+      "HP": 4840,
+      "ATK": 2420,
+      "RES": 1800,
+      "TALENT": 40
+    }
+  },
+  {
+    "from": 305,
+    "to": 424,
+    "conditions": {
+      "rank": 7
+    }
+  },
+  {
+    "from": 306,
+    "to": 425,
+    "conditions": {
+      "rank": 7
+    }
+  },
+  {
+    "from": 307,
+    "to": 434,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 307,
+          "personality": 7
+        },
+        {
+          "id": 354,
+          "personality": 8
+        }
+      ]
+    }
+  },
+  {
+    "from": 308,
+    "to": 427,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 308,
+          "personality": 13
+        },
+        {
+          "id": 313,
+          "personality": 4
+        }
+      ]
+    }
+  },
+  {
+    "from": 309,
+    "to": 463,
+    "conditions": {
+      "rank": 7
+    }
+  },
+  {
+    "from": 310,
+    "to": 433,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 333,
+          "personality": 7
+        },
+        {
+          "id": 310,
+          "personality": 14
+        }
+      ]
+    }
+  },
+  {
+    "from": 312,
+    "to": 430,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 312,
+          "personality": 7
+        },
+        {
+          "id": 364,
+          "personality": 13
+        }
+      ]
+    }
+  },
+  {
+    "from": 313,
+    "to": 427,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 308,
+          "personality": 13
+        },
+        {
+          "id": 313,
+          "personality": 4
+        }
+      ]
+    }
+  },
+  {
+    "from": 316,
+    "to": 428,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 231,
+          "personality": 9
+        },
+        {
+          "id": 316,
+          "personality": 1
+        }
+      ]
+    }
+  },
+  {
+    "from": 322,
+    "to": 435,
+    "conditions": {
+      "rank": 8,
+      "HP": 4900,
+      "SPD": 2810
+    }
+  },
+  {
+    "from": 327,
+    "to": 439,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 327,
+          "personality": 7
+        },
+        {
+          "id": 398,
+          "personality": 6
+        }
+      ]
+    }
+  },
+  {
+    "from": 333,
+    "to": 432,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 383,
+          "personality": 4
+        },
+        {
+          "id": 333,
+          "personality": 7
+        }
+      ]
+    }
+  },
+  {
+    "from": 333,
+    "to": 433,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 333,
+          "personality": 7
+        },
+        {
+          "id": 310,
+          "personality": 14
+        }
+      ]
+    }
+  },
+  {
+    "from": 340,
+    "to": 437,
+    "conditions": {
+      "rank": 9,
+      "HP": 4020,
+      "ATK": 3200
+    }
+  },
+  {
+    "from": 341,
+    "to": 438,
+    "conditions": {
+      "rank": 8,
+      "SP": 1710,
+      "SPD": 3390
+    }
+  },
+  {
+    "from": 348,
+    "to": 349,
+    "conditions": {
+      "rank": 7,
+      "SP": 1670,
+      "INT": 2500
+    }
+  },
+  {
+    "from": 349,
+    "to": 348,
+    "conditions": {
+      "rank": 7,
+      "HP": 2470,
+      "RES": 2190
+    }
+  },
+  {
+    "from": 352,
+    "to": 465,
+    "conditions": {
+      "rank": 7
+    }
+  },
+  {
+    "from": 354,
+    "to": 434,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 307,
+          "personality": 7
+        },
+        {
+          "id": 354,
+          "personality": 8
+        }
+      ]
+    }
+  },
+  {
+    "from": 356,
+    "to": 357,
+    "conditions": {
+      "rank": 7
+    }
+  },
+  {
+    "from": 357,
+    "to": 356,
+    "conditions": {
+      "rank": 7,
+      "HP": 2570,
+      "INT": 2130,
+      "SPD": 1890
+    }
+  },
+  {
+    "from": 363,
+    "to": 440,
+    "conditions": {
+      "rank": 8,
+      "ATK": 3100,
+      "SPD": 3100
+    }
+  },
+  {
+    "from": 364,
+    "to": 430,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 312,
+          "personality": 7
+        },
+        {
+          "id": 364,
+          "personality": 13
+        }
+      ]
+    }
+  },
+  {
+    "from": 367,
+    "to": 441,
+    "conditions": {
+      "rank": 8,
+      "INT": 3170,
+      "RES": 2700
+    }
+  },
+  {
+    "from": 383,
+    "to": 432,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 383,
+          "personality": 4
+        },
+        {
+          "id": 333,
+          "personality": 7
+        }
+      ]
+    }
+  },
+  {
+    "from": 385,
+    "to": 442,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 385,
+          "personality": 6
+        },
+        {
+          "id": 239,
+          "personality": 14
+        }
+      ]
+    }
+  },
+  {
+    "from": 388,
+    "to": 443,
+    "conditions": {
+      "rank": 8,
+      "ATK": 2810,
+      "INT": 3170
+    }
+  },
+  {
+    "from": 388,
+    "to": 466,
+    "conditions": {
+      "rank": 4
+    }
+  },
+  {
+    "from": 389,
+    "to": 390,
+    "conditions": {
+      "rank": 7,
+      "HP": 4250,
+      "ATK": 2850
+    }
+  },
+  {
+    "from": 390,
+    "to": 389,
+    "conditions": {
+      "rank": 7,
+      "HP": 2880,
+      "ATK": 1790,
+      "INT": 1510
+    }
+  },
+  {
+    "from": 392,
+    "to": 450,
+    "conditions": {
+      "rank": 8,
+      "INT": 3100,
+      "SP": 2660
+    }
+  },
+  {
+    "from": 397,
+    "to": 382,
+    "conditions": {
+      "rank": 7,
+      "ATK": 2350,
+      "INT": 1810
+    }
+  },
+  {
+    "from": 398,
+    "to": 439,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 327,
+          "personality": 7
+        },
+        {
+          "id": 398,
+          "personality": 6
+        }
+      ]
+    }
+  },
+  {
+    "from": 401,
+    "to": 444,
+    "conditions": {
+      "rank": 8,
+      "ATK": 3760,
+      "SPD": 2960
+    }
+  },
+  {
+    "from": 402,
+    "to": 445,
+    "conditions": {
+      "rank": 8,
+      "HP": 4680,
+      "ATK": 2070
+    }
+  },
+  {
+    "from": 404,
+    "to": 446,
+    "conditions": {
+      "rank": 8,
+      "ATK": 3470,
+      "SPD": 2960
+    }
+  },
+  {
+    "from": 406,
+    "to": 405,
+    "conditions": {
+      "rank": 7,
+      "jogress": [
+        {
+          "id": 406,
+          "personality": 6
+        },
+        {
+          "id": 235,
+          "personality": 13
+        }
+      ]
+    }
+  },
+  {
+    "from": 410,
+    "to": 411,
+    "conditions": {
+      "rank": 7,
+      "INT": 3380,
+      "RES": 2920
+    }
+  },
+  {
+    "from": 411,
+    "to": 410,
+    "conditions": {
+      "rank": 7,
+      "SP": 1100,
+      "INT": 1370
+    }
+  },
+  {
+    "from": 416,
+    "to": 417,
+    "conditions": {
+      "rank": 7,
+      "ATK": 2500
+    }
+  },
+  {
+    "from": 416,
+    "to": 429,
+    "conditions": {
+      "rank": 8,
+      "HP": 4680,
+      "SPD": 2740,
+      "item": 15
+    }
+  },
+  {
+    "from": 417,
+    "to": 416,
+    "conditions": {
+      "rank": 7,
+      "HP": 2890,
+      "SP": 1180,
+      "RES": 1180
+    }
+  },
+  {
+    "from": 417,
+    "to": 429,
+    "conditions": {
+      "rank": 8,
+      "HP": 4680,
+      "SPD": 2740,
+      "item": 15
+    }
+  },
+  {
+    "from": 421,
+    "to": 448,
+    "conditions": {
+      "rank": 8,
+      "HP": 4450,
+      "ATK": 3980
+    }
+  },
+  {
+    "from": 423,
+    "to": 464,
+    "conditions": {
+      "rank": 7,
+      "item": 6
+    }
+  },
+  {
+    "from": 424,
+    "to": 436,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 424,
+          "personality": 4
+        },
+        {
+          "id": 425,
+          "personality": 13
+        }
+      ]
+    }
+  },
+  {
+    "from": 425,
+    "to": 426,
+    "conditions": {
+      "rank": 7
+    }
+  },
+  {
+    "from": 425,
+    "to": 436,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 424,
+          "personality": 7
+        },
+        {
+          "id": 425,
+          "personality": 13
+        }
+      ]
+    }
+  },
+  {
+    "from": 426,
+    "to": 425,
+    "conditions": {
+      "rank": 7
+    }
+  },
+  {
+    "from": 430,
+    "to": 431,
+    "conditions": {
+      "rank": 8
+    }
+  },
+  {
+    "from": 430,
+    "to": 462,
+    "conditions": {
+      "rank": 8,
+      "ATK": 2970,
+      "SPD": 2680
+    }
+  },
+  {
+    "from": 430,
+    "to": 467,
+    "conditions": {
+      "rank": 8
+    }
+  },
+  {
+    "from": 431,
+    "to": 430,
+    "conditions": {
+      "rank": 8
+    }
+  },
+  {
+    "from": 431,
+    "to": 457,
+    "conditions": {
+      "rank": 8,
+      "SP": 2300,
+      "RES": 2720,
+      "SPD": 1900
+    }
+  },
+  {
+    "from": 452,
+    "to": 456,
+    "conditions": {
+      "rank": 8,
+      "HP": 2620,
+      "ATK": 2620,
+      "SPD": 1650,
+      "jogress": [
+        {
+          "id": 452,
+          "personality": 4
+        },
+        {
+          "id": 454,
+          "personality": 4
+        }
+      ]
+    }
+  },
+  {
+    "from": 454,
+    "to": 456,
+    "conditions": {
+      "rank": 8,
+      "HP": 2620,
+      "ATK": 2620,
+      "SPD": 1650,
+      "jogress": [
+        {
+          "id": 452,
+          "personality": 4
+        },
+        {
+          "id": 454,
+          "personality": 4
+        }
+      ]
+    }
+  },
+  {
+    "from": 455,
+    "to": 456,
+    "conditions": {
+      "rank": 8
+    }
+  },
+  {
+    "from": 456,
+    "to": 455,
+    "conditions": {
+      "rank": 8
+    }
+  },
+  {
+    "from": 457,
+    "to": 455,
+    "conditions": {
+      "rank": 8,
+      "ATK": 2280,
+      "INT": 2190,
+      "SPD": 1730
+    }
+  },
+  {
+    "from": 463,
+    "to": 309,
+    "conditions": {
+      "rank": 7
+    }
+  },
+  {
+    "from": 464,
+    "to": 423,
+    "conditions": {
+      "rank": 7,
+      "item": 6
+    }
+  },
+  {
+    "from": 465,
+    "to": 352,
+    "conditions": {
+      "rank": 7
+    }
+  },
+  {
+    "from": 466,
+    "to": 388,
+    "conditions": {
+      "rank": 7
+    }
+  },
+  {
+    "from": 467,
+    "to": 430,
+    "conditions": {
+      "rank": 8
+    }
+  },
+  {
+    "from": 468,
+    "to": 91,
+    "conditions": {
+      "rank": 3,
+      "HP": 1060
+    }
+  },
+  {
+    "from": 468,
+    "to": 93,
+    "conditions": {
+      "rank": 3,
+      "HP": 1090
+    }
+  },
+  {
+    "from": 468,
+    "to": 155,
+    "conditions": {
+      "rank": 3,
+      "ATK": 540
+    }
+  },
+  {
+    "from": 468,
+    "to": 156,
+    "conditions": {
+      "rank": 3,
+      "SP": 640,
+      "SPD": 430
+    }
+  },
+  {
+    "from": 468,
+    "to": 471,
+    "conditions": {
+      "rank": 3,
+      "ATK": 660,
+      "RES": 420,
+      "SPD": 540
+    }
+  },
+  {
+    "from": 469,
+    "to": 98,
+    "conditions": {
+      "rank": 3,
+      "SPD": 620
+    }
+  },
+  {
+    "from": 469,
+    "to": 132,
+    "conditions": {
+      "rank": 3,
+      "HP": 1060
+    }
+  },
+  {
+    "from": 469,
+    "to": 163,
+    "conditions": {
+      "rank": 3,
+      "SP": 380,
+      "ATK": 640
+    }
+  },
+  {
+    "from": 469,
+    "to": 166,
+    "conditions": {
+      "rank": 3,
+      "RES": 530
+    }
+  },
+  {
+    "from": 469,
+    "to": 168,
+    "conditions": {
+      "rank": 3,
+      "ATK": 660
+    }
+  },
+  {
+    "from": 469,
+    "to": 470,
+    "conditions": {
+      "rank": 3,
+      "SPD": 580
+    }
+  },
+  {
+    "from": 470,
+    "to": 250,
+    "conditions": {
+      "rank": 5,
+      "DEF": 860,
+      "INT": 850,
+      "RES": 900
+    }
+  },
+  {
+    "from": 470,
+    "to": 279,
+    "conditions": {
+      "rank": 5,
+      "INT": 870,
+      "RES": 960
+    }
+  },
+  {
+    "from": 470,
+    "to": 473,
+    "conditions": {
+      "rank": 5,
+      "SP": 620,
+      "ATK": 980,
+      "RES": 920,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 471,
+    "to": 200,
+    "conditions": {
+      "rank": 5,
+      "HP": 1760,
+      "SPD": 1020
+    }
+  },
+  {
+    "from": 471,
+    "to": 239,
+    "conditions": {
+      "rank": 5,
+      "DEF": 1100,
+      "SPD": 740
+    }
+  },
+  {
+    "from": 471,
+    "to": 472,
+    "conditions": {
+      "rank": 5,
+      "ATK": 1220,
+      "INT": 740
+    }
+  },
+  {
+    "from": 472,
+    "to": 383,
+    "conditions": {
+      "rank": 7,
+      "HP": 2400,
+      "ATK": 2220
+    }
+  },
+  {
+    "from": 472,
+    "to": 474,
+    "conditions": {
+      "rank": 7,
+      "ATK": 2420,
+      "DEF": 2060
+    }
+  },
+  {
+    "from": 473,
+    "to": 359,
+    "conditions": {
+      "rank": 7,
+      "ATK": 1430,
+      "DEF": 1790,
+      "RES": 1730
+    }
+  },
+  {
+    "from": 473,
+    "to": 475,
+    "conditions": {
+      "rank": 7,
+      "HP": 2760,
+      "RES": 1680,
+      "SPD": 1720
+    }
+  },
+  {
+    "from": 474,
+    "to": 431,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 474,
+          "personality": 6
+        },
+        {
+          "id": 475,
+          "personality": 13
+        }
+      ]
+    }
+  },
+  {
+    "from": 475,
+    "to": 431,
+    "conditions": {
+      "rank": 8,
+      "jogress": [
+        {
+          "id": 474,
+          "personality": 6
+        },
+        {
+          "id": 475,
+          "personality": 13
+        }
+      ]
+    }
+  }
+]
