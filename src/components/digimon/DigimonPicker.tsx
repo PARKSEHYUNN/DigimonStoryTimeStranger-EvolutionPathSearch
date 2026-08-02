@@ -14,6 +14,8 @@ interface DigimonPickerProps {
   selectedName: string | null;
   onSelect: (digimon: Digimon) => void;
   exclude?: (digimon: Digimon) => boolean;
+  /** Stable hook for the layout checks in scripts/check-responsive.mjs. */
+  testId: 'start' | 'end';
 }
 
 export function DigimonPicker({
@@ -22,6 +24,7 @@ export function DigimonPicker({
   selectedName,
   onSelect,
   exclude,
+  testId,
 }: DigimonPickerProps) {
   const t = useTranslations();
   const [open, setOpen] = useState(false);
@@ -32,6 +35,7 @@ export function DigimonPicker({
 
       <button
         type="button"
+        data-picker={testId}
         onClick={() => setOpen(true)}
         className="flex cursor-pointer flex-col items-center gap-1.5 rounded-xl p-2 transition-colors hover:bg-surface-sunken"
       >

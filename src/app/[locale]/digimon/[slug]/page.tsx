@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { digimonBySlug, digimons, neighborsOf } from '@/lib/digimon/data';
 import { digimonName } from '@/lib/digimon/display';
+import { AdSlot } from '@/components/ads/AdSlot';
 import { DigimonIcon } from '@/components/digimon/DigimonIcon';
 import { EvolutionLinkList } from '@/components/digimon/EvolutionLinkList';
 import { routing, type Locale } from '@/lib/i18n/routing';
@@ -36,17 +37,19 @@ export default async function DigimonDetailPage({
 
   return (
     <article className="flex flex-col gap-6">
-      <header className="flex items-center gap-5 rounded-2xl bg-surface-raised p-5 shadow-sm">
-        <DigimonIcon
-          id={digimon.id}
-          name={name}
-          size={112}
-          variant="full"
-          priority
-        />
-        <div>
-          <h1 className="text-xl font-bold text-content">{name}</h1>
-          <dl className="mt-2 flex flex-wrap gap-x-5 gap-y-1">
+      <header className="flex flex-col items-center gap-4 rounded-2xl bg-surface-raised p-4 text-center shadow-sm sm:flex-row sm:gap-5 sm:p-5 sm:text-left">
+        <div className="shrink-0">
+          <DigimonIcon
+            id={digimon.id}
+            name={name}
+            size={112}
+            variant="full"
+            priority
+          />
+        </div>
+        <div className="min-w-0">
+          <h1 className="text-xl font-bold break-words text-content">{name}</h1>
+          <dl className="mt-2 flex flex-wrap justify-center gap-x-5 gap-y-1 sm:justify-start">
             {facts.map((fact) => (
               <div key={fact.label} className="flex gap-1.5 text-sm">
                 <dt className="text-content-muted">{fact.label}</dt>
@@ -63,7 +66,7 @@ export default async function DigimonDetailPage({
       </header>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <section className="rounded-2xl bg-surface-raised p-5 shadow-sm">
+        <section className="rounded-2xl bg-surface-raised p-4 shadow-sm sm:p-5">
           <h2 className="mb-3 text-sm font-semibold text-content">
             {t('digimon_info.before_digimon')}
           </h2>
@@ -74,7 +77,7 @@ export default async function DigimonDetailPage({
           />
         </section>
 
-        <section className="rounded-2xl bg-surface-raised p-5 shadow-sm">
+        <section className="rounded-2xl bg-surface-raised p-4 shadow-sm sm:p-5">
           <h2 className="mb-3 text-sm font-semibold text-content">
             {t('digimon_info.after_digimon')}
           </h2>
@@ -85,6 +88,8 @@ export default async function DigimonDetailPage({
           />
         </section>
       </div>
+
+      <AdSlot placement="footer" />
     </article>
   );
 }

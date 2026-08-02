@@ -8,6 +8,7 @@ import { OG_LOCALE, SITE_URL } from '@/lib/site';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { CLIENT_NAMESPACES, clientMessages } from '@/lib/i18n/messages';
+import { AdSlot } from '@/components/ads/AdSlot';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -86,8 +87,9 @@ export default async function LocaleLayout({
           messages={await clientMessages(CLIENT_NAMESPACES.chrome)}
         >
           <Navbar />
-          <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">
-            {children}
+          <main className="mx-auto w-full max-w-6xl flex-1 px-3 py-5 sm:px-4 sm:py-6">
+            <AdSlot placement="leaderboard" />
+            <div className="mt-5 sm:mt-6">{children}</div>
           </main>
           <Footer />
         </NextIntlClientProvider>

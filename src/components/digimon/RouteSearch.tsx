@@ -7,6 +7,7 @@ import { findRoutes, DEFAULT_FILTERS } from '@/lib/pathfinder';
 import { digimonName } from '@/lib/digimon/display';
 import type { Digimon } from '@/lib/digimon/schema';
 import type { Locale } from '@/lib/i18n/routing';
+import { AdSlot } from '@/components/ads/AdSlot';
 import { Button } from '@/components/ui/Button';
 import { Select } from '@/components/ui/Select';
 import { Toggle } from '@/components/ui/Toggle';
@@ -57,9 +58,9 @@ export function RouteSearch() {
 
   return (
     <div className="flex flex-col gap-6">
-      <section className="rounded-2xl bg-surface-raised p-5 shadow-sm">
+      <section className="rounded-2xl bg-surface-raised p-4 shadow-sm sm:p-5">
         <div className="flex flex-wrap items-end justify-center gap-x-8 gap-y-4">
-          <div className="w-32">
+          <div className="w-28 sm:w-32">
             <Select
               label={t('evolution_path.agent_level')}
               value={agentLevel}
@@ -87,16 +88,22 @@ export function RouteSearch() {
           </div>
         </div>
 
-        <div className="mt-6 flex items-center justify-center gap-4">
+        <div className="mt-6 flex items-center justify-center gap-2 sm:gap-4">
           <DigimonPicker
+            testId="start"
             label={t('evolution_path.now_digimon')}
             selected={start}
             selectedName={start ? name(start) : null}
             onSelect={setStart}
             exclude={hideDlc}
           />
-          <ArrowRight size={20} className="mt-4 shrink-0 text-content-muted" />
+          <ArrowRight
+            size={20}
+            aria-hidden
+            className="mt-4 shrink-0 text-content-muted"
+          />
           <DigimonPicker
+            testId="end"
             label={t('evolution_path.evolution_from_digimon')}
             selected={end}
             selectedName={end ? name(end) : null}
@@ -108,7 +115,7 @@ export function RouteSearch() {
 
       <section
         aria-live="polite"
-        className="rounded-2xl bg-surface-raised p-5 shadow-sm"
+        className="rounded-2xl bg-surface-raised p-4 shadow-sm sm:p-5"
       >
         {!start || !end ? (
           <p className="py-8 text-center text-sm text-content-muted">
@@ -120,7 +127,7 @@ export function RouteSearch() {
           </p>
         ) : (
           <>
-            <div className="mb-4 flex items-center justify-between gap-3">
+            <div className="mb-4 flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
               <h2 className="text-sm font-semibold text-content">
                 {t('evolution_path.results_heading', { count: routes.length })}
               </h2>
@@ -135,7 +142,7 @@ export function RouteSearch() {
               {routes.map((route, index) => (
                 <article
                   key={route.nodes.join('-')}
-                  className="rounded-xl bg-surface-sunken p-4"
+                  className="rounded-xl bg-surface-sunken p-3 sm:p-4"
                 >
                   <h3 className="mb-3 text-xs font-semibold text-content-muted">
                     {index === 0
@@ -159,8 +166,10 @@ export function RouteSearch() {
         )}
       </section>
 
-      <section className="rounded-2xl bg-surface-raised p-5 shadow-sm">
-        <div className="mb-3 flex items-center justify-between gap-3">
+      <AdSlot placement="in-content" />
+
+      <section className="rounded-2xl bg-surface-raised p-4 shadow-sm sm:p-5">
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
           <h2 className="text-sm font-semibold text-content">
             {t('evolution_path.exception_digimon_list')}
           </h2>
@@ -179,7 +188,7 @@ export function RouteSearch() {
         ) : (
           <ul className="flex flex-wrap gap-1">
             {excluded.map((digimon) => (
-              <li key={digimon.id} className="w-24">
+              <li key={digimon.id} className="w-20 sm:w-24">
                 <DigimonCard
                   digimon={digimon}
                   name={name(digimon)}
