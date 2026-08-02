@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "evolution_path": "Evolution Path",
+    "digimon_list": "Digimon List"
+  },
+  "evolution_path": {
+    "agent_level": "Agent Level",
+    "in_jogress": "Include Jogress",
+    "in_jogress_true": "Include",
+    "in_jogress_false": "Exclude",
+    "in_dlc": "Include DLC",
+    "now_digimon": "Current Digimon",
+    "evolution_from_digimon": "Evolve to",
+    "choice_digimon": "Select Digimon",
+    "choice_digimon_message": "Please select a Digimon.",
+    "evolution_path_error": "Cannot find the evolution path. (An excluded Digimon might be on the path.)",
+    "silhouette_toggle": "View Silhouette",
+    "jogress": "Jogress",
+    "evolution": "Evolution",
+    "devolution": "De-evolution",
+    "exception_error_title": "Warning",
+    "exception_error_start": "The current Digimon cannot be added to the exclusion list.",
+    "exception_error_end": "The Digimon to evolve to cannot be added to the exclusion list.",
+    "exception_digimon_list": "Excluded Digimon List",
+    "exception_digimon_list_reset": "Reset",
+    "exception_digimon_list_message": "There are no currently excluded Digimon. (Click the ban icon on a Digimon in the path to add.)"
+  },
+  "digimon_select_modal": {
+    "title": "Select Digimon"
+  },
+  "digimon_search": {
+    "input_placeholder": "Search Digimon name",
+    "filter_option": "Filter Options",
+    "generation": "Generation",
+    "attribute": "Attribute",
+    "personality": "Base Personality",
+    "loading": "Loading..."
+  },
+  "digimon_info": {
+    "title": "Digimon Info",
+    "name": "Name",
+    "generation": "Generation",
+    "attribute": "Attribute",
+    "personality": "Base Personality",
+    "silhouette_toggle": "View Silhouette",
+    "before_digimon": "Pre-evolution",
+    "before_digimon_none": "No pre-evolutions.",
+    "after_digimon": "Post-evolution",
+    "after_digimon_none": "No post-evolutions.",
+    "agent_level": "Agent Level {agent_level} or higher",
+    "stat": "{key} {value} or higher",
+    "item": "{item} required",
+    "personality_message": "{digimon_name} with {personality} personality",
+    "agent_skill": "{key} {value} or higher"
+  },
+  "digimon_list": {
+    "title": "Digimon List"
+  },
+  "bug_report": {
+    "title": "Report a Bug",
+    "email": "Email (for reply)",
+    "replyto": "Email address to receive a reply",
+    "type": "Issue Type",
+    "choice": "Select...",
+    "ui": "UI/Design Issue",
+    "functional": "Functional Error",
+    "crash": "Crash/Freeze",
+    "etc": "Other",
+    "details": "Details",
+    "details_placeholder": "Please describe the problem in as much detail as possible.",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "error_input": "Please fill in all fields.",
+    "error_network": "A network error occurred.",
+    "error_submit": "Submission failed: {error_message}",
+    "completion_title": "Submission Complete!",
+    "completion_text": "Thank you for your valuable feedback. We will check it as soon as possible."
+  },
+  "attribute": {
+    "0": "No Data",
+    "1": "Vaccine",
+    "2": "Virus",
+    "3": "Data",
+    "4": "Free",
+    "5": "Variable",
+    "6": "Unknown"
+  },
+  "generation": {
+    "0": "In-Training I",
+    "1": "In-Training II",
+    "2": "Rookie",
+    "3": "Champion",
+    "4": "Ultimate",
+    "5": "Mega",
+    "6": "Mega +",
+    "7": "Armor",
+    "8": "Hybrid"
+  },
+  "personality": {
+    "0": "Adoring",
+    "1": "Devoted",
+    "2": "Tolerant",
+    "3": "Overprotective",
+    "4": "Zealous",
+    "5": "Brave",
+    "6": "Reckless",
+    "7": "Daring",
+    "8": "Enlightened",
+    "9": "Sly",
+    "10": "Astute",
+    "11": "Strategic",
+    "12": "Opportunistic",
+    "13": "Friendly",
+    "14": "Sociable",
+    "15": "Compassionate"
+  },
+  "item": {
+    "1": "Digi-Egg of Destiny",
+    "2": "Digi-Egg of Hope",
+    "3": "Digi-Egg of Knowledge",
+    "4": "Digi-Egg of Reliability",
+    "5": "Digi-Egg of Friendship",
+    "6": "Digi-Egg of Miracles",
+    "7": "Digi-Egg of Courage",
+    "8": "Digi-Egg of Love",
+    "9": "Digi-Egg of Sincerity",
+    "10": "Digi-Egg of Light",
+    "11": "Human Spirit of Light",
+    "12": "Human Spirit of Flame",
+    "13": "Beast Spirit of Flame",
+    "14": "Beast Spirit of Light",
+    "15": "Omega Blade"
+  },
+  "agent": {
+    "valor": "Bonds of Valor",
+    "philanthropy": "Bonds of Philanthropy",
+    "amicability": "Bonds of Amicability",
+    "wisdom": "Bonds of Wisdom"
+  },
+  "site_title": "Digimon Story Time Stranger Evolution Path Search",
+  "announcement": {
+    "message": "DLC 2 & 3 Updates Completed"
+  },
+  "footer": {
+    "disclaimer": "This is a non-profit fan-made site. All images are the property of Bandai Namco. Donations are used solely for domain maintenance and site updates."
+  },
+  "stats": {
+    "HP": "Max HP",
+    "SP": "Max SP",
+    "ATK": "Attack",
+    "DEF": "Defense",
+    "INT": "Intelligence",
+    "RES": "Spirit",
+    "SPD": "Agility",
+    "TALENT": "Talent"
+  },
+  "meta": {
+    "site_name": "DigimonTS Evolution Path",
+    "title": "Digimon Story Time Stranger Evolution Path Search",
+    "description": "Find the shortest evolution route between any two Digimon in Digimon Story: Time Stranger. Browse all 475 Digimon with their evolution requirements."
+  }
+}

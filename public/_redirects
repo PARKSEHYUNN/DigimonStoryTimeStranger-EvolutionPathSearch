@@ -1,0 +1,14 @@
+# Cloudflare Pages redirect rules.
+# Static export has no middleware, so locale entry and legacy-URL preservation
+# are handled here at the edge instead.
+
+# Bare root -> default locale. 302 (not 301) so the client-side language
+# preference handler can still move visitors to their own locale without the
+# browser having permanently cached this hop.
+/            /en/            302
+
+# Legacy SPA URLs. The old site served every language from these two paths;
+# equity is consolidated onto the default locale and the preference handler
+# forwards real visitors to their language.
+/list        /en/digimon/    301
+/list/       /en/digimon/    301

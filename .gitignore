@@ -1,3 +1,22 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Next.js
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+
+# Build artifacts
+dist
+dist-ssr
+*.local
+
+# Generated data payloads (rebuilt by `npm run data:graph`)
+src/generated
+
 # Logs
 logs
 *.log
@@ -7,10 +26,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Environment
+.env
+.env.*
+!.env.example
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +41,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Cloudflare
+.wrangler

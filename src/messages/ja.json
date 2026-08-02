@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "evolution_path": "進化ツリー",
+    "digimon_list": "デジモンリスト"
+  },
+  "evolution_path": {
+    "agent_level": "エージェントレベル",
+    "in_jogress": "ジョグレス含む",
+    "in_jogress_true": "含む",
+    "in_jogress_false": "含まない",
+    "in_dlc": "DLC含む",
+    "now_digimon": "現在のデジモン",
+    "evolution_from_digimon": "進化先デジモン",
+    "choice_digimon": "デジモン選択",
+    "choice_digimon_message": "デジモンを選択してください。",
+    "evolution_path_error": "該当の進化ツリーが見つかりません。（除外されたデジモンが経路に含まれている可能性があります。）",
+    "silhouette_toggle": "シルエット表示",
+    "jogress": "ジョグレス",
+    "evolution": "進化",
+    "devolution": "退化",
+    "exception_error_title": "警告",
+    "exception_error_start": "現在のデジモンは除外リストに追加できません。",
+    "exception_error_end": "進化先のデジモンは除外リストに追加できません。",
+    "exception_digimon_list": "除外デジモンリスト",
+    "exception_digimon_list_reset": "リセット",
+    "exception_digimon_list_message": "現在除外したデジモンがいません。（経路上のデジモンの禁止アイコンをクリックして追加してください。）"
+  },
+  "digimon_select_modal": {
+    "title": "デジモン選択"
+  },
+  "digimon_search": {
+    "input_placeholder": "デジモン名検索",
+    "filter_option": "フィルターオプション",
+    "generation": "世代",
+    "attribute": "属性",
+    "personality": "基本性格",
+    "loading": "ロード中..."
+  },
+  "digimon_info": {
+    "title": "デジモン情報",
+    "name": "名前",
+    "generation": "世代",
+    "attribute": "属性",
+    "personality": "基本性格",
+    "silhouette_toggle": "シルエット表示",
+    "before_digimon": "進化前デジモン",
+    "before_digimon_none": "進化前のデジモンがいません。",
+    "after_digimon": "進化後デジモン",
+    "after_digimon_none": "進化後のデジモンがいません。",
+    "agent_level": "エージェントレベル {agent_level} 以上",
+    "stat": "{key} {value} 以上",
+    "item": "{item} 必要",
+    "personality_message": "{personality} 性格の {digimon_name}",
+    "agent_skill": "{key} {value} 以上"
+  },
+  "digimon_list": {
+    "title": "デジモンリスト"
+  },
+  "bug_report": {
+    "title": "バグ報告",
+    "email": "Eメール (返信用)",
+    "replyto": "返信先Eメールアドレス",
+    "type": "問題の種類",
+    "choice": "選択してください...",
+    "ui": "UI/デザインの問題",
+    "functional": "機能エラー",
+    "crash": "クラッシュ/フリーズ",
+    "etc": "その他",
+    "details": "詳細内容",
+    "details_placeholder": "問題をできるだけ詳しく説明してください。",
+    "submit": "送信",
+    "cancel": "キャンセル",
+    "error_input": "すべての項目を入力してください。",
+    "error_network": "ネットワークエラーが発生しました。",
+    "error_submit": "送信失敗: {error_message}",
+    "completion_title": "送信完了！",
+    "completion_text": "貴重なご意見ありがとうございます。早急に確認いたします。"
+  },
+  "attribute": {
+    "0": "No Data",
+    "1": "ワクチン",
+    "2": "ウィルス",
+    "3": "データ",
+    "4": "フリー",
+    "5": "ヴァリアブル",
+    "6": "不明"
+  },
+  "generation": {
+    "0": "幼年期Ⅰ",
+    "1": "幼年期Ⅱ",
+    "2": "成長期",
+    "3": "成熟期",
+    "4": "完全体",
+    "5": "究極体",
+    "6": "超究極体",
+    "7": "アーマー体",
+    "8": "ハイブリッド体"
+  },
+  "personality": {
+    "0": "慈愛",
+    "1": "献身的",
+    "2": "包容力",
+    "3": "過保護",
+    "4": "熱血",
+    "5": "勇敢",
+    "6": "蛮勇",
+    "7": "豪胆",
+    "8": "天啓",
+    "9": "悪知恵",
+    "10": "聡慧",
+    "11": "戰略家",
+    "12": "日和見",
+    "13": "気さく",
+    "14": "社交的",
+    "15": "人情家"
+  },
+  "item": {
+    "1": "運命のデジメンタル",
+    "2": "希望のデジメンタル",
+    "3": "知識のデジメンタル",
+    "4": "誠実のデジメンタル",
+    "5": "友情のデジメンタル",
+    "6": "奇跡のデジメンタル",
+    "7": "勇気のデジメンタル",
+    "8": "愛情のデジメンタル",
+    "9": "純真のデジメンタル",
+    "10": "光のデジメンタル",
+    "11": "光のヒューマンスピリット",
+    "12": "炎のヒューマンスピリット",
+    "13": "炎のビーストスピリット",
+    "14": "光のビーストスピリット",
+    "15": "オメガブレード"
+  },
+  "agent": {
+    "valor": "勇壮の絆",
+    "philanthropy": "博愛の絆",
+    "amicability": "友好の絆",
+    "wisdom": "知啓の絆"
+  },
+  "site_title": "デジモンストーリー タイムストレンジャー 進化ルート検索",
+  "announcement": {
+    "message": "DLC 2・3 アップデート完了"
+  },
+  "footer": {
+    "disclaimer": "当サイトは非営利のファンサイトです。使用されているすべての画像の著作権は株式会社バンダイナムコエンターテインメントに帰属します。いただいた支援金は、ドメインの維持費およびサイトの更新にのみ使用されます。"
+  },
+  "stats": {
+    "HP": "最大HP",
+    "SP": "最大SP",
+    "ATK": "攻撃力",
+    "DEF": "防御力",
+    "INT": "知力",
+    "RES": "精神力",
+    "SPD": "敏捷性",
+    "TALENT": "才能"
+  },
+  "meta": {
+    "site_name": "デジモンTS 進化ルート",
+    "title": "デジモンストーリー タイムストレンジャー 進化ルート検索",
+    "description": "デジモンストーリー タイムストレンジャーの2体のデジモン間の最短進化ルートを検索できます。475体すべてのデジモンの進化条件を確認できます。"
+  }
+}

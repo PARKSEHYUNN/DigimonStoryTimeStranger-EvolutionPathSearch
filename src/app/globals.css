@@ -1,0 +1,93 @@
+@import 'tailwindcss';
+
+/* The app drives dark mode from a `dark` class on <html>, set before paint by
+   the inline theme script in the root layout. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url('/font/PretendardVariable.woff2') format('woff2-variations');
+  unicode-range: U+0020-007E, U+AC00-D7A3;
+}
+
+/* Japanese/CJK glyphs. The legacy stylesheet pointed this at `./woff2/…`,
+   a path that never existed, so JP text silently fell back to a system font. */
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url('/font/PretendardJPVariable.woff2') format('woff2-variations');
+  unicode-range: U+3040-309F, U+30A0-30FF, U+4E00-9FFF;
+}
+
+@theme {
+  --font-sans:
+    'Pretendard Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* Semantic design tokens. Components reference these rather than reaching for
+   raw palette values, so light/dark stays consistent in one place instead of
+   being re-derived with `dark:` variants on every element. */
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-border-subtle: var(--border-subtle);
+  --color-content: var(--content);
+  --color-content-muted: var(--content-muted);
+  --color-accent: var(--accent);
+  --color-accent-content: var(--accent-content);
+  --color-evolution: var(--evolution);
+  --color-devolution: var(--devolution);
+  --color-jogress: var(--jogress);
+}
+
+:root {
+  --surface: oklch(0.97 0.002 250);
+  --surface-raised: oklch(1 0 0);
+  --surface-sunken: oklch(0.93 0.004 250);
+  --border-subtle: oklch(0.88 0.005 250);
+  --content: oklch(0.22 0.01 250);
+  --content-muted: oklch(0.52 0.012 250);
+  --accent: oklch(0.58 0.19 258);
+  --accent-content: oklch(1 0 0);
+  --evolution: oklch(0.6 0.16 150);
+  --devolution: oklch(0.62 0.2 25);
+  --jogress: oklch(0.65 0.14 220);
+}
+
+.dark {
+  --surface: oklch(0.21 0.012 258);
+  --surface-raised: oklch(0.27 0.014 258);
+  --surface-sunken: oklch(0.16 0.01 258);
+  --border-subtle: oklch(0.35 0.014 258);
+  --content: oklch(0.96 0.003 258);
+  --content-muted: oklch(0.7 0.012 258);
+  --accent: oklch(0.68 0.16 258);
+  --accent-content: oklch(0.16 0.01 258);
+  --evolution: oklch(0.72 0.16 150);
+  --devolution: oklch(0.7 0.18 25);
+  --jogress: oklch(0.74 0.13 220);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-content);
+  }
+
+  /* Icon art is the only thing users drag by accident on mobile. */
+  img {
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+}

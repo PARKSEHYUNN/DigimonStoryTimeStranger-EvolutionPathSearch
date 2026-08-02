@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "evolution_path": "진화 트리",
+    "digimon_list": "디지몬 목록"
+  },
+  "evolution_path": {
+    "agent_level": "에이전트 레벨",
+    "in_jogress": "조그레스 포함",
+    "in_jogress_true": "포함",
+    "in_jogress_false": "비포함",
+    "in_dlc": "DLC 포함",
+    "now_digimon": "현재 디지몬",
+    "evolution_from_digimon": "진화 할 디지몬",
+    "choice_digimon": "디지몬 선택",
+    "choice_digimon_message": "디지몬을 선택 해주세요.",
+    "evolution_path_error": "해당 진화 트리를 찾을 수 없습니다. (제외된 디지몬이 경로에 포함 되어있을 수 있습니다.)",
+    "silhouette_toggle": "실루엣 보기",
+    "jogress": "조그레스",
+    "evolution": "진화",
+    "devolution": "퇴화",
+    "exception_error_title": "경고",
+    "exception_error_start": "현재 디지몬은 제외 목록에 추가 할 수 없습니다.",
+    "exception_error_end": "진화 할 디지몬은 제외 목록에 추가 할 수 없습니다.",
+    "exception_digimon_list": "제외된 디지몬 목록",
+    "exception_digimon_list_reset": "초기화",
+    "exception_digimon_list_message": "현재 제외한 디지몬이 없습니다. (경로 상 디지몬의 금지 아이콘을 클릭해 추가하세요.)"
+  },
+  "digimon_select_modal": {
+    "title": "디지몬 선택"
+  },
+  "digimon_search": {
+    "input_placeholder": "디지몬 이름 검색",
+    "filter_option": "필터 옵션",
+    "generation": "세대",
+    "attribute": "속성",
+    "personality": "기본 성격",
+    "loading": "로딩 중..."
+  },
+  "digimon_info": {
+    "title": "디지몬 정보",
+    "name": "이름",
+    "generation": "세대",
+    "attribute": "속성",
+    "personality": "기본 성격",
+    "silhouette_toggle": "실루엣 보기",
+    "before_digimon": "진화 전 디지몬",
+    "before_digimon_none": "진화 전 디지몬이 없습니다.",
+    "after_digimon": "진화 후 디지몬",
+    "after_digimon_none": "진화 후 디지몬이 없습니다.",
+    "agent_level": "에이전트 레벨 {agent_level} 이상",
+    "stat": "{key} {value} 이상",
+    "item": "{item} 필요",
+    "personality_message": "{personality} 성격 {digimon_name}",
+    "agent_skill": "{key} {value} 이상"
+  },
+  "digimon_list": {
+    "title": "디지몬 목록"
+  },
+  "bug_report": {
+    "title": "버그 제보하기",
+    "email": "이메일 (답변을 위해)",
+    "replyto": "답변 받을 이메일 주소",
+    "type": "문제 유형",
+    "choice": "선택하세요...",
+    "ui": "UI/디자인 문제",
+    "functional": "기능 오류",
+    "crash": "크래시/멈춤",
+    "etc": "기타",
+    "details": "상세 내용",
+    "details_placeholder": "문제를 최대한 자세히 설명해주세요.",
+    "submit": "제출하기",
+    "cancel": "취소",
+    "error_input": "모든 항목을 입력해주세요.",
+    "error_network": "네트워크 오류가 발생했습니다.",
+    "error_submit": "제출 실패: {error_message}",
+    "completion_title": "제출 완료!",
+    "completion_text": "소중한 의견 감사합니다. 빠른 시일 내에 확인하겠습니다."
+  },
+  "attribute": {
+    "0": "종족 불명",
+    "1": "백신",
+    "2": "바이러스",
+    "3": "데이터",
+    "4": "프리",
+    "5": "배리어블",
+    "6": "불명"
+  },
+  "generation": {
+    "0": "유년기 I",
+    "1": "유년기 II",
+    "2": "성장기",
+    "3": "성숙기",
+    "4": "완전체",
+    "5": "궁극체",
+    "6": "초궁극체",
+    "7": "아머체",
+    "8": "하이브리드체"
+  },
+  "personality": {
+    "0": "자애",
+    "1": "헌신적",
+    "2": "포용력",
+    "3": "과보호",
+    "4": "열혈",
+    "5": "용감",
+    "6": "만용",
+    "7": "대담",
+    "8": "계시",
+    "9": "잔머리",
+    "10": "지혜로움",
+    "11": "전략가",
+    "12": "기회주의자",
+    "13": "친근함",
+    "14": "사교적",
+    "15": "따뜻함"
+  },
+  "item": {
+    "1": "운명의 캡슐",
+    "2": "희망의 캡슐",
+    "3": "지식의 캡슐",
+    "4": "성실의 캡슐",
+    "5": "우정의 캡슐",
+    "6": "기적의 캡슐",
+    "7": "용기의 캡슐",
+    "8": "사랑의 캡슐",
+    "9": "순수의 캡슐",
+    "10": "빛의 캡슐",
+    "11": "빛의 휴먼 스피릿",
+    "12": "불의 휴먼 스피릿",
+    "13": "불의 비스트 스피릿",
+    "14": "빛의 비스트 스피릿",
+    "15": "오메가 블레이드"
+  },
+  "agent": {
+    "valor": "용맹의 유대",
+    "philanthropy": "박애의 유대",
+    "amicability": "우호의 유대",
+    "wisdom": "지계의 유대"
+  },
+  "site_title": "디지몬 스토리 타임 스트레인저 진화 경로 검색",
+  "announcement": {
+    "message": "DLC 2, 3 업데이트 완료"
+  },
+  "footer": {
+    "disclaimer": "본 사이트는 비영리 팬 사이트입니다. 모든 이미지의 저작권은 Bandai Namco에 있으며, 후원금은 도메인 유지 및 사이트 업데이트를 위해서만 사용됩니다."
+  },
+  "stats": {
+    "HP": "최대 체력",
+    "SP": "최대 SP",
+    "ATK": "공격력",
+    "DEF": "방어력",
+    "INT": "지력",
+    "RES": "정신",
+    "SPD": "민첩",
+    "TALENT": "재능"
+  },
+  "meta": {
+    "site_name": "디지몬TS 진화 경로",
+    "title": "디지몬 스토리 타임 스트레인저 진화 경로 검색",
+    "description": "디지몬 스토리 타임 스트레인저의 두 디지몬 사이 최단 진화 경로를 찾아보세요. 475종 전체 디지몬의 진화 조건을 확인할 수 있습니다."
+  }
+}
