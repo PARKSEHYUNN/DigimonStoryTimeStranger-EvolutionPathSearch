@@ -14,10 +14,14 @@
     "test:watch": "vitest",
     "check:responsive": "node scripts/check-responsive.mjs",
     "check:seo": "node scripts/check-seo.mjs",
+    "check:fonts": "node scripts/check-fonts.mjs",
+    "check:assets": "node scripts/check-assets.mjs",
     "check:admin": "node scripts/check-admin.mjs",
     "data:validate": "node scripts/validate-data.ts",
     "data:migrate": "node tools/migrate-legacy.mjs",
     "icons:optimize": "node scripts/optimize-icons.mjs",
+    "icons:app": "node scripts/generate-icons.mjs",
+    "fonts:subset": "node scripts/subset-fonts.mjs",
     "data:server": "node tools/data-server.ts"
   },
   "dependencies": {
@@ -41,6 +45,7 @@
     "prettier-plugin-tailwindcss": "^0.7.1",
     "puppeteer-core": "^25.4.0",
     "sharp": "^0.35.3",
+    "subset-font": "^2.5.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3",
     "vite": "^7.3.6",

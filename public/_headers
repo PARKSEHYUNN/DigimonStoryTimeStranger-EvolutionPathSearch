@@ -1,0 +1,44 @@
+# Cloudflare Pages response headers.
+#
+# Cache lifetimes here follow one rule: how long a stale copy can be served
+# before it is wrong. Only /_next/static is content-hashed, so only it gets
+# `immutable`.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  # No embedding: there is nothing here worth framing, and it removes
+  # clickjacking as a category.
+  X-Frame-Options: DENY
+  # The site has no camera, microphone or location features.
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+
+# Hashed filenames — a given URL's bytes never change.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Not hashed: /icons/42.webp keeps its name when the art is replaced, and the
+# font files keep theirs when re-subset. A week of caching with a month of
+# background revalidation keeps them effectively free without pinning a stale
+# copy for a year.
+/icons/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
+
+/font/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
+  Access-Control-Allow-Origin: *
+
+# HTML and the RSC payloads beside it must not outlive a deploy, or visitors
+# keep a previous build's page while its hashed assets are gone.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.txt
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Crawler-facing files: fresh enough to matter, cheap enough to revalidate.
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/robots.txt
+  Cache-Control: public, max-age=3600

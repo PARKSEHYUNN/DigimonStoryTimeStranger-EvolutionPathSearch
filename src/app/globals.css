@@ -1,28 +1,13 @@
 @import 'tailwindcss';
 
+/* @font-face declarations, generated alongside the subset files themselves by
+   scripts/subset-fonts.mjs so the unicode-range can never drift from what the
+   fonts actually contain. Run `npm run fonts:subset` to regenerate. */
+@import './fonts.css';
+
 /* The app drives dark mode from a `dark` class on <html>, set before paint by
    the inline theme script in the root layout. */
 @custom-variant dark (&:where(.dark, .dark *));
-
-@font-face {
-  font-family: 'Pretendard Variable';
-  font-weight: 45 920;
-  font-style: normal;
-  font-display: swap;
-  src: url('/font/PretendardVariable.woff2') format('woff2-variations');
-  unicode-range: U+0020-007E, U+AC00-D7A3;
-}
-
-/* Japanese/CJK glyphs. The legacy stylesheet pointed this at `./woff2/…`,
-   a path that never existed, so JP text silently fell back to a system font. */
-@font-face {
-  font-family: 'Pretendard Variable';
-  font-weight: 45 920;
-  font-style: normal;
-  font-display: swap;
-  src: url('/font/PretendardJPVariable.woff2') format('woff2-variations');
-  unicode-range: U+3040-309F, U+30A0-30FF, U+4E00-9FFF;
-}
 
 @theme {
   --font-sans:

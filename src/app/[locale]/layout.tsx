@@ -12,6 +12,7 @@ import { AnnouncementBanner } from '@/components/layout/AnnouncementBanner';
 import { DonateButton } from '@/components/layout/DonateButton';
 import { CLIENT_NAMESPACES, clientMessages } from '@/lib/i18n/messages';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { Analytics } from '@/components/Analytics';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -87,6 +88,7 @@ export default async function LocaleLayout({
           <Footer />
           <DonateButton />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
