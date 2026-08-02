@@ -8,6 +8,10 @@ const KOFI_URL = 'https://ko-fi.com/mesbul';
 /**
  * Floating Ko-fi link, held back for a few seconds so it does not compete with
  * the page for attention on arrival — same behaviour as the site it replaces.
+ *
+ * The official symbol carries its own palette (dark outline, white cup, orange
+ * heart) and is drawn for light backgrounds, so the button stays white in both
+ * themes rather than tinting it with the brand red the placeholder used.
  */
 export function DonateButton() {
   const t = useTranslations('donate');
@@ -27,12 +31,16 @@ export function DonateButton() {
       rel="noopener noreferrer"
       aria-label={t('label')}
       title={t('label')}
-      className="animate-pop-in fixed right-4 bottom-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#FF5E5B] text-white shadow-lg transition-transform hover:scale-110 sm:right-6 sm:bottom-6"
+      className="animate-pop-in fixed right-4 bottom-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-black/10 transition-transform hover:scale-110 sm:right-6 sm:bottom-6"
     >
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden className="h-6 w-6">
-        <path d="M18 8h-1V6H3v8a5 5 0 0 0 5 5h4a5 5 0 0 0 4.9-4H18a3 3 0 0 0 0-6zm0 4h-2v-2h2a1 1 0 0 1 0 2z" />
-        <path d="M20 2H4a1 1 0 0 0-.8 1.6L5 6h14l1.8-2.4A1 1 0 0 0 20 2z" />
-      </svg>
+      <img
+        src="/icons/kofi_symbol.svg"
+        alt=""
+        aria-hidden
+        width={28}
+        height={23}
+        className="h-[23px] w-7"
+      />
     </a>
   );
 }

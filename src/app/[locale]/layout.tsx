@@ -5,6 +5,7 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing, type Locale } from '@/lib/i18n/routing';
 import { OG_LOCALE, SITE_URL } from '@/lib/site';
+import { alternatesFor, localeUrl, otherLocales } from '@/lib/seo';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { AnnouncementBanner } from '@/components/layout/AnnouncementBanner';
@@ -26,37 +27,26 @@ export async function generateMetadata({
 
   const t = await getTranslations({ locale, namespace: 'meta' });
 
-  // Every locale advertises all three variants at their own distinct URLs.
-  const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, `${SITE_URL}/${l}/`]),
-  );
-
   return {
     metadataBase: new URL(SITE_URL),
     title: { default: t('title'), template: `%s | ${t('site_name')}` },
     description: t('description'),
-    alternates: {
-      canonical: `${SITE_URL}/${locale}/`,
-      languages: {
-        ...languages,
-        'x-default': `${SITE_URL}/${routing.defaultLocale}/`,
-      },
-    },
+    alternates: alternatesFor(locale),
     openGraph: {
       type: 'website',
       siteName: t('site_name'),
       title: t('title'),
       description: t('description'),
-      url: `${SITE_URL}/${locale}/`,
+      url: localeUrl(locale),
       locale: OG_LOCALE[locale],
-      alternateLocale: routing.locales
-        .filter((l) => l !== locale)
-        .map((l) => OG_LOCALE[l]!),
+      alternateLocale: otherLocales(locale).map((l) => OG_LOCALE[l]!),
+      images: [{ url: `${SITE_URL}/logo.png`, alt: t('site_name') }],
     },
     twitter: {
       card: 'summary',
       title: t('title'),
       description: t('description'),
+      images: [`${SITE_URL}/logo.png`],
     },
   };
 }
