@@ -10,6 +10,9 @@ export type Locale = (typeof LOCALES)[number];
  */
 export const routing = defineRouting({
   locales: LOCALES,
-  defaultLocale: 'en',
+  // Korean is the primary audience the legacy site served: it shipped
+  // `<html lang="ko">` with Korean-first metadata. Keeping it as the default
+  // means the existing search presence carries over to the new URLs.
+  defaultLocale: 'ko',
   localePrefix: 'always',
 });
