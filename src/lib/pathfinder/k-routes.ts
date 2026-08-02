@@ -1,4 +1,5 @@
 import type { Adjacency } from '../digimon/graph';
+import { CURRENT_BEHAVIOR, type PathfinderBehavior } from './behavior';
 import { findShortestRoute, hopKey, type Route } from './bfs';
 import type { FilterContext, SearchFilters } from './filters';
 
@@ -18,11 +19,16 @@ export function findKShortestRoutes(
   k: number,
   filters: SearchFilters,
   ctx: FilterContext,
+  behavior: PathfinderBehavior = CURRENT_BEHAVIOR,
 ): Route[] {
   if (k < 1) return [];
 
-  const first = findShortestRoute(adjacency, start, end, filters, ctx);
+  const first = findShortestRoute(adjacency, start, end, filters, ctx, {}, behavior);
   if (!first) return [];
+
+  // Spur searches begin partway along a route, so the start-node gate must not
+  // re-fire on them — the real start already passed it above.
+  const spurBehavior = { ...behavior, gateStartNode: false };
 
   const accepted: Route[] = [first];
   // Candidates for the next slot, deduped by node sequence.
@@ -49,10 +55,15 @@ export function findKShortestRoutes(
       // Keep the spur path loopless by removing everything already used.
       const bannedNodes = new Set(rootNodes.slice(0, -1));
 
-      const spur = findShortestRoute(adjacency, spurNode, end, filters, ctx, {
-        bannedNodes,
-        bannedHops,
-      });
+      const spur = findShortestRoute(
+        adjacency,
+        spurNode,
+        end,
+        filters,
+        ctx,
+        { bannedNodes, bannedHops },
+        spurBehavior,
+      );
       if (!spur) continue;
 
       const nodes = [...rootNodes.slice(0, -1), ...spur.nodes];

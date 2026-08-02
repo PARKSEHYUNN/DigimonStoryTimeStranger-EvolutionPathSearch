@@ -34,7 +34,7 @@ function referenceHopCount(
     if (current === end) return dist.get(current)!;
     for (const step of adjacency.get(current) ?? []) {
       if (dist.has(step.target)) continue;
-      if (!isStepAllowed(step, filters, ctx)) continue;
+      if (!isStepAllowed(current, step, filters, ctx)) continue;
       dist.set(step.target, dist.get(current)! + 1);
       queue.push(step.target);
     }

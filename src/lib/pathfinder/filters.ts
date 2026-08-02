@@ -1,5 +1,6 @@
 import type { Step } from '../digimon/graph';
 import type { Digimon } from '../digimon/schema';
+import { CURRENT_BEHAVIOR, type PathfinderBehavior } from './behavior';
 
 export interface SearchFilters {
   /** Player's agent level, 1-10. Gates which evolutions are performable. */
@@ -45,29 +46,47 @@ export function isNodeAllowed(
 }
 
 /**
+ * Whether the hop counts as evolving (gated) rather than de-evolving (free).
+ * See `PathfinderBehavior.direction` for why this is switchable.
+ */
+function isEvolvingHop(
+  from: number,
+  step: Step,
+  ctx: FilterContext,
+  behavior: PathfinderBehavior,
+): boolean {
+  if (behavior.direction === 'edge') return !step.reversed;
+
+  const source = ctx.digimonById.get(from);
+  const target = ctx.digimonById.get(step.target);
+  if (!source || !target) return !step.reversed;
+
+  return target.generation >= source.generation;
+}
+
+/**
  * Whether a single hop may be taken.
  *
  * The agent-level gate applies only when evolving forward. Walking an edge
- * backwards is de-evolution, which costs nothing — and requiring a level to
- * undo an evolution you have already performed would be incoherent.
- *
- * Note this leaves the starting Digimon ungated: the user is asserting they
- * already own it. The legacy build rejected the whole query when the start's
- * generation outranked the agent level, which produced a bare "no path found"
- * for Digimon that are obtainable without evolving at all.
+ * backwards is de-evolution, which costs nothing — requiring a level to undo
+ * an evolution you already performed would be incoherent.
  */
 export function isStepAllowed(
+  from: number,
   step: Step,
   filters: SearchFilters,
   ctx: FilterContext,
+  behavior: PathfinderBehavior = CURRENT_BEHAVIOR,
 ): boolean {
   if (!isNodeAllowed(step.target, filters, ctx)) return false;
 
+  const evolving = isEvolvingHop(from, step, ctx, behavior);
+
   if (!filters.includeJogress && step.evolution.conditions.jogress) {
-    return false;
+    if (evolving || behavior.jogressBlocksReverse) return false;
   }
 
-  if (!step.reversed && filters.agentLevel < ctx.requiredAgentLevel(step.target)) {
+  if (evolving && filters.agentLevel < ctx.requiredAgentLevel(step.target)) {
     return false;
   }
 

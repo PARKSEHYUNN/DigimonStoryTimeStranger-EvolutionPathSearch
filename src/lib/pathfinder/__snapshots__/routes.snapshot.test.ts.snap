@@ -1,0 +1,341 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`route snapshots > agent level 5, no DLC, no Jogress 1`] = `
+[
+  "Grizzlymon -> Tsunomon  [4 hops]  Grizzlymon > Lopmon > Wendigomon > Goblimon > Tsunomon",
+  "CatchMamemon -> Apocalymon  [no route]",
+  "Angewomon -> Astamon  [4 hops]  Angewomon > Gatomon > Salamon > Sangloupmon > Astamon",
+  "Chronomon DM -> Ravemon BM  [no route]",
+  "MirageGaogamon -> MegaSeadramon  [5 hops]  MirageGaogamon > IceLeomon > Frigimon > Gomamon > Ikkakumon > MegaSeadramon",
+  "Chronomon HM -> Hawkmon  [5 hops]  Chronomon HM > Butenmon > Ginryumon > Falcomon > Yokomon > Hawkmon",
+  "JewelBeemon -> Biyomon  [6 hops]  JewelBeemon > Snimon > Tentomon > Motimon > Pabumon > Yokomon > Biyomon",
+  "Ryudamon -> Huckmon  [2 hops]  Ryudamon > Greymon > Huckmon",
+  "ExTyrannomon -> Bearmon  [4 hops]  ExTyrannomon > Clockmon > Zudomon > Mojyamon > Bearmon",
+  "Tapirmon -> ExVeemon  [5 hops]  Tapirmon > Wanyamon > Dodomon > Dorimon > Dorumon > ExVeemon",
+  "Phoenixmon -> EmperorGreymon  [no route]",
+  "Keramon -> Coelamon  [3 hops]  Keramon > Octomon > Crabmon > Coelamon",
+  "Ceresmon Medium -> MudFrigimon  [3 hops]  Ceresmon Medium > Ceresmon > Deramon > MudFrigimon",
+  "PlatinumNumemon -> Drimogemon  [4 hops]  PlatinumNumemon > CatchMamemon > Geremon > Gabumon > Drimogemon",
+  "Nanimon -> Paildramon  [no route]",
+  "Gabumon (Black) -> Jupitermon  [no route]",
+  "Gaogamon -> Jesmon  [no route]",
+  "Greymon (Blue) -> Bakemon  [no route]",
+  "Huckmon -> Beowolfmon  [4 hops]  Huckmon > Nyaromon > Kudamon > Lobomon > Beowolfmon",
+  "SaberLeomon -> Gawappamon  [4 hops]  SaberLeomon > GrapLeomon > Lekismon > Terriermon > Gawappamon",
+  "Chronomon DM -> Astamon  [7 hops]  Chronomon DM > Aegiochusmon: Dark > Aegiomon > Elecmon > Seadramon > Betamon > Devimon > Astamon",
+  "Minotarumon -> Kuwagamon  [6 hops]  Minotarumon > Lopmon > Dorimon > Monodramon > Deltamon > Kimeramon > Kuwagamon",
+  "EmperorGreymon -> SaviorHuckmon  [5 hops]  EmperorGreymon > Aldamon > Agunimon > Coronamon > Firamon > SaviorHuckmon",
+  "Vulcanusmon -> Keramon  [3 hops]  Vulcanusmon > Dragomon > Octomon > Keramon",
+  "MachGaogamon -> Gaogamon  [1 hops]  MachGaogamon > Gaogamon",
+  "MetalGarurumon (Black) -> Gekomon  [no route]",
+  "Octomon -> MirageGaogamon  [no route]",
+  "Omnimon Zwart Defeat -> Mamemon  [no route]",
+  "Apocalymon -> Vademon  [6 hops]  Apocalymon > Piedmon > SkullSatamon > Devimon > Betamon > Vegiemon > Vademon",
+  "MirageGaogamon -> Shakkoumon  [no route]",
+  "BanchoLillymon -> Tsunomon  [no route]",
+  "Frigimon -> Snimon  [4 hops]  Frigimon > Gomamon > Bukamon > Crabmon > Snimon",
+  "Hisyaryumon -> BlackWarGreymon  [no route]",
+  "Examon -> Patamon  [no route]",
+  "MetalGarurumon -> Coredramon (Blue)  [6 hops]  MetalGarurumon > LoaderLeomon > Leomon > Gaomon > Turuiemon > Kotemon > Coredramon (Blue)",
+  "Coredramon (Blue) -> Lalamon  [3 hops]  Coredramon (Blue) > Kotemon > Deputymon > Lalamon",
+  "DarkSuperStarmon -> Magnamon (X Antibody)  [no route]",
+  "Omnimon -> Omnimon: Merciful Mode  [no route]",
+  "BlitzGreymon -> Hagurumon  [no route]",
+  "Meteormon -> MagnaGarurumon  [no route]",
+  "Airdramon -> Guardromon  [4 hops]  Airdramon > Megadramon > Mekanorimon > Hagurumon > Guardromon",
+  "Etemon -> Agumon (Bond of Bravery)  [no route]",
+  "Flymon -> Sukamon  [2 hops]  Flymon > Mushroomon > Sukamon",
+  "SuperStarmon -> Grizzlymon  [5 hops]  SuperStarmon > Deputymon > Kotemon > Turuiemon > Lopmon > Grizzlymon",
+  "FunBeemon -> GeoGreymon  [5 hops]  FunBeemon > Kabuterimon > Kimeramon > Greymon > Agumon > GeoGreymon",
+  "Justimon -> Mushroomon  [3 hops]  Justimon > SuperStarmon > Nanimon > Mushroomon",
+  "Gallantmon CM -> SkullGreymon  [4 hops]  Gallantmon CM > Gallantmon > WarGrowlmon > Coredramon (Green) > SkullGreymon",
+  "Lucemon -> Omnimon: Merciful Mode  [no route]",
+  "Gryphonmon -> Mushroomon  [5 hops]  Gryphonmon > Garudamon > Fugamon > Volcanomon > Nanimon > Mushroomon",
+  "Strikedramon -> Kimeramon  [3 hops]  Strikedramon > Monodramon > Deltamon > Kimeramon",
+  "Terriermon -> BlitzGreymon  [no route]",
+  "Pegasusmon -> Angewomon  [5 hops]  Pegasusmon > Patamon > Angemon > Kudamon > Reppamon > Angewomon",
+  "Junomon HM -> Falcomon  [6 hops]  Junomon HM > Junomon > Angewomon > Reppamon > Kudamon > Ginryumon > Falcomon",
+  "Sorcermon -> Cerberusmon WM  [6 hops]  Sorcermon > Kudamon > Nyaromon > Salamon > Dobermon > Cerberusmon > Cerberusmon WM",
+  "Veedramon -> BanchoStingmon  [no route]",
+  "MetalGarurumon -> BlueMeramon  [3 hops]  MetalGarurumon > WereGarurumon > Garurumon > BlueMeramon",
+  "Salamon -> Gallantmon  [no route]",
+  "Patamon -> Kuzuhamon  [no route]",
+  "Motimon -> Nanimon  [4 hops]  Motimon > Pabumon > Tanemon > Mushroomon > Nanimon",
+  "Leomon -> Cerberusmon  [5 hops]  Leomon > Bearmon > Wanyamon > Tapirmon > Kyubimon > Cerberusmon",
+]
+`;
+
+exports[`route snapshots > alternate routes (k=3) 1`] = `
+[
+  "Grizzlymon -> Tsunomon
+    1. [4] Grizzlymon > Lopmon > Wendigomon > Goblimon > Tsunomon
+    2. [4] Grizzlymon > WereGarurumon > Garurumon > Gabumon > Tsunomon
+    3. [6] Grizzlymon > Lopmon > Dorimon > Monodramon > Deltamon > Goblimon > Tsunomon",
+  "CatchMamemon -> Apocalymon
+    1. [6] CatchMamemon > MetalGarurumon (Black) > WereGarurumon (Black) > Garurumon (Black) > SkullSatamon > Piedmon > Apocalymon
+    2. [8] CatchMamemon > Gargomon > Terriermon > Mojyamon > Gomamon > Hyogamon > Phantomon > Piedmon > Apocalymon
+    3. [8] CatchMamemon > MetalGarurumon (Black) > Cerberusmon > Dobermon > DarkSuperStarmon > Ravemon > Phantomon > Piedmon > Apocalymon",
+  "Angewomon -> Astamon
+    1. [4] Angewomon > Gatomon > Salamon > Sangloupmon > Astamon
+    2. [4] Angewomon > Witchmon > Impmon > Sangloupmon > Astamon
+    3. [4] Angewomon > Mastemon > LadyDevimon > Devimon > Astamon",
+  "Chronomon DM -> Ravemon BM
+    1. [7] Chronomon DM > Butenmon > Ginryumon > Falcomon > Peckmon > Crowmon > Ravemon > Ravemon BM
+    2. [7] Chronomon DM > Butenmon > Buraimon > Hyokomon > Peckmon > Crowmon > Ravemon > Ravemon BM
+    3. [7] Chronomon DM > Butenmon > Ginryumon > SkullGreymon > Titamon > DarkSuperStarmon > Ravemon > Ravemon BM",
+  "MirageGaogamon -> MegaSeadramon
+    1. [5] MirageGaogamon > IceLeomon > Frigimon > Gomamon > Ikkakumon > MegaSeadramon
+    2. [5] MirageGaogamon > Pandamon > ShellNumemon > Otamamon > Seadramon > MegaSeadramon
+    3. [5] MirageGaogamon > IceLeomon > IceDevimon > Gomamon > Ikkakumon > MegaSeadramon",
+  "Chronomon HM -> Hawkmon
+    1. [5] Chronomon HM > Butenmon > Ginryumon > Falcomon > Yokomon > Hawkmon
+    2. [5] Chronomon HM > Butenmon > Buraimon > Hyokomon > Yokomon > Hawkmon
+    3. [5] Chronomon HM > Butenmon > Gryphonmon > Garudamon > Aquilamon > Hawkmon",
+  "JewelBeemon -> Biyomon
+    1. [6] JewelBeemon > Snimon > Tentomon > Motimon > Pabumon > Yokomon > Biyomon
+    2. [6] JewelBeemon > Flymon > FunBeemon > Tanemon > Pabumon > Yokomon > Biyomon
+    3. [6] JewelBeemon > Snimon > Wormmon > Motimon > Pabumon > Yokomon > Biyomon",
+  "Ryudamon -> Huckmon
+    1. [2] Ryudamon > Greymon > Huckmon
+    2. [4] Ryudamon > Tsunomon > Punimon > Nyaromon > Huckmon
+    3. [4] Ryudamon > Greymon > Agumon > GeoGreymon > Huckmon",
+  "ExTyrannomon -> Bearmon
+    1. [4] ExTyrannomon > Clockmon > Zudomon > Mojyamon > Bearmon
+    2. [6] ExTyrannomon > Raremon > ToyAgumon > Gargomon > Terriermon > Mojyamon > Bearmon
+    3. [6] ExTyrannomon > Clockmon > Impmon > Pagumon > Gazimon > Gaogamon > Bearmon",
+  "Tapirmon -> ExVeemon
+    1. [5] Tapirmon > Wanyamon > Dodomon > Dorimon > Dorumon > ExVeemon
+    2. [5] Tapirmon > Garurumon > Gabumon > Tsunomon > Veemon > ExVeemon
+    3. [5] Tapirmon > Unimon > Elecmon > Tsunomon > Veemon > ExVeemon",
+  "Phoenixmon -> EmperorGreymon
+    1. [6] Phoenixmon > Garudamon > Birdramon > Coronamon > Agunimon > Aldamon > EmperorGreymon
+    2. [6] Phoenixmon > Parrotmon > Birdramon > Coronamon > Agunimon > Aldamon > EmperorGreymon
+    3. [7] Phoenixmon > Garudamon > Birdramon > Coronamon > Agunimon > BurningGreymon > Aldamon > EmperorGreymon",
+  "Keramon -> Coelamon
+    1. [3] Keramon > Octomon > Crabmon > Coelamon
+    2. [3] Keramon > Octomon > Syakomon > Coelamon
+    3. [3] Keramon > Octomon > Divermon > Coelamon",
+  "Ceresmon Medium -> MudFrigimon
+    1. [3] Ceresmon Medium > Ceresmon > Deramon > MudFrigimon
+    2. [5] Ceresmon Medium > Ceresmon > Sirenmon > Kiwimon > Deramon > MudFrigimon
+    3. [5] Ceresmon Medium > Ceresmon > Deramon > Sunflowmon > Lalamon > MudFrigimon",
+  "PlatinumNumemon -> Drimogemon
+    1. [4] PlatinumNumemon > CatchMamemon > Geremon > Gabumon > Drimogemon
+    2. [6] PlatinumNumemon > Deramon > Sunflowmon > Renamon > Kyubimon > Gabumon > Drimogemon
+    3. [6] PlatinumNumemon > CatchMamemon > Guardromon > Gotsumon > Monochromon > Triceramon > Drimogemon",
+  "Nanimon -> Paildramon
+    1. [5] Nanimon > Mushroomon > Tanemon > FunBeemon > Stingmon > Paildramon
+    2. [5] Nanimon > Volcanomon > BanchoLeomon > Chaosmon > Darkdramon > Paildramon
+    3. [5] Nanimon > Mushroomon > Flymon > FunBeemon > Stingmon > Paildramon",
+  "Gabumon (Black) -> Jupitermon
+    1. [7] Gabumon (Black) > BlackGatomon > Chuumon > Gekomon > Elecmon > Aegiomon > Aegiochusmon > Jupitermon
+    2. [7] Gabumon (Black) > BlackGatomon > Chuumon > Gekomon > Elecmon > Aegiomon > Aegiochusmon: Green > Jupitermon
+    3. [7] Gabumon (Black) > BlackGatomon > Chuumon > Gekomon > Elecmon > Aegiomon > Aegiochusmon: Blue > Jupitermon",
+  "Gaogamon -> Jesmon
+    1. [2] Gaogamon > SaviorHuckmon > Jesmon
+    2. [4] Gaogamon > Gaomon > Strikedramon > SaviorHuckmon > Jesmon
+    3. [4] Gaogamon > Gazimon > BaoHuckmon > SaviorHuckmon > Jesmon",
+  "Greymon (Blue) -> Bakemon
+    1. [2] Greymon (Blue) > DemiDevimon > Bakemon
+    2. [4] Greymon (Blue) > Agumon (Black) > Devimon > Impmon > Bakemon
+    3. [4] Greymon (Blue) > DemiDevimon > Pagumon > Impmon > Bakemon",
+  "Huckmon -> Beowolfmon
+    1. [4] Huckmon > Nyaromon > Kudamon > Lobomon > Beowolfmon
+    2. [5] Huckmon > Nyaromon > Kudamon > Lobomon > KendoGarurumon > Beowolfmon
+    3. [6] Huckmon > Greymon > Ryudamon > Ginryumon > Kudamon > Lobomon > Beowolfmon",
+  "SaberLeomon -> Gawappamon
+    1. [4] SaberLeomon > GrapLeomon > Lekismon > Terriermon > Gawappamon
+    2. [6] SaberLeomon > Cerberusmon > Kyubimon > Renamon > Lekismon > Terriermon > Gawappamon
+    3. [6] SaberLeomon > GrapLeomon > Grizzlymon > Bearmon > Mojyamon > Terriermon > Gawappamon",
+]
+`;
+
+exports[`route snapshots > default filters 1`] = `
+[
+  "Grizzlymon -> Tsunomon  [4 hops]  Grizzlymon > Lopmon > Wendigomon > Goblimon > Tsunomon",
+  "CatchMamemon -> Apocalymon  [6 hops]  CatchMamemon > MetalGarurumon (Black) > WereGarurumon (Black) > Garurumon (Black) > SkullSatamon > Piedmon > Apocalymon",
+  "Angewomon -> Astamon  [4 hops]  Angewomon > Gatomon > Salamon > Sangloupmon > Astamon",
+  "Chronomon DM -> Ravemon BM  [7 hops]  Chronomon DM > Butenmon > Ginryumon > Falcomon > Peckmon > Crowmon > Ravemon > Ravemon BM",
+  "MirageGaogamon -> MegaSeadramon  [5 hops]  MirageGaogamon > IceLeomon > Frigimon > Gomamon > Ikkakumon > MegaSeadramon",
+  "Chronomon HM -> Hawkmon  [5 hops]  Chronomon HM > Butenmon > Ginryumon > Falcomon > Yokomon > Hawkmon",
+  "JewelBeemon -> Biyomon  [6 hops]  JewelBeemon > Snimon > Tentomon > Motimon > Pabumon > Yokomon > Biyomon",
+  "Ryudamon -> Huckmon  [2 hops]  Ryudamon > Greymon > Huckmon",
+  "ExTyrannomon -> Bearmon  [4 hops]  ExTyrannomon > Clockmon > Zudomon > Mojyamon > Bearmon",
+  "Tapirmon -> ExVeemon  [5 hops]  Tapirmon > Wanyamon > Dodomon > Dorimon > Dorumon > ExVeemon",
+  "Phoenixmon -> EmperorGreymon  [6 hops]  Phoenixmon > Garudamon > Birdramon > Coronamon > Agunimon > Aldamon > EmperorGreymon",
+  "Keramon -> Coelamon  [3 hops]  Keramon > Octomon > Crabmon > Coelamon",
+  "Ceresmon Medium -> MudFrigimon  [3 hops]  Ceresmon Medium > Ceresmon > Deramon > MudFrigimon",
+  "PlatinumNumemon -> Drimogemon  [4 hops]  PlatinumNumemon > CatchMamemon > Geremon > Gabumon > Drimogemon",
+  "Nanimon -> Paildramon  [5 hops]  Nanimon > Mushroomon > Tanemon > FunBeemon > Stingmon > Paildramon",
+  "Gabumon (Black) -> Jupitermon  [7 hops]  Gabumon (Black) > BlackGatomon > Chuumon > Gekomon > Elecmon > Aegiomon > Aegiochusmon > Jupitermon",
+  "Gaogamon -> Jesmon  [2 hops]  Gaogamon > SaviorHuckmon > Jesmon",
+  "Greymon (Blue) -> Bakemon  [2 hops]  Greymon (Blue) > DemiDevimon > Bakemon",
+  "Huckmon -> Beowolfmon  [4 hops]  Huckmon > Nyaromon > Kudamon > Lobomon > Beowolfmon",
+  "SaberLeomon -> Gawappamon  [4 hops]  SaberLeomon > GrapLeomon > Lekismon > Terriermon > Gawappamon",
+  "Chronomon DM -> Astamon  [7 hops]  Chronomon DM > Aegiochusmon: Dark > Aegiomon > Elecmon > Seadramon > Betamon > Devimon > Astamon",
+  "Minotarumon -> Kuwagamon  [6 hops]  Minotarumon > Lopmon > Dorimon > Monodramon > Deltamon > Kimeramon > Kuwagamon",
+  "EmperorGreymon -> SaviorHuckmon  [5 hops]  EmperorGreymon > Aldamon > Agunimon > Coronamon > Firamon > SaviorHuckmon",
+  "Vulcanusmon -> Keramon  [3 hops]  Vulcanusmon > Dragomon > Octomon > Keramon",
+  "MachGaogamon -> Gaogamon  [1 hops]  MachGaogamon > Gaogamon",
+  "MetalGarurumon (Black) -> Gekomon  [4 hops]  MetalGarurumon (Black) > CatchMamemon > Geremon > Chuumon > Gekomon",
+  "Octomon -> MirageGaogamon  [4 hops]  Octomon > Kamemon > ShellNumemon > Pandamon > MirageGaogamon",
+  "Omnimon Zwart Defeat -> Mamemon  [5 hops]  Omnimon Zwart Defeat > Omnimon Zwart > MetalGarurumon (Black) > CatchMamemon > PrinceMamemon > Mamemon",
+  "Apocalymon -> Vademon  [4 hops]  Apocalymon > Piedmon > SkullSatamon > Ebemon > Vademon",
+  "MirageGaogamon -> Shakkoumon  [5 hops]  MirageGaogamon > IceLeomon > Frigimon > Angewomon > Magnadramon > Shakkoumon",
+  "BanchoLillymon -> Tsunomon  [6 hops]  BanchoLillymon > Lillymon > Witchmon > Shamamon > Musyamon > Zubamon > Tsunomon",
+  "Frigimon -> Snimon  [4 hops]  Frigimon > Gomamon > Bukamon > Crabmon > Snimon",
+  "Hisyaryumon -> BlackWarGreymon  [5 hops]  Hisyaryumon > Airdramon > Dorumon > Dorugamon > MetalGreymon (Blue) > BlackWarGreymon",
+  "Examon -> Patamon  [6 hops]  Examon > Slayerdramon > AeroVeedramon > Airdramon > Kudamon > Angemon > Patamon",
+  "MetalGarurumon -> Coredramon (Blue)  [4 hops]  MetalGarurumon > LoaderLeomon > Chaosdramon > Gigadramon > Coredramon (Blue)",
+  "Coredramon (Blue) -> Lalamon  [3 hops]  Coredramon (Blue) > Kotemon > Deputymon > Lalamon",
+  "DarkSuperStarmon -> Magnamon (X Antibody)  [6 hops]  DarkSuperStarmon > Dobermon > Salamon > Veedramon > Veemon > Magnamon > Magnamon (X Antibody)",
+  "Omnimon -> Omnimon: Merciful Mode  [1 hops]  Omnimon > Omnimon: Merciful Mode",
+  "BlitzGreymon -> Hagurumon  [5 hops]  BlitzGreymon > MetalGreymon > Greymon > Megadramon > Mekanorimon > Hagurumon",
+  "Meteormon -> MagnaGarurumon  [7 hops]  Meteormon > Frigimon > Lunamon > Nyaromon > Kudamon > Lobomon > Beowolfmon > MagnaGarurumon",
+  "Airdramon -> Guardromon  [4 hops]  Airdramon > Megadramon > Mekanorimon > Hagurumon > Guardromon",
+  "Etemon -> Agumon (Bond of Bravery)  [3 hops]  Etemon > Numemon > Agumon > Agumon (Bond of Bravery)",
+  "Flymon -> Sukamon  [2 hops]  Flymon > Mushroomon > Sukamon",
+  "SuperStarmon -> Grizzlymon  [5 hops]  SuperStarmon > Deputymon > Kotemon > Turuiemon > Lopmon > Grizzlymon",
+  "FunBeemon -> GeoGreymon  [5 hops]  FunBeemon > Kabuterimon > Kimeramon > Greymon > Agumon > GeoGreymon",
+  "Justimon -> Mushroomon  [3 hops]  Justimon > SuperStarmon > Nanimon > Mushroomon",
+  "Gallantmon CM -> SkullGreymon  [4 hops]  Gallantmon CM > Gallantmon > WarGrowlmon > Coredramon (Green) > SkullGreymon",
+  "Lucemon -> Omnimon: Merciful Mode  [7 hops]  Lucemon > Tokomon > Coronamon > BaoHuckmon > LoaderLeomon > MetalGarurumon > Omnimon > Omnimon: Merciful Mode",
+  "Gryphonmon -> Mushroomon  [5 hops]  Gryphonmon > Garudamon > Fugamon > Volcanomon > Nanimon > Mushroomon",
+  "Strikedramon -> Kimeramon  [3 hops]  Strikedramon > Monodramon > Deltamon > Kimeramon",
+  "Terriermon -> BlitzGreymon  [5 hops]  Terriermon > Lekismon > WereGarurumon > CresGarurumon > Omnimon Alter-S > BlitzGreymon",
+  "Pegasusmon -> Angewomon  [5 hops]  Pegasusmon > Patamon > Angemon > Kudamon > Reppamon > Angewomon",
+  "Junomon HM -> Falcomon  [6 hops]  Junomon HM > Junomon > Angewomon > Reppamon > Kudamon > Ginryumon > Falcomon",
+  "Sorcermon -> Cerberusmon WM  [5 hops]  Sorcermon > Lunamon > Frigimon > IceLeomon > SaberLeomon > Cerberusmon WM",
+  "Veedramon -> BanchoStingmon  [6 hops]  Veedramon > Veemon > ExVeemon > Dinobeemon > Stingmon > JewelBeemon > BanchoStingmon",
+  "MetalGarurumon -> BlueMeramon  [3 hops]  MetalGarurumon > WereGarurumon > Garurumon > BlueMeramon",
+  "Salamon -> Gallantmon  [5 hops]  Salamon > Nyaromon > Huckmon > Growlmon > WarGrowlmon > Gallantmon",
+  "Patamon -> Kuzuhamon  [5 hops]  Patamon > Angemon > MagnaAngemon > SlashAngemon > Matadormon > Kuzuhamon",
+  "Motimon -> Nanimon  [4 hops]  Motimon > Pabumon > Tanemon > Mushroomon > Nanimon",
+  "Leomon -> Cerberusmon  [3 hops]  Leomon > GrapLeomon > SaberLeomon > Cerberusmon",
+  "Aegiochusmon: Dark -> Magnamon  [5 hops]  Aegiochusmon: Dark > Aegiomon > Elecmon > Tsunomon > Veemon > Magnamon",
+  "Chirinmon -> Witchmon  [3 hops]  Chirinmon > Reppamon > Angewomon > Witchmon",
+  "Elecmon -> Susanomon  [8 hops]  Elecmon > Tsunomon > Punimon > Nyaromon > Kudamon > Lobomon > Beowolfmon > MagnaGarurumon > Susanomon",
+  "Tsumemon -> Divermon  [3 hops]  Tsumemon > Keramon > Octomon > Divermon",
+  "TigerVespamon -> Gaiomon  [6 hops]  TigerVespamon > JewelBeemon > Flymon > Megadramon > Airdramon > Hisyaryumon > Gaiomon",
+  "Dorimon -> Agumon (Bond of Bravery)  [4 hops]  Dorimon > Monodramon > Raptordramon > Agumon > Agumon (Bond of Bravery)",
+  "IceDevimon -> BanchoStingmon  [6 hops]  IceDevimon > Gomamon > Bukamon > Crabmon > Snimon > JewelBeemon > BanchoStingmon",
+  "WaruSeadramon -> Poyomon  [4 hops]  WaruSeadramon > Coelamon > Crabmon > Bukamon > Poyomon",
+  "Cyberdramon -> ExTyrannomon  [4 hops]  Cyberdramon > GeoGreymon > Guilmon > Tyrannomon > ExTyrannomon",
+  "Knightmon -> CatchMamemon  [4 hops]  Knightmon > ZubaEagermon > Shoutmon > Gargomon > CatchMamemon",
+  "Omnimon (X Antibody) -> Datamon  [7 hops]  Omnimon (X Antibody) > Omnimon > WarGreymon > MetalGreymon > Greymon > Megadramon > Mekanorimon > Datamon",
+  "Zudomon -> Aegiochusmon: Blue  [6 hops]  Zudomon > Ikkakumon > Gabumon > Tsunomon > Elecmon > Aegiomon > Aegiochusmon: Blue",
+  "Gabumon (Black) -> Lotosmon  [5 hops]  Gabumon (Black) > Tsumemon > Keramon > Wendigomon > Arukenimon > Lotosmon",
+  "Tankmon -> Nyaromon  [4 hops]  Tankmon > Zubamon > Tsunomon > Punimon > Nyaromon",
+  "Gigadramon -> Dragomon  [4 hops]  Gigadramon > Raptordramon > Monodramon > Kurisarimon > Dragomon",
+  "Tankdramon -> Gaiomon  [5 hops]  Tankdramon > Raptordramon > Agumon > Greymon > MetalGreymon > Gaiomon",
+  "Chronomon HM -> Salamon  [5 hops]  Chronomon HM > Butenmon > Ginryumon > Kudamon > Nyaromon > Salamon",
+  "SkullBaluchimon -> EmperorGreymon  [7 hops]  SkullBaluchimon > BlackGatomon > Gazimon > BaoHuckmon > Coronamon > Agunimon > Aldamon > EmperorGreymon",
+  "Marsmon -> Kokuwamon  [5 hops]  Marsmon > GrapLeomon > Leopardmon > Knightmon > Clockmon > Kokuwamon",
+  "GraceNovamon -> Icemon  [3 hops]  GraceNovamon > Dianamon > Crescemon > Icemon",
+  "Gotsumon -> Duramon  [4 hops]  Gotsumon > Starmon > Solarmon > Guardromon (Gold) > Duramon",
+  "HerculesKabuterimon -> Nanimon  [4 hops]  HerculesKabuterimon > MegaKabuterimon > Flymon > Mushroomon > Nanimon",
+  "Jupitermon -> Scorpiomon  [5 hops]  Jupitermon > Aegiochusmon > Aegiomon > Elecmon > Kuwagamon > Scorpiomon",
+  "Elecmon -> Butenmon  [4 hops]  Elecmon > Tsunomon > Zubamon > Buraimon > Butenmon",
+  "Taomon -> Pumpkinmon  [2 hops]  Taomon > Woodmon > Pumpkinmon",
+  "Megidramon -> Geremon  [4 hops]  Megidramon > Megadramon > Flymon > Gizamon > Geremon",
+  "Nyaromon -> JewelBeemon  [5 hops]  Nyaromon > Kudamon > Airdramon > Megadramon > Flymon > JewelBeemon",
+  "Floramon -> Agumon (Bond of Bravery)  [5 hops]  Floramon > Vegiemon > Betamon > Koromon > Agumon > Agumon (Bond of Bravery)",
+  "Flymon -> MetalMamemon  [5 hops]  Flymon > Gizamon > Geremon > Chuumon > PlatinumSukamon > MetalMamemon",
+  "Waspmon -> Witchmon  [4 hops]  Waspmon > Tentomon > Sunflowmon > Lillymon > Witchmon",
+  "Enbarrmon -> Rosemon BM  [6 hops]  Enbarrmon > Kyubimon > Renamon > Sunflowmon > Pumpkinmon > Rosemon > Rosemon BM",
+  "Bacchusmon -> Lopmon  [5 hops]  Bacchusmon > Digitamamon > Ogremon > Goblimon > Wendigomon > Lopmon",
+  "Airdramon -> Muchomon  [1 hops]  Airdramon > Muchomon",
+  "Ryudamon -> Cerberusmon WM  [3 hops]  Ryudamon > Monochromon > Cerberusmon > Cerberusmon WM",
+  "Apollomon -> Dobermon  [4 hops]  Apollomon > Volcanomon > Starmon > DarkSuperStarmon > Dobermon",
+  "Agumon (Black) -> Elecmon  [4 hops]  Agumon (Black) > Coredramon (Blue) > Dracomon > Seadramon > Elecmon",
+  "Unimon -> Greymon  [4 hops]  Unimon > Tapirmon > Garurumon > Kimeramon > Greymon",
+  "Huckmon -> GranKuwagamon  [5 hops]  Huckmon > Greymon > Kimeramon > Kuwagamon > Okuwamon > GranKuwagamon",
+  "Wendigomon -> Gawappamon  [4 hops]  Wendigomon > Keramon > Octomon > Crabmon > Gawappamon",
+  "Tsumemon -> Millenniummon  [5 hops]  Tsumemon > Keramon > Mekanorimon > Megadramon > Machinedramon > Millenniummon",
+  "Pabumon -> Renamon  [4 hops]  Pabumon > Tanemon > Floramon > Sunflowmon > Renamon",
+  "Pabumon -> IceDevimon  [5 hops]  Pabumon > Tanemon > Palmon > Mojyamon > Gomamon > IceDevimon",
+  "Sakuyamon -> Growlmon  [6 hops]  Sakuyamon > Taomon > Garurumon > Tapirmon > Meramon > Coronamon > Growlmon",
+  "Lunamon -> Gaiomon  [5 hops]  Lunamon > Nyaromon > Kudamon > Airdramon > Hisyaryumon > Gaiomon",
+  "Turuiemon -> Venusmon  [4 hops]  Turuiemon > Matadormon > Kuzuhamon > Taomon > Venusmon",
+  "Strikedramon -> Magnadramon  [6 hops]  Strikedramon > Monodramon > Dorimon > SnowGoblimon > Gatomon > Angewomon > Magnadramon",
+  "RustTyrannomon -> Cerberusmon WM  [5 hops]  RustTyrannomon > ExTyrannomon > Belphemon SM > Astamon > Plutomon > Cerberusmon WM",
+  "Otamamon -> Dorumon  [4 hops]  Otamamon > Seadramon > Hisyaryumon > Airdramon > Dorumon",
+  "FunBeemon -> Wizardmon  [5 hops]  FunBeemon > Tanemon > Pabumon > Yokomon > Biyomon > Wizardmon",
+  "Palmon -> Octomon  [3 hops]  Palmon > Kurisarimon > Keramon > Octomon",
+  "Turuiemon -> Eaglemon  [6 hops]  Turuiemon > Gaomon > Wanyamon > Tapirmon > Unimon > Chirinmon > Eaglemon",
+  "GreatGrizzlymon -> Hawkmon  [6 hops]  GreatGrizzlymon > Grizzlymon > Bearmon > Mojyamon > Mistymon > Firamon > Hawkmon",
+  "Aquilamon -> Coronamon  [3 hops]  Aquilamon > Biyomon > Birdramon > Coronamon",
+  "Lillymon -> DemiDevimon  [4 hops]  Lillymon > Witchmon > Impmon > Pagumon > DemiDevimon",
+  "Shamamon -> Digmon  [5 hops]  Shamamon > Fugamon > Volcanomon > Golemon > Armadillomon > Digmon",
+  "Tankdramon -> Angemon  [5 hops]  Tankdramon > Raptordramon > Dorumon > Airdramon > Kudamon > Angemon",
+  "Pandamon -> BeelStarmon  [3 hops]  Pandamon > BlackGatomon > LadyDevimon > BeelStarmon",
+  "Beelzemon -> Lopmon  [3 hops]  Beelzemon > SkullMeramon > Wendigomon > Lopmon",
+  "GroundLocomon -> SkullSeadramon  [7 hops]  GroundLocomon > BigMamemon > Tankmon > Zubamon > Tsunomon > Ryudamon > Coelamon > SkullSeadramon",
+  "BanchoLeomon -> Lilamon  [5 hops]  BanchoLeomon > GrapLeomon > Lekismon > Renamon > Sunflowmon > Lilamon",
+]
+`;
+
+exports[`route snapshots > legacy behavior preset 1`] = `
+[
+  "Grizzlymon -> Tsunomon  [4 hops]  Grizzlymon > Lopmon > Wendigomon > Goblimon > Tsunomon",
+  "CatchMamemon -> Apocalymon  [6 hops]  CatchMamemon > MetalGarurumon (Black) > WereGarurumon (Black) > Garurumon (Black) > SkullSatamon > Piedmon > Apocalymon",
+  "Angewomon -> Astamon  [4 hops]  Angewomon > Gatomon > Salamon > Sangloupmon > Astamon",
+  "Chronomon DM -> Ravemon BM  [7 hops]  Chronomon DM > Butenmon > Ginryumon > Falcomon > Peckmon > Crowmon > Ravemon > Ravemon BM",
+  "MirageGaogamon -> MegaSeadramon  [5 hops]  MirageGaogamon > IceLeomon > Frigimon > Gomamon > Ikkakumon > MegaSeadramon",
+  "Chronomon HM -> Hawkmon  [5 hops]  Chronomon HM > Butenmon > Ginryumon > Falcomon > Yokomon > Hawkmon",
+  "JewelBeemon -> Biyomon  [6 hops]  JewelBeemon > Snimon > Tentomon > Motimon > Pabumon > Yokomon > Biyomon",
+  "Ryudamon -> Huckmon  [2 hops]  Ryudamon > Greymon > Huckmon",
+  "ExTyrannomon -> Bearmon  [4 hops]  ExTyrannomon > Clockmon > Zudomon > Mojyamon > Bearmon",
+  "Tapirmon -> ExVeemon  [5 hops]  Tapirmon > Wanyamon > Dodomon > Dorimon > Dorumon > ExVeemon",
+  "Phoenixmon -> EmperorGreymon  [6 hops]  Phoenixmon > Garudamon > Birdramon > Coronamon > Agunimon > Aldamon > EmperorGreymon",
+  "Keramon -> Coelamon  [3 hops]  Keramon > Octomon > Crabmon > Coelamon",
+  "Ceresmon Medium -> MudFrigimon  [3 hops]  Ceresmon Medium > Ceresmon > Deramon > MudFrigimon",
+  "PlatinumNumemon -> Drimogemon  [4 hops]  PlatinumNumemon > CatchMamemon > Geremon > Gabumon > Drimogemon",
+  "Nanimon -> Paildramon  [5 hops]  Nanimon > Mushroomon > Tanemon > FunBeemon > Stingmon > Paildramon",
+  "Gabumon (Black) -> Jupitermon  [7 hops]  Gabumon (Black) > BlackGatomon > Chuumon > Gekomon > Elecmon > Aegiomon > Aegiochusmon > Jupitermon",
+  "Gaogamon -> Jesmon  [2 hops]  Gaogamon > SaviorHuckmon > Jesmon",
+  "Greymon (Blue) -> Bakemon  [2 hops]  Greymon (Blue) > DemiDevimon > Bakemon",
+  "Huckmon -> Beowolfmon  [4 hops]  Huckmon > Nyaromon > Kudamon > Lobomon > Beowolfmon",
+  "SaberLeomon -> Gawappamon  [4 hops]  SaberLeomon > GrapLeomon > Lekismon > Terriermon > Gawappamon",
+  "Chronomon DM -> Astamon  [7 hops]  Chronomon DM > Aegiochusmon: Dark > Aegiomon > Elecmon > Seadramon > Betamon > Devimon > Astamon",
+  "Minotarumon -> Kuwagamon  [6 hops]  Minotarumon > Lopmon > Dorimon > Monodramon > Deltamon > Kimeramon > Kuwagamon",
+  "EmperorGreymon -> SaviorHuckmon  [5 hops]  EmperorGreymon > Aldamon > Agunimon > Coronamon > Firamon > SaviorHuckmon",
+  "Vulcanusmon -> Keramon  [3 hops]  Vulcanusmon > Dragomon > Octomon > Keramon",
+  "MachGaogamon -> Gaogamon  [1 hops]  MachGaogamon > Gaogamon",
+  "MetalGarurumon (Black) -> Gekomon  [4 hops]  MetalGarurumon (Black) > CatchMamemon > Geremon > Chuumon > Gekomon",
+  "Octomon -> MirageGaogamon  [4 hops]  Octomon > Kamemon > ShellNumemon > Pandamon > MirageGaogamon",
+  "Omnimon Zwart Defeat -> Mamemon  [5 hops]  Omnimon Zwart Defeat > Omnimon Zwart > MetalGarurumon (Black) > CatchMamemon > PrinceMamemon > Mamemon",
+  "Apocalymon -> Vademon  [4 hops]  Apocalymon > Piedmon > SkullSatamon > Ebemon > Vademon",
+  "MirageGaogamon -> Shakkoumon  [5 hops]  MirageGaogamon > IceLeomon > Frigimon > Angewomon > Magnadramon > Shakkoumon",
+  "BanchoLillymon -> Tsunomon  [6 hops]  BanchoLillymon > Lillymon > Witchmon > Shamamon > Musyamon > Zubamon > Tsunomon",
+  "Frigimon -> Snimon  [4 hops]  Frigimon > Gomamon > Bukamon > Crabmon > Snimon",
+  "Hisyaryumon -> BlackWarGreymon  [5 hops]  Hisyaryumon > Airdramon > Dorumon > Dorugamon > MetalGreymon (Blue) > BlackWarGreymon",
+  "Examon -> Patamon  [6 hops]  Examon > Slayerdramon > AeroVeedramon > Airdramon > Kudamon > Angemon > Patamon",
+  "MetalGarurumon -> Coredramon (Blue)  [4 hops]  MetalGarurumon > LoaderLeomon > Chaosdramon > Gigadramon > Coredramon (Blue)",
+  "Coredramon (Blue) -> Lalamon  [3 hops]  Coredramon (Blue) > Kotemon > Deputymon > Lalamon",
+  "DarkSuperStarmon -> Magnamon (X Antibody)  [6 hops]  DarkSuperStarmon > Dobermon > Salamon > Veedramon > Veemon > Magnamon > Magnamon (X Antibody)",
+  "Omnimon -> Omnimon: Merciful Mode  [1 hops]  Omnimon > Omnimon: Merciful Mode",
+  "BlitzGreymon -> Hagurumon  [5 hops]  BlitzGreymon > MetalGreymon > Greymon > Megadramon > Mekanorimon > Hagurumon",
+  "Meteormon -> MagnaGarurumon  [7 hops]  Meteormon > Frigimon > Lunamon > Nyaromon > Kudamon > Lobomon > Beowolfmon > MagnaGarurumon",
+  "Airdramon -> Guardromon  [4 hops]  Airdramon > Megadramon > Mekanorimon > Hagurumon > Guardromon",
+  "Etemon -> Agumon (Bond of Bravery)  [3 hops]  Etemon > Numemon > Agumon > Agumon (Bond of Bravery)",
+  "Flymon -> Sukamon  [2 hops]  Flymon > Mushroomon > Sukamon",
+  "SuperStarmon -> Grizzlymon  [5 hops]  SuperStarmon > Deputymon > Kotemon > Turuiemon > Lopmon > Grizzlymon",
+  "FunBeemon -> GeoGreymon  [5 hops]  FunBeemon > Kabuterimon > Kimeramon > Greymon > Agumon > GeoGreymon",
+  "Justimon -> Mushroomon  [3 hops]  Justimon > SuperStarmon > Nanimon > Mushroomon",
+  "Gallantmon CM -> SkullGreymon  [4 hops]  Gallantmon CM > Gallantmon > WarGrowlmon > Coredramon (Green) > SkullGreymon",
+  "Lucemon -> Omnimon: Merciful Mode  [7 hops]  Lucemon > Tokomon > Coronamon > BaoHuckmon > LoaderLeomon > MetalGarurumon > Omnimon > Omnimon: Merciful Mode",
+  "Gryphonmon -> Mushroomon  [5 hops]  Gryphonmon > Garudamon > Fugamon > Volcanomon > Nanimon > Mushroomon",
+  "Strikedramon -> Kimeramon  [3 hops]  Strikedramon > Monodramon > Deltamon > Kimeramon",
+  "Terriermon -> BlitzGreymon  [5 hops]  Terriermon > Lekismon > WereGarurumon > CresGarurumon > Omnimon Alter-S > BlitzGreymon",
+  "Pegasusmon -> Angewomon  [5 hops]  Pegasusmon > Patamon > Angemon > Kudamon > Reppamon > Angewomon",
+  "Junomon HM -> Falcomon  [6 hops]  Junomon HM > Junomon > Angewomon > Reppamon > Kudamon > Ginryumon > Falcomon",
+  "Sorcermon -> Cerberusmon WM  [5 hops]  Sorcermon > Lunamon > Frigimon > IceLeomon > SaberLeomon > Cerberusmon WM",
+  "Veedramon -> BanchoStingmon  [6 hops]  Veedramon > Veemon > ExVeemon > Dinobeemon > Stingmon > JewelBeemon > BanchoStingmon",
+  "MetalGarurumon -> BlueMeramon  [3 hops]  MetalGarurumon > WereGarurumon > Garurumon > BlueMeramon",
+  "Salamon -> Gallantmon  [5 hops]  Salamon > Nyaromon > Huckmon > Growlmon > WarGrowlmon > Gallantmon",
+  "Patamon -> Kuzuhamon  [5 hops]  Patamon > Angemon > MagnaAngemon > SlashAngemon > Matadormon > Kuzuhamon",
+  "Motimon -> Nanimon  [4 hops]  Motimon > Pabumon > Tanemon > Mushroomon > Nanimon",
+  "Leomon -> Cerberusmon  [3 hops]  Leomon > GrapLeomon > SaberLeomon > Cerberusmon",
+]
+`;

@@ -1,4 +1,5 @@
 import type { Adjacency, Step } from '../digimon/graph';
+import { CURRENT_BEHAVIOR, type PathfinderBehavior } from './behavior';
 import { isNodeAllowed, isStepAllowed } from './filters';
 import type { FilterContext, SearchFilters } from './filters';
 
@@ -33,12 +34,20 @@ export function findShortestRoute(
   filters: SearchFilters,
   ctx: FilterContext,
   restrictions: Restrictions = {},
+  behavior: PathfinderBehavior = CURRENT_BEHAVIOR,
 ): Route | null {
   const { bannedNodes, bannedHops } = restrictions;
 
   if (!isNodeAllowed(start, filters, ctx)) return null;
   if (!isNodeAllowed(end, filters, ctx)) return null;
   if (bannedNodes?.has(start) || bannedNodes?.has(end)) return null;
+
+  // Opt-in rollback: refuse the query when the player could not have evolved
+  // into the Digimon they say they are holding.
+  if (behavior.gateStartNode && filters.agentLevel < ctx.requiredAgentLevel(start)) {
+    return null;
+  }
+
   if (start === end) return { nodes: [start], steps: [] };
 
   // Predecessor plus the hop used to get there. The hop matters: bidirectional
@@ -60,7 +69,7 @@ export function findShortestRoute(
       if (visited.has(target)) continue;
       if (bannedNodes?.has(target)) continue;
       if (bannedHops?.has(hopKey(current, target))) continue;
-      if (!isStepAllowed(step, filters, ctx)) continue;
+      if (!isStepAllowed(current, step, filters, ctx, behavior)) continue;
 
       visited.add(target);
       cameFrom.set(target, { prev: current, step });
