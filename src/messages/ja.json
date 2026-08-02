@@ -1,7 +1,10 @@
 {
   "nav": {
-    "evolution_path": "進化ツリー",
-    "digimon_list": "デジモンリスト"
+    "evolution_path": "ルート検索",
+    "digimon_list": "デジモンリスト",
+    "brand": "進化ルート",
+    "change_language": "言語を変更",
+    "toggle_theme": "ダークモード切替"
   },
   "evolution_path": {
     "agent_level": "エージェントレベル",
@@ -23,7 +26,14 @@
     "exception_error_end": "進化先のデジモンは除外リストに追加できません。",
     "exception_digimon_list": "除外デジモンリスト",
     "exception_digimon_list_reset": "リセット",
-    "exception_digimon_list_message": "現在除外したデジモンがいません。（経路上のデジモンの禁止アイコンをクリックして追加してください。）"
+    "exception_digimon_list_message": "現在除外したデジモンがいません。（経路上のデジモンの禁止アイコンをクリックして追加してください。）",
+    "heading": "進化ルート検索",
+    "subheading": "現在のデジモンと目標のデジモンを選ぶと、最短ルートと代替ルートをすぐに表示します。",
+    "results_heading": "ルート {count}件",
+    "shortest_route": "最短ルート — {hops}ステップ",
+    "alternate_route": "代替 {index} — {hops}ステップ",
+    "exclude_digimon": "{name} をルートから除外",
+    "remove_exclusion": "{name} を除外リストから解除"
   },
   "digimon_select_modal": {
     "title": "デジモン選択"
@@ -34,7 +44,10 @@
     "generation": "世代",
     "attribute": "属性",
     "personality": "基本性格",
-    "loading": "ロード中..."
+    "loading": "ロード中...",
+    "reset": "検索・フィルターをリセット",
+    "result_count": "{count}体",
+    "no_results": "条件に合うデジモンがいません。"
   },
   "digimon_info": {
     "title": "デジモン情報",
@@ -54,7 +67,8 @@
     "agent_skill": "{key} {value} 以上"
   },
   "digimon_list": {
-    "title": "デジモンリスト"
+    "title": "デジモンリスト",
+    "description": "育成可能なデジモン475体と進化条件を確認できます。"
   },
   "bug_report": {
     "title": "バグ報告",
@@ -137,7 +151,6 @@
     "amicability": "友好の絆",
     "wisdom": "知啓の絆"
   },
-  "site_title": "デジモンストーリー タイムストレンジャー 進化ルート検索",
   "announcement": {
     "message": "DLC 2・3 アップデート完了"
   },
@@ -158,5 +171,11 @@
     "site_name": "デジモンTS 進化ルート",
     "title": "デジモンストーリー タイムストレンジャー 進化ルート検索",
     "description": "デジモンストーリー タイムストレンジャーの2体のデジモン間の最短進化ルートを検索できます。475体すべてのデジモンの進化条件を確認できます。"
+  },
+  "conditions": {
+    "level": "Lv {value} 以上",
+    "stat": "{stat} {value} 以上",
+    "item": "{item} が必要",
+    "jogress_partner": "{digimon}（{personality}）"
   }
 }

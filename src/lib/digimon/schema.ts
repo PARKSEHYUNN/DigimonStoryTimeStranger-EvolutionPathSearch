@@ -61,16 +61,32 @@ const jogressPartner = z.object({
   personality: z.number().int().min(0).max(15),
 });
 
+const threshold = z.number().int().nonnegative().optional();
+
+/**
+ * Written out key by key rather than generated from STAT_KEYS/BOND_KEYS: a
+ * computed spread erases the field names from the inferred type, leaving
+ * consumers unable to read `conditions.HP` without an index signature.
+ */
 export const evolutionConditionsSchema = z
   .object({
     /** Minimum level ("rank" in the source data). Present on every edge. */
     rank: z.number().int().positive(),
-    ...Object.fromEntries(
-      STAT_KEYS.map((k) => [k, z.number().int().nonnegative().optional()]),
-    ),
-    ...Object.fromEntries(
-      BOND_KEYS.map((k) => [k, z.number().int().nonnegative().optional()]),
-    ),
+
+    HP: threshold,
+    SP: threshold,
+    ATK: threshold,
+    DEF: threshold,
+    INT: threshold,
+    RES: threshold,
+    SPD: threshold,
+    TALENT: threshold,
+
+    valor: threshold,
+    philanthropy: threshold,
+    amicability: threshold,
+    wisdom: threshold,
+
     /** Required item, referencing items.json. */
     item: z.number().int().positive().optional(),
     /** Exactly two partners when present. */

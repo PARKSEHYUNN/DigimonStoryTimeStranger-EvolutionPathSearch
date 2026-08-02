@@ -1,7 +1,10 @@
 {
   "nav": {
-    "evolution_path": "Evolution Path",
-    "digimon_list": "Digimon List"
+    "evolution_path": "Route Search",
+    "digimon_list": "Digimon List",
+    "brand": "Evolution Path",
+    "change_language": "Change language",
+    "toggle_theme": "Toggle dark mode"
   },
   "evolution_path": {
     "agent_level": "Agent Level",
@@ -23,7 +26,14 @@
     "exception_error_end": "The Digimon to evolve to cannot be added to the exclusion list.",
     "exception_digimon_list": "Excluded Digimon List",
     "exception_digimon_list_reset": "Reset",
-    "exception_digimon_list_message": "There are no currently excluded Digimon. (Click the ban icon on a Digimon in the path to add.)"
+    "exception_digimon_list_message": "There are no currently excluded Digimon. (Click the ban icon on a Digimon in the path to add.)",
+    "heading": "Evolution Path Search",
+    "subheading": "Pick where you are and where you want to go. The shortest route is found instantly, with alternates.",
+    "results_heading": "{count, plural, one {# route} other {# routes}} found",
+    "shortest_route": "Shortest — {hops, plural, one {# hop} other {# hops}}",
+    "alternate_route": "Alternate {index} — {hops, plural, one {# hop} other {# hops}}",
+    "exclude_digimon": "Exclude {name} from routes",
+    "remove_exclusion": "Remove {name} from the exclusion list"
   },
   "digimon_select_modal": {
     "title": "Select Digimon"
@@ -34,7 +44,10 @@
     "generation": "Generation",
     "attribute": "Attribute",
     "personality": "Base Personality",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "reset": "Clear search and filters",
+    "result_count": "{count, plural, one {# Digimon} other {# Digimon}}",
+    "no_results": "No Digimon match these filters."
   },
   "digimon_info": {
     "title": "Digimon Info",
@@ -54,7 +67,8 @@
     "agent_skill": "{key} {value} or higher"
   },
   "digimon_list": {
-    "title": "Digimon List"
+    "title": "Digimon List",
+    "description": "All 475 raisable Digimon, with evolution requirements."
   },
   "bug_report": {
     "title": "Report a Bug",
@@ -137,7 +151,6 @@
     "amicability": "Bonds of Amicability",
     "wisdom": "Bonds of Wisdom"
   },
-  "site_title": "Digimon Story Time Stranger Evolution Path Search",
   "announcement": {
     "message": "DLC 2 & 3 Updates Completed"
   },
@@ -158,5 +171,11 @@
     "site_name": "DigimonTS Evolution Path",
     "title": "Digimon Story Time Stranger Evolution Path Search",
     "description": "Find the shortest evolution route between any two Digimon in Digimon Story: Time Stranger. Browse all 475 Digimon with their evolution requirements."
+  },
+  "conditions": {
+    "level": "Lv {value}+",
+    "stat": "{stat} {value}+",
+    "item": "{item} required",
+    "jogress_partner": "{digimon} ({personality})"
   }
 }

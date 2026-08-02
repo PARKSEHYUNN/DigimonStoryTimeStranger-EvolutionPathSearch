@@ -5,6 +5,9 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing, type Locale } from '@/lib/i18n/routing';
 import { OG_LOCALE, SITE_URL } from '@/lib/site';
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
+import { CLIENT_NAMESPACES, clientMessages } from '@/lib/i18n/messages';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -77,8 +80,17 @@ export default async function LocaleLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>
-      <body className="min-h-dvh antialiased">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      <body className="flex min-h-dvh flex-col antialiased">
+        {/* Only the chrome's namespaces. Screens add their own below. */}
+        <NextIntlClientProvider
+          messages={await clientMessages(CLIENT_NAMESPACES.chrome)}
+        >
+          <Navbar />
+          <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">
+            {children}
+          </main>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
