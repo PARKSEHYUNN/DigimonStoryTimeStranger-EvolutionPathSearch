@@ -63,6 +63,7 @@ export function DigimonPicker({
         tall
       >
         <DigimonBrowser
+          autoFocusSearch
           exclude={exclude}
           onSelect={(digimon) => {
             onSelect(digimon);

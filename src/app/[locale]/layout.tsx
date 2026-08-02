@@ -7,6 +7,8 @@ import { routing, type Locale } from '@/lib/i18n/routing';
 import { OG_LOCALE, SITE_URL } from '@/lib/site';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
+import { AnnouncementBanner } from '@/components/layout/AnnouncementBanner';
+import { DonateButton } from '@/components/layout/DonateButton';
 import { CLIENT_NAMESPACES, clientMessages } from '@/lib/i18n/messages';
 import { AdSlot } from '@/components/ads/AdSlot';
 
@@ -87,11 +89,13 @@ export default async function LocaleLayout({
           messages={await clientMessages(CLIENT_NAMESPACES.chrome)}
         >
           <Navbar />
+          <AnnouncementBanner />
           <main className="mx-auto w-full max-w-6xl flex-1 px-3 py-5 sm:px-4 sm:py-6">
             <AdSlot placement="leaderboard" />
             <div className="mt-5 sm:mt-6">{children}</div>
           </main>
           <Footer />
+          <DonateButton />
         </NextIntlClientProvider>
       </body>
     </html>

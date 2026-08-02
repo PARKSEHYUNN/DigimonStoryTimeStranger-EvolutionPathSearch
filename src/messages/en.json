@@ -88,7 +88,9 @@
     "error_network": "A network error occurred.",
     "error_submit": "Submission failed: {error_message}",
     "completion_title": "Submission Complete!",
-    "completion_text": "Thank you for your valuable feedback. We will check it as soon as possible."
+    "completion_text": "Thank you for your valuable feedback. We will check it as soon as possible.",
+    "open": "Report a bug",
+    "sending": "Sending…"
   },
   "attribute": {
     "0": "No Data",
@@ -152,10 +154,13 @@
     "wisdom": "Bonds of Wisdom"
   },
   "announcement": {
-    "message": "DLC 2 & 3 Updates Completed"
+    "message": "DLC 2 & 3 Updates Completed",
+    "dismiss": "Dismiss announcement"
   },
   "footer": {
-    "disclaimer": "This is a non-profit fan-made site. All images are the property of Bandai Namco. Donations are used solely for domain maintenance and site updates."
+    "disclaimer": "An unofficial fan-made site, not affiliated with Bandai Namco. All Digimon names and images remain the property of their respective owners. Advertising and donation revenue is used only to cover domain, hosting and maintenance costs.",
+    "copyright": "© 2025-2026 Digimon Story Time Stranger Evolution Path Search",
+    "developed_by": "Developed by {name}"
   },
   "stats": {
     "HP": "Max HP",
@@ -177,5 +182,8 @@
     "stat": "{stat} {value}+",
     "item": "{item} required",
     "jogress_partner": "{digimon} ({personality})"
+  },
+  "donate": {
+    "label": "Support on Ko-fi"
   }
 }

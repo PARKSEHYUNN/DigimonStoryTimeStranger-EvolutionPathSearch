@@ -4,6 +4,7 @@ import { Link } from '@/lib/i18n/navigation';
 import { ThemeToggle } from './ThemeToggle';
 import { LocaleSwitcher } from './LocaleSwitcher';
 import { NavLinks } from './NavLinks';
+import { BugReportButton } from './BugReportButton';
 
 export async function Navbar() {
   const t = await getTranslations('nav');
@@ -34,6 +35,7 @@ export async function Navbar() {
         <div className="flex shrink-0 items-center">
           <LocaleSwitcher label={t('change_language')} />
           <ThemeToggle label={t('toggle_theme')} />
+          <BugReportButton />
         </div>
       </nav>
     </header>

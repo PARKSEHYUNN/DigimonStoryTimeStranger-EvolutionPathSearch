@@ -21,9 +21,18 @@ interface DigimonBrowserProps {
   onSelect: (digimon: Digimon) => void;
   /** Hidden entirely — used to keep DLC out when the user has it switched off. */
   exclude?: (digimon: Digimon) => boolean;
+  /**
+   * Only for the picker dialog: focus search on open so the user can type
+   * straight away. Off on the list page, where it would yank the scroll.
+   */
+  autoFocusSearch?: boolean;
 }
 
-export function DigimonBrowser({ onSelect, exclude }: DigimonBrowserProps) {
+export function DigimonBrowser({
+  onSelect,
+  exclude,
+  autoFocusSearch,
+}: DigimonBrowserProps) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
 
@@ -88,7 +97,9 @@ export function DigimonBrowser({ onSelect, exclude }: DigimonBrowserProps) {
             aria-hidden
             className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-content-muted"
           />
+          {/* eslint-disable-next-line jsx-a11y/no-autofocus */}
           <input
+            autoFocus={autoFocusSearch}
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}

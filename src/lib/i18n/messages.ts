@@ -8,8 +8,8 @@ import { getMessages } from 'next-intl/server';
  * ones only server components use — into all 1,433 prerendered pages.
  */
 export const CLIENT_NAMESPACES = {
-  /** Navbar, locale switcher, theme toggle: present on every page. */
-  chrome: ['nav'],
+  /** Navbar, locale switcher, theme toggle, bug report, announcement, donate. */
+  chrome: ['nav', 'bug_report', 'announcement', 'donate'],
   /** The route search screen and everything it opens. */
   search: [
     'evolution_path',

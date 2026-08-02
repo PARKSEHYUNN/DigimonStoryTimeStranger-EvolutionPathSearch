@@ -104,6 +104,16 @@ for (const viewport of VIEWPORTS) {
       )) {
         const rect = el.getBoundingClientRect();
         if (rect.width === 0 || rect.height === 0) continue;
+
+        // WCAG 2.2 SC 2.5.8 exempts targets sitting inline in a sentence,
+        // where line-height rather than the control decides the height.
+        const display = getComputedStyle(el).display;
+        const inSentence =
+          display === 'inline' &&
+          (el.parentElement?.textContent ?? '').trim() !==
+            (el.textContent ?? '').trim();
+        if (inSentence) continue;
+
         if (rect.width < 24 || rect.height < 24) {
           smallTargets.push({
             tag: el.tagName.toLowerCase(),
