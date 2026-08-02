@@ -88,7 +88,6 @@ export function BugReportButton() {
                 {t('email')}
               </span>
               {/* Without this, showModal() parks focus on the close button. */}
-              {/* eslint-disable-next-line jsx-a11y/no-autofocus */}
               <input
                 autoFocus
                 type="email"

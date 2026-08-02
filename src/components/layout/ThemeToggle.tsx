@@ -1,22 +1,34 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 import { Moon, Sun } from 'lucide-react';
 
 /**
- * The initial class is applied by the inline script in the locale layout, so
- * this only has to stay in sync with whatever that decided.
+ * The `dark` class on <html> is the source of truth — the inline script in the
+ * locale layout sets it before first paint, and this button flips it.
+ *
+ * Subscribing to that class rather than mirroring it into state means the icon
+ * cannot drift out of sync, and there is no post-mount setState to make React
+ * render twice.
  */
-export function ThemeToggle({ label }: { label: string }) {
-  const [dark, setDark] = useState(false);
+const subscribe = (onChange: () => void) => {
+  const observer = new MutationObserver(onChange);
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['class'],
+  });
+  return () => observer.disconnect();
+};
 
-  useEffect(() => {
-    setDark(document.documentElement.classList.contains('dark'));
-  }, []);
+const isDark = () => document.documentElement.classList.contains('dark');
+
+export function ThemeToggle({ label }: { label: string }) {
+  // The server has no <html> to read, so it renders the light icon; the class
+  // is already correct by the time hydration runs.
+  const dark = useSyncExternalStore(subscribe, isDark, () => false);
 
   const toggle = () => {
     const next = !dark;
-    setDark(next);
     document.documentElement.classList.toggle('dark', next);
     try {
       localStorage.setItem('theme', next ? 'dark' : 'light');

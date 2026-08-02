@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 import { useTranslations } from 'next-intl';
 import { Megaphone, X } from 'lucide-react';
 
@@ -11,30 +11,56 @@ import { Megaphone, X } from 'lucide-react';
 const ANNOUNCEMENT_ID = '2026-dlc-2-3';
 const STORAGE_KEY = 'announcement-dismissed';
 
+/**
+ * Dismissal lives in localStorage, which React cannot see. Reading it through
+ * a store rather than an effect keeps the component to a single render and
+ * gives the server a defined answer.
+ */
+const listeners = new Set<() => void>();
+
+const subscribe = (onChange: () => void) => {
+  listeners.add(onChange);
+  return () => {
+    listeners.delete(onChange);
+  };
+};
+
+/** Holds the dismissal when localStorage refuses to, so the X still works. */
+let dismissedInSession: string | null = null;
+
+const dismissedId = (): string | null => {
+  if (dismissedInSession !== null) return dismissedInSession;
+  try {
+    return localStorage.getItem(STORAGE_KEY);
+  } catch {
+    // Private browsing: treat it as never dismissed.
+    return null;
+  }
+};
+
 export function AnnouncementBanner() {
   const t = useTranslations('announcement');
-  // Starts hidden so the server HTML and the first client paint agree; a
-  // banner that flashes in and out on every load is worse than a late one.
-  const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
-    try {
-      setVisible(localStorage.getItem(STORAGE_KEY) !== ANNOUNCEMENT_ID);
-    } catch {
-      setVisible(true);
-    }
-  }, []);
+  // The server snapshot reports it as already dismissed, so the banner is
+  // absent from the HTML and the first client paint. A notice that flashes in
+  // and out on every load is worse than one that arrives a frame late.
+  const dismissed = useSyncExternalStore(
+    subscribe,
+    dismissedId,
+    () => ANNOUNCEMENT_ID,
+  );
+
+  if (dismissed === ANNOUNCEMENT_ID) return null;
 
   const dismiss = () => {
-    setVisible(false);
+    dismissedInSession = ANNOUNCEMENT_ID;
     try {
       localStorage.setItem(STORAGE_KEY, ANNOUNCEMENT_ID);
     } catch {
       // Private browsing: the notice will come back next visit.
     }
+    for (const listener of listeners) listener();
   };
-
-  if (!visible) return null;
 
   return (
     <div className="border-b border-accent/20 bg-accent/10">

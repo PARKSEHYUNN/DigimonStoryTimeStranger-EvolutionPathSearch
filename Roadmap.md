@@ -162,10 +162,24 @@ EvolutionPath/
 현행 `AdminPage.jsx`(25KB) + `AdminEditPage.jsx`(29KB) + `vite.config.js`의 CRUD 미들웨어(209줄)를 대체한다. 현행은 `import.meta.env.DEV` 가드로 프로덕션 노출을 막지만, 정적 익스포트에서는 Route Handler를 쓸 수 없으므로 어차피 분리가 필요하다. 구조적으로도 더 안전하다.
 
 - `tools/admin/` — 독립 Vite + React + TS 앱. 배포 파이프라인에 포함되지 않는다.
-- `tools/data-server.mjs` — `data/*.json` 읽기·쓰기 로컬 Node 서버. **저장 전 Phase 1의 Zod 스키마로 검증**해 깨진 데이터가 커밋되는 것을 원천 차단(현행에는 검증이 없다).
+- `tools/data-server.ts` — `data/*.json` 읽기·쓰기 로컬 Node 서버. **저장 전 Phase 1의 Zod 스키마로 검증**해 깨진 데이터가 커밋되는 것을 원천 차단(현행에는 검증이 없다).
 - 단방향 간선 구조 덕분에 현행 admin 로직의 절반(양방향 관계 수동 동기화 코드)이 통째로 사라진다.
 - 스키마·타입은 tsconfig path alias로 Next 앱과 공유. 별도 워크스페이스는 두지 않는다.
 - `npm run admin`으로 UI와 데이터 서버를 동시 기동.
+
+**구현하면서 정한 것**
+
+- 검증 규칙을 `src/lib/digimon/validate.ts` 하나로 모았다. 빌드 게이트(`scripts/validate-data.ts`), 서버의 저장 전 검사, 편집기의 실시간 표시가 **같은 함수**를 호출한다. 편집기가 통과시킨 데이터를 빌드가 거부하는 상황이 구조적으로 불가능해진다.
+- 데이터 서버를 별도 프로세스로 띄우는 대신, 같은 핸들러(`dataApi`)를 admin Vite 서버에 미들웨어로 마운트했다. `npm run admin` 하나로 단일 오리진에서 동작하고 프록시 설정이 필요 없다. 헤드리스로 쓸 일이 있으면 `npm run data:server`로 단독 기동도 된다.
+- **낙관적 동시성 제어**: 로드 시 4개 파일의 해시(revision)를 함께 내려주고, 저장 시 그 revision을 되보낸다. 그 사이 파일이 바뀌었으면 409로 거부한다. 오래된 탭이 최신 편집을 덮어쓰는 사고를 막는다.
+- **정규화 직렬화**: 저장할 때 정렬 순서와 조건 키 순서를 스키마 순서로 고정하고, 내용이 실제로 바뀐 파일만 임시 파일 + rename으로 쓴다. diff가 실제 변경분만 남고 저장이 멱등해진다.
+- 삭제는 간선을 cascade하되, **다른 간선이 조그레스 상대로 참조 중이면 거부**한다. 조용히 지우면 그 간선의 조건이 몰래 바뀌기 때문이다.
+- 조그레스 상대 둘이 같은 경우를 검증 오류로 추가했다(기존 34건 전부 만족).
+
+**Phase 5에서 함께 정리한 것 (범위 밖이었으나 방치할 수 없었던 것)**
+
+- `next lint`가 Next 16에서 제거되어 `npm run lint`가 죽어 있었다. `eslint.config.mjs`(flat config)를 세우고 되살렸다.
+- 되살린 린터가 실제 오류 2건을 찾았다: `ThemeToggle` / `AnnouncementBanner`가 effect 안에서 setState 하는 패턴. 둘 다 `useSyncExternalStore`로 고쳐 렌더 1회로 줄였다.
 
 ## Phase 6 — 이미지 최적화 및 배포
 
@@ -174,6 +188,8 @@ EvolutionPath/
 - Cloudflare Pages 연결: 빌드 `npx next build`, 출력 `out`.
 - `search.digimonts.my` DNS를 Cloudflare로 이관.
 - Cloudflare Web Analytics 적용.
+- 일본어 폰트 `PretendardJPVariable.woff2`가 5.3MB(전체 CJK)다. 서브셋팅 필요.
+- `favicon.ico`가 없어 모든 첫 방문에 404가 난다. `public/logo.png`에서 `src/app/icon.png` 생성.
 - **컷오버 전 확인**: 구 URL 301 동작, sitemap 제출, GSC 색인 재요청.
 
 ---

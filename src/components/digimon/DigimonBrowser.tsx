@@ -97,7 +97,6 @@ export function DigimonBrowser({
             aria-hidden
             className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-content-muted"
           />
-          {/* eslint-disable-next-line jsx-a11y/no-autofocus */}
           <input
             autoFocus={autoFocusSearch}
             type="search"
