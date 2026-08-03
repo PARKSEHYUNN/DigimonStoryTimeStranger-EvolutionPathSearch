@@ -19,13 +19,17 @@ import fs from 'node:fs';
 const BASE = process.argv[2] ?? 'http://localhost:4173';
 
 const CHROME_CANDIDATES = [
+  // Checked first so a CI image or container can point at whatever browser it
+  // has instead of silently skipping the whole check.
+  process.env.CHROME_PATH,
   'C:/Program Files/Google/Chrome/Application/chrome.exe',
   'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
   'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
   'C:/Program Files/Microsoft/Edge/Application/msedge.exe',
   '/usr/bin/google-chrome',
+  '/usr/bin/chromium',
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-];
+].filter(Boolean);
 
 const executablePath = CHROME_CANDIDATES.find((p) => fs.existsSync(p));
 if (!executablePath) {
@@ -45,6 +49,9 @@ const PAGES = [
   { name: 'list', path: '/ko/digimon/' },
   { name: 'detail', path: '/ko/digimon/agumon/' },
   { name: 'detail (ja)', path: '/ja/digimon/omnimon/' },
+  // Long prose at 320px is where an unwrapped URL shows up as a horizontal
+  // scrollbar, and the policy body carries two of them.
+  { name: 'privacy', path: '/ko/privacy/' },
 ];
 
 const browser = await puppeteer.launch({

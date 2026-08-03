@@ -213,8 +213,26 @@ curl -s https://search.digimonts.my/ko/ | grep -o 'data-ad-slot="[^"]*"'
   CLS가 무너진다. 이 리뉴얼이 [AdSlot](src/components/ads/AdSlot.tsx)으로 높이를 미리 잡아둔 이유가 그거다.
 - **EEA·영국 트래픽에는 동의 관리 플랫폼(CMP)이 의무다.** 3개 언어 사이트이므로 해당될 수 있다.
   AdSense 대시보드의 기본 제공 CMP를 켜면 된다.
-- **개인정보처리방침 페이지가 필요하다.** 현재는 푸터 면책 문구뿐이다. 승인 전에 준비해야 한다.
 - 자기 사이트 광고를 직접 클릭하지 않는다. 무효 트래픽으로 계정이 정지된다.
+
+### 7-5. 개인정보처리방침
+
+승인 요건이다. `/{locale}/privacy/`에 3개 언어로 준비돼 있고 푸터에서 링크된다
+([src/app/[locale]/privacy/page.tsx](src/app/%5Blocale%5D/privacy/page.tsx)).
+
+내용은 실제 동작에 맞춰 쓰여 있다 — Formspree(버그 신고), Cloudflare(호스팅·통계),
+Google AdSense(광고), localStorage 2개 키(`theme`, `announcement-dismissed`), Ko-fi(외부 링크).
+**데이터 흐름이 바뀌면 이 문서도 같이 고쳐야 한다.** 사실과 다른 방침은 없는 것보다 나쁘다.
+
+본문은 `src/messages/{ko,en,ja}.json`의 `privacy` 네임스페이스에 있다.
+최종 수정일도 메시지 안에 직접 적혀 있다(`privacy.updated`) — `Intl`로 날짜를 만들면
+서브셋 폰트에 없는 한자(年月日)가 나오기 때문이다. 방침을 고치면 3개 언어의 날짜도 함께 갱신한다.
+
+일본어 문구를 수정한 뒤에는 서브셋을 다시 만들어야 한다:
+
+```bash
+npm run fonts:subset && npm run check:fonts
+```
 
 ---
 

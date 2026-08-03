@@ -16,13 +16,17 @@ import puppeteer from 'puppeteer-core';
 const BASE = process.argv[2] ?? 'http://localhost:4173';
 
 const CHROME_CANDIDATES = [
+  // Checked first so a CI image or container can point at whatever browser it
+  // has instead of silently skipping the whole check.
+  process.env.CHROME_PATH,
   'C:/Program Files/Google/Chrome/Application/chrome.exe',
   'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
   'C:/Program Files/Microsoft/Edge/Application/msedge.exe',
   'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
   '/usr/bin/google-chrome',
+  '/usr/bin/chromium',
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-];
+].filter(Boolean);
 
 const executablePath = CHROME_CANDIDATES.find((p) => fs.existsSync(p));
 if (!executablePath) {
@@ -49,7 +53,13 @@ const PAGES = [
   },
 ];
 
-const browser = await puppeteer.launch({ executablePath, headless: true });
+// Same launch args as check-responsive.mjs: without --no-sandbox Chrome
+// refuses to start as root, which is how it runs inside a container.
+const browser = await puppeteer.launch({
+  executablePath,
+  headless: true,
+  args: ['--no-sandbox', '--disable-dev-shm-usage'],
+});
 
 try {
   for (const { path: url, fonts: expected } of PAGES) {

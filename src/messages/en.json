@@ -160,7 +160,95 @@
   "footer": {
     "disclaimer": "An unofficial fan-made site, not affiliated with Bandai Namco. All Digimon names and images remain the property of their respective owners. Advertising and donation revenue is used only to cover domain, hosting and maintenance costs.",
     "copyright": "© 2025-2026 Digimon Story Time Stranger Evolution Path Search",
-    "developed_by": "Developed by {name}"
+    "developed_by": "Developed by {name}",
+    "privacy": "Privacy Policy"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: August 3, 2026",
+    "intro": "This is an unofficial fan site with no accounts and no sign-in. It does not directly collect information that identifies you, and it collects nothing beyond what is described below.",
+    "sections": {
+      "collect": {
+        "title": "Information collected",
+        "body": [
+          "Information you provide: the email address, issue type, and description you enter in the bug report form. If you do not use that form, nothing is sent.",
+          "Information recorded automatically: when you load a page, the hosting provider Cloudflare records your IP address, browser type, and the address requested in its server logs. This is the minimum needed to serve the site and keep it secure, and the operator sees it only in aggregated form.",
+          "Information handled by third parties for advertising and traffic statistics is described separately below."
+        ]
+      },
+      "storage": {
+        "title": "Cookies and browser storage",
+        "body": [
+          "This site sets no cookies of its own.",
+          "It does use your browser's local storage to remember display settings. Only two values are stored — whether dark mode is on (theme) and whether you dismissed the announcement banner (announcement-dismissed). They stay in your browser and are never sent to a server. Clearing site data in your browser removes them.",
+          "Google advertising uses cookies separately; see the advertising section below."
+        ]
+      },
+      "ads": {
+        "title": "Advertising (Google AdSense)",
+        "body": [
+          "This site displays Google AdSense advertising to cover its running costs.",
+          "Google and other third-party vendors use cookies to serve ads based on your prior visits to this or other websites. Google's use of advertising cookies enables it and its partners to serve ads to you based on that history.",
+          "You can turn off personalized advertising in Google Ads Settings at https://www.google.com/settings/ads and opt out of third-party vendor cookies more broadly at https://www.aboutads.info/choices.",
+          "Visitors from the European Economic Area, the United Kingdom, and Switzerland are asked separately for consent to advertising and cookie use, and that choice can be changed at any time."
+        ]
+      },
+      "analytics": {
+        "title": "Traffic statistics",
+        "body": [
+          "Cloudflare Web Analytics is used to count visitors and page views.",
+          "It sets no cookies and collects no browser fingerprint, and it reports only aggregated data that does not identify individuals. What the operator can see amounts to which pages were viewed and how often."
+        ]
+      },
+      "bug_report": {
+        "title": "Bug report form",
+        "body": [
+          "The bug report form is delivered to the operator's email through Formspree (formspree.io), so the address and text you enter pass through Formspree's servers.",
+          "Addresses collected this way are used only to reply to the report. No marketing or promotional email is sent."
+        ]
+      },
+      "third_parties": {
+        "title": "Third parties and international transfer",
+        "body": [
+          "The operator does not sell or rent your information.",
+          "The following providers are used to the extent needed to run the site, and their servers are located outside the Republic of Korea: Cloudflare (hosting and traffic statistics), Google (advertising), and Formspree (delivering the contact form).",
+          "Each provider handles personal data under its own policy.",
+          "The support button is only a link out to Ko-fi; this site neither receives nor stores anything from that process."
+        ]
+      },
+      "retention": {
+        "title": "Retention",
+        "body": [
+          "Email received through a bug report is deleted once the issue is resolved and there is no longer a reason to keep it.",
+          "Other records are retained by the providers above under their own policies. The operator keeps no database accumulating visitor information."
+        ]
+      },
+      "rights": {
+        "title": "Your rights",
+        "body": [
+          "Because the site has no accounts, for most visitors the operator holds nothing at all.",
+          "If you have sent a bug report, you may request access, correction, or deletion at the contact address below, and any such request is handled without delay."
+        ]
+      },
+      "children": {
+        "title": "Children's privacy",
+        "body": [
+          "This site is not directed at children under 14 and does not knowingly collect their personal information. Anything received from a child is deleted as soon as the operator becomes aware of it."
+        ]
+      },
+      "changes": {
+        "title": "Changes to this policy",
+        "body": [
+          "If this policy changes, this page is updated and the date at the top is revised. Significant changes are also announced on the site."
+        ]
+      },
+      "contact": {
+        "title": "Contact",
+        "body": [
+          "Questions about this policy, or about how data is handled, can be sent to:"
+        ]
+      }
+    }
   },
   "stats": {
     "HP": "Max HP",
@@ -182,7 +270,8 @@
     "evolves_into": "Evolves into {names}.",
     "no_relations": "No recorded evolutions.",
     "list_description": "Every raisable Digimon in Digimon Story: Time Stranger — 475 in all, with generation, attribute, personality and full evolution requirements.",
-    "breadcrumb_home": "Home"
+    "breadcrumb_home": "Home",
+    "privacy_description": "How this site handles cookies, advertising, and traffic statistics, and what information it collects."
   },
   "conditions": {
     "level": "Lv {value}+",

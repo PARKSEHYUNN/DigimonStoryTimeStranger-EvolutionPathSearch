@@ -23,16 +23,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'x-default': localeUrl(routing.defaultLocale, path),
   });
 
-  const pages: { path: string; priority: number; changeFrequency: 'weekly' | 'monthly' }[] =
-    [
-      { path: '', priority: 1, changeFrequency: 'weekly' },
-      { path: 'digimon', priority: 0.8, changeFrequency: 'weekly' },
-      ...digimons.map((d) => ({
-        path: `digimon/${d.slug}`,
-        priority: 0.6,
-        changeFrequency: 'monthly' as const,
-      })),
-    ];
+  const pages: {
+    path: string;
+    priority: number;
+    changeFrequency: 'weekly' | 'monthly';
+  }[] = [
+    { path: '', priority: 1, changeFrequency: 'weekly' },
+    { path: 'digimon', priority: 0.8, changeFrequency: 'weekly' },
+    // Low priority but listed: AdSense expects the policy to be reachable,
+    // and a page only the footer links to is easy for a crawler to miss.
+    { path: 'privacy', priority: 0.3, changeFrequency: 'monthly' },
+    ...digimons.map((d) => ({
+      path: `digimon/${d.slug}`,
+      priority: 0.6,
+      changeFrequency: 'monthly' as const,
+    })),
+  ];
 
   // No `lastModified`. Stamping build time onto every URL would tell Google
   // all 1,431 pages changed on every deploy, which is both false and worse
