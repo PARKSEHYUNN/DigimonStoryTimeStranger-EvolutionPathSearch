@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "admin": "vite --config tools/admin/vite.config.ts",
-    "build": "npm run data:validate && next build && node scripts/prune-export.mjs && node scripts/check-fonts.mjs",
+    "build": "npm run data:validate && next build && node scripts/prune-export.mjs && node scripts/write-ads-txt.mjs && node scripts/check-fonts.mjs",
     "start": "npx serve out",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",

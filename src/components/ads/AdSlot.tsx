@@ -1,4 +1,6 @@
 import type { CSSProperties } from 'react';
+import { adUnitFor, type AdPlacement } from '@/lib/ads';
+import { AdUnit } from '@/components/ads/AdUnit';
 
 /**
  * Reserved space for a banner ad.
@@ -9,11 +11,11 @@ import type { CSSProperties } from 'react';
  * this whole rewrite exists to improve. Reserving now costs nothing; retrofitting
  * later means re-measuring every screen.
  *
- * No network calls are made yet. To go live, drop the provider's script into
- * the locale layout and render the unit inside `children` here; nothing else
- * about the layout has to move.
+ * Whether a real ad goes inside is a build-time question: with AdSense
+ * configured the box holds a unit, without it the box holds a placeholder and
+ * the page makes no ad network requests. See lib/ads.ts.
  */
-export type AdPlacement = 'leaderboard' | 'in-content' | 'footer';
+export type { AdPlacement };
 
 /**
  * Heights are the standard unit sizes plus nothing else — the box is exactly
@@ -30,25 +32,39 @@ const PLACEMENT_STYLE: Record<AdPlacement, CSSProperties> = {
 
 interface AdSlotProps {
   placement: AdPlacement;
-  /** Hidden on small screens — for units that only make sense on desktop. */
+  /**
+   * Hidden on small screens — for units that only make sense on desktop.
+   *
+   * Note this hides with `display: none`, and AdSense measures zero width for
+   * such a slot and gives up without retrying when it later becomes visible.
+   * A desktop-only unit therefore stays blank for anyone who loaded the page
+   * narrow and widened it. Fine for a breakpoint users rarely cross mid-visit;
+   * if that changes, the fix is to mount the unit conditionally instead.
+   */
   desktopOnly?: boolean;
   label?: string;
 }
 
 export function AdSlot({ placement, desktopOnly, label }: AdSlotProps) {
+  const unit = adUnitFor(placement);
+
   return (
     <aside
       aria-label={label ?? 'Advertisement'}
       data-ad-placement={placement}
       style={PLACEMENT_STYLE[placement]}
-      className={`mx-auto flex w-full max-w-3xl items-center justify-center overflow-hidden rounded-xl bg-surface-sunken/60 [block-size:var(--ad-h)] md:[block-size:var(--ad-h-md)] ${
+      className={`bg-surface-sunken/60 mx-auto flex w-full max-w-3xl items-center justify-center overflow-hidden rounded-xl [block-size:var(--ad-h)] md:[block-size:var(--ad-h-md)] ${
         desktopOnly ? 'hidden md:flex' : 'flex'
       }`}
     >
-      {/* Placeholder until a provider is wired up. Swap for the ad unit. */}
-      <span className="text-[0.6rem] tracking-widest text-content-muted/50 uppercase select-none">
-        {label ?? 'Ad'}
-      </span>
+      {unit ? (
+        <AdUnit client={unit.client} slot={unit.slot} />
+      ) : (
+        /* No AdSense configured — the box still holds its space. */
+        <span className="text-content-muted/50 text-[0.6rem] tracking-widest uppercase select-none">
+          {label ?? 'Ad'}
+        </span>
+      )}
     </aside>
   );
 }

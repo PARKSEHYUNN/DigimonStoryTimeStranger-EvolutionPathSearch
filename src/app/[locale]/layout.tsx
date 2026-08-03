@@ -12,6 +12,7 @@ import { AnnouncementBanner } from '@/components/layout/AnnouncementBanner';
 import { DonateButton } from '@/components/layout/DonateButton';
 import { CLIENT_NAMESPACES, clientMessages } from '@/lib/i18n/messages';
 import { AdSlot } from '@/components/ads/AdSlot';
+import { AdSenseScript } from '@/components/ads/AdSenseScript';
 import { Analytics } from '@/components/Analytics';
 
 export function generateStaticParams() {
@@ -73,6 +74,7 @@ export default async function LocaleLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+        <AdSenseScript />
       </head>
       <body className="flex min-h-dvh flex-col antialiased">
         {/* Only the chrome's namespaces. Screens add their own below. */}
