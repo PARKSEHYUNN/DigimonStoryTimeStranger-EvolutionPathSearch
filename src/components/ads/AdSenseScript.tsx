@@ -1,4 +1,4 @@
-import { ADSENSE_CLIENT } from '@/lib/ads';
+import { ADS_ENABLED, ADSENSE_CLIENT } from '@/lib/ads';
 
 /**
  * The AdSense loader, once per document.
@@ -11,10 +11,10 @@ import { ADSENSE_CLIENT } from '@/lib/ads';
  * server-rendered document with no client component to host it, which is the
  * same reason Analytics.tsx emits a raw tag.
  *
- * Unset client ID renders nothing at all — see lib/ads.ts.
+ * Renders nothing unless ads are switched on for this build — see lib/ads.ts.
  */
 export function AdSenseScript() {
-  if (!ADSENSE_CLIENT) return null;
+  if (!ADS_ENABLED) return null;
 
   return (
     <script
