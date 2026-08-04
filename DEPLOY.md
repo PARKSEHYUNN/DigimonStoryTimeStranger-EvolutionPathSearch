@@ -1,6 +1,6 @@
 # 배포 절차 — Cloudflare Pages
 
-`search.digimonts.my`를 현재 호스팅에서 Cloudflare Pages로 옮기는 순서다.
+`digimonts.my`를 현재 호스팅에서 Cloudflare Pages로 옮기는 순서다.
 
 코드 쪽 준비는 끝나 있다. 아래는 **계정·도메인 권한이 필요해 이 저장소 밖에서 해야 하는 일**과,
 각 단계에서 무엇을 확인해야 하는지다.
@@ -105,7 +105,7 @@ nslookup -type=NS digimonts.my
 
 ## 5. 커스텀 도메인 연결 — 여기서부터 운영에 영향
 
-Pages 프로젝트 → **Custom domains** → **Set up a domain** → `search.digimonts.my`
+Pages 프로젝트 → **Custom domains** → **Set up a domain** → `digimonts.my`
 
 Cloudflare가 CNAME 레코드를 자동 생성한다. **이 시점에 트래픽이 새 사이트로 넘어간다.**
 
@@ -116,6 +116,16 @@ Cloudflare가 CNAME 레코드를 자동 생성한다. **이 시점에 트래픽�
 
 문제가 생기면 이 CNAME을 기존 호스팅 주소로 되돌리는 것이 가장 빠른 롤백이다.
 
+### 정본 호스트는 에이펙스다
+
+사이트는 `digimonts.my`에서 서비스되고, `search.digimonts.my`는 여기로 리다이렉트된다.
+
+[src/lib/site.ts](src/lib/site.ts)의 `SITE_URL`이 그 사실을 담고 있으며, canonical·hreflang·
+OG URL·사이트맵 1,434개·`robots.txt`의 sitemap 줄이 **전부 이 상수 하나에서 파생된다.**
+정본 호스트를 옮기면 이 값부터 고쳐야 한다. 리다이렉트되는 주소를 가리키는 canonical은
+스스로를 부정하는 신호이고, 그런 URL로 채워진 사이트맵은 Search Console에서
+"페이지에 리디렉션이 있음"으로 전부 잡힌다.
+
 ---
 
 ## 6. 컷오버 후
@@ -123,7 +133,7 @@ Cloudflare가 CNAME 레코드를 자동 생성한다. **이 시점에 트래픽�
 ### 리다이렉트 실동작
 
 ```bash
-curl -sI https://search.digimonts.my/list | grep -i "^location\|^HTTP"
+curl -sI https://digimonts.my/list | grep -i "^location\|^HTTP"
 # HTTP/2 301
 # location: /ko/digimon/
 ```
@@ -133,7 +143,7 @@ curl -sI https://search.digimonts.my/list | grep -i "^location\|^HTTP"
 ### Search Console
 
 1. 속성이 이미 있다면 소유권 확인이 유지되는지 점검 (DNS TXT 방식이면 3번에서 레코드가 넘어왔는지 확인)
-2. **Sitemaps** → `https://search.digimonts.my/sitemap.xml` 제출
+2. **Sitemaps** → `https://digimonts.my/sitemap.xml` 제출
    - 구 sitemap은 URL 2개였다. 새 sitemap은 **1,431개**다
 3. URL 검사에서 `/ko/digimon/agumon/` 같은 상세 페이지를 직접 조회해 색인 요청
 4. 색인 수가 늘어나는지 몇 주간 추적
@@ -165,7 +175,7 @@ curl -sI https://search.digimonts.my/list | grep -i "^location\|^HTTP"
 페이지 코드와 같은 상수를 읽으므로 스크립트 태그의 ID와 어긋날 수 없다.
 
 ```bash
-curl -s https://search.digimonts.my/ads.txt
+curl -s https://digimonts.my/ads.txt
 # google.com, pub-1963786647016806, DIRECT, f08c47fec0942fa0
 ```
 
@@ -176,7 +186,7 @@ curl -s https://search.digimonts.my/ads.txt
 
 ### 7-2. 계정 신청과 사이트 소유권 확인
 
-1. [AdSense 가입](https://adsense.google.com) → 사이트에 `search.digimonts.my` 추가
+1. [AdSense 가입](https://adsense.google.com) → 사이트에 `digimonts.my` 추가
 2. 확인 방식은 **Ads.txt 스니펫**을 고르면 된다. 위 파일이 이미 그 내용을 내보내고 있어
    추가 작업이 없다. 루트 `/`가 `/ko/`로 302 리다이렉트되는데, `/ads.txt`는 그 경로를
    거치지 않고 직접 응답하므로 리다이렉트 변수도 없다.
@@ -204,7 +214,7 @@ curl -s https://search.digimonts.my/ads.txt
 **확인**:
 
 ```bash
-curl -s https://search.digimonts.my/ko/ | grep -o 'data-ad-slot="[^"]*"'
+curl -s https://digimonts.my/ko/ | grep -o 'data-ad-slot="[^"]*"'
 ```
 
 ### 7-4. 주의할 것

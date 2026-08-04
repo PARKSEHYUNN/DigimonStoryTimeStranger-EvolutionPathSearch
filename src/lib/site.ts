@@ -1,4 +1,16 @@
-export const SITE_URL = 'https://search.digimonts.my';
+/**
+ * The canonical origin, and the only place it is written down.
+ *
+ * Everything crawler-facing derives from this: canonical links, hreflang,
+ * Open Graph URLs, the sitemap's 1,434 entries and the sitemap line in
+ * robots.txt. It must be the address that actually serves pages, not one that
+ * redirects to it — a canonical or hreflang pointing at a redirect is a
+ * self-defeating signal, and a sitemap full of them reports as "Page with
+ * redirect" in Search Console.
+ *
+ * The site moved to the apex; `search.digimonts.my` now redirects here.
+ */
+export const SITE_URL = 'https://digimonts.my';
 
 /**
  * Who runs the site, and where to reach them.
