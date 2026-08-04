@@ -4,13 +4,12 @@ import { useLocale } from 'next-intl';
 import { useState, useRef, useEffect } from 'react';
 import { Check, Globe } from 'lucide-react';
 import { usePathname, useRouter } from '@/lib/i18n/navigation';
-import { LOCALES, LOCALE_STORAGE_KEY, type Locale } from '@/lib/i18n/routing';
-
-const LABELS: Record<Locale, string> = {
-  en: 'English',
-  ko: '한국어',
-  ja: '日本語',
-};
+import {
+  LOCALES,
+  LOCALE_LABELS,
+  LOCALE_STORAGE_KEY,
+  type Locale,
+} from '@/lib/i18n/routing';
 
 export function LocaleSwitcher({ label }: { label: string }) {
   const locale = useLocale() as Locale;
@@ -82,7 +81,7 @@ export function LocaleSwitcher({ label }: { label: string }) {
                 onClick={() => switchTo(l)}
                 className="text-content hover:bg-surface-sunken flex w-full cursor-pointer items-center justify-between px-3 py-2 text-sm transition-colors"
               >
-                {LABELS[l]}
+                {LOCALE_LABELS[l]}
                 {l === locale && <Check size={14} className="text-accent" />}
               </button>
             </li>

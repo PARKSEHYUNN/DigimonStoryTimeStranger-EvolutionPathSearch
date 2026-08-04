@@ -34,6 +34,7 @@ import { fileURLToPath } from 'node:url';
 import {
   DEFAULT_LOCALE,
   LOCALES,
+  LOCALE_LABELS,
   LOCALE_STORAGE_KEY,
 } from '../src/lib/i18n/locales.ts';
 
@@ -104,9 +105,16 @@ ${SCRIPT}
   </head>
   <body>
     <noscript>
-      <p>
-        <a href="/${DEFAULT_LOCALE}/">Continue to the site</a>
-      </p>
+      <!-- Without scripting there is no language signal at all, so the
+           refresh above only breaks the tie. Every locale is listed as a real
+           link so a reader can correct it, and so a crawler that does not run
+           scripts still finds all three. -->
+      <ul>
+${LOCALES.map(
+  (locale) =>
+    `        <li><a href="/${locale}/" hreflang="${locale}" lang="${locale}">${LOCALE_LABELS[locale]}</a></li>`,
+).join('\n')}
+      </ul>
     </noscript>
   </body>
 </html>

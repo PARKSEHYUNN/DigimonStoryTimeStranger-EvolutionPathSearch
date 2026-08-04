@@ -3,7 +3,12 @@ import { DEFAULT_LOCALE, LOCALES } from './locales';
 
 // Re-exported so callers keep importing locale facts from one place, even
 // though they are declared in ./locales for the build scripts' benefit.
-export { LOCALES, DEFAULT_LOCALE, LOCALE_STORAGE_KEY } from './locales';
+export {
+  LOCALES,
+  DEFAULT_LOCALE,
+  LOCALE_LABELS,
+  LOCALE_STORAGE_KEY,
+} from './locales';
 export type { Locale } from './locales';
 
 /**

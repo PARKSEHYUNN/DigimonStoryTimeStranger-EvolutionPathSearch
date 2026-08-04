@@ -16,11 +16,39 @@ export const LOCALES = ['en', 'ko', 'ja'] as const;
 export type Locale = (typeof LOCALES)[number];
 
 /**
- * Korean is the primary audience the legacy site served: it shipped
- * `<html lang="ko">` with Korean-first metadata. Keeping it as the default
- * means the existing search presence carries over to the new URLs.
+ * Where a reader goes when nothing else identifies them.
+ *
+ * English, not Korean, even though Korean is the site's main audience. This
+ * value only ever applies to someone we could not match — a French or German
+ * browser, a crawler with no language, a request with a bad locale segment.
+ * Such a reader is far likelier to get by in English than in Korean, and
+ * Korean speakers never reach this branch: their browser says `ko` and the
+ * router sends them to /ko/ directly.
+ *
+ * It is also the x-default hreflang target (lib/seo.ts, app/sitemap.ts), which
+ * has to agree with the above. x-default means "the page for readers no other
+ * version suits" — the same population. Pointing the router at English while
+ * telling Google that unmatched readers want Korean would be two answers to
+ * one question.
+ *
+ * No URL depends on this. Every locale is prefixed, so /ko/ is /ko/ regardless
+ * and the Korean search presence is carried by the ko hreflang, not by this.
  */
-export const DEFAULT_LOCALE: Locale = 'ko';
+export const DEFAULT_LOCALE: Locale = 'en';
+
+/**
+ * Each language named in itself, never translated.
+ *
+ * A reader looking for their own language scans for the word they recognise,
+ * so "日本語" has to read as 日本語 on the Korean page too. Shared with the
+ * generated root router, whose no-script fallback lists all three rather than
+ * guessing on behalf of someone we have no signal for.
+ */
+export const LOCALE_LABELS: Record<Locale, string> = {
+  en: 'English',
+  ko: '한국어',
+  ja: '日本語',
+};
 
 /**
  * Where a reader's stated language choice is remembered.
