@@ -13,9 +13,18 @@ export default function robots(): MetadataRoute.Robots {
       // disallow below would hide it, and AdSense treats an uncrawlable
       // ads.txt as a missing one — which caps what advertisers will bid.
       allow: ['/', '/ads.txt'],
-      // RSC payloads sit beside the HTML and carry the same content; keeping
-      // crawlers out of them avoids duplicate-content noise.
-      disallow: ['/_next/', '/*.txt$'],
+
+      // Only the RSC payloads. They sit beside the HTML as `index.txt`,
+      // carry the same content, and are worth keeping out of the index.
+      //
+      // `/_next/` is deliberately NOT listed. Every stylesheet and script the
+      // site loads lives under /_next/static/, and Google renders a page
+      // before judging it — blocking those leaves the crawler looking at
+      // unstyled markup and reporting the page as not mobile-friendly. It
+      // never protected anything either: there is not a single .txt payload
+      // under /_next/, so the rule below already covers what this one was
+      // written for.
+      disallow: ['/*.txt$'],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
