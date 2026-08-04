@@ -2,10 +2,11 @@
 # Static export has no middleware, so locale entry and legacy-URL preservation
 # are handled here at the edge instead.
 
-# Bare root -> default locale. 302 (not 301) so the client-side language
-# preference handler can still move visitors to their own locale without the
-# browser having permanently cached this hop.
-/            /ko/            302
+# The bare root is deliberately absent here. `/` is served by a generated
+# index.html that picks the locale from the reader's stored choice, then their
+# browser's languages (scripts/write-root-router.mjs). An edge redirect would
+# fire before that file is ever served, so the two cannot coexist — this is
+# where the redirect used to be.
 
 # Legacy SPA URLs. The old site served every language from these two paths and
 # advertised itself as Korean, so equity is consolidated onto /ko/ and the

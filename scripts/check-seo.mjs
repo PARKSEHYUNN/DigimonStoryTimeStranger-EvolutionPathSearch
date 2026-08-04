@@ -35,7 +35,13 @@ function htmlFiles(dir, acc = []) {
  */
 const isErrorPage = (file) => {
   const rel = path.relative(OUT, file).replace(/\\/g, '/');
-  return rel.startsWith('404/') || rel.startsWith('_not-found/');
+  return (
+    rel.startsWith('404/') ||
+    rel.startsWith('_not-found/') ||
+    // The root language router is the same case: a noindex redirect stub with
+    // no locale of its own, so canonical and hreflang would be meaningless.
+    rel === 'index.html'
+  );
 };
 
 const allPages = htmlFiles(OUT);

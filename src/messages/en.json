@@ -165,7 +165,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "updated": "Last updated: August 3, 2026",
+    "updated": "Last updated: August 4, 2026",
     "intro": "This is an unofficial fan site with no accounts and no sign-in. It does not directly collect information that identifies you, and it collects nothing beyond what is described below.",
     "sections": {
       "collect": {
@@ -180,7 +180,7 @@
         "title": "Cookies and browser storage",
         "body": [
           "This site sets no cookies of its own.",
-          "It does use your browser's local storage to remember display settings. Only two values are stored — whether dark mode is on (theme) and whether you dismissed the announcement banner (announcement-dismissed). They stay in your browser and are never sent to a server. Clearing site data in your browser removes them.",
+          "It does use your browser's local storage to remember display settings. Only three values are stored — whether dark mode is on (theme), whether you dismissed the announcement banner (announcement-dismissed), and the display language you picked yourself (locale). They stay in your browser and are never sent to a server. Clearing site data in your browser removes them.",
           "Google advertising uses cookies separately; see the advertising section below."
         ]
       },

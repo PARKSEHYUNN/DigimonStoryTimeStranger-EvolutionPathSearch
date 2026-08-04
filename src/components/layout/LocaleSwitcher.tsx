@@ -4,7 +4,7 @@ import { useLocale } from 'next-intl';
 import { useState, useRef, useEffect } from 'react';
 import { Check, Globe } from 'lucide-react';
 import { usePathname, useRouter } from '@/lib/i18n/navigation';
-import { LOCALES, type Locale } from '@/lib/i18n/routing';
+import { LOCALES, LOCALE_STORAGE_KEY, type Locale } from '@/lib/i18n/routing';
 
 const LABELS: Record<Locale, string> = {
   en: 'English',
@@ -37,6 +37,17 @@ export function LocaleSwitcher({ label }: { label: string }) {
 
   const switchTo = (next: Locale) => {
     setOpen(false);
+
+    // Picking from this menu is the only moment a reader states a language,
+    // so it is the only place that records one. The root router reads this
+    // back on the next visit and skips guessing from the browser.
+    try {
+      localStorage.setItem(LOCALE_STORAGE_KEY, next);
+    } catch {
+      // Storage disabled or full. The switch still works; it just will not
+      // be remembered, which is the same as a first visit.
+    }
+
     // `usePathname` returns the path with the locale segment stripped and
     // dynamic segments already filled in, so switching language keeps the
     // reader on the same page instead of dropping them home.
@@ -51,7 +62,7 @@ export function LocaleSwitcher({ label }: { label: string }) {
         aria-label={label}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className="flex cursor-pointer items-center gap-1.5 rounded-lg p-2 text-content-muted transition-colors hover:bg-surface-sunken hover:text-content"
+        className="text-content-muted hover:bg-surface-sunken hover:text-content flex cursor-pointer items-center gap-1.5 rounded-lg p-2 transition-colors"
       >
         <Globe size={18} />
         <span className="text-sm font-medium uppercase">{locale}</span>
@@ -60,7 +71,7 @@ export function LocaleSwitcher({ label }: { label: string }) {
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 z-50 mt-1 w-36 overflow-hidden rounded-lg border border-border-subtle bg-surface-raised py-1 shadow-lg"
+          className="border-border-subtle bg-surface-raised absolute right-0 z-50 mt-1 w-36 overflow-hidden rounded-lg border py-1 shadow-lg"
         >
           {LOCALES.map((l) => (
             <li key={l}>
@@ -69,7 +80,7 @@ export function LocaleSwitcher({ label }: { label: string }) {
                 role="option"
                 aria-selected={l === locale}
                 onClick={() => switchTo(l)}
-                className="flex w-full cursor-pointer items-center justify-between px-3 py-2 text-sm text-content transition-colors hover:bg-surface-sunken"
+                className="text-content hover:bg-surface-sunken flex w-full cursor-pointer items-center justify-between px-3 py-2 text-sm transition-colors"
               >
                 {LABELS[l]}
                 {l === locale && <Check size={14} className="text-accent" />}

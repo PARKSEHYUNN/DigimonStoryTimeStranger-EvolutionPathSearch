@@ -50,7 +50,8 @@ Cloudflare 대시보드 → **Workers & Pages** → **Create** → **Pages** →
 
 `<project>.pages.dev`에서 확인할 것:
 
-- [ ] `/` → `/ko/`로 이동하는가 (`_redirects` 302)
+- [ ] `/` 접속 시 브라우저 언어에 맞는 로케일로 가는가 (일본어 브라우저면 `/ja/`)
+- [ ] 언어를 직접 바꾼 뒤 `/`로 다시 오면 그 선택을 따르는가
 - [ ] `/list` → `/ko/digimon/` 301
 - [ ] 진화 경로 검색이 3개 언어에서 동작하는가
 - [ ] `/ja/` 페이지에서 일본어가 시스템 폰트가 아닌 Pretendard로 렌더되는가
@@ -115,6 +116,20 @@ Cloudflare가 CNAME 레코드를 자동 생성한다. **이 시점에 트래픽�
 - [ ] 기존 호스팅을 아직 내리지 않았는가 (롤백 경로 확보)
 
 문제가 생기면 이 CNAME을 기존 호스팅 주소로 되돌리는 것이 가장 빠른 롤백이다.
+
+### 루트 `/`의 언어 선택
+
+`/`에는 페이지가 없다(모든 로케일이 접두사를 갖는다). 대신 빌드가 생성하는
+[scripts/write-root-router.mjs](scripts/write-root-router.mjs)의 `index.html`이
+**이용자가 직접 고른 언어 → 브라우저 언어 → 한국어** 순으로 목적지를 정한다.
+
+**이 판단은 루트에서만 한다.** 로케일 페이지에서 같은 일을 하면 en-US 로케일로 렌더하는
+Googlebot이 `/ko/`에서 `/en/`으로 튕기고, `/ko/`는 x-default이자 사이트맵 최상위 페이지라
+hreflang 작업이 통째로 무너진다. 구글의 다국어 가이드도 이 패턴을 경고한다.
+`/ko/digimon/agumon/` 같은 딥링크는 누구에게나 한국어 그대로다.
+
+`_redirects`에 있던 `/ → /ko/` 규칙은 이 파일로 대체됐다. 엣지 리다이렉트가 먼저 걸리면
+`index.html`이 서빙될 기회 자체가 없으므로 둘은 공존할 수 없다.
 
 ### 정본 호스트는 에이펙스다
 
@@ -235,7 +250,7 @@ curl -s https://digimonts.my/ko/ | grep -o 'data-ad-slot="[^"]*"'
 ([src/app/[locale]/privacy/page.tsx](src/app/%5Blocale%5D/privacy/page.tsx)).
 
 내용은 실제 동작에 맞춰 쓰여 있다 — Formspree(버그 신고), Cloudflare(호스팅·통계),
-Google AdSense(광고), localStorage 2개 키(`theme`, `announcement-dismissed`), Ko-fi(외부 링크).
+Google AdSense(광고), localStorage 3개 키(`theme`, `announcement-dismissed`, `locale`), Ko-fi(외부 링크).
 **데이터 흐름이 바뀌면 이 문서도 같이 고쳐야 한다.** 사실과 다른 방침은 없는 것보다 나쁘다.
 
 본문은 `src/messages/{ko,en,ja}.json`의 `privacy` 네임스페이스에 있다.
