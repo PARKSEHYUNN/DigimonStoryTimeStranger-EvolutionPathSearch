@@ -95,7 +95,7 @@ const html = `<!doctype html>
     <!-- A router, not a page. Nothing here should be indexed; the locale
          homepages carry the canonical content. -->
     <meta name="robots" content="noindex" />
-    <title>Digimon Story Time Stranger — Evolution Path</title>
+    <title>Digimon Story: Time Stranger — Evolution Path</title>
     <script>
 ${SCRIPT}
     </script>

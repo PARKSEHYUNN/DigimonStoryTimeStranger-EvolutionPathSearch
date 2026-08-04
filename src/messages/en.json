@@ -159,7 +159,7 @@
   },
   "footer": {
     "disclaimer": "An unofficial fan-made site, not affiliated with Bandai Namco. All Digimon names and images remain the property of their respective owners. Advertising and donation revenue is used only to cover domain, hosting and maintenance costs.",
-    "copyright": "© 2025-2026 Digimon Story Time Stranger Evolution Path Search",
+    "copyright": "© 2025-2026 Digimon Story: Time Stranger Evolution Path Search",
     "developed_by": "Developed by {name}",
     "privacy": "Privacy Policy"
   },
@@ -261,8 +261,8 @@
     "TALENT": "Talent"
   },
   "meta": {
-    "site_name": "DigimonTS Evolution Path",
-    "title": "Digimon Story Time Stranger Evolution Path Search",
+    "site_name": "Digimon Story: Time Stranger Evolution Path",
+    "title": "Digimon Story: Time Stranger Evolution Path Search",
     "description": "Find the shortest evolution route between any two Digimon in Digimon Story: Time Stranger. Browse all 475 Digimon with their evolution requirements.",
     "digimon_title": "{name} Evolution Routes",
     "digimon_description": "{name} ({generation}, {attribute}) in Digimon Story: Time Stranger. {relations} See every requirement and the shortest route from any Digimon.",
