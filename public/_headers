@@ -37,8 +37,19 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 # Crawler-facing files: fresh enough to matter, cheap enough to revalidate.
+#
+# Content-Type is stated rather than left to the host's extension guess. These
+# three are read by machines that reject on type — Search Console refuses a
+# sitemap that does not arrive as XML, and an ads.txt served as anything but
+# plain text is treated as absent. Cloudflare's defaults are already right;
+# spelling them out means a host change cannot quietly break them.
 /sitemap.xml
   Cache-Control: public, max-age=3600
+  Content-Type: application/xml; charset=utf-8
 
 /robots.txt
   Cache-Control: public, max-age=3600
+  Content-Type: text/plain; charset=utf-8
+
+/ads.txt
+  Content-Type: text/plain; charset=utf-8
