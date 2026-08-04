@@ -262,6 +262,7 @@
   },
   "meta": {
     "site_name": "Digimon Story: Time Stranger Evolution Path",
+    "title_suffix": "Digimon Story: Time Stranger",
     "title": "Digimon Story: Time Stranger Evolution Path Search",
     "description": "Find the shortest evolution route between any two Digimon in Digimon Story: Time Stranger. Browse all 475 Digimon with their evolution requirements.",
     "digimon_title": "{name} Evolution Routes",
