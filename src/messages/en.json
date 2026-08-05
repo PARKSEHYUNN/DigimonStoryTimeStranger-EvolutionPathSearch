@@ -33,6 +33,7 @@
     "shortest_route": "Shortest — {hops, plural, one {# hop} other {# hops}}",
     "alternate_route": "Alternate {index} — {hops, plural, one {# hop} other {# hops}}",
     "exclude_digimon": "Exclude {name} from routes",
+    "open_digimon": "Open {name} in a new tab",
     "remove_exclusion": "Remove {name} from the exclusion list"
   },
   "digimon_select_modal": {

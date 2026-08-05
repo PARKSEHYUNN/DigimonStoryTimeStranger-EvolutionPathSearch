@@ -33,6 +33,7 @@
     "shortest_route": "最短ルート — {hops}ステップ",
     "alternate_route": "代替 {index} — {hops}ステップ",
     "exclude_digimon": "{name} をルートから除外",
+    "open_digimon": "{name} の情報を新しいタブで開く",
     "remove_exclusion": "{name} を除外リストから解除"
   },
   "digimon_select_modal": {

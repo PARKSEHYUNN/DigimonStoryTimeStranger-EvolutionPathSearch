@@ -33,6 +33,7 @@
     "shortest_route": "최단 경로 — {hops}단계",
     "alternate_route": "대안 {index} — {hops}단계",
     "exclude_digimon": "{name} 경로에서 제외",
+    "open_digimon": "{name} 정보 새 탭에서 열기",
     "remove_exclusion": "{name} 제외 목록에서 해제"
   },
   "digimon_select_modal": {
