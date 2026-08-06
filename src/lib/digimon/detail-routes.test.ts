@@ -100,6 +100,52 @@ describe('nearestApex', () => {
     }
   });
 
+  it('breaks a remaining tie by the gentler thresholds', () => {
+    // Two thirds of entries still tie after distance and Digimon count, so
+    // this decides most of what is actually shown.
+    for (const slug of ['agumon', 'greymon', 'wargreymon', 'kuramon']) {
+      const reach = nearestApex(bySlug(slug));
+      for (let i = 1; i < reach.length; i++) {
+        const prev = reach[i - 1]!;
+        const curr = reach[i]!;
+        if (
+          prev.hops === curr.hops &&
+          prev.extraDigimon === curr.extraDigimon
+        ) {
+          expect(prev.conditionLoad).toBeLessThanOrEqual(curr.conditionLoad);
+        }
+      }
+    }
+  });
+
+  it('does not let a stat-free Jogress outrank a solo evolution', () => {
+    // A Jogress with no thresholds scores zero on conditionLoad. Ranking it
+    // below extraDigimon is what stops it reading as the easiest option.
+    for (const d of ['agumon', 'greymon', 'metalgreymon']) {
+      const reach = nearestApex(bySlug(d));
+      for (let i = 1; i < reach.length; i++) {
+        const prev = reach[i - 1]!;
+        const curr = reach[i]!;
+        if (prev.hops === curr.hops) {
+          expect(prev.extraDigimon).toBeLessThanOrEqual(curr.extraDigimon);
+        }
+      }
+    }
+  });
+
+  it('scores a stat requirement against its own stat, not across stats', () => {
+    // HP is asked for in the thousands where bonds are asked for in the
+    // dozens; an unnormalised sum would rank every HP gate as the hardest.
+    const reach = nearestApex(bySlug('agumon'));
+    for (const entry of reach) {
+      // Each requirement contributes at most 1, so the load stays comparable.
+      const count = entry.finalStep
+        ? Object.keys(entry.finalStep.conditions).length
+        : 0;
+      expect(entry.conditionLoad).toBeLessThanOrEqual(count);
+    }
+  });
+
   it('excludes the Digimon itself', () => {
     const omnimon = bySlug('omnimon');
     for (const { digimon } of nearestApex(omnimon)) {

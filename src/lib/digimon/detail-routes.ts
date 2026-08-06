@@ -1,6 +1,6 @@
 import { DEFAULT_FILTERS, findRoutes, type Route } from '@/lib/pathfinder';
-import { digimons } from './data';
-import type { Digimon, Evolution } from './schema';
+import { digimons, evolutions } from './data';
+import { BOND_KEYS, STAT_KEYS, type Digimon, type Evolution } from './schema';
 
 /**
  * The route content on a Digimon's page, computed at build time.
@@ -55,7 +55,29 @@ export interface ApexReach {
   extraDigimon: number;
 
   /**
+   * How demanding the final hop's thresholds are, from 0 upwards.
+   *
+   * Raw numbers cannot be compared across stats: HP requirements run to 4,900
+   * where SP tops out at 2,660, so summing them would mark every HP-gated
+   * evolution as the hardest by arithmetic alone. Each requirement is scored
+   * against the largest the game ever asks for that same stat, and the shares
+   * are added — which captures both how high the bars are and how many of
+   * them there are.
+   *
+   * Ranks below this rather than above it, deliberately. 856 of the entries
+   * shown have no stat requirements at all because they are Jogress: the cost
+   * is a whole second Digimon, not a threshold. Sorting on thresholds first
+   * would float exactly those to the top as the "easiest".
+   */
+  conditionLoad: number;
+
+  /**
    * The hop that arrives at this Digimon, so its requirements can be shown.
+   *
+   * Note the DLC caveat: owning the DLC removes an evolution's requirements
+   * rather than adding a shortcut, and the data does not model that yet — so
+   * these thresholds describe the non-DLC path. Revisit when DLC gains the
+   * per-evolution detail to express it.
    *
    * A step count on its own misleads badly here. Agumon reaches Agumon (Bond
    * of Bravery) in "1 step", which reads as trivial, while the edge actually
@@ -125,6 +147,36 @@ export function raisingRoutes(target: Digimon): RaisingRoute[] {
  * pages, which is duplicate content rather than content. The distances are
  * what differ: WarGreymon reaches Omnimon in one step, Kuramon in six.
  */
+/**
+ * The largest value the game ever demands of each stat, so requirements can be
+ * scored as a share of it rather than compared as raw numbers.
+ */
+const REQUIREMENT_CEILING = new Map<string, number>();
+for (const evolution of evolutions) {
+  for (const key of [...STAT_KEYS, ...BOND_KEYS]) {
+    const value = evolution.conditions[key];
+    if (value === undefined) continue;
+    REQUIREMENT_CEILING.set(
+      key,
+      Math.max(REQUIREMENT_CEILING.get(key) ?? 0, value),
+    );
+  }
+}
+
+/** How demanding an evolution's thresholds are — see ApexReach.conditionLoad. */
+function conditionLoadOf(evolution: Evolution | null): number {
+  if (!evolution) return 0;
+
+  let load = 0;
+  for (const key of [...STAT_KEYS, ...BOND_KEYS]) {
+    const value = evolution.conditions[key];
+    if (value === undefined) continue;
+    const ceiling = REQUIREMENT_CEILING.get(key);
+    if (ceiling) load += value / ceiling;
+  }
+  return load;
+}
+
 /** Jogress partners a route needs that are not already part of it. */
 function extraDigimonNeeded(route: Route): number {
   const onRoute = new Set(route.nodes);
@@ -153,20 +205,25 @@ export function nearestApex(from: Digimon): ApexReach[] {
     if (!route) continue;
 
     const last = route.steps.at(-1);
+    const finalStep = last && !last.reversed ? last.evolution : null;
     reached.push({
       digimon,
       hops: route.nodes.length - 1,
       extraDigimon: extraDigimonNeeded(route),
-      finalStep: last && !last.reversed ? last.evolution : null,
+      conditionLoad: conditionLoadOf(finalStep),
+      finalStep,
     });
   }
 
-  // Fewest steps, then fewest Digimon to raise. The id is only a tiebreak of
-  // last resort, kept so the build is deterministic.
+  // Fewest steps, then fewest Digimon to raise, then the gentlest thresholds.
+  // Two thirds of the entries still tied after the first two, so the third
+  // decides most of the remaining order. The id is a tiebreak of last resort,
+  // kept only so the build is deterministic.
   reached.sort(
     (a, b) =>
       a.hops - b.hops ||
       a.extraDigimon - b.extraDigimon ||
+      a.conditionLoad - b.conditionLoad ||
       a.digimon.id - b.digimon.id,
   );
 
