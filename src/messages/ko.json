@@ -65,7 +65,17 @@
     "stat": "{key} {value} 이상",
     "item": "{item} 필요",
     "personality_message": "{personality} 성격 {digimon_name}",
-    "agent_skill": "{key} {value} 이상"
+    "agent_skill": "{key} {value} 이상",
+    "raising_heading": "{name} 육성 최단 경로",
+    "raising_none": "유년기에서 도달하는 경로가 없습니다.",
+    "raising_from": "{name}에서 시작 · {hops}단계",
+    "raising_open": "검색에서 열기",
+    "raising_intro": "유년기 디지몬에서 {name}까지 가장 짧게 도달하는 경로입니다. 에이전트 레벨 10, 조그레스와 DLC를 모두 포함한 기준입니다.",
+    "apex_heading": "가장 가까운 초궁극체",
+    "apex_none": "도달 가능한 초궁극체가 없습니다.",
+    "apex_intro": "{name}에서 가장 적은 단계로 도달할 수 있는 초궁극체입니다.",
+    "hops": "{hops}단계",
+    "step_devolution": "퇴화"
   },
   "digimon_list": {
     "title": "디지몬 목록",

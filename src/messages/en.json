@@ -65,7 +65,17 @@
     "stat": "{key} {value} or higher",
     "item": "{item} required",
     "personality_message": "{digimon_name} with {personality} personality",
-    "agent_skill": "{key} {value} or higher"
+    "agent_skill": "{key} {value} or higher",
+    "raising_heading": "Shortest routes to {name}",
+    "raising_none": "No route reaches this Digimon from an In-Training one.",
+    "raising_from": "From {name} · {hops} steps",
+    "raising_open": "Open in the search",
+    "raising_intro": "The shortest ways to reach {name} starting from an In-Training Digimon, at agent level 10 with Jogress and DLC included.",
+    "apex_heading": "Nearest Ultra level Digimon",
+    "apex_none": "No Ultra level Digimon is reachable.",
+    "apex_intro": "The Ultra level Digimon {name} can reach in the fewest steps.",
+    "hops": "{hops} steps",
+    "step_devolution": "De-evolution"
   },
   "digimon_list": {
     "title": "Digimon List",

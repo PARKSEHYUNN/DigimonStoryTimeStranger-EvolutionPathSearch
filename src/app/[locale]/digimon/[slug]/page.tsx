@@ -11,6 +11,9 @@ import { digimonName, iconUrl } from '@/lib/digimon/display';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { DigimonIcon } from '@/components/digimon/DigimonIcon';
 import { EvolutionLinkList } from '@/components/digimon/EvolutionLinkList';
+import { RaisingRoutes } from '@/components/digimon/RaisingRoutes';
+import { NearestApex } from '@/components/digimon/NearestApex';
+import { nearestApex, raisingRoutes } from '@/lib/digimon/detail-routes';
 import { routing, type Locale } from '@/lib/i18n/routing';
 import {
   alternatesFor,
@@ -107,9 +110,18 @@ export default async function DigimonDetailPage({
   const { evolvesTo, evolvesFrom } = neighborsOf(digimon.id);
 
   const facts = [
-    { label: t('digimon_info.generation'), value: t(`generation.${digimon.generation}`) },
-    { label: t('digimon_info.attribute'), value: t(`attribute.${digimon.attribute}`) },
-    { label: t('digimon_info.personality'), value: t(`personality.${digimon.personality}`) },
+    {
+      label: t('digimon_info.generation'),
+      value: t(`generation.${digimon.generation}`),
+    },
+    {
+      label: t('digimon_info.attribute'),
+      value: t(`attribute.${digimon.attribute}`),
+    },
+    {
+      label: t('digimon_info.personality'),
+      value: t(`personality.${digimon.personality}`),
+    },
   ];
 
   // Describes exactly what the page holds: a named thing with an image, plus
@@ -161,7 +173,7 @@ export default async function DigimonDetailPage({
         dangerouslySetInnerHTML={{ __html: jsonLdScript(structuredData) }}
       />
 
-      <header className="flex flex-col items-center gap-4 rounded-2xl bg-surface-raised p-4 text-center shadow-sm sm:flex-row sm:gap-5 sm:p-5 sm:text-left">
+      <header className="bg-surface-raised flex flex-col items-center gap-4 rounded-2xl p-4 text-center shadow-sm sm:flex-row sm:gap-5 sm:p-5 sm:text-left">
         <div className="shrink-0">
           <DigimonIcon
             id={digimon.id}
@@ -172,17 +184,17 @@ export default async function DigimonDetailPage({
           />
         </div>
         <div className="min-w-0">
-          <h1 className="text-xl font-bold break-words text-content">{name}</h1>
+          <h1 className="text-content text-xl font-bold break-words">{name}</h1>
           <dl className="mt-2 flex flex-wrap justify-center gap-x-5 gap-y-1 sm:justify-start">
             {facts.map((fact) => (
               <div key={fact.label} className="flex gap-1.5 text-sm">
                 <dt className="text-content-muted">{fact.label}</dt>
-                <dd className="font-medium text-content">{fact.value}</dd>
+                <dd className="text-content font-medium">{fact.value}</dd>
               </div>
             ))}
           </dl>
           {digimon.dlc && (
-            <span className="mt-2 inline-block rounded-full bg-accent/15 px-2 py-0.5 text-xs font-semibold text-accent">
+            <span className="bg-accent/15 text-accent mt-2 inline-block rounded-full px-2 py-0.5 text-xs font-semibold">
               DLC
             </span>
           )}
@@ -190,8 +202,8 @@ export default async function DigimonDetailPage({
       </header>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <section className="rounded-2xl bg-surface-raised p-4 shadow-sm sm:p-5">
-          <h2 className="mb-3 text-sm font-semibold text-content">
+        <section className="bg-surface-raised rounded-2xl p-4 shadow-sm sm:p-5">
+          <h2 className="text-content mb-3 text-sm font-semibold">
             {t('digimon_info.before_digimon')}
           </h2>
           <EvolutionLinkList
@@ -201,8 +213,8 @@ export default async function DigimonDetailPage({
           />
         </section>
 
-        <section className="rounded-2xl bg-surface-raised p-4 shadow-sm sm:p-5">
-          <h2 className="mb-3 text-sm font-semibold text-content">
+        <section className="bg-surface-raised rounded-2xl p-4 shadow-sm sm:p-5">
+          <h2 className="text-content mb-3 text-sm font-semibold">
             {t('digimon_info.after_digimon')}
           </h2>
           <EvolutionLinkList
@@ -212,6 +224,28 @@ export default async function DigimonDetailPage({
           />
         </section>
       </div>
+
+      <section className="bg-surface-raised rounded-2xl p-4 shadow-sm sm:p-5">
+        <h2 className="text-content mb-3 text-sm font-semibold">
+          {t('digimon_info.raising_heading', { name })}
+        </h2>
+        <RaisingRoutes
+          routes={raisingRoutes(digimon)}
+          target={name}
+          locale={locale as Locale}
+        />
+      </section>
+
+      <section className="bg-surface-raised rounded-2xl p-4 shadow-sm sm:p-5">
+        <h2 className="text-content mb-3 text-sm font-semibold">
+          {t('digimon_info.apex_heading')}
+        </h2>
+        <NearestApex
+          reach={nearestApex(digimon)}
+          from={name}
+          locale={locale as Locale}
+        />
+      </section>
 
       <AdSlot placement="footer" />
     </article>

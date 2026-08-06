@@ -65,7 +65,17 @@
     "stat": "{key} {value} 以上",
     "item": "{item} 必要",
     "personality_message": "{personality} 性格の {digimon_name}",
-    "agent_skill": "{key} {value} 以上"
+    "agent_skill": "{key} {value} 以上",
+    "raising_heading": "{name} への最短ルート",
+    "raising_none": "幼年期から到達するルートがありません。",
+    "raising_from": "{name} から · {hops} ステップ",
+    "raising_open": "検索で開く",
+    "raising_intro": "幼年期のデジモンから {name} へ最も短く到達するルートです。エージェントレベル 10、ジョグレスと DLC を含む条件です。",
+    "apex_heading": "最も近い超究極体",
+    "apex_none": "到達できる超究極体がありません。",
+    "apex_intro": "{name} から最も少ないステップで到達できる超究極体です。",
+    "hops": "{hops} ステップ",
+    "step_devolution": "退化"
   },
   "digimon_list": {
     "title": "デジモンリスト",
