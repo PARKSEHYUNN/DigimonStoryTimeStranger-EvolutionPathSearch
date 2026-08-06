@@ -108,6 +108,7 @@ export default async function DigimonDetailPage({
   const t = await getTranslations();
   const name = digimonName(digimon, locale as Locale);
   const { evolvesTo, evolvesFrom } = neighborsOf(digimon.id);
+  const apexReach = nearestApex(digimon);
 
   const facts = [
     {
@@ -236,16 +237,21 @@ export default async function DigimonDetailPage({
         />
       </section>
 
-      <section className="bg-surface-raised rounded-2xl p-4 shadow-sm sm:p-5">
-        <h2 className="text-content mb-3 text-sm font-semibold">
-          {t('digimon_info.apex_heading')}
-        </h2>
-        <NearestApex
-          reach={nearestApex(digimon)}
-          from={name}
-          locale={locale as Locale}
-        />
-      </section>
+      {/* Dropped rather than shown empty. An Ultra with no Ultra next door has
+          nothing to answer here, and a heading over "none" reads worse than the
+          absence — see APEX_NEIGHBOUR_LIMIT. */}
+      {apexReach.length > 0 && (
+        <section className="bg-surface-raised rounded-2xl p-4 shadow-sm sm:p-5">
+          <h2 className="text-content mb-3 text-sm font-semibold">
+            {t('digimon_info.apex_heading')}
+          </h2>
+          <NearestApex
+            reach={apexReach}
+            from={name}
+            locale={locale as Locale}
+          />
+        </section>
+      )}
 
       <AdSlot placement="footer" />
     </article>

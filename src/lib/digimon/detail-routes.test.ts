@@ -151,6 +151,33 @@ describe('nearestApex', () => {
     }
   });
 
+  it('limits an Ultra to the Ultras next door', () => {
+    // Below the top tier any distance answers "what can I become". For an
+    // Ultra only the neighbours do; the rest is a list of strangers.
+    for (const slug of ['omnimon', 'chaosmon', 'alphamon-ouryuken']) {
+      const digimon = digimons.find((d) => d.slug === slug);
+      if (!digimon || digimon.generation !== 6) continue;
+      for (const { hops } of nearestApex(digimon)) {
+        expect(hops).toBeLessThanOrEqual(2);
+      }
+    }
+  });
+
+  it('returns nothing for an Ultra with no Ultra nearby', () => {
+    // 21 of the 30 are four or more steps from the next one; their pages drop
+    // the section rather than print filler.
+    const lonely = digimons
+      .filter((d) => d.generation === 6)
+      .filter((d) => nearestApex(d).length === 0);
+    expect(lonely.length).toBeGreaterThan(0);
+  });
+
+  it('still answers fully for anything below the top tier', () => {
+    // The limit is for Ultras only — Agumon should still see distant options.
+    const reach = nearestApex(bySlug('agumon'));
+    expect(reach.some((r) => r.hops > 2)).toBe(true);
+  });
+
   it('excludes the Digimon itself', () => {
     const omnimon = bySlug('omnimon');
     for (const { digimon } of nearestApex(omnimon)) {

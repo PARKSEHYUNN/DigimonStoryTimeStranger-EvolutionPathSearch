@@ -39,6 +39,23 @@ export const ROUTES_SHOWN = 3;
  */
 export const APEX_SHOWN = 9;
 
+/**
+ * How far an Ultra may look for other Ultras.
+ *
+ * For anything below the top tier this section answers "what can I become",
+ * and any distance is a fair answer. For an Ultra the question is already
+ * settled, and what remains useful is the variants next door: Omnimon is one
+ * step from Omnimon Zwart, X-Antibody and Merciful Mode, which is a real
+ * answer to "what else can I make from here".
+ *
+ * Beyond a step or two it stops being an answer. Only 9 of the 30 Ultras have
+ * any neighbour within two steps; for the other 21 the nearest is four or more
+ * away — AlphamonOuryuken's closest is five — and a list of unrelated Digimon
+ * five steps off is not a progression, it is filler. Those pages drop the
+ * section instead.
+ */
+const APEX_NEIGHBOUR_LIMIT = 2;
+
 const seeds = digimons.filter((d) => d.generation <= SEED_MAX_GENERATION);
 const apexes = digimons.filter((d) => d.generation === APEX_GENERATION);
 
@@ -230,7 +247,13 @@ export function nearestApex(from: Digimon): ApexReach[] {
   // Two thirds of the entries still tied after the first two, so the third
   // decides most of the remaining order. The id is a tiebreak of last resort,
   // kept only so the build is deterministic.
-  reached.sort(
+  // An Ultra looking at other Ultras only wants the ones next door.
+  const candidates =
+    from.generation === APEX_GENERATION
+      ? reached.filter((r) => r.hops <= APEX_NEIGHBOUR_LIMIT)
+      : reached;
+
+  candidates.sort(
     (a, b) =>
       a.hops - b.hops ||
       a.extraDigimon - b.extraDigimon ||
@@ -238,7 +261,7 @@ export function nearestApex(from: Digimon): ApexReach[] {
       a.digimon.id - b.digimon.id,
   );
 
-  const nearest = reached.slice(0, APEX_SHOWN);
+  const nearest = candidates.slice(0, APEX_SHOWN);
   apexCache.set(from.id, nearest);
   return nearest;
 }
