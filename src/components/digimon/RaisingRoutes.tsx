@@ -1,11 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 import { ArrowLeft, ArrowRight, Search } from 'lucide-react';
-import { digimonById, itemById } from '@/lib/digimon/data';
-import { digimonName, itemName } from '@/lib/digimon/display';
+import { digimonById } from '@/lib/digimon/data';
+import { digimonName } from '@/lib/digimon/display';
 import type { RaisingRoute } from '@/lib/digimon/detail-routes';
-import { BOND_KEYS, STAT_KEYS, type Evolution } from '@/lib/digimon/schema';
 import { Link } from '@/lib/i18n/navigation';
 import type { Locale } from '@/lib/i18n/routing';
+import { evolutionRequirements, jogressPartners } from './requirements';
 
 /**
  * The shortest ways to raise this Digimon, rendered on the server.
@@ -37,33 +37,6 @@ interface PreparedRoute {
   searchHref: string;
   chain: { slug: string; name: string; reversed: boolean | null }[];
   hops: Hop[];
-}
-
-function requirementsOf(
-  evolution: Evolution,
-  locale: Locale,
-  t: Awaited<ReturnType<typeof getTranslations>>,
-): string[] {
-  const { conditions } = evolution;
-  const item = conditions.item ? itemById.get(conditions.item) : undefined;
-
-  return [
-    t('conditions.level', { value: conditions.rank }),
-    ...STAT_KEYS.filter((k) => conditions[k] !== undefined).map((k) =>
-      t('conditions.stat', { stat: t(`stats.${k}`), value: conditions[k]! }),
-    ),
-    ...BOND_KEYS.filter((k) => conditions[k] !== undefined).map((k) =>
-      t('conditions.stat', { stat: t(`agent.${k}`), value: conditions[k]! }),
-    ),
-    ...(item ? [t('conditions.item', { item: itemName(item, locale) })] : []),
-    ...(conditions.jogress ?? []).map((partner) => {
-      const digimon = digimonById.get(partner.id);
-      return t('conditions.jogress_partner', {
-        digimon: digimon ? digimonName(digimon, locale) : `#${partner.id}`,
-        personality: t(`personality.${partner.personality}`),
-      });
-    }),
-  ];
 }
 
 export async function RaisingRoutes({
@@ -108,7 +81,10 @@ export async function RaisingRoutes({
             name: digimonName(to, locale),
             requirements: step.reversed
               ? null
-              : requirementsOf(step.evolution, locale, t),
+              : [
+                  ...evolutionRequirements(step.evolution, locale, t),
+                  ...jogressPartners(step.evolution, locale, t),
+                ],
           },
         ];
       }),

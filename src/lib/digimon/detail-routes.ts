@@ -1,6 +1,6 @@
 import { DEFAULT_FILTERS, findRoutes, type Route } from '@/lib/pathfinder';
 import { digimons } from './data';
-import type { Digimon } from './schema';
+import type { Digimon, Evolution } from './schema';
 
 /**
  * The route content on a Digimon's page, computed at build time.
@@ -41,6 +41,18 @@ export interface RaisingRoute {
 export interface ApexReach {
   digimon: Digimon;
   hops: number;
+  /**
+   * The hop that arrives at this Digimon, so its requirements can be shown.
+   *
+   * A step count on its own misleads badly here. Agumon reaches Agumon (Bond
+   * of Bravery) in "1 step", which reads as trivial, while the edge actually
+   * demands agent level 8 and 3,630 attack. Jogress is worse: Omnimon in "1
+   * step" hides that a second fully raised Digimon has to exist alongside the
+   * first. The requirements are in the data — they were simply never shown.
+   *
+   * Null when the last hop is a de-evolution, which carries no requirements.
+   */
+  finalStep: Evolution | null;
 }
 
 /**
@@ -109,7 +121,14 @@ export function nearestApex(from: Digimon): ApexReach[] {
   for (const digimon of apexes) {
     if (digimon.id === from.id) continue;
     const [route] = findRoutes(from.id, digimon.id, 1, DEFAULT_FILTERS);
-    if (route) reached.push({ digimon, hops: route.nodes.length - 1 });
+    if (!route) continue;
+
+    const last = route.steps.at(-1);
+    reached.push({
+      digimon,
+      hops: route.nodes.length - 1,
+      finalStep: last && !last.reversed ? last.evolution : null,
+    });
   }
 
   reached.sort((a, b) => a.hops - b.hops || a.digimon.id - b.digimon.id);
