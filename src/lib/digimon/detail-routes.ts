@@ -42,6 +42,19 @@ export interface ApexReach {
   digimon: Digimon;
   hops: number;
   /**
+   * How many Digimon beyond this route's own chain the player has to raise.
+   *
+   * Jogress needs a partner standing beside the line being raised, and that
+   * partner is a whole second playthrough of levelling. Two apexes at the same
+   * step count are not the same amount of work when one of them wants an extra
+   * Digimon, and 82% of the entries shown tie on step count — without this the
+   * order among them came down to internal ID, which is to say nothing at all.
+   *
+   * Partners already on the route do not count: they are being raised anyway.
+   */
+  extraDigimon: number;
+
+  /**
    * The hop that arrives at this Digimon, so its requirements can be shown.
    *
    * A step count on its own misleads badly here. Agumon reaches Agumon (Bond
@@ -112,6 +125,22 @@ export function raisingRoutes(target: Digimon): RaisingRoute[] {
  * pages, which is duplicate content rather than content. The distances are
  * what differ: WarGreymon reaches Omnimon in one step, Kuramon in six.
  */
+/** Jogress partners a route needs that are not already part of it. */
+function extraDigimonNeeded(route: Route): number {
+  const onRoute = new Set(route.nodes);
+  const extra = new Set<number>();
+
+  for (const step of route.steps) {
+    // A de-evolution asks nothing of the player, partners included.
+    if (!step || step.reversed) continue;
+    for (const partner of step.evolution.conditions.jogress ?? []) {
+      if (!onRoute.has(partner.id)) extra.add(partner.id);
+    }
+  }
+
+  return extra.size;
+}
+
 export function nearestApex(from: Digimon): ApexReach[] {
   const cached = apexCache.get(from.id);
   if (cached) return cached;
@@ -127,11 +156,19 @@ export function nearestApex(from: Digimon): ApexReach[] {
     reached.push({
       digimon,
       hops: route.nodes.length - 1,
+      extraDigimon: extraDigimonNeeded(route),
       finalStep: last && !last.reversed ? last.evolution : null,
     });
   }
 
-  reached.sort((a, b) => a.hops - b.hops || a.digimon.id - b.digimon.id);
+  // Fewest steps, then fewest Digimon to raise. The id is only a tiebreak of
+  // last resort, kept so the build is deterministic.
+  reached.sort(
+    (a, b) =>
+      a.hops - b.hops ||
+      a.extraDigimon - b.extraDigimon ||
+      a.digimon.id - b.digimon.id,
+  );
 
   const nearest = reached.slice(0, APEX_SHOWN);
   apexCache.set(from.id, nearest);

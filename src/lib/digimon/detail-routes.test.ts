@@ -69,6 +69,37 @@ describe('nearestApex', () => {
     expect(wargreymon.hops).toBeLessThan(kuramon.hops);
   });
 
+  it('breaks a step-count tie by how many Digimon must be raised', () => {
+    // 82% of the entries shown tie on step count, so this comparison decides
+    // most of the order. Within one distance, fewer extra Digimon comes first.
+    for (const slug of ['agumon', 'greymon', 'wargreymon', 'kuramon']) {
+      const reach = nearestApex(bySlug(slug));
+      for (let i = 1; i < reach.length; i++) {
+        const prev = reach[i - 1]!;
+        const curr = reach[i]!;
+        if (prev.hops === curr.hops) {
+          expect(prev.extraDigimon).toBeLessThanOrEqual(curr.extraDigimon);
+        }
+      }
+    }
+  });
+
+  it('does not count a Jogress partner that is already on the route', () => {
+    // Omnimon comes from WarGreymon + MetalGarurumon, so a route arriving
+    // through WarGreymon only needs MetalGarurumon raised separately.
+    const reach = nearestApex(bySlug('wargreymon'));
+    const omnimon = reach.find((r) => r.digimon.slug === 'omnimon');
+    expect(omnimon?.extraDigimon).toBe(1);
+  });
+
+  it('counts nothing extra when no Jogress is involved', () => {
+    for (const { finalStep, extraDigimon } of nearestApex(bySlug('agumon'))) {
+      if (finalStep && !finalStep.conditions.jogress) {
+        expect(extraDigimon).toBe(0);
+      }
+    }
+  });
+
   it('excludes the Digimon itself', () => {
     const omnimon = bySlug('omnimon');
     for (const { digimon } of nearestApex(omnimon)) {
