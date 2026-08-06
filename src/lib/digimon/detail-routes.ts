@@ -23,10 +23,21 @@ const SEED_MAX_GENERATION = 1;
 const APEX_GENERATION = 6;
 
 /** Enough to show there is a choice, few enough that they do not read alike. */
-const ROUTES_SHOWN = 3;
+export const ROUTES_SHOWN = 3;
 
-/** Distinct per Digimon, unlike the full reachable set — see nearestApex. */
-const APEX_SHOWN = 5;
+/**
+ * Distinct per Digimon, unlike the full reachable set — see nearestApex.
+ *
+ * Nine rather than five because the ordering was quietly deciding what appears
+ * at all. Agumon has nine Ultras at four steps, so a list of five cut four of
+ * them, and the ones cut were the Jogress ones — Omnimon among them, off the
+ * page of the Digimon it is most associated with. Across the site that left 48
+ * pages showing no Jogress option whatever; at nine it is one.
+ *
+ * Nine is where the curve flattens. Ten clears the last page but costs every
+ * one of the 475 an extra row to do it.
+ */
+export const APEX_SHOWN = 9;
 
 const seeds = digimons.filter((d) => d.generation <= SEED_MAX_GENERATION);
 const apexes = digimons.filter((d) => d.generation === APEX_GENERATION);
@@ -140,14 +151,6 @@ export function raisingRoutes(target: Digimon): RaisingRoute[] {
 }
 
 /**
- * The Ultra-level Digimon this one can reach soonest.
- *
- * Nearest rather than reachable, because every Digimon in the game can reach
- * every one of the 30 — listing them would print the same block on all 475
- * pages, which is duplicate content rather than content. The distances are
- * what differ: WarGreymon reaches Omnimon in one step, Kuramon in six.
- */
-/**
  * The largest value the game ever demands of each stat, so requirements can be
  * scored as a share of it rather than compared as raw numbers.
  */
@@ -193,6 +196,14 @@ function extraDigimonNeeded(route: Route): number {
   return extra.size;
 }
 
+/**
+ * The Ultra-level Digimon this one can reach soonest.
+ *
+ * Nearest rather than reachable, because every Digimon in the game can reach
+ * every one of the 30 — listing them would print the same block on all 475
+ * pages, which is duplicate content rather than content. The distances are
+ * what differ: WarGreymon reaches Omnimon in one step, Kuramon in six.
+ */
 export function nearestApex(from: Digimon): ApexReach[] {
   const cached = apexCache.get(from.id);
   if (cached) return cached;

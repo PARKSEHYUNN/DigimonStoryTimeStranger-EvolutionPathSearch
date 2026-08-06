@@ -1,6 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { digimons } from './data';
-import { nearestApex, raisingRoutes } from './detail-routes';
+import {
+  APEX_SHOWN,
+  ROUTES_SHOWN,
+  nearestApex,
+  raisingRoutes,
+} from './detail-routes';
 
 const bySlug = (slug: string) => {
   const digimon = digimons.find((d) => d.slug === slug);
@@ -29,10 +34,10 @@ describe('raisingRoutes', () => {
     expect(hops).toEqual([...hops].sort((a, b) => a - b));
   });
 
-  it('shows at most three, and never the same chain twice', () => {
+  it('caps the list, and never shows the same chain twice', () => {
     for (const slug of ['omnimon', 'agumon', 'kuramon']) {
       const routes = raisingRoutes(bySlug(slug));
-      expect(routes.length).toBeLessThanOrEqual(3);
+      expect(routes.length).toBeLessThanOrEqual(ROUTES_SHOWN);
       const chains = routes.map((r) => r.route.nodes.join('-'));
       expect(new Set(chains).size).toBe(chains.length);
     }
@@ -56,7 +61,7 @@ describe('nearestApex', () => {
 
   it('orders by distance and caps the list', () => {
     const reach = nearestApex(bySlug('agumon'));
-    expect(reach.length).toBeLessThanOrEqual(5);
+    expect(reach.length).toBeLessThanOrEqual(APEX_SHOWN);
     const hops = reach.map((r) => r.hops);
     expect(hops).toEqual([...hops].sort((a, b) => a - b));
   });
