@@ -13,3 +13,11 @@
 # preference handler forwards visitors of other languages.
 /list        /ko/digimon/    301
 /list/       /ko/digimon/    301
+
+# Naver's site verification, served at the exact URL it asks for.
+#
+# Pages strips .html and 301s /foo.html to /foo, so the file Naver uploads is
+# reachable at every address except the one Naver requests. A verifier that
+# does not follow redirects simply fails. The 200 here is a rewrite rather than
+# a redirect: same asset, no hop.
+/navereb19e1bff7893892952288337f312e92.html  /navereb19e1bff7893892952288337f312e92  200
