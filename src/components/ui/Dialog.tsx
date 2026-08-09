@@ -60,7 +60,14 @@ export function Dialog({ open, onClose, title, children, tall }: DialogProps) {
             <X size={18} />
           </button>
         </header>
-        <div className="flex min-h-0 flex-1 flex-col overflow-y-auto p-5">
+        <div
+          className={`flex min-h-0 flex-1 flex-col p-5 ${
+            // `tall` content (the Digimon picker's Virtuoso grid) scrolls
+            // itself; a second scroll container here would fight it for
+            // wheel/touch input and re-trigger Virtuoso's own remeasuring.
+            tall ? 'overflow-hidden' : 'overflow-y-auto'
+          }`}
+        >
           {children}
         </div>
       </div>

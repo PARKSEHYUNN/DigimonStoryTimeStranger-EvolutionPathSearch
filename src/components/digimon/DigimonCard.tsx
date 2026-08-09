@@ -40,13 +40,20 @@ export function DigimonCard({
           size={size}
           silhouette={silhouette}
         />
-        <span className="line-clamp-2 text-xs leading-tight font-medium text-content">
-          {name}
-        </span>
-        <span className="text-[0.65rem] leading-tight text-content-muted">
-          {t(`generation.${digimon.generation}`)} ·{' '}
-          {t(`attribute.${digimon.attribute}`)}
-        </span>
+        {/* Fixed-height block, not the individual lines: a short name should
+            still sit directly above its info line, with any slack pushed to
+            the bottom of the card rather than wedged between the two. Every
+            card needs the same total height regardless, or Virtuoso's grid
+            keeps revising its estimate of the list's length as it scrolls. */}
+        <div className="flex min-h-[2.625rem] w-full flex-col items-center gap-0.5">
+          <span className="line-clamp-2 text-xs leading-tight font-medium text-content">
+            {name}
+          </span>
+          <span className="w-full truncate text-[0.65rem] leading-tight text-content-muted">
+            {t(`generation.${digimon.generation}`)} ·{' '}
+            {t(`attribute.${digimon.attribute}`)}
+          </span>
+        </div>
       </Wrapper>
 
       {action && (
