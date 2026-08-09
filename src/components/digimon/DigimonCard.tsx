@@ -1,17 +1,22 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Ban, X } from 'lucide-react';
+import { Ban, Star, X } from 'lucide-react';
 import type { Digimon } from '@/lib/digimon/schema';
 import { DigimonIcon } from './DigimonIcon';
+
+type CardAction =
+  /** Ban adds to the exclusion list, remove takes it off — both momentary. */
+  | { kind: 'ban' | 'remove'; onAction: () => void; label: string }
+  /** Favorite reflects current state instead of just performing an action. */
+  | { kind: 'favorite'; active: boolean; onAction: () => void; label: string };
 
 interface DigimonCardProps {
   digimon: Digimon;
   name: string;
   onClick?: () => void;
   silhouette?: boolean;
-  /** Corner affordance: ban adds to the exclusion list, remove takes it off. */
-  action?: { kind: 'ban' | 'remove'; onAction: () => void; label: string };
+  action?: CardAction;
   size?: number;
 }
 
@@ -65,13 +70,24 @@ export function DigimonCard({
           }}
           aria-label={action.label}
           title={action.label}
+          aria-pressed={action.kind === 'favorite' ? action.active : undefined}
           className={`absolute top-0 right-0 cursor-pointer rounded-full p-1 shadow-sm transition-opacity ${
             action.kind === 'ban'
               ? 'bg-surface-raised text-devolution opacity-0 group-hover:opacity-100 focus-visible:opacity-100'
-              : 'bg-devolution text-white'
+              : action.kind === 'favorite'
+                ? action.active
+                  ? 'bg-surface-raised text-accent opacity-100'
+                  : 'bg-surface-raised text-content-muted opacity-0 group-hover:opacity-100 focus-visible:opacity-100'
+                : 'bg-devolution text-white'
           }`}
         >
-          {action.kind === 'ban' ? <Ban size={13} /> : <X size={13} />}
+          {action.kind === 'ban' ? (
+            <Ban size={13} />
+          ) : action.kind === 'favorite' ? (
+            <Star size={13} className={action.active ? 'fill-current' : ''} />
+          ) : (
+            <X size={13} />
+          )}
         </button>
       )}
     </div>

@@ -50,7 +50,10 @@
     "loading": "ロード中...",
     "reset": "検索・フィルターをリセット",
     "result_count": "{count}体",
-    "no_results": "条件に合うデジモンがいません。"
+    "no_results": "条件に合うデジモンがいません。",
+    "favorites": "お気に入り",
+    "add_favorite": "{name}をお気に入りに追加",
+    "remove_favorite": "{name}をお気に入りから削除"
   },
   "digimon_info": {
     "title": "デジモン情報",

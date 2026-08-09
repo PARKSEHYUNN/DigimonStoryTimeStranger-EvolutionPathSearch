@@ -50,7 +50,10 @@
     "loading": "Loading...",
     "reset": "Clear search and filters",
     "result_count": "{count, plural, one {# Digimon} other {# Digimon}}",
-    "no_results": "No Digimon match these filters."
+    "no_results": "No Digimon match these filters.",
+    "favorites": "Favorites",
+    "add_favorite": "Add {name} to favorites",
+    "remove_favorite": "Remove {name} from favorites"
   },
   "digimon_info": {
     "title": "Digimon Info",

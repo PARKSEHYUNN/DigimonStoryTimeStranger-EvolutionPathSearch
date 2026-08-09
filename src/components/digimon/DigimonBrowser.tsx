@@ -1,10 +1,10 @@
 'use client';
 
-import { useDeferredValue, useMemo, useState } from 'react';
+import { useDeferredValue, useMemo, useState, useSyncExternalStore } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { VirtuosoGrid } from 'react-virtuoso';
 import { Search, SlidersHorizontal, X } from 'lucide-react';
-import { digimons } from '@/lib/digimon/data';
+import { digimonById, digimons } from '@/lib/digimon/data';
 import { digimonName } from '@/lib/digimon/display';
 import type { Digimon } from '@/lib/digimon/schema';
 import type { Locale } from '@/lib/i18n/routing';
@@ -14,6 +14,48 @@ import { DigimonCard } from './DigimonCard';
 const GENERATIONS = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 const ATTRIBUTES = [0, 1, 2, 3, 4, 5, 6];
 const PERSONALITIES = Array.from({ length: 16 }, (_, i) => i);
+
+/**
+ * Favorited Digimon ids, read from localStorage the same way the silhouette
+ * toggle is: as an external store, cached rather than rebuilt on every read.
+ * useSyncExternalStore compares snapshots with Object.is, and a Set rebuilt
+ * from scratch each call would never be equal to its predecessor — every
+ * render would look like a change and React would warn (or loop).
+ */
+const favoritesListeners = new Set<() => void>();
+const EMPTY_FAVORITES: ReadonlySet<number> = new Set();
+let favoritesCache: ReadonlySet<number> | null = null;
+
+const subscribeFavorites = (onChange: () => void) => {
+  favoritesListeners.add(onChange);
+  return () => favoritesListeners.delete(onChange);
+};
+
+function readFavorites(): ReadonlySet<number> {
+  if (favoritesCache) return favoritesCache;
+  try {
+    const raw = localStorage.getItem('favorites');
+    favoritesCache = new Set(raw ? (JSON.parse(raw) as number[]) : []);
+  } catch {
+    favoritesCache = EMPTY_FAVORITES;
+  }
+  return favoritesCache;
+}
+
+const readServerFavorites = () => EMPTY_FAVORITES;
+
+function toggleFavorite(id: number) {
+  const next = new Set(readFavorites());
+  if (next.has(id)) next.delete(id);
+  else next.add(id);
+  favoritesCache = next;
+  try {
+    localStorage.setItem('favorites', JSON.stringify([...next]));
+  } catch {
+    // Storage unavailable or full — the toggle still holds for this session.
+  }
+  for (const listener of favoritesListeners) listener();
+}
 
 type FilterKey = 'generation' | 'attribute' | 'personality';
 
@@ -35,6 +77,24 @@ export function DigimonBrowser({
 }: DigimonBrowserProps) {
   const t = useTranslations();
   const locale = useLocale() as Locale;
+
+  const favorites = useSyncExternalStore(
+    subscribeFavorites,
+    readFavorites,
+    readServerFavorites,
+  );
+
+  // Always on top regardless of the search box or filters below — a
+  // favorite is "what I reach for often", not "what currently matches".
+  // Still respects `exclude`: a DLC favorite has no business appearing
+  // while DLC is switched off, since picking it would go nowhere.
+  const favoriteDigimons = useMemo(
+    () =>
+      [...favorites]
+        .map((id) => digimonById.get(id))
+        .filter((d): d is Digimon => d !== undefined && !exclude?.(d)),
+    [favorites, exclude],
+  );
 
   const [query, setQuery] = useState('');
   const [showFilters, setShowFilters] = useState(false);
@@ -148,6 +208,33 @@ export function DigimonBrowser({
         </div>
       )}
 
+      {favoriteDigimons.length > 0 && (
+        <div className="shrink-0">
+          <p className="mb-1 text-xs font-semibold text-content-muted">
+            {t('digimon_search.favorites')}
+          </p>
+          <div className="grid grid-cols-3 gap-1 sm:grid-cols-4 md:grid-cols-6">
+            {favoriteDigimons.map((digimon) => (
+              <DigimonCard
+                key={`fav-${digimon.id}`}
+                digimon={digimon}
+                name={digimonName(digimon, locale)}
+                onClick={() => onSelect(digimon)}
+                action={{
+                  kind: 'favorite',
+                  active: true,
+                  onAction: () => toggleFavorite(digimon.id),
+                  label: t('digimon_search.remove_favorite', {
+                    name: digimonName(digimon, locale),
+                  }),
+                }}
+                size={64}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
       <p className="shrink-0 text-xs text-content-muted" aria-live="polite">
         {t('digimon_search.result_count', { count: results.length })}
       </p>
@@ -162,14 +249,28 @@ export function DigimonBrowser({
             data={results}
             className="h-full"
             listClassName="grid grid-cols-3 gap-1 sm:grid-cols-4 md:grid-cols-6"
-            itemContent={(_, digimon) => (
-              <DigimonCard
-                digimon={digimon}
-                name={digimonName(digimon, locale)}
-                onClick={() => onSelect(digimon)}
-                size={64}
-              />
-            )}
+            itemContent={(_, digimon) => {
+              const isFavorite = favorites.has(digimon.id);
+              return (
+                <DigimonCard
+                  digimon={digimon}
+                  name={digimonName(digimon, locale)}
+                  onClick={() => onSelect(digimon)}
+                  action={{
+                    kind: 'favorite',
+                    active: isFavorite,
+                    onAction: () => toggleFavorite(digimon.id),
+                    label: t(
+                      isFavorite
+                        ? 'digimon_search.remove_favorite'
+                        : 'digimon_search.add_favorite',
+                      { name: digimonName(digimon, locale) },
+                    ),
+                  }}
+                  size={64}
+                />
+              );
+            }}
           />
         )}
       </div>
