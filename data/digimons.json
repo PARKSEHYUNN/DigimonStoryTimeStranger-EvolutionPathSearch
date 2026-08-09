@@ -6173,5 +6173,18 @@
     "attribute": 2,
     "personality": 13,
     "dlc": true
+  },
+  {
+    "id": 476,
+    "slug": "terriermon-assistant",
+    "names": {
+      "en": "Terriermon Assistant",
+      "ko": "테리어몬 조수",
+      "ja": "テリアモン助手"
+    },
+    "generation": 2,
+    "attribute": 1,
+    "personality": 13,
+    "dlc": false
   }
 ]

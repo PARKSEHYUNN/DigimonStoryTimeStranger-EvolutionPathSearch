@@ -2,7 +2,7 @@
   "nav": {
     "evolution_path": "ルート検索",
     "digimon_list": "デジモンリスト",
-    "brand": "進化ルート",
+    "brand": "EvoPath",
     "change_language": "言語を変更",
     "toggle_theme": "ダークモード切替"
   },
@@ -18,6 +18,8 @@
     "choice_digimon_message": "デジモンを選択してください。",
     "evolution_path_error": "該当の進化ツリーが見つかりません。（除外されたデジモンが経路に含まれている可能性があります。）",
     "silhouette_toggle": "シルエット表示",
+    "copy_link": "リンクをコピー",
+    "copy_link_done": "コピーしました！",
     "jogress": "ジョグレス",
     "evolution": "進化",
     "devolution": "退化",
@@ -170,7 +172,7 @@
   },
   "footer": {
     "disclaimer": "本サイトはバンダイナムコとは無関係の非公式ファンサイトです。すべてのデジモン名称および画像の権利は各権利者に帰属します。広告および支援による収益は、ドメイン・ホスティング・保守費用にのみ使用されます。",
-    "copyright": "© 2025-2026 デジモンストーリー タイムストレンジャー 進化ルート検索",
+    "copyright": "© 2025-2026 デジモンストーリー タイムストレンジャー EvoPath検索",
     "developed_by": "開発 {name}",
     "privacy": "プライバシーポリシー"
   },
@@ -272,9 +274,9 @@
     "TALENT": "才能"
   },
   "meta": {
-    "site_name": "デジモンストーリー タイムストレンジャー 進化ルート",
-    "title_suffix": "デジモンストーリー タイムストレンジャー",
-    "title": "デジモンストーリー タイムストレンジャー 進化ルート検索",
+    "site_name": "デジモンストーリー タイムストレンジャー EvoPath",
+    "title_suffix": "EvoPath",
+    "title": "EvoPath - デジモンストーリー タイムストレンジャー 進化ルート検索",
     "description": "デジモンストーリー タイムストレンジャーの2体のデジモン間の最短進化ルートを検索できます。475体すべてのデジモンの進化条件を確認できます。",
     "digimon_title": "{name} の進化ルート",
     "digimon_description": "デジモンストーリー タイムストレンジャーの{name}（{generation}・{attribute}）。{relations} すべての進化条件と、任意のデジモンからの最短ルートを確認できます。",

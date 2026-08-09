@@ -31,12 +31,10 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(SITE_URL),
-    // The suffix is the game's name alone, not the site's. Every page title
-    // already begins with "<something> evolution routes", so repeating the
-    // site's own "evolution path" after the bar spent width on a word the
-    // reader had just read — and titles clip at roughly 60 half-width columns.
-    // og:siteName below still names the site, which is a different question:
-    // a share card labelled with the game alone reads as the official one.
+    // The suffix is the site's brand alone, not the game's — a bare game
+    // name after the bar would read like the official game's own site in
+    // search results and browser tabs. og:siteName below spells out the game
+    // too, since a share card needs that context that a short tab title doesn't.
     title: { default: t('title'), template: `%s | ${t('title_suffix')}` },
     description: t('description'),
     alternates: alternatesFor(locale),

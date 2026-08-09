@@ -1,12 +1,14 @@
 'use client';
 
-import { useMemo, useState, useSyncExternalStore } from 'react';
+import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { ArrowRight, RotateCcw } from 'lucide-react';
+import { ArrowRight, Check, Copy, RotateCcw } from 'lucide-react';
 import { findRoutes, DEFAULT_FILTERS } from '@/lib/pathfinder';
+import { digimonBySlug } from '@/lib/digimon/data';
 import { digimonName } from '@/lib/digimon/display';
 import {
   AGENT_LEVELS,
+  EMPTY_PARAMS,
   parseRouteParams,
   toSearchString,
   type RouteParams,
@@ -65,6 +67,30 @@ function writeSearch(query: string) {
   for (const listener of listeners) listener();
 }
 
+/**
+ * The silhouette toggle, read from localStorage the same way the search is
+ * read from the URL: as an external store, not mirrored into state. Setting
+ * it from an effect would mean a render with the server's default followed
+ * immediately by a second one with the stored value — this collapses that
+ * into the single render the sync external store already gives the search.
+ */
+const silhouetteListeners = new Set<() => void>();
+
+const subscribeSilhouette = (onChange: () => void) => {
+  silhouetteListeners.add(onChange);
+  return () => silhouetteListeners.delete(onChange);
+};
+
+const readSilhouette = () => localStorage.getItem('silhouette') === '1';
+
+/** Nothing is stored yet as far as the prerendered HTML knows. */
+const readServerSilhouette = () => false;
+
+function writeSilhouette(value: boolean) {
+  localStorage.setItem('silhouette', value ? '1' : '0');
+  for (const listener of silhouetteListeners) listener();
+}
+
 export function RouteSearch() {
   const t = useTranslations();
   const locale = useLocale() as Locale;
@@ -78,9 +104,51 @@ export function RouteSearch() {
   const update = (patch: Partial<RouteParams>) =>
     writeSearch(toSearchString({ ...params, ...patch }));
 
+  // A bare landing (no query string at all) reopens whatever was last
+  // searched, so refreshing or coming back later doesn't start from a blank
+  // pair of pickers. A link with its own `from`/`to` always wins — this only
+  // fills in what nobody specified.
+  useEffect(() => {
+    if (window.location.search) return;
+    const saved = localStorage.getItem('lastSearch');
+    if (!saved) return;
+    try {
+      const { from, to } = JSON.parse(saved) as { from?: string; to?: string };
+      const savedStart = from ? (digimonBySlug.get(from) ?? null) : null;
+      const savedEnd = to ? (digimonBySlug.get(to) ?? null) : null;
+      if (savedStart || savedEnd) {
+        writeSearch(
+          toSearchString({ ...EMPTY_PARAMS, start: savedStart, end: savedEnd }),
+        );
+      }
+    } catch {
+      // Malformed storage (hand-edited, or from an older shape) — ignore it.
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!start || !end) return;
+    localStorage.setItem(
+      'lastSearch',
+      JSON.stringify({ from: start.slug, to: end.slug }),
+    );
+  }, [start, end]);
+
   // Not in the URL: a viewing preference, like dark mode. A shared link should
-  // not decide for whoever opens it whether the art is hidden.
-  const [silhouette, setSilhouette] = useState(false);
+  // not decide for whoever opens it whether the art is hidden. Persisted
+  // locally instead, so it survives a refresh without following the link.
+  const silhouette = useSyncExternalStore(
+    subscribeSilhouette,
+    readSilhouette,
+    readServerSilhouette,
+  );
+
+  const [copied, setCopied] = useState(false);
+  const copyLink = async () => {
+    await navigator.clipboard.writeText(window.location.href);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1500);
+  };
 
   const name = (d: Digimon) => digimonName(d, locale);
 
@@ -185,11 +253,21 @@ export function RouteSearch() {
               <h2 className="text-content text-sm font-semibold">
                 {t('evolution_path.results_heading', { count: routes.length })}
               </h2>
-              <Toggle
-                checked={silhouette}
-                onChange={setSilhouette}
-                label={t('evolution_path.silhouette_toggle')}
-              />
+              <div className="flex items-center gap-3">
+                <Button variant="ghost" onClick={copyLink}>
+                  {copied ? <Check size={14} /> : <Copy size={14} />}
+                  {t(
+                    copied
+                      ? 'evolution_path.copy_link_done'
+                      : 'evolution_path.copy_link',
+                  )}
+                </Button>
+                <Toggle
+                  checked={silhouette}
+                  onChange={writeSilhouette}
+                  label={t('evolution_path.silhouette_toggle')}
+                />
+              </div>
             </div>
 
             <div className="flex flex-col gap-4">

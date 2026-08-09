@@ -968,6 +968,13 @@
     }
   },
   {
+    "from": 27,
+    "to": 476,
+    "conditions": {
+      "rank": 1
+    }
+  },
+  {
     "from": 28,
     "to": 85,
     "conditions": {
@@ -10407,6 +10414,13 @@
           "personality": 13
         }
       ]
+    }
+  },
+  {
+    "from": 476,
+    "to": 27,
+    "conditions": {
+      "rank": 1
     }
   }
 ]
