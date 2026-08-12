@@ -11,7 +11,6 @@ import { Footer } from '@/components/layout/Footer';
 import { AnnouncementBanner } from '@/components/layout/AnnouncementBanner';
 import { DonateButton } from '@/components/layout/DonateButton';
 import { CLIENT_NAMESPACES, clientMessages } from '@/lib/i18n/messages';
-import { AdSlot } from '@/components/ads/AdSlot';
 import { AdSenseScript } from '@/components/ads/AdSenseScript';
 import { Analytics } from '@/components/Analytics';
 
@@ -88,8 +87,11 @@ export default async function LocaleLayout({
           <Navbar />
           <AnnouncementBanner />
           <main className="mx-auto w-full max-w-6xl flex-1 px-3 py-5 sm:px-4 sm:py-6">
-            <AdSlot placement="leaderboard" />
-            <div className="mt-5 sm:mt-6">{children}</div>
+            {/* Each page places its own leaderboard, or none — this used to
+                be unconditional here, which put an ad above the privacy
+                policy along with everything else. A legal notice is not
+                publisher content, and AdSense does not treat it as such. */}
+            {children}
           </main>
           <Footer />
           <DonateButton />

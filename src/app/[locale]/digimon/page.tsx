@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { AdSlot } from '@/components/ads/AdSlot';
 import { DigimonListView } from '@/components/digimon/DigimonListView';
+import { DigimonPreviewGrid } from '@/components/digimon/DigimonPreviewGrid';
 import { CLIENT_NAMESPACES, clientMessages } from '@/lib/i18n/messages';
 import { routing, type Locale } from '@/lib/i18n/routing';
 import {
@@ -93,10 +95,12 @@ export default async function DigimonListPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdScript(structuredData) }}
       />
-      <div className="mb-6">
+      <AdSlot placement="leaderboard" />
+      <div className="mt-5 mb-6 sm:mt-6">
         <h1 className="text-xl font-bold text-content">{t('title')}</h1>
         <p className="mt-1 text-sm text-content-muted">{t('description')}</p>
       </div>
+      <DigimonPreviewGrid locale={locale as Locale} />
       <NextIntlClientProvider
         messages={await clientMessages(CLIENT_NAMESPACES.browser)}
       >

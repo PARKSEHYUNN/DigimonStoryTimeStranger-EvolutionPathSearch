@@ -1,5 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { AdSlot } from '@/components/ads/AdSlot';
 import { RouteSearch } from '@/components/digimon/RouteSearch';
 import { CLIENT_NAMESPACES, clientMessages } from '@/lib/i18n/messages';
 import { jsonLdScript, localeUrl } from '@/lib/seo';
@@ -33,7 +34,8 @@ export default async function HomePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdScript(structuredData) }}
       />
-      <div className="mb-6">
+      <AdSlot placement="leaderboard" />
+      <div className="mt-5 mb-6 sm:mt-6">
         <h1 className="text-xl font-bold text-content">{t('heading')}</h1>
         <p className="mt-1 text-sm text-content-muted">{t('subheading')}</p>
       </div>

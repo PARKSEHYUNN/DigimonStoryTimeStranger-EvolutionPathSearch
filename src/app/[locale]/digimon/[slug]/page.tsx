@@ -174,6 +174,8 @@ export default async function DigimonDetailPage({
         dangerouslySetInnerHTML={{ __html: jsonLdScript(structuredData) }}
       />
 
+      <AdSlot placement="leaderboard" />
+
       <header className="bg-surface-raised flex flex-col items-center gap-4 rounded-2xl p-4 text-center shadow-sm sm:flex-row sm:gap-5 sm:p-5 sm:text-left">
         <div className="shrink-0">
           <DigimonIcon
