@@ -13,9 +13,13 @@ export function DigimonListView() {
 
   // The server-rendered DigimonPreviewGrid exists for crawlers and the
   // pre-hydration paint; once the real, interactive grid below has mounted,
-  // showing both would just be duplicate Digimon.
+  // showing both would just be duplicate Digimon. Hidden, not removed: React
+  // still considers that node its own, and pulling it out of the DOM behind
+  // React's back leaves React trying to remove it again on unmount — a
+  // removeChild crash the next time this page's tree gets torn down.
   useEffect(() => {
-    document.getElementById('digimon-preview-grid')?.remove();
+    const preview = document.getElementById('digimon-preview-grid');
+    if (preview) preview.style.display = 'none';
   }, []);
 
   return (
