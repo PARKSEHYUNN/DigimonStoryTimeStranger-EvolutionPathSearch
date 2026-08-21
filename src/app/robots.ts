@@ -9,10 +9,7 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
-      // /ads.txt has to be spelled out: it is a .txt file, so the blanket
-      // disallow below would hide it, and AdSense treats an uncrawlable
-      // ads.txt as a missing one — which caps what advertisers will bid.
-      allow: ['/', '/ads.txt'],
+      allow: '/',
 
       // Only the RSC payloads. They sit beside the HTML as `index.txt`,
       // carry the same content, and are worth keeping out of the index.

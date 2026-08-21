@@ -169,89 +169,83 @@ curl -sI https://digimonts.my/list | grep -i "^location\|^HTTP"
 
 ---
 
-## 7. Google AdSense
+## 7. Adsterra
 
-**순서상 여기다.** 애드센스는 심사 대상 도메인에서 실제로 사이트가 서비스되고 있어야 승인한다.
-5번(커스텀 도메인 연결)이 끝나기 전에 신청하면 "사이트에 연결할 수 없음"으로 반려된다.
+**순서상 여기다.** 대부분의 광고 네트워크는 심사 대상 도메인에서 실제로 사이트가 서비스되고
+있어야 승인한다. 5번(커스텀 도메인 연결)이 끝나기 전에 신청하지 않는다.
 
-**게시자 ID와 광고 실행은 분리돼 있다.** 두 가지는 성격이 다르다.
+**ads.txt는 안 쓴다.** Adsterra 대시보드 자체가 "광고주가 이를 요구하지 않아 파일을 제공하지
+않는다"고 명시하고 있다 — AdSense와 다른 부분이다.
 
-- **누가 이 도메인의 광고 지면을 팔 수 있는가** — 공개 정보다. [src/lib/ads.ts](src/lib/ads.ts)에
-  상수로 커밋돼 있고, `/ads.txt`는 **설정 없이 모든 배포에서 자동 생성된다.**
-- **이 빌드가 광고 코드를 실제로 실행하는가** — 환경 결정이다. `NEXT_PUBLIC_ADSENSE_ENABLED=true`
-  일 때만 켜진다. 승인되지 않은 도메인(프리뷰)에서 광고를 돌리는 것이 정책 위반이기 때문이다.
+**이 빌드가 광고 코드를 실제로 실행하는가만 환경 결정이다.** `NEXT_PUBLIC_ADS_ENABLED=true`
+일 때만 켜진다. 승인되지 않은 도메인(프리뷰)에서 광고를 돌리는 것이 정책 위반이기 때문이다.
+플래그가 꺼져 있으면 HTML에 광고 스크립트도 마크업도 없고 네트워크 요청도 나가지 않는다.
 
-플래그가 꺼져 있으면 HTML에 로더도 광고 마크업도 없고 네트워크 요청도 나가지 않는다.
-(클라이언트 청크에 `AdUnit` 코드 자체는 들어가지만 렌더되지 않아 실행되지 않는다.)
+### 7-1. 광고 켜기
 
-### 7-1. `ads.txt` — 이미 나가고 있다
+Adsterra 대시보드에서 존을 세 개 만든다:
 
-빌드가 [scripts/write-ads-txt.mjs](scripts/write-ads-txt.mjs)로 `out/ads.txt`를 생성한다.
-페이지 코드와 같은 상수를 읽으므로 스크립트 태그의 ID와 어긋날 수 없다.
+- **배너(Banner) 728×90** — 데스크톱용
+- **배너(Banner) 320×50** — 모바일용
+- **Native Banner** — 위젯 레이아웃·폰트를 고르면 발급된다
 
-```bash
-curl -s https://digimonts.my/ads.txt
-# google.com, pub-1963786647016806, DIRECT, f08c47fec0942fa0
-```
-
-경로는 소문자 `/ads.txt`다. 구글이 가져가는 경로가 그것이다.
-
-`robots.txt`의 `Disallow: /*.txt$`에 걸리지 않도록 `Allow: /ads.txt`가 명시돼 있다.
-크롤링이 막힌 `ads.txt`는 없는 것과 같이 취급되고, 그러면 입찰 단가가 떨어진다.
-
-### 7-2. 계정 신청과 사이트 소유권 확인
-
-1. [AdSense 가입](https://adsense.google.com) → 사이트에 `digimonts.my` 추가
-2. 확인 방식은 **Ads.txt 스니펫**을 고르면 된다. 위 파일이 이미 그 내용을 내보내고 있어
-   추가 작업이 없다. 루트 `/`가 `/ko/`로 302 리다이렉트되는데, `/ads.txt`는 그 경로를
-   거치지 않고 직접 응답하므로 리다이렉트 변수도 없다.
-3. **코드 스니펫** 방식을 쓰려면 아래 7-3의 플래그를 먼저 켜야 한다.
-   그러면 AdSense가 붙여넣으라는 것과 동일한 로더가 `<head>`에 출력된다.
-4. 대시보드에서 **검토 요청**. 승인까지 보통 며칠 ~ 2주.
-
-### 7-3. 광고 켜기
-
-승인 후 대시보드에서 **디스플레이 광고** 단위를 만들고, 플래그와 슬롯 ID를 넣은 뒤 **재배포**한다.
+리더보드(본문 최상단) 자리 하나가 배너 둘을 화면 폭에 따라 전환해서 쓰고, in-content(검색
+폼과 결과 사이)·footer(디지몬 상세 페이지 하단)는 Native Banner 하나를 공유한다 — 홈 화면엔
+footer 자리가 없고 상세 페이지엔 in-content 자리가 없어서 겹칠 일이 없다.
 정적 익스포트라 환경변수는 빌드 시점에 박힌다. **값만 바꾸고 재배포하지 않으면 아무 일도 일어나지 않는다.**
 
-| 변수                                   | 값      | 역할                |
-| -------------------------------------- | ------- | ------------------- |
-| `NEXT_PUBLIC_ADSENSE_ENABLED`          | `true`  | 광고 코드 실행      |
-| `NEXT_PUBLIC_ADSENSE_SLOT_LEADERBOARD` | 슬롯 ID | 본문 최상단 (전체)  |
-| `NEXT_PUBLIC_ADSENSE_SLOT_IN_CONTENT`  | 슬롯 ID | 검색 폼과 결과 사이 |
-| `NEXT_PUBLIC_ADSENSE_SLOT_FOOTER`      | 슬롯 ID | 상세 페이지 하단    |
+| 변수                                            | 값        | 역할                 |
+| ----------------------------------------------- | --------- | -------------------- |
+| `NEXT_PUBLIC_ADS_ENABLED`                       | `true`    | 광고 코드 실행        |
+| `NEXT_PUBLIC_ADSTERRA_LEADERBOARD_DESKTOP_KEY`  | 존 key    | 본문 최상단, 728×90   |
+| `NEXT_PUBLIC_ADSTERRA_LEADERBOARD_MOBILE_KEY`   | 존 key    | 본문 최상단, 320×50   |
+| `NEXT_PUBLIC_ADSTERRA_NATIVE_CONTAINER_ID`      | `container-…` | in-content·footer |
+| `NEXT_PUBLIC_ADSTERRA_NATIVE_SCRIPT_SRC`        | invoke.js URL | in-content·footer |
 
-플래그만 켜고 슬롯을 비워두면 로더만 나가고 광고는 안 나온다 — 코드 스니펫 확인 단계에 쓰는 상태다.
-
-**비어 있는 위치는 플레이스홀더로 남는다.** 레이아웃을 건드리지 않고 특정 위치만 끄고 켤 수 있다는 뜻이다.
-세 개를 한 번에 켜지 말고 리더보드 하나로 시작해 수익과 이탈률을 같이 보는 편이 낫다.
+리더보드는 데스크톱·모바일 키 둘 다 있어야 켜진다 — 한쪽만 넣으면 반대쪽 화면 크기에서는
+광고가 안 뜨는데 그걸 알아챌 방법이 없어서, [lib/ads.ts](src/lib/ads.ts)가 아예 둘 다 없는
+것과 동일하게 취급한다.
 
 **확인**:
 
 ```bash
-curl -s https://digimonts.my/ko/ | grep -o 'data-ad-slot="[^"]*"'
+curl -s https://digimonts.my/ko/ | grep -o 'highperformanceformat\|container-'
 ```
 
-### 7-4. 주의할 것
+### 7-2. 주의할 것
 
-- **프리뷰 배포(`*.pages.dev`)에는 `NEXT_PUBLIC_ADSENSE_ENABLED`를 넣지 않는다.**
+- **프리뷰 배포(`*.pages.dev`)에는 `NEXT_PUBLIC_ADS_ENABLED`를 넣지 않는다.**
   Pages는 Production/Preview 환경변수를 따로 관리한다. 승인되지 않은 도메인에 광고를 띄우는 것은
-  정책 위반이고, 계정 정지 사유다. (`ads.txt`는 프리뷰에도 나가지만 그건 무해하다 —
-  판매자를 선언하는 것과 광고를 돌리는 것은 다른 일이다.)
-- **자동 광고(Auto ads)는 켜지 않는 편이 좋다.** 구글이 임의 위치에 삽입하면서 레이아웃을 밀어내
-  CLS가 무너진다. 이 리뉴얼이 [AdSlot](src/components/ads/AdSlot.tsx)으로 높이를 미리 잡아둔 이유가 그거다.
-- **EEA·영국 트래픽에는 동의 관리 플랫폼(CMP)이 의무다.** 3개 언어 사이트이므로 해당될 수 있다.
-  AdSense 대시보드의 기본 제공 CMP를 켜면 된다.
+  정책 위반이고, 계정 정지 사유다.
+- **한 페이지에 배너 존을 두 개 이상 동시에 띄우지 않는다.** Adsterra 배너는 `atOptions`라는
+  전역 변수를 초기화 직후 읽는 방식이라, 두 배너가 거의 동시에 로드되면 뒤의 설정이 앞의 것을
+  덮어써서 광고가 깨지거나 엉뚱한 존이 뜬다. 지금 구조는 리더보드 하나만 배너를 쓰고
+  나머지는 Native Banner(다른 렌더링 방식, 충돌 없음)로 두도록 짜여 있다 — 새 배너 자리를
+  추가할 땐 이 제약을 먼저 확인한다.
+- **Native Banner의 실제 높이가 예약해둔 값(100px/90px)과 다를 수 있다.** 배너와 달리
+  고정 픽셀 크기가 없는 형식이라 [AdSlot.tsx](src/components/ads/AdSlot.tsx)는 이 값을
+  잘라내지 않고 자라도록(`min-block-size`) 열어뒀다 — 실제로 배포해서 렌더된 높이를
+  보고 예약 값을 맞춰 조정한다.
+- **"Show adult ads" 존 설정은 켜지 않는 걸 권한다.** Adsterra 대시보드에 성인 광고
+  허용 시 CPM이 오른다는 안내가 있는데, 디지몬은 아동·가족 대상 IP라 브랜드 리스크가
+  수익보다 크다고 판단했다. 코드와는 무관한 Adsterra 쪽 설정이니 계정에서 직접 확인한다.
+- **EEA·영국·스위스 트래픽에 대한 동의 관리(CMP)는 현재 없다.** AdSense는 대시보드에
+  기본 제공 CMP가 있었지만 Adsterra는 그런 걸 자동으로 붙여주지 않는다. 3개 언어 사이트라
+  해당 지역 방문자가 있을 수 있고, 지금 상태로는 GDPR 동의 요건을 채우지 못한다.
+  실제 서비스에 반영하기 전에 별도 동의 배너를 붙이거나, 해당 지역에는 광고를 아예
+  띄우지 않는 지역 차단(geofencing) 중 하나를 결정해야 한다.
 - 자기 사이트 광고를 직접 클릭하지 않는다. 무효 트래픽으로 계정이 정지된다.
 
-### 7-5. 개인정보처리방침
+### 7-3. 개인정보처리방침
 
 승인 요건이다. `/{locale}/privacy/`에 3개 언어로 준비돼 있고 푸터에서 링크된다
 ([src/app/[locale]/privacy/page.tsx](src/app/%5Blocale%5D/privacy/page.tsx)).
 
 내용은 실제 동작에 맞춰 쓰여 있다 — Formspree(버그 신고), Cloudflare(호스팅·통계),
-Google AdSense(광고), localStorage 3개 키(`theme`, `announcement-dismissed`, `locale`), Ko-fi(외부 링크).
+Adsterra(광고), localStorage 3개 키(`theme`, `announcement-dismissed`, `locale`), Ko-fi(외부 링크).
 **데이터 흐름이 바뀌면 이 문서도 같이 고쳐야 한다.** 사실과 다른 방침은 없는 것보다 나쁘다.
+위 EEA 동의 관리 항목이 해결되기 전까지는, 이 방침도 "별도로 동의를 요청한다"고 주장하지
+않는다 — 실제로 그런 절차가 없기 때문이다.
 
 본문은 `src/messages/{ko,en,ja}.json`의 `privacy` 네임스페이스에 있다.
 최종 수정일도 메시지 안에 직접 적혀 있다(`privacy.updated`) — `Intl`로 날짜를 만들면

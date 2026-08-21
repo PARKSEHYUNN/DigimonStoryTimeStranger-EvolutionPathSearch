@@ -1,74 +1,96 @@
 /**
- * Google AdSense wiring.
+ * Adsterra wiring.
  *
- * Two separate questions live here, and conflating them is the mistake this
- * file is arranged to avoid:
+ * Adsterra has no single site-wide loader the way AdSense's adsbygoogle.js
+ * was, and no publisher-level ID to declare either — Adsterra does not
+ * provide ads.txt files, so there is nothing here for one. Each placement is
+ * its own self-contained embed tied to one ad zone, and the two zone types in
+ * use here work differently enough to need separate handling:
  *
- *   1. Who is allowed to sell this domain's ad inventory? — a public fact,
- *      committed below and published at /ads.txt on every deploy.
- *   2. Should this build actually run ad code? — an environment decision,
- *      because running ads on a domain AdSense has not approved is a policy
- *      problem, and preview deployments are exactly that.
+ *   - A banner zone (leaderboard) is a fixed pixel size and reads a global
+ *     `atOptions` the instant its script runs — see AdUnit.tsx for why that
+ *     means never mounting two banners on the same page at once.
+ *   - A Native Banner zone (in-content, footer) targets a `<div>` by a fixed
+ *     id baked into its own script, and doesn't share global state with
+ *     anything else — safe to mount more than once, including alongside a
+ *     banner.
  *
- * The site is a static export, so the answer to (2) is inlined by `next build`
- * and changing it means a rebuild, not a restart.
+ * The site is a static export, so whether ads run at all is inlined by
+ * `next build` — changing it means a rebuild, not a restart.
  */
 
 /**
- * The AdSense publisher ID.
+ * Whether this build loads any ad code at all.
  *
- * Committed rather than configured: it is public by design. It is served at
- * /ads.txt for any advertiser to read and appears in the loader URL on every
- * page — there is nothing here to protect. Keeping it in the repo is what
- * makes /ads.txt correct on every deploy with no dashboard step, which is the
- * whole point of the file: an ads.txt that is missing or stale reads as
- * "unauthorized" to demand partners and caps what they will bid.
- *
- * ads.txt wants this bare `pub-…` form; page code wants it prefixed.
- */
-export const ADSENSE_PUBLISHER_ID = 'pub-1963786647016806';
-
-/** The same ID in the `ca-pub-…` form the ad loader and ad units expect. */
-export const ADSENSE_CLIENT = `ca-${ADSENSE_PUBLISHER_ID}`;
-
-/**
- * Whether this build loads the AdSense script at all.
- *
- * Off unless NEXT_PUBLIC_ADSENSE_ENABLED is exactly "true", so the safe state
- * is the default one: no loader, no network call, and every AdSlot stays the
+ * Off unless NEXT_PUBLIC_ADS_ENABLED is exactly "true", so the safe state is
+ * the default one: no ad script, no network call, and every AdSlot stays the
  * reserved placeholder it is without ads. Set it on the production deploy
  * only — never on previews, which serve from *.pages.dev.
  */
-export const ADS_ENABLED = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === 'true';
+export const ADS_ENABLED = process.env.NEXT_PUBLIC_ADS_ENABLED === 'true';
 
 export type AdPlacement = 'leaderboard' | 'in-content' | 'footer';
 
-/**
- * Slot IDs, one per ad unit created in the AdSense dashboard.
- *
- * Indexed access (`process.env[name]`) does not survive the build — Next
- * replaces literal `process.env.NEXT_PUBLIC_*` member reads and nothing else,
- * so each one has to be spelled out.
- */
-const SLOT: Record<AdPlacement, string | undefined> = {
-  leaderboard: process.env.NEXT_PUBLIC_ADSENSE_SLOT_LEADERBOARD,
-  'in-content': process.env.NEXT_PUBLIC_ADSENSE_SLOT_IN_CONTENT,
-  footer: process.env.NEXT_PUBLIC_ADSENSE_SLOT_FOOTER,
-};
-
-export interface AdUnitConfig {
-  client: string;
-  slot: string;
+/** One Adsterra banner zone: a size and the key it was created under. */
+export interface BannerZone {
+  key: string;
+  width: number;
+  height: number;
 }
+
+/** A placement rendered as a banner, swapped by viewport at mount. */
+export interface BannerUnit {
+  kind: 'banner';
+  desktop: BannerZone;
+  mobile: BannerZone;
+}
+
+/** A placement rendered as a Native Banner: a script and the div it fills. */
+export interface NativeUnit {
+  kind: 'native';
+  containerId: string;
+  scriptSrc: string;
+}
+
+export type AdUnitConfig = BannerUnit | NativeUnit;
+
+/**
+ * The leaderboard's two zones — 728x90 for desktop, 320x50 for mobile.
+ * Adsterra banner zones are one fixed size each, unlike an AdSense slot that
+ * could pick a creative to fit any reserved box, so covering both
+ * breakpoints takes two zones rather than one.
+ */
+const LEADERBOARD_DESKTOP_KEY = process.env.NEXT_PUBLIC_ADSTERRA_LEADERBOARD_DESKTOP_KEY;
+const LEADERBOARD_MOBILE_KEY = process.env.NEXT_PUBLIC_ADSTERRA_LEADERBOARD_MOBILE_KEY;
+
+/**
+ * One Native Banner zone, shared by `in-content` and `footer`. Reusing the
+ * same zone in two spots is fine here specifically because they never appear
+ * on the same page: `in-content` is the home screen's only, `footer` is the
+ * detail pages' only.
+ */
+const NATIVE_CONTAINER_ID = process.env.NEXT_PUBLIC_ADSTERRA_NATIVE_CONTAINER_ID;
+const NATIVE_SCRIPT_SRC = process.env.NEXT_PUBLIC_ADSTERRA_NATIVE_SCRIPT_SRC;
 
 /**
  * The unit to render at `placement`, or null to leave the box a placeholder.
  *
- * A placement with no slot ID configured stays empty even when ads are on:
- * that is how a single position is turned off without touching the layout.
+ * The leaderboard's two zone keys are required together: a banner missing
+ * its mobile or desktop half would leave one breakpoint with no ad and no way
+ * to say so, so an incomplete pair is treated the same as none.
  */
 export function adUnitFor(placement: AdPlacement): AdUnitConfig | null {
-  const slot = SLOT[placement]?.trim();
-  if (!ADS_ENABLED || !slot) return null;
-  return { client: ADSENSE_CLIENT, slot };
+  if (!ADS_ENABLED) return null;
+
+  if (placement === 'leaderboard') {
+    if (!LEADERBOARD_DESKTOP_KEY || !LEADERBOARD_MOBILE_KEY) return null;
+    return {
+      kind: 'banner',
+      desktop: { key: LEADERBOARD_DESKTOP_KEY, width: 728, height: 90 },
+      mobile: { key: LEADERBOARD_MOBILE_KEY, width: 320, height: 50 },
+    };
+  }
+
+  if (!NATIVE_CONTAINER_ID || !NATIVE_SCRIPT_SRC) return null;
+  return { kind: 'native', containerId: NATIVE_CONTAINER_ID, scriptSrc: NATIVE_SCRIPT_SRC };
 }

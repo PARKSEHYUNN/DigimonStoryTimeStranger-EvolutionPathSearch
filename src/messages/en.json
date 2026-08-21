@@ -181,7 +181,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "updated": "Last updated: August 4, 2026",
+    "updated": "Last updated: August 21, 2026",
     "intro": "This is an unofficial fan site with no accounts and no sign-in. It does not directly collect information that identifies you, and it collects nothing beyond what is described below.",
     "sections": {
       "collect": {
@@ -197,16 +197,15 @@
         "body": [
           "This site sets no cookies of its own.",
           "It does use your browser's local storage to remember display settings. Only three values are stored — whether dark mode is on (theme), whether you dismissed the announcement banner (announcement-dismissed), and the display language you picked yourself (locale). They stay in your browser and are never sent to a server. Clearing site data in your browser removes them.",
-          "Google advertising uses cookies separately; see the advertising section below."
+          "Advertising uses cookies separately; see the advertising section below."
         ]
       },
       "ads": {
-        "title": "Advertising (Google AdSense)",
+        "title": "Advertising (Adsterra)",
         "body": [
-          "This site displays Google AdSense advertising to cover its running costs.",
-          "Google and other third-party vendors use cookies to serve ads based on your prior visits to this or other websites. Google's use of advertising cookies enables it and its partners to serve ads to you based on that history.",
-          "You can turn off personalized advertising in Google Ads Settings at https://www.google.com/settings/ads and opt out of third-party vendor cookies more broadly at https://www.aboutads.info/choices.",
-          "Visitors from the European Economic Area, the United Kingdom, and Switzerland are asked separately for consent to advertising and cookie use, and that choice can be changed at any time."
+          "This site displays Adsterra advertising to cover its running costs.",
+          "Adsterra and its advertising partners may use cookies or similar technologies to serve ads, including ads based on your prior visits to this or other websites.",
+          "You can opt out of interest-based advertising from participating companies at https://www.aboutads.info/choices."
         ]
       },
       "analytics": {

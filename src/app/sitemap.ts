@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }[] = [
     { path: '', priority: 1, changeFrequency: 'weekly' },
     { path: 'digimon', priority: 0.8, changeFrequency: 'weekly' },
-    // Low priority but listed: AdSense expects the policy to be reachable,
+    // Low priority but listed: ad review expects the policy to be reachable,
     // and a page only the footer links to is easy for a crawler to miss.
     { path: 'privacy', priority: 0.3, changeFrequency: 'monthly' },
     ...digimons.map((d) => ({

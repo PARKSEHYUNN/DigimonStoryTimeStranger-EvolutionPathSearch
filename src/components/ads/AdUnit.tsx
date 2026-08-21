@@ -1,53 +1,108 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import type { AdUnitConfig } from '@/lib/ads';
+import type { AdUnitConfig, BannerUnit, BannerZone, NativeUnit } from '@/lib/ads';
 
 declare global {
   interface Window {
-    adsbygoogle?: unknown[];
+    atOptions?: {
+      key: string;
+      format: string;
+      height: number;
+      width: number;
+      params: Record<string, unknown>;
+    };
   }
 }
 
+/** Matches the breakpoint AdSlot's own CSS switches its reserved height on. */
+const DESKTOP_BREAKPOINT = 768;
+
+/** Dispatches to the embed Adsterra actually uses for this zone type. */
+export function AdUnit(unit: AdUnitConfig) {
+  if (unit.kind === 'native') return <NativeAdUnit {...unit} />;
+  return <BannerAdUnit {...unit} />;
+}
+
 /**
- * One AdSense display unit, filling the box AdSlot reserved for it.
+ * One Adsterra banner, filling the box AdSlot reserved for it.
  *
- * Sizing is left entirely to CSS. The <ins> is 100% of a parent whose height
- * is already pinned to a standard unit height, so AdSense measures a fixed
- * box and picks a horizontal creative that fits inside it. The alternative —
- * `data-ad-format="auto"` with a free height — lets the creative decide how
- * tall the page gets after load, which is the layout shift the reserved box
- * exists to prevent.
+ * Adsterra's snippet is two plain <script> tags: one sets a global
+ * `atOptions`, the next — an "invoke.js" scoped to that zone's key — reads it
+ * synchronously to know what to draw. There is no per-instance handle to
+ * pass options through, so nothing else may write `atOptions` between the
+ * two, which is why this waits for its own script to finish loading before
+ * anything else on the page could reuse the global for a different zone. A
+ * page here never carries two banner placements at once for exactly that
+ * reason — see lib/ads.ts.
  *
- * `data-full-width-responsive="false"` keeps it from ignoring that box and
- * going edge-to-edge on phones.
+ * Both tags are created imperatively rather than written into JSX: a script
+ * element made this way defaults to `async = true`, which is also how you
+ * opt into Chrome's "ignored document.write in an async script" intervention
+ * for third-party scripts. Setting it false keeps this one running the same
+ * way it would from a plain, synchronous <script> in static HTML.
  */
-export function AdUnit({ client, slot }: AdUnitConfig) {
+function BannerAdUnit({ desktop, mobile }: BannerUnit) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const requested = useRef(false);
 
   useEffect(() => {
-    // Strict Mode runs effects twice. A second push against an <ins> that
-    // already has one throws "All 'ins' elements in the DOM with class=
-    // adsbygoogle already have ads in them" and kills the rest of the queue.
+    // Strict Mode runs effects twice; a second injection would draw the
+    // banner twice into the same box.
     if (requested.current) return;
     requested.current = true;
 
-    try {
-      (window.adsbygoogle = window.adsbygoogle ?? []).push({});
-    } catch {
-      // Loader blocked, offline, or an ad blocker. The reserved box simply
-      // stays empty — nothing else on the page depends on this.
-    }
-  }, []);
+    const container = containerRef.current;
+    if (!container) return;
+
+    const zone: BannerZone =
+      window.innerWidth >= DESKTOP_BREAKPOINT ? desktop : mobile;
+
+    window.atOptions = {
+      key: zone.key,
+      format: 'iframe',
+      height: zone.height,
+      width: zone.width,
+      params: {},
+    };
+
+    const script = document.createElement('script');
+    script.async = false;
+    script.src = `https://www.highperformanceformat.com/${zone.key}/invoke.js`;
+    container.appendChild(script);
+  }, [desktop, mobile]);
+
+  return <div ref={containerRef} />;
+}
+
+/**
+ * One Adsterra Native Banner.
+ *
+ * Unlike the banner zone, this one carries no shared global to race: the
+ * script finds its target by a fixed `id` baked into the script itself
+ * (`container-<key>`), so two of these — even the same zone twice on
+ * different pages, which is what in-content and footer do — never collide.
+ * That is also why it can run genuinely async, `data-cfasync="false"` and
+ * all, exactly as Adsterra hands it out.
+ */
+function NativeAdUnit({ containerId, scriptSrc }: NativeUnit) {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const requested = useRef(false);
+
+  useEffect(() => {
+    if (requested.current) return;
+    requested.current = true;
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.dataset.cfasync = 'false';
+    script.src = scriptSrc;
+    wrapperRef.current?.appendChild(script);
+  }, [scriptSrc]);
 
   return (
-    <ins
-      className="adsbygoogle"
-      style={{ display: 'block', width: '100%', height: '100%' }}
-      data-ad-client={client}
-      data-ad-slot={slot}
-      data-ad-format="horizontal"
-      data-full-width-responsive="false"
-    />
+    <div ref={wrapperRef} className="w-full">
+      <div id={containerId} />
+    </div>
   );
 }
